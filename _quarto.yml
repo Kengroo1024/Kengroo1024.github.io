@@ -4,17 +4,21 @@ project:
 lang: zh
 
 website:
-  title: "Kengroo1024.github.io"
+  title: "Kengroo"
   navbar:
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/Kengroo1024
+    left: 
+      - text: 关于
+        file: about.qmd
+  sidebar:
+    contents: posts
+
 format:
   html:
-    theme: cosmo
+    theme: darkly
+    code-copy: true
     css: styles.css
 
 
