@@ -1,30 +1,83 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/7-zip的文件名编码问题.html",
+    "href": "posts/7-zip的文件名编码问题.html",
+    "title": "7-zip的文件名编码问题",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
+    "crumbs": [
+      "关于",
+      "Posts",
+      "7-zip的文件名编码问题"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Kengroo1024.github.io",
+    "objectID": "posts/7-zip的文件名编码问题.html#问题概述",
+    "href": "posts/7-zip的文件名编码问题.html#问题概述",
+    "title": "7-zip的文件名编码问题",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n2024年2月6日\n\n\nTristan O’Malley\n\n\n\n\n\n\n无匹配项"
+    "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
+    "crumbs": [
+      "关于",
+      "Posts",
+      "7-zip的文件名编码问题"
+    ]
+  },
+  {
+    "objectID": "posts/7-zip的文件名编码问题.html#问题解决",
+    "href": "posts/7-zip的文件名编码问题.html#问题解决",
+    "title": "7-zip的文件名编码问题",
+    "section": "问题解决",
+    "text": "问题解决\n使用 CLI 界面，将 7-zip 可执行文件加入环境变量或在 7-zip可执行文件的所在目录打开 cmd 或者 powershell\n\n查看压缩包内容\n执行下列命令\nchcp [nnn]\n其中 nnn 是微软的代码页，下面列出几个常用的\n\n\n\n编码\n代码页\n\n\n\n\nGBK\n936\n\n\nUTF-8\n65001\n\n\nUTF-16\n1200\n\n\nShift-JIS\n932\n\n\n\n然后执行下面命令\n7z l src\n\n\n进行解压\n执行以下命令\n7z x src [-o dest] -mcp=num\nsrc为源文件路径，dest为输出文件路径，num为文件编码对应的代码页，如果不指定输出路径默认解压到当前目录。\n注意，在 ps 中相对路径须加./",
+    "crumbs": [
+      "关于",
+      "Posts",
+      "7-zip的文件名编码问题"
+    ]
+  },
+  {
+    "objectID": "posts/7-zip的文件名编码问题.html#碎碎念",
+    "href": "posts/7-zip的文件名编码问题.html#碎碎念",
+    "title": "7-zip的文件名编码问题",
+    "section": "碎碎念",
+    "text": "碎碎念\nmcp选项竟然没有出现在文档里面，无法理解。\n但是文档中提供了scc和scs选项，看起来也能起到相同的效果。",
+    "crumbs": [
+      "关于",
+      "Posts",
+      "7-zip的文件名编码问题"
+    ]
+  },
+  {
+    "objectID": "posts/7-zip的文件名编码问题.html#参考",
+    "href": "posts/7-zip的文件名编码问题.html#参考",
+    "title": "7-zip的文件名编码问题",
+    "section": "参考",
+    "text": "参考\n解决方案来自 CSDN\n7-zip CLI 帮助文档",
+    "crumbs": [
+      "关于",
+      "Posts",
+      "7-zip的文件名编码问题"
+    ]
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Kengroo1024",
     "section": "",
-    "text": "About this blog"
+    "text": "这是我使用GitHub托管的小博客，使用Quarto创建。"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "about.html#about-this-blog",
+    "href": "about.html#about-this-blog",
+    "title": "Kengroo1024",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "这是我使用GitHub托管的小博客，使用Quarto创建。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello you guys",
+    "section": "",
+    "text": "7-zip的文件名编码问题\n\n\n\n\n\n\n7-zip\n\n\nWindows\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nKengroo1024\n\n\n\n\n\n\n无匹配项"
   }
 ]
