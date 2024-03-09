@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -118,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/7-zip的文件名编码问题.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/高数/导数和微分.html">高数</a></li><li class="breadcrumb-item"><a href="../../posts/高数/微分方程.html">微分方程</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/高数/导数和微分.html">高数</a></li><li class="breadcrumb-item"><a href="../../posts/高数/微分方程.html">微分方程</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -139,12 +168,6 @@ ul.task-list li input[type="checkbox"] {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/7-zip的文件名编码问题.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7-zip的文件名编码问题</span></a>
-  </div>
-</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
@@ -235,12 +258,29 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
- <span class="menu-text">Quarto使用心得</span></a>
+ <span class="menu-text">杂项</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/杂项/7-zip的文件名编码问题.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7-zip的文件名编码问题</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+ <span class="menu-text">Quarto使用心得</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="切換部分">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../posts/Quarto使用心得/第二节.html" class="sidebar-item-text sidebar-link">
@@ -249,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/Quarto使用心得/Quarto不完全指北.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/Quarto使用心得/第一节.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto使用心得 第一节</span></a>
   </div>
 </li>
@@ -263,12 +303,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#可分离变量的方程" id="toc-可分离变量的方程" class="nav-link active" data-scroll-target="#可分离变量的方程"><span class="header-section-number">1</span> 可分离变量的方程</a></li>
+  <li><a href="#齐次微分方程" id="toc-齐次微分方程" class="nav-link" data-scroll-target="#齐次微分方程"><span class="header-section-number">2</span> 齐次微分方程</a></li>
+  <li><a href="#一阶线性微分方程" id="toc-一阶线性微分方程" class="nav-link" data-scroll-target="#一阶线性微分方程"><span class="header-section-number">3</span> 一阶线性微分方程</a></li>
+  <li><a href="#线性微分方程解的结构" id="toc-线性微分方程解的结构" class="nav-link" data-scroll-target="#线性微分方程解的结构"><span class="header-section-number">4</span> 线性微分方程解的结构</a>
+  <ul class="collapse">
+  <li><a href="#解齐次方程" id="toc-解齐次方程" class="nav-link" data-scroll-target="#解齐次方程"><span class="header-section-number">4.1</span> 解齐次方程</a></li>
+  <li><a href="#解非齐次方程" id="toc-解非齐次方程" class="nav-link" data-scroll-target="#解非齐次方程"><span class="header-section-number">4.2</span> 解非齐次方程</a></li>
+  <li><a href="#拆分非齐次方程" id="toc-拆分非齐次方程" class="nav-link" data-scroll-target="#拆分非齐次方程"><span class="header-section-number">4.3</span> 拆分非齐次方程</a></li>
+  </ul></li>
+  <li><a href="#常系数线性微分方程" id="toc-常系数线性微分方程" class="nav-link" data-scroll-target="#常系数线性微分方程"><span class="header-section-number">5</span> 常系数线性微分方程</a>
+  <ul class="collapse">
+  <li><a href="#常系数齐次线性方程" id="toc-常系数齐次线性方程" class="nav-link" data-scroll-target="#常系数齐次线性方程"><span class="header-section-number">5.1</span> 常系数齐次线性方程</a></li>
+  <li><a href="#二阶常系数非齐次线性方程" id="toc-二阶常系数非齐次线性方程" class="nav-link" data-scroll-target="#二阶常系数非齐次线性方程"><span class="header-section-number">5.2</span> 二阶常系数非齐次线性方程</a></li>
+  </ul></li>
+  <li><a href="#差分方程" id="toc-差分方程" class="nav-link" data-scroll-target="#差分方程"><span class="header-section-number">6</span> 差分方程</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/7-zip的文件名编码问题.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/高数/导数和微分.html">高数</a></li><li class="breadcrumb-item"><a href="../../posts/高数/微分方程.html">微分方程</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/高数/导数和微分.html">高数</a></li><li class="breadcrumb-item"><a href="../../posts/高数/微分方程.html">微分方程</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">微分方程</h1>
   <div class="quarto-categories">
@@ -295,12 +355,6 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">修改的</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月9日</p>
-    </div>
-  </div>
     
   </div>
   
@@ -309,10 +363,174 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="可分离变量的方程" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="可分离变量的方程"><span class="header-section-number">1</span> 可分离变量的方程</h2>
+<p>可以被表示为<span class="math inline">\(g(x)\mathrm dy=f(x)\mathrm dx\)</span>的方程</p>
+<p>求解方法：两边积分</p>
+<p><span class="math display">\[
+\int g(y)\mathrm dy=\int f(x)\mathrm dx
+\]</span></p>
+</section>
+<section id="齐次微分方程" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="齐次微分方程"><span class="header-section-number">2</span> 齐次微分方程</h2>
+<p>可以被表示为<span class="math inline">\(\dfrac{\mathrm dy}{\mathrm dx}=\varphi(\dfrac yx)\)</span>的方程</p>
+<p>求解方法：令<span class="math inline">\(u=\dfrac yx\)</span>，有<span class="math inline">\(y'=u+xu'\)</span>，则原方程可以化为</p>
+<p><span class="math display">\[
+xu'=\varphi(u)-u
+\]</span></p>
+<p>进一步可以化为</p>
+<p><span class="math display">\[
+\dfrac{\mathrm dx}{x}=\dfrac{\mathrm du}{\varphi(u)-u}
+\]</span></p>
+<p>于是归结为可分离变量的方程。</p>
+</section>
+<section id="一阶线性微分方程" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="一阶线性微分方程"><span class="header-section-number">3</span> 一阶线性微分方程</h2>
+<p>形如<span class="math inline">\(y'+p(x)y=q(x)\)</span>的方程</p>
+<p>求解方法：公式法</p>
+<p><span class="math display">\[
+y=
+\mathrm e^{-\int p(x)\mathrm dx}
+\left[
+\int q(x)\mathrm e^{\int p(x)\mathrm dx}\mathrm dx+C
+\right]
+\]</span></p>
+<p>括号内都是正的，括号外都是负的，e的指数上都是<span class="math inline">\(p\)</span>，常数项才有<span class="math inline">\(q\)</span>.</p>
+</section>
+<section id="线性微分方程解的结构" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="线性微分方程解的结构"><span class="header-section-number">4</span> 线性微分方程解的结构</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注释
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>可以和线性方程组解的结构类比证明和记忆。</p>
+</div>
+</div>
+<p><span class="math inline">\(n\)</span>阶线性微分方程的一般形式为</p>
+<p><span class="math display">\[
+y^{(n)}+\sum_{i=1}^{n} p_{i}(x)y^{(n-i)}=q(x)
+\]</span></p>
+<p>规定<span class="math inline">\(y^{(0)}=y\)</span>. 当<span class="math inline">\(f(x)=0\)</span>时称为<span class="math inline">\(n\)</span>阶齐次线性微分方程。</p>
+<p>在此特别研究二阶线性微分方程。</p>
+<p>二阶齐次线性方程</p>
+<p><span class="math display">\[
+y''+p(x)y'+q(x)y=0
+\]</span></p>
+<p>二阶非齐次线性方程</p>
+<p><span class="math display">\[
+y''+p(x)y'+q(x)y=f(x)
+\]</span></p>
+<section id="解齐次方程" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="解齐次方程"><span class="header-section-number">4.1</span> 解齐次方程</h3>
+<p>如果<span class="math inline">\(y_1(x)\)</span>和<span class="math inline">\(y_2(x)\)</span>是齐次方程的两个线性无关<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>的特解，那么</p>
+<p><span class="math display">\[
+y=C_1y_1(x)+C_2y_2(x)
+\]</span></p>
+<p>就是齐次方程的通解。</p>
+</section>
+<section id="解非齐次方程" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="解非齐次方程"><span class="header-section-number">4.2</span> 解非齐次方程</h3>
+<p>如果如果<span class="math inline">\(y_1(x)\)</span>和<span class="math inline">\(y_2(x)\)</span>是齐次方程的两个线性无关的特解，<span class="math inline">\(y^*(x)\)</span>是非齐次方程的特解，那么</p>
+<p><span class="math display">\[
+y=C_1y_1(x)+C_2y_2(x)+y^*(x)
+\]</span></p>
+<p>是非齐次方程的通解。</p>
+</section>
+<section id="拆分非齐次方程" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="拆分非齐次方程"><span class="header-section-number">4.3</span> 拆分非齐次方程</h3>
+<p>如果<span class="math inline">\(y_1^*(x),y_2^*(x)\)</span>分别是非齐次线性方程</p>
+<p><span class="math display">\[
+\begin{aligned}
+y''+p(x)y'+q(x)y=f_1(x)\\
+y''+p(x)y'+q(x)y=f_2(x)
+\end{aligned}
+\]</span></p>
+<p>的通解，那么<span class="math inline">\(y_1^*(x)+y_2^*(x)\)</span>是非齐次线性方程</p>
+<p><span class="math display">\[
+y''+p(x)y'+q(x)y=f_1(x)+f_2(x)
+\]</span></p>
+<p>的一个特解。</p>
+</section>
+</section>
+<section id="常系数线性微分方程" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="常系数线性微分方程"><span class="header-section-number">5</span> 常系数线性微分方程</h2>
+<section id="常系数齐次线性方程" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="常系数齐次线性方程"><span class="header-section-number">5.1</span> 常系数齐次线性方程</h3>
+<p>采用特征根法求解，以二阶为例。</p>
+<p>二阶常系数齐次微分方程一般形式为</p>
+<p><span class="math display">\[
+y''+py'+q=0
+\]</span></p>
+<p>特征方程为</p>
+<p><span class="math display">\[
+r^2+pr+q=0
+\]</span></p>
+<p>设<span class="math inline">\(r_1,r_2\)</span>为该方程的两个根。</p>
+<ol type="1">
+<li><p><span class="math inline">\(r_1\not= r_2\)</span>，且都是实数，通解为</p>
+<p><span class="math display">\[
+y=C_1\mathrm e^{r_1x}+C_2\mathrm e^{r_2x}
+\]</span></p></li>
+<li><p><span class="math inline">\(r_1=r_2\)</span>，通解为</p>
+<p><span class="math display">\[
+y=(C_1+C_2x)\mathrm e^{r_1x}
+\]</span></p></li>
+<li><p><span class="math inline">\(r_1=a+\mathrm ib,\ r_2=a-\mathrm ib\)</span>为共轭复根，通解为</p>
+<p><span class="math display">\[
+y=\mathrm e^{ax}(C_1\cos bx+C_2\sin bx)
+\]</span></p></li>
+</ol>
+<p>其实还是</p>
+<p><span class="math display">\[
+y=\sum_{i=1}^n \mathrm C_ie^{r_i}
+\]</span></p>
+<p>只是有复数时要用欧拉公式展开。</p>
+</section>
+<section id="二阶常系数非齐次线性方程" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="二阶常系数非齐次线性方程"><span class="header-section-number">5.2</span> 二阶常系数非齐次线性方程</h3>
+<p>二阶常系数非齐次微分方程一般形式为</p>
+<p><span class="math display">\[
+y''+py'+q=f(x)
+\]</span></p>
+<ol type="1">
+<li><p>若<span class="math inline">\(f(x)=P_m(x)e^{\lambda x}\)</span>，其中<span class="math inline">\(P_m(x)\)</span>为<span class="math inline">\(x\)</span>的<span class="math inline">\(m\)</span>次多项式，<span class="math inline">\(\lambda\)</span>为特征方程的一个根，那么特解可以表示为</p>
+<p><span class="math display">\[
+y^*(x)=x^kQ_m(x)\mathrm e^{\lambda x}
+\]</span></p>
+<p>其中<span class="math inline">\(k\)</span>是<span class="math inline">\(\lambda\)</span>的重数，<span class="math inline">\(Q_m(x)\)</span>是与<span class="math inline">\(P_m(x)\)</span>同次的多项式。</p></li>
+<li><p>若<span class="math display">\[f(x)=\mathrm e^{ax}[P_l^{(1)}(x)\cos bx+P_n^{(2)}(x)\sin bx]\]</span>其中<span class="math inline">\(P_l^{(1)},P_n^{(2)}\)</span>分别是<span class="math inline">\(x\)</span>的<span class="math inline">\(l,n\)</span>次多项式，则特解可以表示为</p>
+<p><span class="math display">\[
+y^*(x)=x^k\mathrm e^{ax}[R_m^{(1)}(x)\cos bx+R_m^{(2)}(x)\sin bx]
+\]</span></p>
+<p>其中<span class="math inline">\(R_m^{(1)}(x),R_m^{(2)}(x)\)</span>是两个<span class="math inline">\(m\)</span>次多项式，<span class="math inline">\(m=\max\{n,l\}\)</span>.</p>
+<p><span class="math display">\[
+k=\left\{\begin{aligned}
+0&amp;,a+\mathrm ib\text{不是特征方程的根}\\
+1&amp;,a+\mathrm ib\text{是特征方程的单根}
+\end{aligned}\right.
+\]</span></p></li>
+</ol>
+</section>
+</section>
+<section id="差分方程" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="差分方程"><span class="header-section-number">6</span> 差分方程</h2>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">脚注</h2>
+
+<ol>
+<li id="fn1"><p>线性无关即不成比例<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

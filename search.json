@@ -238,7 +238,7 @@
     "href": "posts/线性代数/特征向量.html#判断特征根重数的一种方法",
     "title": "特征向量",
     "section": "2 判断特征根重数的一种方法",
-    "text": "2 判断特征根重数的一种方法\n条件：n阶方阵\\(\\boldsymbol A\\)可相似对角化，或者干脆就是对角矩阵。\n行为：把待验证的特征值\\(\\lambda_0\\)带入矩阵\\(\\boldsymbol A-\\lambda\\boldsymbol E\\)中。\n结论：\\(\\boldsymbol A-\\lambda_0\\boldsymbol E\\)的秩\\(r\\)与该特征值所对应的线性无关的特征向量个数\\(k\\)的关系为\n\\[\nk=n-r\n\\]\n该命题的逆命题也成立，实际上，它的逆命题就是![[矩阵#矩阵相似对角化的条件]]",
+    "text": "2 判断特征根重数的一种方法\n条件：n阶方阵\\(\\boldsymbol A\\)可相似对角化，或者干脆就是对角矩阵。\n行为：把待验证的特征值\\(\\lambda_0\\)带入矩阵\\(\\boldsymbol A-\\lambda\\boldsymbol E\\)中。\n结论：\\(\\boldsymbol A-\\lambda_0\\boldsymbol E\\)的秩\\(r\\)与该特征值所对应的线性无关的特征向量个数\\(k\\)的关系为\n\\[\nk=n-r\n\\]\n该命题的逆命题也成立，实际上，它的逆命题就是矩阵相似对角化的条件",
     "crumbs": [
       "首页",
       "Posts",
@@ -309,160 +309,6 @@
       "Posts",
       "概统",
       "概率与统计知识点"
-    ]
-  },
-  {
-    "objectID": "posts/Quarto使用心得/Quarto不完全指北.html",
-    "href": "posts/Quarto使用心得/Quarto不完全指北.html",
-    "title": "Quarto使用心得 第一节",
-    "section": "",
-    "text": "Quarto 是 R 语言开发团队 Posit 开发的新一代开源出版工具，用于替换 Rmarkdown，并且在一定程度上具有学术写作的能力，甚至可以它创建一个网站，基于 Pandoc 和 Deno （你可以在 Quarto 的安装目录里找到这两个工具）。不仅对于 R 的支持良好，而且对于 Python, Julia, Obeservable 都有良好支持。\n由于是一个新的工具，官方的文档没有对于中文的支持，因此这篇博客记录了 Quarto 的基本使用方法。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "Quarto使用心得",
-      "Quarto使用心得 第一节"
-    ]
-  },
-  {
-    "objectID": "posts/Quarto使用心得/Quarto不完全指北.html#环境配置",
-    "href": "posts/Quarto使用心得/Quarto不完全指北.html#环境配置",
-    "title": "Quarto使用心得 第一节",
-    "section": "1 环境配置",
-    "text": "1 环境配置\nQuarto 可以使用以下两种方式下载。注意，无论是哪一种，都需要良好的网络支持。\n\n使用winget命令\nwinget install --id Posit.Quarto\n在官网上选择合适的版本进行下载\n\n在 cmd 中输入\nquarto --version\n出现一段数字即下载成功。\n\n1.1 附加组件的下载\nQuarto 有两个附加组件：\n\nTinyTex\nChromium\n\n可以使用\nquarto list tools\n查看附加组件的下载情况，正常情况应该出现类似下面的提示\n[✓] Inspecting tools\n\nTool         Status            Installed     Latest\nchromium     Not installed     ---           869685\ntinytex      Up to date        v2022.10      v2022.10\n\n1.1.1 TinyTex\nTinyTex 是 Texlive 的一个发行版，Quarto-Pandoc 依赖它编译 qmd 文件为 pdf 格式。不过如果系统的环境变量中已经有了 Tex Live，则 Quarto 会自动使用，不用下载 TinyTex。\n另外，Quarto 只对 Tex Live 进行了适配，如果使用外部 Tex 系统，只推荐使用 Tex Live。\n下载 TinyTex\nquarto install tinytex\n升级 TinyTex\nquarto update tinytex\n使用 Quarto 下载的 TinyTex 默认是不会添加到环境变量的，也就是说，如果没有其它 Tex 发行版，在 cmd 中输入latex或xelatex会得到“‘xxx’ 不是内部或外部命令，也不是可运行的程序或批处理文件。”这样的提示。如果想独立使用 TinyTex，需要使用\nquarto install tinytex --update-path\n\n\n1.1.2 Chromium\nQuarto 使用 Chromium 对 HTML 文件进行预览，如果系统中已经有了 Chromium 系浏览器如 Chrome, Edge, 360 极速浏览器, VScode等则不用下载。\n下载 Chromium\nquarto install Chromium\n升级 Chromium\nquarto update Chromium",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "Quarto使用心得",
-      "Quarto使用心得 第一节"
-    ]
-  },
-  {
-    "objectID": "posts/Quarto使用心得/Quarto不完全指北.html#编辑器",
-    "href": "posts/Quarto使用心得/Quarto不完全指北.html#编辑器",
-    "title": "Quarto使用心得 第一节",
-    "section": "2 编辑器",
-    "text": "2 编辑器\nQuarto 文件的默认扩展名是 qmd，这是一个纯文本文件。\n理论上，完全可以使用记事本编写 qmd 文件，然后使用 Quarto 渲染，但是仍然有几个编辑器是受到官方推荐的\n\nVScode\nJupyter Lab\nRstudio\nNeovim\n\n私以为，能使用 Neovim 的大佬，已经不再需要这篇教程了，而我个人并不使用 Rstudio，因此这一节集中在使用 VScode 和 Jupyter Lab 来使用 Quarto 上。\n\n2.1 Jupyter Lab\n基于 Jupyter Lab 使用 Quarto 并不需要额外的组件支持，Quarto 支持直接渲染 ipynb 文件，但是在文件中需要一些额外的 metadata 说明，这一篇博客中暂且不提。\n\n\n2.2 VScode\n朋友，不知道你是否知道宇宙第一的文本编辑器 VScode 呢？如果你没有尝试过，请务必试一试。\n基于 VScode 使用 Quarto 需要先安装它的官方扩展\nQuarto现在只是一个出版工具，并不绑定任何语言，如果要使用代码相关的功能，还需要在系统中安装语言内核，以及在vscode中安装相关的扩展\n\nPython Extension\nR Extension\nJulia Extension\n\n另外，在 VScode 中使用 Python 要通过 Jupyter 作为中介，检查系统中的 Jupyter 是否被 Quarto 使用，需要下面的命令\nquarto check jupyter\n如果正确安装，应该出现类似下面的提示\n[&gt;] Checking Python 3 installation....OK\n      Version: 3.11.5 (Conda)\n      Path: C:/Anaconda3/python.exe\n      Jupyter: 5.5.0\n      Kernels: python3, ir\n\n(-) Checking Jupyter engine render....0.00s - Debugger warning: It seems that frozen modules are being used, which may\n0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n0.00s - to python to disable frozen modules.\n0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n0.00s - Debugger warning: It seems that frozen modules are being used, which may\n0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n0.00s - to python to disable frozen modules.\n0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n[&gt;] Checking Jupyter engine render....OK\n最后，按ctrl+,打开设置，在设置的右上角，点击“打开设置(python)”按钮，在 setting.python 文件中添加以下配置\n{\n    \"[quarto]\": {\n    \"editor.quickSuggestions\": {\n        \"comments\": \"on\",\n        \"other\": \"on\",\n        \"strings\": \"on\"\n        }\n    }\n}\n这个配置开启了代码自动补全和建议",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "Quarto使用心得",
-      "Quarto使用心得 第一节"
-    ]
-  },
-  {
-    "objectID": "posts/Quarto使用心得/Quarto不完全指北.html#参考",
-    "href": "posts/Quarto使用心得/Quarto不完全指北.html#参考",
-    "title": "Quarto使用心得 第一节",
-    "section": "3 参考",
-    "text": "3 参考\nQuarto 官网",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "Quarto使用心得",
-      "Quarto使用心得 第一节"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hello you guys",
-    "section": "",
-    "text": "概率与统计知识点\n\n\n\n\n\n\n考研数学\n\n\n概统\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n二次型\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n特征向量\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n矩阵\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n行列式计算\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n三角函数\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n导数和微分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n微分方程\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n积分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n7-zip的文件名编码问题\n\n\n\n\n\n\n7-zip\n\n\nWindows\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第二节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月29日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第一节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月24日\n\n\nKengroo1024\n\n\n\n\n\n\n无匹配项"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Kengroo1024",
-    "section": "",
-    "text": "在读本科生，正准备考研。"
-  },
-  {
-    "objectID": "about.html#关于我about-me",
-    "href": "about.html#关于我about-me",
-    "title": "Kengroo1024",
-    "section": "",
-    "text": "在读本科生，正准备考研。"
-  },
-  {
-    "objectID": "about.html#关于本博客about-this-blog",
-    "href": "about.html#关于本博客about-this-blog",
-    "title": "Kengroo1024",
-    "section": "关于本博客/About this blog",
-    "text": "关于本博客/About this blog\n这是我使用GitHub托管的小博客，使用Quarto创建。\n建立本博客完全出于兴趣。\n\n转载许可\n本博客上发表的文章，如无特别说明，皆使用 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 许可证 发布\n\n\n考研数学版块\n这是我在考研复习数学时所做的笔记，不保证正确性，亦不保证完整性，因为过于浅显的知识点并不会被记录。"
-  },
-  {
-    "objectID": "about.html#杂七杂八的事情miscellanea",
-    "href": "about.html#杂七杂八的事情miscellanea",
-    "title": "Kengroo1024",
-    "section": "杂七杂八的事情/Miscellanea",
-    "text": "杂七杂八的事情/Miscellanea\n考研数学相关的博文基本上是在手机上写的，因为手机上用的是Obsidian，因此其中非常有可能出现一些奇怪的语法或句子，那就是Obsidian的专用语法，我看漏了没改或者是懒得改。"
-  },
-  {
-    "objectID": "about.html#鸣谢acknowlegements",
-    "href": "about.html#鸣谢acknowlegements",
-    "title": "Kengroo1024",
-    "section": "鸣谢/Acknowlegements",
-    "text": "鸣谢/Acknowlegements\nQuarto\nGithub\n知乎上热心的数学答主们"
-  },
-  {
-    "objectID": "posts/7-zip的文件名编码问题.html",
-    "href": "posts/7-zip的文件名编码问题.html",
-    "title": "7-zip的文件名编码问题",
-    "section": "",
-    "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "7-zip的文件名编码问题"
-    ]
-  },
-  {
-    "objectID": "posts/7-zip的文件名编码问题.html#问题概述",
-    "href": "posts/7-zip的文件名编码问题.html#问题概述",
-    "title": "7-zip的文件名编码问题",
-    "section": "",
-    "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "7-zip的文件名编码问题"
-    ]
-  },
-  {
-    "objectID": "posts/7-zip的文件名编码问题.html#问题解决",
-    "href": "posts/7-zip的文件名编码问题.html#问题解决",
-    "title": "7-zip的文件名编码问题",
-    "section": "2 问题解决",
-    "text": "2 问题解决\n使用 CLI 界面，将 7-zip 可执行文件加入环境变量或在 7-zip可执行文件的所在目录打开 cmd 或者 powershell\n\n2.1 查看压缩包内容\n执行下列命令\nchcp [nnn]\n其中 nnn 是微软的代码页，下面列出几个常用的\n\n\n\n编码\n代码页\n\n\n\n\nGBK\n936\n\n\nUTF-8\n65001\n\n\nUTF-16\n1200\n\n\nShift-JIS\n932\n\n\n\n然后执行下面命令\n7z l src\n\n\n2.2 进行解压\n执行以下命令\n7z x src [-o dest] -mcp=num\nsrc为源文件路径，dest为输出文件路径，num为文件编码对应的代码页，如果不指定输出路径默认解压到当前目录。\n注意，在 ps 中相对路径须加./",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "7-zip的文件名编码问题"
-    ]
-  },
-  {
-    "objectID": "posts/7-zip的文件名编码问题.html#碎碎念",
-    "href": "posts/7-zip的文件名编码问题.html#碎碎念",
-    "title": "7-zip的文件名编码问题",
-    "section": "3 碎碎念",
-    "text": "3 碎碎念\nmcp选项竟然没有出现在文档里面，无法理解。\n但是文档中提供了scc和scs选项，看起来也能起到相同的效果。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "7-zip的文件名编码问题"
-    ]
-  },
-  {
-    "objectID": "posts/7-zip的文件名编码问题.html#参考",
-    "href": "posts/7-zip的文件名编码问题.html#参考",
-    "title": "7-zip的文件名编码问题",
-    "section": "4 参考",
-    "text": "4 参考\n解决方案来自 CSDN\n7-zip CLI 帮助文档",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "7-zip的文件名编码问题"
     ]
   },
   {
@@ -541,6 +387,165 @@
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第二节"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello you guys",
+    "section": "",
+    "text": "概率与统计知识点\n\n\n\n\n\n\n考研数学\n\n\n概统\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n二次型\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n特征向量\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n矩阵\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n行列式计算\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n三角函数\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n导数和微分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n微分方程\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n积分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n7-zip的文件名编码问题\n\n\n\n\n\n\n7-zip\n\n\nWindows\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第二节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月29日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第一节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月24日\n\n\nKengroo1024\n\n\n\n\n\n\n无匹配项"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Kengroo1024",
+    "section": "",
+    "text": "在读本科生，正准备考研。"
+  },
+  {
+    "objectID": "about.html#关于我about-me",
+    "href": "about.html#关于我about-me",
+    "title": "Kengroo1024",
+    "section": "",
+    "text": "在读本科生，正准备考研。"
+  },
+  {
+    "objectID": "about.html#关于本博客about-this-blog",
+    "href": "about.html#关于本博客about-this-blog",
+    "title": "Kengroo1024",
+    "section": "关于本博客/About this blog",
+    "text": "关于本博客/About this blog\n这是我使用GitHub托管的小博客，使用Quarto创建。\n建立本博客完全出于兴趣。\n\n转载许可\n本博客上发表的文章，如无特别说明，皆使用 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 许可证 发布\n\n\n考研数学版块\n这是我在考研复习数学时所做的笔记，不保证正确性，亦不保证完整性，因为过于浅显的知识点并不会被记录。"
+  },
+  {
+    "objectID": "about.html#杂七杂八的事情miscellanea",
+    "href": "about.html#杂七杂八的事情miscellanea",
+    "title": "Kengroo1024",
+    "section": "杂七杂八的事情/Miscellanea",
+    "text": "杂七杂八的事情/Miscellanea\n考研数学相关的博文基本上是在手机上写的，因为手机上用的是Obsidian，因此其中非常有可能出现一些奇怪的语法或句子，那就是Obsidian的专用语法，我看漏了没改或者是懒得改。"
+  },
+  {
+    "objectID": "about.html#鸣谢acknowlegements",
+    "href": "about.html#鸣谢acknowlegements",
+    "title": "Kengroo1024",
+    "section": "鸣谢/Acknowlegements",
+    "text": "鸣谢/Acknowlegements\nQuarto\nGithub\n知乎上热心的数学答主们"
+  },
+  {
+    "objectID": "posts/Quarto使用心得/第一节.html",
+    "href": "posts/Quarto使用心得/第一节.html",
+    "title": "Quarto使用心得 第一节",
+    "section": "",
+    "text": "Quarto 是 R 语言开发团队 Posit 开发的新一代开源出版工具，用于替换 Rmarkdown，并且在一定程度上具有学术写作的能力，甚至可以它创建一个网站，基于 Pandoc 和 Deno （你可以在 Quarto 的安装目录里找到这两个工具）。不仅对于 R 的支持良好，而且对于 Python, Julia, Obeservable 都有良好支持。\n由于是一个新的工具，官方的文档没有对于中文的支持，因此这篇博客记录了 Quarto 的基本使用方法。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第一节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/第一节.html#环境配置",
+    "href": "posts/Quarto使用心得/第一节.html#环境配置",
+    "title": "Quarto使用心得 第一节",
+    "section": "1 环境配置",
+    "text": "1 环境配置\nQuarto 可以使用以下两种方式下载。注意，无论是哪一种，都需要良好的网络支持。\n\n使用winget命令\nwinget install --id Posit.Quarto\n在官网上选择合适的版本进行下载\n\n在 cmd 中输入\nquarto --version\n出现一段数字即下载成功。\n\n1.1 附加组件的下载\nQuarto 有两个附加组件：\n\nTinyTex\nChromium\n\n可以使用\nquarto list tools\n查看附加组件的下载情况，正常情况应该出现类似下面的提示\n[✓] Inspecting tools\n\nTool         Status            Installed     Latest\nchromium     Not installed     ---           869685\ntinytex      Up to date        v2022.10      v2022.10\n\n1.1.1 TinyTex\nTinyTex 是 Texlive 的一个发行版，Quarto-Pandoc 依赖它编译 qmd 文件为 pdf 格式。不过如果系统的环境变量中已经有了 Tex Live，则 Quarto 会自动使用，不用下载 TinyTex。\n另外，Quarto 只对 Tex Live 进行了适配，如果使用外部 Tex 系统，只推荐使用 Tex Live。\n下载 TinyTex\nquarto install tinytex\n升级 TinyTex\nquarto update tinytex\n使用 Quarto 下载的 TinyTex 默认是不会添加到环境变量的，也就是说，如果没有其它 Tex 发行版，在 cmd 中输入latex或xelatex会得到“‘xxx’ 不是内部或外部命令，也不是可运行的程序或批处理文件。”这样的提示。如果想独立使用 TinyTex，需要使用\nquarto install tinytex --update-path\n\n\n1.1.2 Chromium\nQuarto 使用 Chromium 对 HTML 文件进行预览，如果系统中已经有了 Chromium 系浏览器如 Chrome, Edge, 360 极速浏览器, VScode等则不用下载。\n下载 Chromium\nquarto install Chromium\n升级 Chromium\nquarto update Chromium",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第一节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/第一节.html#编辑器",
+    "href": "posts/Quarto使用心得/第一节.html#编辑器",
+    "title": "Quarto使用心得 第一节",
+    "section": "2 编辑器",
+    "text": "2 编辑器\nQuarto 文件的默认扩展名是 qmd，这是一个纯文本文件。\n理论上，完全可以使用记事本编写 qmd 文件，然后使用 Quarto 渲染，但是仍然有几个编辑器是受到官方推荐的\n\nVScode\nJupyter Lab\nRstudio\nNeovim\n\n私以为，能使用 Neovim 的大佬，已经不再需要这篇教程了，而我个人并不使用 Rstudio，因此这一节集中在使用 VScode 和 Jupyter Lab 来使用 Quarto 上。\n\n2.1 Jupyter Lab\n基于 Jupyter Lab 使用 Quarto 并不需要额外的组件支持，Quarto 支持直接渲染 ipynb 文件，但是在文件中需要一些额外的 metadata 说明，这一篇博客中暂且不提。\n\n\n2.2 VScode\n朋友，不知道你是否知道宇宙第一的文本编辑器 VScode 呢？如果你没有尝试过，请务必试一试。\n基于 VScode 使用 Quarto 需要先安装它的官方扩展\nQuarto现在只是一个出版工具，并不绑定任何语言，如果要使用代码相关的功能，还需要在系统中安装语言内核，以及在vscode中安装相关的扩展\n\nPython Extension\nR Extension\nJulia Extension\n\n另外，在 VScode 中使用 Python 要通过 Jupyter 作为中介，检查系统中的 Jupyter 是否被 Quarto 使用，需要下面的命令\nquarto check jupyter\n如果正确安装，应该出现类似下面的提示\n[&gt;] Checking Python 3 installation....OK\n      Version: 3.11.5 (Conda)\n      Path: C:/Anaconda3/python.exe\n      Jupyter: 5.5.0\n      Kernels: python3, ir\n\n(-) Checking Jupyter engine render....0.00s - Debugger warning: It seems that frozen modules are being used, which may\n0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n0.00s - to python to disable frozen modules.\n0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n0.00s - Debugger warning: It seems that frozen modules are being used, which may\n0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n0.00s - to python to disable frozen modules.\n0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n[&gt;] Checking Jupyter engine render....OK\n最后，按ctrl+,打开设置，在设置的右上角，点击“打开设置(python)”按钮，在 setting.python 文件中添加以下配置\n{\n    \"[quarto]\": {\n    \"editor.quickSuggestions\": {\n        \"comments\": \"on\",\n        \"other\": \"on\",\n        \"strings\": \"on\"\n        }\n    }\n}\n这个配置开启了代码自动补全和建议",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第一节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/第一节.html#参考",
+    "href": "posts/Quarto使用心得/第一节.html#参考",
+    "title": "Quarto使用心得 第一节",
+    "section": "3 参考",
+    "text": "3 参考\nQuarto 官网",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第一节"
+    ]
+  },
+  {
+    "objectID": "posts/杂项/7-zip的文件名编码问题.html",
+    "href": "posts/杂项/7-zip的文件名编码问题.html",
+    "title": "7-zip的文件名编码问题",
+    "section": "",
+    "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "杂项",
+      "7-zip的文件名编码问题"
+    ]
+  },
+  {
+    "objectID": "posts/杂项/7-zip的文件名编码问题.html#问题概述",
+    "href": "posts/杂项/7-zip的文件名编码问题.html#问题概述",
+    "title": "7-zip的文件名编码问题",
+    "section": "",
+    "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "杂项",
+      "7-zip的文件名编码问题"
+    ]
+  },
+  {
+    "objectID": "posts/杂项/7-zip的文件名编码问题.html#问题解决",
+    "href": "posts/杂项/7-zip的文件名编码问题.html#问题解决",
+    "title": "7-zip的文件名编码问题",
+    "section": "2 问题解决",
+    "text": "2 问题解决\n使用 CLI 界面，将 7-zip 可执行文件加入环境变量或在 7-zip可执行文件的所在目录打开 cmd 或者 powershell\n\n2.1 查看压缩包内容\n执行下列命令\nchcp [nnn]\n其中 nnn 是微软的代码页，下面列出几个常用的\n\n\n\n编码\n代码页\n\n\n\n\nGBK\n936\n\n\nUTF-8\n65001\n\n\nUTF-16\n1200\n\n\nShift-JIS\n932\n\n\n\n然后执行下面命令\n7z l src\n\n\n2.2 进行解压\n执行以下命令\n7z x src [-o dest] -mcp=num\nsrc为源文件路径，dest为输出文件路径，num为文件编码对应的代码页，如果不指定输出路径默认解压到当前目录。\n注意，在 ps 中相对路径须加./",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "杂项",
+      "7-zip的文件名编码问题"
+    ]
+  },
+  {
+    "objectID": "posts/杂项/7-zip的文件名编码问题.html#碎碎念",
+    "href": "posts/杂项/7-zip的文件名编码问题.html#碎碎念",
+    "title": "7-zip的文件名编码问题",
+    "section": "3 碎碎念",
+    "text": "3 碎碎念\nmcp选项竟然没有出现在文档里面，无法理解。\n但是文档中提供了scc和scs选项，看起来也能起到相同的效果。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "杂项",
+      "7-zip的文件名编码问题"
+    ]
+  },
+  {
+    "objectID": "posts/杂项/7-zip的文件名编码问题.html#参考",
+    "href": "posts/杂项/7-zip的文件名编码问题.html#参考",
+    "title": "7-zip的文件名编码问题",
+    "section": "4 参考",
+    "text": "4 参考\n解决方案来自 CSDN\n7-zip CLI 帮助文档",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "杂项",
+      "7-zip的文件名编码问题"
     ]
   },
   {
@@ -710,6 +715,110 @@
       "Posts",
       "高数",
       "三角函数"
+    ]
+  },
+  {
+    "objectID": "posts/高数/微分方程.html",
+    "href": "posts/高数/微分方程.html",
+    "title": "微分方程",
+    "section": "",
+    "text": "可以被表示为\\(g(x)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "posts/高数/微分方程.html#可分离变量的方程",
+    "href": "posts/高数/微分方程.html#可分离变量的方程",
+    "title": "微分方程",
+    "section": "",
+    "text": "可以被表示为\\(g(x)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "posts/高数/微分方程.html#齐次微分方程",
+    "href": "posts/高数/微分方程.html#齐次微分方程",
+    "title": "微分方程",
+    "section": "2 齐次微分方程",
+    "text": "2 齐次微分方程\n可以被表示为\\(\\dfrac{\\mathrm dy}{\\mathrm dx}=\\varphi(\\dfrac yx)\\)的方程\n求解方法：令\\(u=\\dfrac yx\\)，有\\(y'=u+xu'\\)，则原方程可以化为\n\\[\nxu'=\\varphi(u)-u\n\\]\n进一步可以化为\n\\[\n\\dfrac{\\mathrm dx}{x}=\\dfrac{\\mathrm du}{\\varphi(u)-u}\n\\]\n于是归结为可分离变量的方程。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "posts/高数/微分方程.html#一阶线性微分方程",
+    "href": "posts/高数/微分方程.html#一阶线性微分方程",
+    "title": "微分方程",
+    "section": "3 一阶线性微分方程",
+    "text": "3 一阶线性微分方程\n形如\\(y'+p(x)y=q(x)\\)的方程\n求解方法：公式法\n\\[\ny=\n\\mathrm e^{-\\int p(x)\\mathrm dx}\n\\left[\n\\int q(x)\\mathrm e^{\\int p(x)\\mathrm dx}\\mathrm dx+C\n\\right]\n\\]\n括号内都是正的，括号外都是负的，e的指数上都是\\(p\\)，常数项才有\\(q\\).",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "posts/高数/微分方程.html#线性微分方程解的结构",
+    "href": "posts/高数/微分方程.html#线性微分方程解的结构",
+    "title": "微分方程",
+    "section": "4 线性微分方程解的结构",
+    "text": "4 线性微分方程解的结构\n\n\n\n\n\n\n注释\n\n\n\n可以和线性方程组解的结构类比证明和记忆。\n\n\n\\(n\\)阶线性微分方程的一般形式为\n\\[\ny^{(n)}+\\sum_{i=1}^{n} p_{i}(x)y^{(n-i)}=q(x)\n\\]\n规定\\(y^{(0)}=y\\). 当\\(f(x)=0\\)时称为\\(n\\)阶齐次线性微分方程。\n在此特别研究二阶线性微分方程。\n二阶齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=0\n\\]\n二阶非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f(x)\n\\]\n\n4.1 解齐次方程\n如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关1的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)\n\\]\n就是齐次方程的通解。\n\n\n4.2 解非齐次方程\n如果如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关的特解，\\(y^*(x)\\)是非齐次方程的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)+y^*(x)\n\\]\n是非齐次方程的通解。\n\n\n4.3 拆分非齐次方程\n如果\\(y_1^*(x),y_2^*(x)\\)分别是非齐次线性方程\n\\[\n\\begin{aligned}\ny''+p(x)y'+q(x)y=f_1(x)\\\\\ny''+p(x)y'+q(x)y=f_2(x)\n\\end{aligned}\n\\]\n的通解，那么\\(y_1^*(x)+y_2^*(x)\\)是非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f_1(x)+f_2(x)\n\\]\n的一个特解。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "posts/高数/微分方程.html#常系数线性微分方程",
+    "href": "posts/高数/微分方程.html#常系数线性微分方程",
+    "title": "微分方程",
+    "section": "5 常系数线性微分方程",
+    "text": "5 常系数线性微分方程\n\n5.1 常系数齐次线性方程\n采用特征根法求解，以二阶为例。\n二阶常系数齐次微分方程一般形式为\n\\[\ny''+py'+q=0\n\\]\n特征方程为\n\\[\nr^2+pr+q=0\n\\]\n设\\(r_1,r_2\\)为该方程的两个根。\n\n\\(r_1\\not= r_2\\)，且都是实数，通解为\n\\[\ny=C_1\\mathrm e^{r_1x}+C_2\\mathrm e^{r_2x}\n\\]\n\\(r_1=r_2\\)，通解为\n\\[\ny=(C_1+C_2x)\\mathrm e^{r_1x}\n\\]\n\\(r_1=a+\\mathrm ib,\\ r_2=a-\\mathrm ib\\)为共轭复根，通解为\n\\[\ny=\\mathrm e^{ax}(C_1\\cos bx+C_2\\sin bx)\n\\]\n\n其实还是\n\\[\ny=\\sum_{i=1}^n \\mathrm C_ie^{r_i}\n\\]\n只是有复数时要用欧拉公式展开。\n\n\n5.2 二阶常系数非齐次线性方程\n二阶常系数非齐次微分方程一般形式为\n\\[\ny''+py'+q=f(x)\n\\]\n\n若\\(f(x)=P_m(x)e^{\\lambda x}\\)，其中\\(P_m(x)\\)为\\(x\\)的\\(m\\)次多项式，\\(\\lambda\\)为特征方程的一个根，那么特解可以表示为\n\\[\ny^*(x)=x^kQ_m(x)\\mathrm e^{\\lambda x}\n\\]\n其中\\(k\\)是\\(\\lambda\\)的重数，\\(Q_m(x)\\)是与\\(P_m(x)\\)同次的多项式。\n若\\[f(x)=\\mathrm e^{ax}[P_l^{(1)}(x)\\cos bx+P_n^{(2)}(x)\\sin bx]\\]其中\\(P_l^{(1)},P_n^{(2)}\\)分别是\\(x\\)的\\(l,n\\)次多项式，则特解可以表示为\n\\[\ny^*(x)=x^k\\mathrm e^{ax}[R_m^{(1)}(x)\\cos bx+R_m^{(2)}(x)\\sin bx]\n\\]\n其中\\(R_m^{(1)}(x),R_m^{(2)}(x)\\)是两个\\(m\\)次多项式，\\(m=\\max\\{n,l\\}\\).\n\\[\nk=\\left\\{\\begin{aligned}\n0&,a+\\mathrm ib\\text{不是特征方程的根}\\\\\n1&,a+\\mathrm ib\\text{是特征方程的单根}\n\\end{aligned}\\right.\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "posts/高数/微分方程.html#差分方程",
+    "href": "posts/高数/微分方程.html#差分方程",
+    "title": "微分方程",
+    "section": "6 差分方程",
+    "text": "6 差分方程",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "posts/高数/微分方程.html#footnotes",
+    "href": "posts/高数/微分方程.html#footnotes",
+    "title": "微分方程",
+    "section": "脚注",
+    "text": "脚注\n\n\n线性无关即不成比例↩︎",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "微分方程"
     ]
   }
 ]
