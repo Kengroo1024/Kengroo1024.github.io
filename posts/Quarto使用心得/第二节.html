@@ -8,7 +8,7 @@
 
 <meta name="author" content="Kengroo1024">
 
-<title>Kengroo - 7-zip的文件名编码问题</title>
+<title>Kengroo - Quarto使用心得 第二节</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,8 +106,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed fullcontent">
@@ -81,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Kengroo</span>
     </a>
   </div>
@@ -92,11 +157,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">首页</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">关于</span></a>
   </li>  
 </ul>
@@ -118,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posts/7-zip的文件名编码问题.html">Posts</a></li><li class="breadcrumb-item"><a href="../posts/7-zip的文件名编码问题.html">7-zip的文件名编码问题</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/7-zip的文件名编码问题.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/Quarto使用心得/第二节.html">Quarto使用心得</a></li><li class="breadcrumb-item"><a href="../../posts/Quarto使用心得/第二节.html">Quarto使用心得 第二节</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -141,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/7-zip的文件名编码问题.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../posts/7-zip的文件名编码问题.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">7-zip的文件名编码问题</span></a>
   </div>
 </li>
@@ -156,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/概统/知识点.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/概统/知识点.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">概率与统计知识点</span></a>
   </div>
 </li>
@@ -173,25 +238,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/高数/导数和微分.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/高数/导数和微分.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">导数和微分</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/高数/积分.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/高数/积分.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">积分</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/高数/三角函数.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/高数/三角函数.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">三角函数</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/高数/微分方程.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/高数/微分方程.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">微分方程</span></a>
   </div>
 </li>
@@ -208,25 +273,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/线性代数/二次型.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/线性代数/二次型.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">二次型</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/线性代数/矩阵.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/线性代数/矩阵.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">矩阵</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/线性代数/特征向量.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/线性代数/特征向量.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">特征向量</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/线性代数/行列式.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/线性代数/行列式.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">行列式计算</span></a>
   </div>
 </li>
@@ -234,22 +299,22 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Quarto使用心得</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="切換部分">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/Quarto使用心得/第二节.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/Quarto使用心得/第二节.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Quarto使用心得 第二节</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../posts/Quarto使用心得/Quarto不完全指北.html" class="sidebar-item-text sidebar-link">
+  <a href="../../posts/Quarto使用心得/Quarto不完全指北.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto使用心得 第一节</span></a>
   </div>
 </li>
@@ -266,12 +331,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../posts/7-zip的文件名编码问题.html">Posts</a></li><li class="breadcrumb-item"><a href="../posts/7-zip的文件名编码问题.html">7-zip的文件名编码问题</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/7-zip的文件名编码问题.html">Posts</a></li><li class="breadcrumb-item"><a href="../../posts/Quarto使用心得/第二节.html">Quarto使用心得</a></li><li class="breadcrumb-item"><a href="../../posts/Quarto使用心得/第二节.html">Quarto使用心得 第二节</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">7-zip的文件名编码问题</h1>
+<h1 class="title">Quarto使用心得 第二节</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">7-zip</div>
-    <div class="quarto-category">Windows</div>
+    <div class="quarto-category">Quarto</div>
   </div>
   </div>
 
@@ -289,7 +353,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024年2月9日</p>
+      <p class="date">2023年11月29日</p>
     </div>
   </div>
   
@@ -301,64 +365,277 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="问题概述" class="level2">
-<h2 class="anchored" data-anchor-id="问题概述">问题概述</h2>
-<p>7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。</p>
+<p>在<a href="https://www.cnblogs.com/Kengroo/p/17853491.html">上一篇</a>博客中，我们已经在 VScode 中配置好了 Quarto 的工作环境，接下来我们将 Quarto 渲染一篇文档为 HTML 格式。</p>
+<p>Quarto 采取格式与内容相分离的方式来编写文档，因此，我们写作内容的文件是一个纯文本文件，渲染（render）与格式调整是之后完成的事情。</p>
+<p>要使用 Quarto 渲染一个文档，首先在工作空间中新建一个名为<code>test.qmd</code>的空文件，这个文件就是我们将在其中写作的文档。</p>
+<section id="yaml-配置" class="level2">
+<h2 class="anchored" data-anchor-id="yaml-配置">YAML 配置</h2>
+<p><a href="https://yaml.org/">YAML</a> 是“YAML ain’t Markup Language”的循环缩写。YAML 是一种在互联网上广泛使用的用于数据存储和交换的标记语言。</p>
+<!-- YAML 对于格式化的规则的要求是非常严格的，下面我将简短地叙述在 Quarto 中会用到的规则，关于 YAML 的完整教程，可以看[菜鸟教程上的 YAML 教程](https://www.runoob.com/w3cnote/yaml-intro.html)。
+
+1. YAML 是大小写敏感的。`kengroo`和`Kengroo`被视为两个变量。
+2. 用缩进表示层级关系，推荐用两个空格作为缩进符，在 Quarto 中，使用非两个空格的缩进会报错。
+3. 使用键值对`key: value`表示数据。**注意**：在冒号“:”与“value”间有一空格分隔，否则会报错。
+4. 有布尔值`true`和`false`，注意大小写。
+5. 数组的语法类似 Markdown 的无序列表，使用连字符+空格的方式，注意，需要保持缩进层级相同。
+
+    ```YAML
+    - item1
+    - item2
+    - item3
+    ```
+
+6. 单行字符串由双引号`""`包裹。
+7. 对于多行文本，使用`>`,`|`,`|+`,`|-`四种方式引导，这四种方法各有不同的意义
+
+    - “\>” 忽略多行字符串中每行的换行
+    - “|” 不忽略换行
+    - “|+” 为字符串最后的一行添加换行
+    - “|-” 删除字符串最后一行的换行符
+
+    例如
+
+    ```YAML
+    string: |
+      here is a
+      multi-line
+      string
+    ```
+
+    注意冒号和管道符之间的空格，以及多行文本的相同缩进。
+8. 兼容流式风格，即 JSON 的写法 -->
+<p>Quarto 的配置选项以 YAML 的格式写在文件的最开头，上下由三个连字符“-”包裹，称为文档的“Metadata”，你如果熟悉 Pandoc 标准的 Markdown，对这种配置格式应该不感到陌生。</p>
+<p>关于 YAML 的说明将在下一篇博客中提及，现在我给出一个可用的样例用于编写我们的文件。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> zh</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>这是一个正确的 Metadata 写法。其意义是令模板使用中文，并用默认配置将文档输出为 HTML 格式。现在你应该将这段代码复制进你的文档中。以便后续的预览和渲染。</p>
 </section>
-<section id="问题解决" class="level2">
-<h2 class="anchored" data-anchor-id="问题解决">问题解决</h2>
-<p>使用 CLI 界面，将 7-zip 可执行文件加入环境变量或在 7-zip可执行文件的所在目录打开 cmd 或者 powershell</p>
-<section id="查看压缩包内容" class="level3">
-<h3 class="anchored" data-anchor-id="查看压缩包内容">查看压缩包内容</h3>
-<p>执行下列命令</p>
-<pre><code>chcp [nnn]</code></pre>
-<p>其中 nnn 是微软的代码页，下面列出几个常用的</p>
+<section id="预览和渲染文档" class="level2">
+<h2 class="anchored" data-anchor-id="预览和渲染文档">预览和渲染文档</h2>
+<p>下载了 Quarto 扩展以后，在 VScode 中打开 qmd 文件，页面的右上角会有一个 Preview 按钮，点击可以进行预览，在一般的屏幕上上会打开预览的 HTML 文件。</p>
+<p>自带的预览脚本对于 HTML 输出的支持是很好的，但是对于其他的文件格式就不那么完美了。按 ctrl+反引号打开终端，或使用 cmd，执行下面的命令</p>
+<pre class="batch"><code>quarto preview src</code></pre>
+<p>其中，<code>src</code>是目标文件的地址。</p>
+<p>就会开启一个预览进程，只要终端不被关闭或进程不被停止，Quarto 就会监控文件的更改并实时预览文件，还可以在终端中查看渲染失败的错误信息。</p>
+<p>要渲染文件，只需要把上面命令的 preview 换成 render 即可，即</p>
+<pre class="batch"><code>quarto render src</code></pre>
+<p>现在，预览你的文档并尝试下面学习下面的写作语法。</p>
+</section>
+<section id="基本的-markdown-和-gfm-语法" class="level2">
+<h2 class="anchored" data-anchor-id="基本的-markdown-和-gfm-语法">基本的 Markdown 和 GFM 语法</h2>
+<p>Markdown 是一种轻量级的标记语言。使用 Markdown，你可以完全将格式抛诸脑后，完全将注意力集中在内容的写作上，这篇博客的写作就是使用 Markdown 完成的。</p>
+<p>你可以在 <a href="https://markdown.com.cn">Markdown 官方教程</a>中学习到 Markdown 的<a href="https://markdown.com.cn/basic-syntax/">基本语法</a>和<a href="https://markdown.com.cn/extended-syntax/">扩展语法</a>。</p>
+<p>Quarto 也完全支持 <a href="https://github.github.com/gfm/"><abbr title="Github Flavored arkdown">GFM</abbr></a> 的所有语法，你可以查看 GFM 的一个<a href="https://gfm.docschina.org/zh-hans/">中文文档</a>来学习 GFM 的语法。GFM 是 Markdown 的一个方言，为 Markdown 添加了很多有用的特性，在此不多赘述。</p>
+</section>
+<section id="quarto-pandoc-专用的的-markdown-语法" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-pandoc-专用的的-markdown-语法">Quarto-Pandoc 专用的的 Markdown 语法</h2>
+<p>Quarto 还有拥有许多 GFM 不包括和不支持的语法，诸如网格式表格、图表和公式编号、以及引用等等，可以在<a href="https://quarto.org/docs/authoring/markdown-basics.html">官方教程</a>查看完整的教程，这里列出几个常用的。</p>
+<section id="分页符和嵌入视频" class="level3">
+<h3 class="anchored" data-anchor-id="分页符和嵌入视频">分页符和嵌入视频</h3>
+<p>分页符语法<code></code>，注意尖括号与文字之间都有一个空格。分页符在不同的环境下（例如 word 和 latex 中）都会解析成各自的分页符</p>
+<p>嵌入视频语法<code></code>，注意其中的空格，<code>src</code>为视频地址，只接受 mp4 后缀的视频。例如</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>然后效果是</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9Q_608h25ZE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>经我实测，只对油管有较好的支持，对 bilibili 并不支持。但是 Markdown 是支持内嵌 HTML 的，也可以直接把 bilibili 复制过来的 HTML 代码嵌入其中。</p>
+</section>
+<section id="容器div-和-span" class="level3">
+<h3 class="anchored" data-anchor-id="容器div-和-span">容器（div 和 span）</h3>
+<p>Quarto 中支持用三个或更多的英文冒号包裹一段内容，这定义了一个容器。</p>
+<p>例如这样</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:::{#text .smaller}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Some text</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>这与以下 HTML 代码相同</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"smaller"</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  Some text</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>容器之间可以嵌套，只要使用的冒号个数不一样多即可。</p>
+<p>大括号也可以单独使用，为一些元素添加属性，例如</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>![alt](imgsrc){#text}</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>这代表一张 ID 为 <code>text</code> 的图片。</p>
+<p>Quarto 中有一些预定义的样式，例如上面的 smaller 就可以将元素变得更小。</p>
+</section>
+<section id="标注块" class="level3">
+<h3 class="anchored" data-anchor-id="标注块">标注块</h3>
+<p>将容器类名定义为</p>
+<ul>
+<li><code>callout-note</code></li>
+<li><code>callout-tip</code></li>
+<li><code>callout-warning</code></li>
+<li><code>callout-important</code></li>
+<li><code>callout-caution</code></li>
+</ul>
+<p>中的一种，就可以得到标注块，例如这样</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>## This is a note for you</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Note that there are five types of callouts, including: </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>`note`, `tip`, `warning`, `caution`, and `important`.</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>就会得到</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This is a note for you
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that there are five types of callouts, including: <code>note</code>, <code>tip</code>, <code>warning</code>, <code>caution</code>, and <code>important</code>.</p>
+</div>
+</div>
+<p>注意，我们使用了一个二级标题改变了标注块的标题。</p>
+</section>
+<section id="标签页仅支持-html" class="level3">
+<h3 class="anchored" data-anchor-id="标签页仅支持-html">标签页（仅支持 HTML）</h3>
+<p>将类名写为<code>panel-tabset</code>就可以得到标签页。</p>
+<p>标签页可以将内容分页展示，其中用二级标题来进行分页。</p>
+<p>例如</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>:::{.panel-tabset}</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>## Python</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>print("hello world")</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>## C</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>printf("hello world\n");</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>## Cpp</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>cout <span class="er">&lt;&lt;</span> "hello world" <span class="er">&lt;&lt;</span> endl;</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>渲染效果</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">C</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Cpp</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>print(“hello world”)</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>printf(“hello world”);</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>cout &lt;&lt; “hello world” &lt;&lt; endl;</p>
+</div>
+</div>
+</div>
+</section>
+<section id="交叉引用" class="level3">
+<h3 class="anchored" data-anchor-id="交叉引用">交叉引用</h3>
+<p>可以使用容器和大括号对几乎所有的元素进行编号以便交叉引用，例如定理、公式图表等，只要定义它们的 ID 即可。</p>
+<p>例如</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>:::{#thm-Pythagorean}</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>## 勾股定理</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>在直角三角形ABC中，C为直角，角的对边分别为a,b,c，则它们满足下列关系</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>a^2+b^2=c^2</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>这将渲染出以下效果</p>
+<div id="thm-Pythagorean" class="theorem">
+<p><span class="theorem-title"><strong>定理 1 (勾股定理)</strong></span> 在直角三角形ABC中，C为直角，角的对边分别为a,b,c，则它们满足下列关系 <span class="math display">\[
+a^2+b^2=c^2
+\]</span></p>
+</div>
+<p>注意，ID 前必须带有对应的类名如 thm, eq, pf, tbl 等，并且标题被渲染成了定理的名字。</p>
+<p>要进行引用，只需要写下<code>@thm-Pythagorean</code>，这将得到一个完整的引用 <a href="#thm-Pythagorean" class="quarto-xref">定理&nbsp;1</a>。</p>
+<p>要进行自定义引用前缀，需要写<code>[公式 @thm-Pythagorean]</code>，这将得到 <a href="#thm-Pythagorean" class="quarto-xref">公式&nbsp;1</a> 而不是 <a href="#thm-Pythagorean" class="quarto-xref">定理&nbsp;1</a> 。</p>
+<p>要进行无前缀引用，需要写<code>[-@thm-Pythagorean]</code>，注意 @ 前的连字符 -，这将得到单独的 <a href="#thm-Pythagorean" class="quarto-xref">1</a>，不带任何前缀。</p>
+<p>对于全部的类名，请见下面的表格。</p>
 <table class="table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">编码</th>
-<th style="text-align: right;">代码页</th>
+<th>环境</th>
+<th style="text-align: center;">前缀</th>
+<th>使用div</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">GBK</td>
-<td style="text-align: right;">936</td>
+<td>表</td>
+<td style="text-align: center;">tbl</td>
+<td>否</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">UTF-8</td>
-<td style="text-align: right;">65001</td>
+<td>图</td>
+<td style="text-align: center;">fig</td>
+<td>否</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">UTF-16</td>
-<td style="text-align: right;">1200</td>
+<td>方程式</td>
+<td style="text-align: center;">eq</td>
+<td>否</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Shift-JIS</td>
-<td style="text-align: right;">932</td>
+<td>章节</td>
+<td style="text-align: center;">sec</td>
+<td>否</td>
+</tr>
+<tr class="odd">
+<td>列表</td>
+<td style="text-align: center;">lst</td>
+<td>否</td>
+</tr>
+<tr class="even">
+<td>定理</td>
+<td style="text-align: center;">thm</td>
+<td>是</td>
+</tr>
+<tr class="odd">
+<td>引理</td>
+<td style="text-align: center;">lem</td>
+<td>是</td>
+</tr>
+<tr class="even">
+<td>推论</td>
+<td style="text-align: center;">cor</td>
+<td>是</td>
+</tr>
+<tr class="odd">
+<td>命题</td>
+<td style="text-align: center;">prp</td>
+<td>是</td>
+</tr>
+<tr class="even">
+<td>猜想</td>
+<td style="text-align: center;">cnj</td>
+<td>是</td>
+</tr>
+<tr class="odd">
+<td>定义</td>
+<td style="text-align: center;">def</td>
+<td>是</td>
+</tr>
+<tr class="even">
+<td>例</td>
+<td style="text-align: center;">exm</td>
+<td>是</td>
+</tr>
+<tr class="odd">
+<td>练习</td>
+<td style="text-align: center;">exr</td>
+<td>是</td>
 </tr>
 </tbody>
 </table>
-<p>然后执行下面命令</p>
-<pre><code>7z l src</code></pre>
+<p>对于证明、解等环境，它们并不需要交叉引用，因此并没有相应的前缀，要使用相应的环境只需要将类名定义为<code>solution</code>、<code>proof</code>即可，例如</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>:::{.solution}</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>Some text</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="进行解压" class="level3">
-<h3 class="anchored" data-anchor-id="进行解压">进行解压</h3>
-<p>执行以下命令</p>
-<pre><code>7z x src [-o dest] -mcp=num</code></pre>
-<p><code>src</code>为源文件路径，<code>dest</code>为输出文件路径，<code>num</code>为文件编码对应的代码页，如果不指定输出路径默认解压到当前目录。</p>
-<p>注意，在 ps 中相对路径须加<code>./</code></p>
-</section>
-</section>
-<section id="碎碎念" class="level2">
-<h2 class="anchored" data-anchor-id="碎碎念">碎碎念</h2>
-<p><code>mcp</code>选项竟然没有出现在文档里面，无法理解。</p>
-<p>但是文档中提供了<code>scc</code>和<code>scs</code>选项，看起来也能起到相同的效果。</p>
 </section>
 <section id="参考" class="level2">
 <h2 class="anchored" data-anchor-id="参考">参考</h2>
-<p>解决方案来自 <a href="https://blog.csdn.net/qq_43780850/article/details/129134210#:~:text=%E5%8F%AA%E9%9C%80%E8%A6%81%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A7%A3%E5%8E%8B%EF%BC%8C%E6%B7%BB%E5%8A%A0-mcp%3D936%E5%8F%82%E6%95%B0%E5%8D%B3%E5%8F%AF%EF%BC%8C936%E4%BB%A3%E8%A1%A8GBK%EF%BC%8C-mcp%20%E5%8D%B3method,code%20page%EF%BC%8Cx%E4%BB%A3%E8%A1%A8eXtract_7zip%20%E7%BC%96%E7%A0%81">CSDN</a></p>
-<p><a href="https://documentation.help/7-Zip/index4.htm">7-zip CLI 帮助文档</a></p>
+<p><a href="https://quarto.org">Quarto 官网</a></p>
 
 
 </section>
@@ -896,6 +1173,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 

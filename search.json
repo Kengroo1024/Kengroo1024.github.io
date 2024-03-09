@@ -1,12 +1,418 @@
 [
   {
+    "objectID": "posts/高数/积分.html",
+    "href": "posts/高数/积分.html",
+    "title": "积分",
+    "section": "",
+    "text": "在区间\\([a,b]\\)上做分划 \\[\na=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b\n\\] 令\\(\\Delta x_i=x_i-x_{i-1}\\)，任取\\(\\xi_i\\in[x_{i-1},x_i]\\)，只要\\(\\lambda=\\mathrm{sup}\\{\\Delta x_i\\}\\to 0\\)时，和式 \\[\n\\sum_{i=1}^{n}f(\\xi_i)\\Delta x_i\n\\]\n的极限存在，那么称和式为\\(f(x)\\)在区间\\([a,b]\\)上的定积分，记做 \\[\n\\int_a^b f(x)\\mathrm{d}x.\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/积分.html#定积分定义",
+    "href": "posts/高数/积分.html#定积分定义",
+    "title": "积分",
+    "section": "",
+    "text": "在区间\\([a,b]\\)上做分划 \\[\na=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b\n\\] 令\\(\\Delta x_i=x_i-x_{i-1}\\)，任取\\(\\xi_i\\in[x_{i-1},x_i]\\)，只要\\(\\lambda=\\mathrm{sup}\\{\\Delta x_i\\}\\to 0\\)时，和式 \\[\n\\sum_{i=1}^{n}f(\\xi_i)\\Delta x_i\n\\]\n的极限存在，那么称和式为\\(f(x)\\)在区间\\([a,b]\\)上的定积分，记做 \\[\n\\int_a^b f(x)\\mathrm{d}x.\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/积分.html#构造定积分",
+    "href": "posts/高数/积分.html#构造定积分",
+    "title": "积分",
+    "section": "构造定积分",
+    "text": "构造定积分\n\\[\n\\int_0^1f(x)\\mathrm{d}x=\\lim_{n\\to\\infty}\\sum_{i=0}^n\\dfrac1nf(\\dfrac in)\n\\]\n极限，求和，\\(\\dfrac in\\)就是\\(\\xi_i\\)，\\(\\dfrac 1n\\)就是\\(\\Delta x_i\\)，就是把区间\\([0,1]\\)分为了\\(n\\)份，符合定积分定义因此这个极限就是定积分。\n\n\n\n\n\n\n注释\n\n\n\n看到极限后求和就要想到积分。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/积分.html#不太好记的不定积分",
+    "href": "posts/高数/积分.html#不太好记的不定积分",
+    "title": "积分",
+    "section": "不太好记的不定积分",
+    "text": "不太好记的不定积分\n\n\n\n\n\n\n注意\n\n\n\n不定积分一定要记得带\\(C\\)\n\n\n\n\n\n\n\n\n注意\n\n\n\n看到这类积分是定积分时一定要先考察是否是奇函数\n\n\n\n\\(\\int\\dfrac{1}{a^2-x^2}\\mathrm dx=\\dfrac{1}{2a}\\ln\\left|\\dfrac{a+x}{a-x}\\right|+C\\)\n\\(\\int\\dfrac{1}{\\sqrt{x^2\\pm a^2}}\\mathrm dx=\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|+C\\)\n\\(\\int\\dfrac{1}{1+\\cos x}\\mathrm dx=\\tan\\dfrac t2+C\\)",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/积分.html#三角函数定积分的一个结论",
+    "href": "posts/高数/积分.html#三角函数定积分的一个结论",
+    "title": "积分",
+    "section": "三角函数定积分的一个结论",
+    "text": "三角函数定积分的一个结论\n\\[\n\\int_0^{\\frac \\pi2}\\sin^nx\\mathrm dx=\n\\int_0^{\\frac \\pi2}\\cos^nx\\mathrm dx=\n\\left\\{\n\\begin{aligned}\n\\dfrac{(n-1)!!}{n!!}\\dfrac\\pi2,\\text{当n为偶数}\\\\\n\\dfrac{(n-1)!!}{n!!},\\text{当n为奇数}\n\\end{aligned}\n\\right.\n\\]\n\n论证. 见此",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/积分.html#旋转体体积",
+    "href": "posts/高数/积分.html#旋转体体积",
+    "title": "积分",
+    "section": "旋转体体积",
+    "text": "旋转体体积\n\\[\nV=\\pi\\int_a^bf^2(x)\\mathrm dx\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/导数和微分.html",
+    "href": "posts/高数/导数和微分.html",
+    "title": "导数和微分",
+    "section": "",
+    "text": "\\[\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}\n\\] \\[\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial y}\\\\\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/导数和微分.html#二元函数求偏导链式法则",
+    "href": "posts/高数/导数和微分.html#二元函数求偏导链式法则",
+    "title": "导数和微分",
+    "section": "",
+    "text": "\\[\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}\n\\] \\[\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial y}\\\\\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/导数和微分.html#二元函数全微分",
+    "href": "posts/高数/导数和微分.html#二元函数全微分",
+    "title": "导数和微分",
+    "section": "二元函数全微分",
+    "text": "二元函数全微分\n\\[\n\\mathrm{d}z=\\dfrac{\\partial z}{\\partial x}\\mathrm{d}x+\\dfrac{\\partial z}{\\partial y}\\mathrm{d}y\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/导数和微分.html#taylor-formula",
+    "href": "posts/高数/导数和微分.html#taylor-formula",
+    "title": "导数和微分",
+    "section": "Taylor Formula",
+    "text": "Taylor Formula\n\\[\nf(x)=f(x-x_0)+f'(x_0)(x-x_0)+o(x)\n\\]\n\\[\nf(x)=f(x-x_0)+\\sum_{i=1}^{\\infty}f^{(i)}(x_0)\\dfrac{(x-x_0)^n}{i!}\n\\]\n\n\n\n常用泰勒展开式",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/导数和微分.html#导数定义",
+    "href": "posts/高数/导数和微分.html#导数定义",
+    "title": "导数和微分",
+    "section": "导数定义",
+    "text": "导数定义\n给定函数\\(f(x)\\)，若极限\n\\[\n\\lim_{\\Delta x\\to0}\\dfrac{f(x_0\\pm\\Delta x)-f(x_0)}{\\Delta x}\n\\]\n存在，且相等则称其为\\(f(x)\\)在\\(x_0\\)处的导数，并称\\(f(x)\\)在\\(x=x_0\\)处可导。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/导数和微分.html#高阶无穷小量",
+    "href": "posts/高数/导数和微分.html#高阶无穷小量",
+    "title": "导数和微分",
+    "section": "高阶无穷小量",
+    "text": "高阶无穷小量\n若\\(f,g\\)在\\(x_0\\)处的极限都是0，并且有\n\\[\n\\lim_{x\\to x_0}\\dfrac{f(x)}{g(x)}=0\n\\]\n则称\\(f\\)为\\(g\\)在\\(x=x_0\\)处的高阶无穷小量，记做\n\\[\nf(x)=o(g(x))\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/导数和微分.html#一阶微分的形式不变性和高阶微分没有此性质",
+    "href": "posts/高数/导数和微分.html#一阶微分的形式不变性和高阶微分没有此性质",
+    "title": "导数和微分",
+    "section": "一阶微分的形式不变性和高阶微分没有此性质",
+    "text": "一阶微分的形式不变性和高阶微分没有此性质\n已知\\(y=f(u),u=\\varphi(x)\\)，那么进行变量替换时有\n\\[\n\\mathrm dy=f'(u)\\mathrm du=f'(u)\\varphi'(x)\\mathrm dx\n\\]\n这称为一阶微分的形式不变性，而二阶微分不具有这个性质，而是\n\\[\n\\mathrm d^2y=f''(u)\\mathrm du^2+f'(x)\\mathrm d^2u\n\\]\n上式是通过将\\(u\\)看作以\\(x\\)为自变量的函数，而不是自变量得出的，进行第二次微分时，多出了一项，而且求微分的次数越高，多出的项越多。\n如果\\(u\\)是自变量，那么依旧有\n\\[\n\\mathrm d^2y=f''(u)\\mathrm du^2\n\\]\n\n\n\n\n\n\n求微分时变量替换的问题\n\n\n\n所以在求微分时，只能一次一次求，不能一步到位。\n例如求\\(\\dfrac{\\mathrm d^2y}{dx^2}\\)不能直接求\\(\\dfrac{\\mathrm d^2y}{du^2}\\cdot\\left(\\dfrac{\\mathrm du}{dx}\\right)^2\\)\n因为它实际上是\n\\[\n\\dfrac{\\mathrm d^2y}{\\mathrm dx^2}=f''(u)\\left(\\dfrac{\\mathrm du}{\\mathrm dx}\\right)^2+f'(x)\\dfrac{\\mathrm d^2u}{\\mathrm dx^2}\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "posts/高数/导数和微分.html#渐近线",
+    "href": "posts/高数/导数和微分.html#渐近线",
+    "title": "导数和微分",
+    "section": "渐近线",
+    "text": "渐近线\n如果关于函数\\(f(x)\\)的极限\n\\[\n\\lim_{x\\to+\\infty}\\dfrac{f(x)}{x}\n\\]\n存在，那么这个函数有一个向\\(x\\)轴正方向的渐近线，其斜率\\(k\\)等于上述极限，截距\n\\[\nb=\\lim_{x\\to+\\infty}(f(x)-kx)\n\\]\n\n\n\n\n\n\n注释\n\n\n\n如果\\(f(x)\\)同时在\\((c,+\\infty)\\)上可导，那么由L’Hopital’s Rule可以立即得到\n\\[\nk=\\lim_{x\\to+\\infty}f'(x)\n\\]\n\n\n上述讨论在\\(x\\to-\\infty\\)时也成立，函数在\\(x\\)轴负方向也有一条渐近线，如果正负两根渐近线重合，视为一条渐近线。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/行列式.html",
+    "href": "posts/线性代数/行列式.html",
+    "title": "行列式计算",
+    "section": "",
+    "text": "参见这里",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "行列式计算"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/行列式.html#行列式计算",
+    "href": "posts/线性代数/行列式.html#行列式计算",
+    "title": "行列式计算",
+    "section": "",
+    "text": "参见这里",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "行列式计算"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/特征向量.html",
+    "href": "posts/线性代数/特征向量.html",
+    "title": "特征向量",
+    "section": "",
+    "text": "可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "特征向量"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/特征向量.html#逆矩阵的特征值和特征向量的对应关系",
+    "href": "posts/线性代数/特征向量.html#逆矩阵的特征值和特征向量的对应关系",
+    "title": "特征向量",
+    "section": "",
+    "text": "可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "特征向量"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/特征向量.html#判断特征根重数的一种方法",
+    "href": "posts/线性代数/特征向量.html#判断特征根重数的一种方法",
+    "title": "特征向量",
+    "section": "判断特征根重数的一种方法",
+    "text": "判断特征根重数的一种方法\n条件：n阶方阵\\(\\boldsymbol A\\)可相似对角化，或者干脆就是对角矩阵。\n行为：把待验证的特征值\\(\\lambda_0\\)带入矩阵\\(\\boldsymbol A-\\lambda\\boldsymbol E\\)中。\n结论：\\(\\boldsymbol A-\\lambda_0\\boldsymbol E\\)的秩\\(r\\)与该特征值所对应的线性无关的特征向量个数\\(k\\)的关系为\n\\[\nk=n-r\n\\]\n该命题的逆命题也成立，实际上，它的逆命题就是![[矩阵#矩阵相似对角化的条件]]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "特征向量"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/特征向量.html#几何重数和代数重数",
+    "href": "posts/线性代数/特征向量.html#几何重数和代数重数",
+    "title": "特征向量",
+    "section": "几何重数和代数重数",
+    "text": "几何重数和代数重数\n代数重数，即解特征方程时特征根的重数。\n几何重数，即特征值对应的解空间的维数，也就是特征根对应的线性无关的特征向量的个数。\n关系：代数重数\\(\\geq\\)几何重数\\(\\geq1\\)\n当代数重数与几何重数相等时，矩阵可相似对角化。这是更为普适的条件，可以适用于复矩阵。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "特征向量"
+    ]
+  },
+  {
+    "objectID": "posts/概统/知识点.html",
+    "href": "posts/概统/知识点.html",
+    "title": "概率与统计知识点",
+    "section": "",
+    "text": "\\[\nP(B|A)=\\dfrac{P(AB)}{P(A)}\n\\]\n^ff235e\n\n\\[\nP(B|A)P(A)=P(A|B)P(B)=P(AB)\n\\]\n\n\n\n\n\\[\nf_{Y|X}(y|x)=\\dfrac{f(x,y)}{f_X(x)}\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "概统",
+      "概率与统计知识点"
+    ]
+  },
+  {
+    "objectID": "posts/概统/知识点.html#条件概率",
+    "href": "posts/概统/知识点.html#条件概率",
+    "title": "概率与统计知识点",
+    "section": "",
+    "text": "\\[\nP(B|A)=\\dfrac{P(AB)}{P(A)}\n\\]\n^ff235e\n\n\\[\nP(B|A)P(A)=P(A|B)P(B)=P(AB)\n\\]\n\n\n\n\n\\[\nf_{Y|X}(y|x)=\\dfrac{f(x,y)}{f_X(x)}\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "概统",
+      "概率与统计知识点"
+    ]
+  },
+  {
+    "objectID": "posts/概统/知识点.html#全概率公式",
+    "href": "posts/概统/知识点.html#全概率公式",
+    "title": "概率与统计知识点",
+    "section": "全概率公式",
+    "text": "全概率公式\n\\[\nP(A)=\\sum_{i=1}^nP(A|B_i)P(B_i)\n\\]\n^6c9cba",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "概统",
+      "概率与统计知识点"
+    ]
+  },
+  {
+    "objectID": "posts/概统/知识点.html#贝叶斯公式",
+    "href": "posts/概统/知识点.html#贝叶斯公式",
+    "title": "概率与统计知识点",
+    "section": "贝叶斯公式",
+    "text": "贝叶斯公式\n在只有两个事件时\n\\[\nP(B|A)=\\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\\bar B)P(\\bar B)}\n\\]\n在多个事件时\n\\[\nP(B_i|A)=\\dfrac{P(A|B_i)P(B_i)}{\\sum_{i=1}^nP(A|B_i)P(B_i)}\n\\]\n^322785\n\n论证. 对条件概率公式的分母使用一次全概率公式即可。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "概统",
+      "概率与统计知识点"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/Quarto不完全指北.html",
+    "href": "posts/Quarto使用心得/Quarto不完全指北.html",
+    "title": "Quarto使用心得 第一节",
+    "section": "",
+    "text": "Quarto 是 R 语言开发团队 Posit 开发的新一代开源出版工具，用于替换 Rmarkdown，并且在一定程度上具有学术写作的能力，甚至可以它创建一个网站，基于 Pandoc 和 Deno （你可以在 Quarto 的安装目录里找到这两个工具）。不仅对于 R 的支持良好，而且对于 Python, Julia, Obeservable 都有良好支持。\n由于是一个新的工具，官方的文档没有对于中文的支持，因此这篇博客记录了 Quarto 的基本使用方法。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第一节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/Quarto不完全指北.html#环境配置",
+    "href": "posts/Quarto使用心得/Quarto不完全指北.html#环境配置",
+    "title": "Quarto使用心得 第一节",
+    "section": "环境配置",
+    "text": "环境配置\nQuarto 可以使用以下两种方式下载。注意，无论是哪一种，都需要良好的网络支持。\n\n使用winget命令\nwinget install --id Posit.Quarto\n在官网上选择合适的版本进行下载\n\n在 cmd 中输入\nquarto --version\n出现一段数字即下载成功。\n\n附加组件的下载\nQuarto 有两个附加组件：\n\nTinyTex\nChromium\n\n可以使用\nquarto list tools\n查看附加组件的下载情况，正常情况应该出现类似下面的提示\n[✓] Inspecting tools\n\nTool         Status            Installed     Latest\nchromium     Not installed     ---           869685\ntinytex      Up to date        v2022.10      v2022.10\n\nTinyTex\nTinyTex 是 Texlive 的一个发行版，Quarto-Pandoc 依赖它编译 qmd 文件为 pdf 格式。不过如果系统的环境变量中已经有了 Tex Live，则 Quarto 会自动使用，不用下载 TinyTex。\n另外，Quarto 只对 Tex Live 进行了适配，如果使用外部 Tex 系统，只推荐使用 Tex Live。\n下载 TinyTex\nquarto install tinytex\n升级 TinyTex\nquarto update tinytex\n使用 Quarto 下载的 TinyTex 默认是不会添加到环境变量的，也就是说，如果没有其它 Tex 发行版，在 cmd 中输入latex或xelatex会得到“‘xxx’ 不是内部或外部命令，也不是可运行的程序或批处理文件。”这样的提示。如果想独立使用 TinyTex，需要使用\nquarto install tinytex --update-path\n\n\nChromium\nQuarto 使用 Chromium 对 HTML 文件进行预览，如果系统中已经有了 Chromium 系浏览器如 Chrome, Edge, 360 极速浏览器, VScode等则不用下载。\n下载 Chromium\nquarto install Chromium\n升级 Chromium\nquarto update Chromium",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第一节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/Quarto不完全指北.html#编辑器",
+    "href": "posts/Quarto使用心得/Quarto不完全指北.html#编辑器",
+    "title": "Quarto使用心得 第一节",
+    "section": "编辑器",
+    "text": "编辑器\nQuarto 文件的默认扩展名是 qmd，这是一个纯文本文件。\n理论上，完全可以使用记事本编写 qmd 文件，然后使用 Quarto 渲染，但是仍然有几个编辑器是受到官方推荐的\n\nVScode\nJupyter Lab\nRstudio\nNeovim\n\n私以为，能使用 Neovim 的大佬，已经不再需要这篇教程了，而我个人并不使用 Rstudio，因此这一节集中在使用 VScode 和 Jupyter Lab 来使用 Quarto 上。\n\nJupyter Lab\n基于 Jupyter Lab 使用 Quarto 并不需要额外的组件支持，Quarto 支持直接渲染 ipynb 文件，但是在文件中需要一些额外的 metadata 说明，这一篇博客中暂且不提。\n\n\nVScode\n朋友，不知道你是否知道宇宙第一的文本编辑器 VScode 呢？如果你没有尝试过，请务必试一试。\n基于 VScode 使用 Quarto 需要先安装它的官方扩展\nQuarto现在只是一个出版工具，并不绑定任何语言，如果要使用代码相关的功能，还需要在系统中安装语言内核，以及在vscode中安装相关的扩展\n\nPython Extension\nR Extension\nJulia Extension\n\n另外，在 VScode 中使用 Python 要通过 Jupyter 作为中介，检查系统中的 Jupyter 是否被 Quarto 使用，需要下面的命令\nquarto check jupyter\n如果正确安装，应该出现类似下面的提示\n[&gt;] Checking Python 3 installation....OK\n      Version: 3.11.5 (Conda)\n      Path: C:/Anaconda3/python.exe\n      Jupyter: 5.5.0\n      Kernels: python3, ir\n\n(-) Checking Jupyter engine render....0.00s - Debugger warning: It seems that frozen modules are being used, which may\n0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n0.00s - to python to disable frozen modules.\n0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n0.00s - Debugger warning: It seems that frozen modules are being used, which may\n0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n0.00s - to python to disable frozen modules.\n0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n[&gt;] Checking Jupyter engine render....OK\n最后，按ctrl+,打开设置，在设置的右上角，点击“打开设置(python)”按钮，在 setting.python 文件中添加以下配置\n{\n    \"[quarto]\": {\n    \"editor.quickSuggestions\": {\n        \"comments\": \"on\",\n        \"other\": \"on\",\n        \"strings\": \"on\"\n        }\n    }\n}\n这个配置开启了代码自动补全和建议",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第一节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/Quarto不完全指北.html#参考",
+    "href": "posts/Quarto使用心得/Quarto不完全指北.html#参考",
+    "title": "Quarto使用心得 第一节",
+    "section": "参考",
+    "text": "参考\nQuarto 官网",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第一节"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello you guys",
+    "section": "",
+    "text": "概率与统计知识点\n\n\n\n\n\n\n考研数学\n\n\n概统\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n二次型\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n特征向量\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n矩阵\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n行列式计算\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n三角函数\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n导数和微分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n微分方程\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n积分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n7-zip的文件名编码问题\n\n\n\n\n\n\n7-zip\n\n\nWindows\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第二节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月29日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第一节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月24日\n\n\nKengroo1024\n\n\n\n\n\n\n无匹配项"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Kengroo1024",
+    "section": "",
+    "text": "在读本科生，正准备考研。"
+  },
+  {
+    "objectID": "about.html#关于我about-me",
+    "href": "about.html#关于我about-me",
+    "title": "Kengroo1024",
+    "section": "",
+    "text": "在读本科生，正准备考研。"
+  },
+  {
+    "objectID": "about.html#关于本博客about-this-blog",
+    "href": "about.html#关于本博客about-this-blog",
+    "title": "Kengroo1024",
+    "section": "关于本博客/About this blog",
+    "text": "关于本博客/About this blog\n这是我使用GitHub托管的小博客，使用Quarto创建。\n建立本博客完全出于兴趣。\n\n转载许可\n本博客上发表的文章，如无特别说明，皆使用 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 许可证 发布\n\n\n考研数学版块\n这是我在考研复习数学时所做的笔记，不保证正确性，亦不保证完整性，因为过于浅显的知识点并不会被记录。"
+  },
+  {
+    "objectID": "about.html#杂七杂八的事情miscellanea",
+    "href": "about.html#杂七杂八的事情miscellanea",
+    "title": "Kengroo1024",
+    "section": "杂七杂八的事情/Miscellanea",
+    "text": "杂七杂八的事情/Miscellanea\n考研数学相关的博文基本上是在手机上写的，因为手机上用的是Obsidian，因此其中非常有可能出现一些奇怪的语法或句子，那就是Obsidian的专用语法，我看漏了没改或者是懒得改。"
+  },
+  {
+    "objectID": "about.html#鸣谢acknowlegements",
+    "href": "about.html#鸣谢acknowlegements",
+    "title": "Kengroo1024",
+    "section": "鸣谢/Acknowlegements",
+    "text": "鸣谢/Acknowlegements\nQuarto\nGithub\n知乎上热心的数学答主们"
+  },
+  {
     "objectID": "posts/7-zip的文件名编码问题.html",
     "href": "posts/7-zip的文件名编码问题.html",
     "title": "7-zip的文件名编码问题",
     "section": "",
     "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
     "crumbs": [
-      "关于",
+      "首页",
       "Posts",
       "7-zip的文件名编码问题"
     ]
@@ -18,7 +424,7 @@
     "section": "",
     "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
     "crumbs": [
-      "关于",
+      "首页",
       "Posts",
       "7-zip的文件名编码问题"
     ]
@@ -30,7 +436,7 @@
     "section": "问题解决",
     "text": "问题解决\n使用 CLI 界面，将 7-zip 可执行文件加入环境变量或在 7-zip可执行文件的所在目录打开 cmd 或者 powershell\n\n查看压缩包内容\n执行下列命令\nchcp [nnn]\n其中 nnn 是微软的代码页，下面列出几个常用的\n\n\n\n编码\n代码页\n\n\n\n\nGBK\n936\n\n\nUTF-8\n65001\n\n\nUTF-16\n1200\n\n\nShift-JIS\n932\n\n\n\n然后执行下面命令\n7z l src\n\n\n进行解压\n执行以下命令\n7z x src [-o dest] -mcp=num\nsrc为源文件路径，dest为输出文件路径，num为文件编码对应的代码页，如果不指定输出路径默认解压到当前目录。\n注意，在 ps 中相对路径须加./",
     "crumbs": [
-      "关于",
+      "首页",
       "Posts",
       "7-zip的文件名编码问题"
     ]
@@ -42,7 +448,7 @@
     "section": "碎碎念",
     "text": "碎碎念\nmcp选项竟然没有出现在文档里面，无法理解。\n但是文档中提供了scc和scs选项，看起来也能起到相同的效果。",
     "crumbs": [
-      "关于",
+      "首页",
       "Posts",
       "7-zip的文件名编码问题"
     ]
@@ -54,30 +460,256 @@
     "section": "参考",
     "text": "参考\n解决方案来自 CSDN\n7-zip CLI 帮助文档",
     "crumbs": [
-      "关于",
+      "首页",
       "Posts",
       "7-zip的文件名编码问题"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Kengroo1024",
+    "objectID": "posts/Quarto使用心得/第二节.html",
+    "href": "posts/Quarto使用心得/第二节.html",
+    "title": "Quarto使用心得 第二节",
     "section": "",
-    "text": "这是我使用GitHub托管的小博客，使用Quarto创建。"
+    "text": "在上一篇博客中，我们已经在 VScode 中配置好了 Quarto 的工作环境，接下来我们将 Quarto 渲染一篇文档为 HTML 格式。\nQuarto 采取格式与内容相分离的方式来编写文档，因此，我们写作内容的文件是一个纯文本文件，渲染（render）与格式调整是之后完成的事情。\n要使用 Quarto 渲染一个文档，首先在工作空间中新建一个名为test.qmd的空文件，这个文件就是我们将在其中写作的文档。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第二节"
+    ]
   },
   {
-    "objectID": "about.html#about-this-blog",
-    "href": "about.html#about-this-blog",
-    "title": "Kengroo1024",
-    "section": "",
-    "text": "这是我使用GitHub托管的小博客，使用Quarto创建。"
+    "objectID": "posts/Quarto使用心得/第二节.html#yaml-配置",
+    "href": "posts/Quarto使用心得/第二节.html#yaml-配置",
+    "title": "Quarto使用心得 第二节",
+    "section": "YAML 配置",
+    "text": "YAML 配置\nYAML 是“YAML ain’t Markup Language”的循环缩写。YAML 是一种在互联网上广泛使用的用于数据存储和交换的标记语言。\n\nQuarto 的配置选项以 YAML 的格式写在文件的最开头，上下由三个连字符“-”包裹，称为文档的“Metadata”，你如果熟悉 Pandoc 标准的 Markdown，对这种配置格式应该不感到陌生。\n关于 YAML 的说明将在下一篇博客中提及，现在我给出一个可用的样例用于编写我们的文件。\n---\nlang: zh\nformat: \n  html: default\n---\n这是一个正确的 Metadata 写法。其意义是令模板使用中文，并用默认配置将文档输出为 HTML 格式。现在你应该将这段代码复制进你的文档中。以便后续的预览和渲染。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第二节"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hello you guys",
+    "objectID": "posts/Quarto使用心得/第二节.html#预览和渲染文档",
+    "href": "posts/Quarto使用心得/第二节.html#预览和渲染文档",
+    "title": "Quarto使用心得 第二节",
+    "section": "预览和渲染文档",
+    "text": "预览和渲染文档\n下载了 Quarto 扩展以后，在 VScode 中打开 qmd 文件，页面的右上角会有一个 Preview 按钮，点击可以进行预览，在一般的屏幕上上会打开预览的 HTML 文件。\n自带的预览脚本对于 HTML 输出的支持是很好的，但是对于其他的文件格式就不那么完美了。按 ctrl+反引号打开终端，或使用 cmd，执行下面的命令\nquarto preview src\n其中，src是目标文件的地址。\n就会开启一个预览进程，只要终端不被关闭或进程不被停止，Quarto 就会监控文件的更改并实时预览文件，还可以在终端中查看渲染失败的错误信息。\n要渲染文件，只需要把上面命令的 preview 换成 render 即可，即\nquarto render src\n现在，预览你的文档并尝试下面学习下面的写作语法。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第二节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/第二节.html#基本的-markdown-和-gfm-语法",
+    "href": "posts/Quarto使用心得/第二节.html#基本的-markdown-和-gfm-语法",
+    "title": "Quarto使用心得 第二节",
+    "section": "基本的 Markdown 和 GFM 语法",
+    "text": "基本的 Markdown 和 GFM 语法\nMarkdown 是一种轻量级的标记语言。使用 Markdown，你可以完全将格式抛诸脑后，完全将注意力集中在内容的写作上，这篇博客的写作就是使用 Markdown 完成的。\n你可以在 Markdown 官方教程中学习到 Markdown 的基本语法和扩展语法。\nQuarto 也完全支持 GFM 的所有语法，你可以查看 GFM 的一个中文文档来学习 GFM 的语法。GFM 是 Markdown 的一个方言，为 Markdown 添加了很多有用的特性，在此不多赘述。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第二节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/第二节.html#quarto-pandoc-专用的的-markdown-语法",
+    "href": "posts/Quarto使用心得/第二节.html#quarto-pandoc-专用的的-markdown-语法",
+    "title": "Quarto使用心得 第二节",
+    "section": "Quarto-Pandoc 专用的的 Markdown 语法",
+    "text": "Quarto-Pandoc 专用的的 Markdown 语法\nQuarto 还有拥有许多 GFM 不包括和不支持的语法，诸如网格式表格、图表和公式编号、以及引用等等，可以在官方教程查看完整的教程，这里列出几个常用的。\n\n分页符和嵌入视频\n分页符语法，注意尖括号与文字之间都有一个空格。分页符在不同的环境下（例如 word 和 latex 中）都会解析成各自的分页符\n嵌入视频语法，注意其中的空格，src为视频地址，只接受 mp4 后缀的视频。例如\n\n然后效果是\n\n经我实测，只对油管有较好的支持，对 bilibili 并不支持。但是 Markdown 是支持内嵌 HTML 的，也可以直接把 bilibili 复制过来的 HTML 代码嵌入其中。\n\n\n容器（div 和 span）\nQuarto 中支持用三个或更多的英文冒号包裹一段内容，这定义了一个容器。\n例如这样\n:::{#text .smaller}\nSome text\n:::\n这与以下 HTML 代码相同\n&lt;div id=\"text\" class=\"smaller\"&gt;\n  Some text\n&lt;/div&gt;\n容器之间可以嵌套，只要使用的冒号个数不一样多即可。\n大括号也可以单独使用，为一些元素添加属性，例如\n![alt](imgsrc){#text}\n这代表一张 ID 为 text 的图片。\nQuarto 中有一些预定义的样式，例如上面的 smaller 就可以将元素变得更小。\n\n\n标注块\n将容器类名定义为\n\ncallout-note\ncallout-tip\ncallout-warning\ncallout-important\ncallout-caution\n\n中的一种，就可以得到标注块，例如这样\n:::{.callout-note}\n## This is a note for you\n\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n就会得到\n\n\n\n\n\n\nThis is a note for you\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n注意，我们使用了一个二级标题改变了标注块的标题。\n\n\n标签页（仅支持 HTML）\n将类名写为panel-tabset就可以得到标签页。\n标签页可以将内容分页展示，其中用二级标题来进行分页。\n例如\n:::{.panel-tabset}\n## Python\n\nprint(\"hello world\")\n\n## C\n\nprintf(\"hello world\\n\");\n\n## Cpp\n\ncout &lt;&lt; \"hello world\" &lt;&lt; endl;\n:::\n渲染效果\n\nPythonCCpp\n\n\nprint(“hello world”)\n\n\nprintf(“hello world”);\n\n\ncout &lt;&lt; “hello world” &lt;&lt; endl;\n\n\n\n\n\n交叉引用\n可以使用容器和大括号对几乎所有的元素进行编号以便交叉引用，例如定理、公式图表等，只要定义它们的 ID 即可。\n例如\n:::{#thm-Pythagorean}\n\n## 勾股定理\n\n在直角三角形ABC中，C为直角，角的对边分别为a,b,c，则它们满足下列关系\n\n$$\na^2+b^2=c^2\n$$\n:::\n这将渲染出以下效果\n\n定理 1 (勾股定理) 在直角三角形ABC中，C为直角，角的对边分别为a,b,c，则它们满足下列关系 \\[\na^2+b^2=c^2\n\\]\n\n注意，ID 前必须带有对应的类名如 thm, eq, pf, tbl 等，并且标题被渲染成了定理的名字。\n要进行引用，只需要写下@thm-Pythagorean，这将得到一个完整的引用 定理 1。\n要进行自定义引用前缀，需要写[公式 @thm-Pythagorean]，这将得到 公式 1 而不是 定理 1 。\n要进行无前缀引用，需要写[-@thm-Pythagorean]，注意 @ 前的连字符 -，这将得到单独的 1，不带任何前缀。\n对于全部的类名，请见下面的表格。\n\n\n\n环境\n前缀\n使用div\n\n\n\n\n表\ntbl\n否\n\n\n图\nfig\n否\n\n\n方程式\neq\n否\n\n\n章节\nsec\n否\n\n\n列表\nlst\n否\n\n\n定理\nthm\n是\n\n\n引理\nlem\n是\n\n\n推论\ncor\n是\n\n\n命题\nprp\n是\n\n\n猜想\ncnj\n是\n\n\n定义\ndef\n是\n\n\n例\nexm\n是\n\n\n练习\nexr\n是\n\n\n\n对于证明、解等环境，它们并不需要交叉引用，因此并没有相应的前缀，要使用相应的环境只需要将类名定义为solution、proof即可，例如\n:::{.solution}\nSome text\n:::",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第二节"
+    ]
+  },
+  {
+    "objectID": "posts/Quarto使用心得/第二节.html#参考",
+    "href": "posts/Quarto使用心得/第二节.html#参考",
+    "title": "Quarto使用心得 第二节",
+    "section": "参考",
+    "text": "参考\nQuarto 官网",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "Quarto使用心得",
+      "Quarto使用心得 第二节"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/二次型.html",
+    "href": "posts/线性代数/二次型.html",
+    "title": "二次型",
     "section": "",
-    "text": "7-zip的文件名编码问题\n\n\n\n\n\n\n7-zip\n\n\nWindows\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nKengroo1024\n\n\n\n\n\n\n无匹配项"
+    "text": "实际上就是把二次型的矩阵\\(\\boldsymbol A\\)对角化，按矩阵的相似对角化操作即可。如果还要进一步求出所用的线性变换\\(\\boldsymbol P\\)，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "二次型"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/二次型.html#将二次型化为规范型",
+    "href": "posts/线性代数/二次型.html#将二次型化为规范型",
+    "title": "二次型",
+    "section": "",
+    "text": "实际上就是把二次型的矩阵\\(\\boldsymbol A\\)对角化，按矩阵的相似对角化操作即可。如果还要进一步求出所用的线性变换\\(\\boldsymbol P\\)，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "二次型"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/二次型.html#二次型的正定性",
+    "href": "posts/线性代数/二次型.html#二次型的正定性",
+    "title": "二次型",
+    "section": "二次型的正定性",
+    "text": "二次型的正定性\n二次型如果是正定的，那么其所有的特征值\\(\\lambda\\geq0\\)；如果是负定的，那么所有的特征值\\(\\lambda\\leq0\\).\n二次型如果是正定的，则所有顺序主子式大于0.",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "二次型"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/矩阵.html",
+    "href": "posts/线性代数/矩阵.html",
+    "title": "矩阵",
+    "section": "",
+    "text": "二阶矩阵的特征多项式\\(|\\lambda\\boldsymbol E-\\boldsymbol A|=0\\)为\n\\[\n\\lambda^2-tr(\\boldsymbol A)\\lambda+\\det(\\boldsymbol A)=0\n\\]\n其中\\(tr(A)\\)为矩阵的迹，\\(\\det(A)\\)为矩阵的行列式。\n只要解该方程即可。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/矩阵.html#二阶矩阵的特征值",
+    "href": "posts/线性代数/矩阵.html#二阶矩阵的特征值",
+    "title": "矩阵",
+    "section": "",
+    "text": "二阶矩阵的特征多项式\\(|\\lambda\\boldsymbol E-\\boldsymbol A|=0\\)为\n\\[\n\\lambda^2-tr(\\boldsymbol A)\\lambda+\\det(\\boldsymbol A)=0\n\\]\n其中\\(tr(A)\\)为矩阵的迹，\\(\\det(A)\\)为矩阵的行列式。\n只要解该方程即可。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/矩阵.html#矩阵多项式的特征值",
+    "href": "posts/线性代数/矩阵.html#矩阵多项式的特征值",
+    "title": "矩阵",
+    "section": "矩阵多项式的特征值",
+    "text": "矩阵多项式的特征值\n若\\(\\lambda\\)是\\(\\boldsymbol A\\)的特征值，那么\\(\\varphi(\\lambda)\\)是矩阵多项式\\(\\varphi(\\boldsymbol A)\\)的特征值。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/矩阵.html#对角矩阵",
+    "href": "posts/线性代数/矩阵.html#对角矩阵",
+    "title": "矩阵",
+    "section": "对角矩阵",
+    "text": "对角矩阵\n\n矩阵的相似对角化\n如果一个矩阵相似于对角矩阵，那么它可以写为\n\\[\n\\boldsymbol A=\\boldsymbol P^{-1}\\boldsymbol\\Lambda\\boldsymbol P\n\\]\n其中\\(\\boldsymbol P\\)是各个特征向量组成的矩阵，它们和\\(\\boldsymbol\\Lambda\\)中各自的特征值一一对应。\n\n\n矩阵相似对角化的条件\n如果\\(k\\)阶方阵拥有\\(k\\)个线性无关的特征向量，则其相似于对角矩阵。\n\n\n\n\n\n\n对于具体的情况\n\n\n\n\n\n\n实对称矩阵必能对角化\n若矩阵有\\(k\\)个不同的特征值，则其也必能对角化\n若矩阵的每个\\(i\\)重特征值都拥有\\(i\\)个线性无关的特征向量，那么它也必能对角化\n\n\n\n\n\n\n特征值\n对角矩阵的特征值是对角线上所有元素，重复按重根计算。\n\n\n秩\n对角矩阵的秩等于对角线上非零元的个数。\n\n推论 1 如果一个矩阵相似于对角矩阵，则它的秩等于非0特征值的个数，重根按重数计算。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/矩阵.html#伴随矩阵",
+    "href": "posts/线性代数/矩阵.html#伴随矩阵",
+    "title": "矩阵",
+    "section": "伴随矩阵",
+    "text": "伴随矩阵\n\n秩\n\\(n\\)阶矩阵\\(\\boldsymbol A\\)的伴随矩阵为\\(\\boldsymbol A^*\\)，它的秩为\n\\[\nr(\\boldsymbol A^*)=\\left\\{\\begin{aligned}\nn,&\\text{ if }r(\\boldsymbol A)=n,\\\\\n1,&\\text{ if }r(\\boldsymbol A)=n-1,\\\\\n0,&\\text{ if }r(\\boldsymbol A)&lt;n-1\n\\end{aligned}\\right.\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/矩阵.html#秩1矩阵",
+    "href": "posts/线性代数/矩阵.html#秩1矩阵",
+    "title": "矩阵",
+    "section": "秩1矩阵",
+    "text": "秩1矩阵\n设矩阵\\(\\boldsymbol A\\)的秩为1，那么它有如下一些性质\n\n可分解性\n\\(\\boldsymbol A\\)一定可以被分解为两向量之积，即\n\\[\n\\exists\\boldsymbol\\alpha,\\boldsymbol\\beta,\\text{使得}\\boldsymbol A=\\boldsymbol\\alpha^T\\boldsymbol\\beta\n\\]\n且\n\\[\n\\boldsymbol\\beta^T\\boldsymbol\\alpha=tr(\\boldsymbol A)\n\\]\n\n\n\n\n\n\n推广\n\n\n\n如果\\(r(\\boldsymbol A)=k\\)则\\(\\boldsymbol A\\)可以被分解为一\\(m\\times k\\)和秩\\(k\\)矩阵\\(\\boldsymbol M\\)和一\\(k\\times n\\)的秩\\(k\\)矩阵\\(\\boldsymbol N\\)之积\n\n\n\n\n特征值\n如果\\(\\boldsymbol A\\)是\\(n\\)阶方阵，其特征值为\\(n-1\\)个0和\\(tr(\\boldsymbol A)\\).\n\n\n相似对角化\n\\(\\boldsymbol A\\)一定可以相似对角化，其中\\(n\\)个0对应\\(n\\)个线性无关的特征向量。\n\n\n幂乘\n\\[\n\\boldsymbol A^n=tr(\\boldsymbol A)^{n-1}A\n\\]",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "posts/线性代数/矩阵.html#实对称矩阵",
+    "href": "posts/线性代数/矩阵.html#实对称矩阵",
+    "title": "矩阵",
+    "section": "实对称矩阵",
+    "text": "实对称矩阵\n对于有限维实对称矩阵（下面简称对称矩阵），有如下性质\n\n特征向量正交性\n对称矩阵不同特征值对应的特征向量是正交的。\n\n\n特征向量个数\n对称矩阵特征根的代数重数和几何重数相等，即\\(i\\)重特征根必然对应\\(i\\)个线性无关的特征向量。\n\n\n\n\n\n\n注释\n\n\n\n根据矩阵相似对角化的条件，对称矩阵必可相似对角化\n且由 推论 1 ，对称矩阵的秩等于其非零特征值的个数，重根按重数计算。\n\n\n\n\n特征值和特征向量\n对称矩阵的特征值均为实数，特征向量均为实向量。",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "posts/高数/三角函数.html",
+    "href": "posts/高数/三角函数.html",
+    "title": "三角函数",
+    "section": "",
+    "text": "三角函数六角图\n\n\n在图中，对角线表示倒数，黄色三角形的邻角表示具有恒等关系，具体如下\n\n\\(\\sin^2x+\\cos^2=1\\)\n\\(\\sec^2x-\\tan^2x=1\\)\n\\(\\csc^2x-\\cot^2x=1\\)",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "三角函数"
+    ]
+  },
+  {
+    "objectID": "posts/高数/三角函数.html#三角函数六角图",
+    "href": "posts/高数/三角函数.html#三角函数六角图",
+    "title": "三角函数",
+    "section": "",
+    "text": "三角函数六角图\n\n\n在图中，对角线表示倒数，黄色三角形的邻角表示具有恒等关系，具体如下\n\n\\(\\sin^2x+\\cos^2=1\\)\n\\(\\sec^2x-\\tan^2x=1\\)\n\\(\\csc^2x-\\cot^2x=1\\)",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "三角函数"
+    ]
+  },
+  {
+    "objectID": "posts/高数/三角函数.html#三角函数和差化积公式",
+    "href": "posts/高数/三角函数.html#三角函数和差化积公式",
+    "title": "三角函数",
+    "section": "三角函数和差化积公式",
+    "text": "三角函数和差化积公式",
+    "crumbs": [
+      "首页",
+      "Posts",
+      "高数",
+      "三角函数"
+    ]
   }
 ]
