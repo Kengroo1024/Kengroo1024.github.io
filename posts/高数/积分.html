@@ -103,7 +103,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -291,7 +291,19 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#定积分定义" id="toc-定积分定义" class="nav-link active" data-scroll-target="#定积分定义"><span class="header-section-number">1</span> 定积分定义</a></li>
+  <li><a href="#构造定积分" id="toc-构造定积分" class="nav-link" data-scroll-target="#构造定积分"><span class="header-section-number">2</span> 构造定积分</a></li>
+  <li><a href="#不太好记的不定积分" id="toc-不太好记的不定积分" class="nav-link" data-scroll-target="#不太好记的不定积分"><span class="header-section-number">3</span> 不太好记的不定积分</a></li>
+  <li><a href="#三角函数定积分的一个结论" id="toc-三角函数定积分的一个结论" class="nav-link" data-scroll-target="#三角函数定积分的一个结论"><span class="header-section-number">4</span> 三角函数定积分的一个结论</a></li>
+  <li><a href="#旋转体体积" id="toc-旋转体体积" class="nav-link" data-scroll-target="#旋转体体积"><span class="header-section-number">5</span> 旋转体体积</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -322,6 +334,12 @@ window.Quarto = {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">修改的</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2024年3月9日</p>
+    </div>
+  </div>
     
   </div>
   
@@ -330,8 +348,8 @@ window.Quarto = {
 </header>
 
 
-<section id="定积分定义" class="level2">
-<h2 class="anchored" data-anchor-id="定积分定义">定积分定义</h2>
+<section id="定积分定义" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="定积分定义"><span class="header-section-number">1</span> 定积分定义</h2>
 <p>在区间<span class="math inline">\([a,b]\)</span>上做分划 <span class="math display">\[
 a=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b
 \]</span> 令<span class="math inline">\(\Delta x_i=x_i-x_{i-1}\)</span>，任取<span class="math inline">\(\xi_i\in[x_{i-1},x_i]\)</span>，只要<span class="math inline">\(\lambda=\mathrm{sup}\{\Delta x_i\}\to 0\)</span>时，和式 <span class="math display">\[
@@ -341,8 +359,8 @@ a=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b
 \int_a^b f(x)\mathrm{d}x.
 \]</span></p>
 </section>
-<section id="构造定积分" class="level2">
-<h2 class="anchored" data-anchor-id="构造定积分">构造定积分</h2>
+<section id="构造定积分" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="构造定积分"><span class="header-section-number">2</span> 构造定积分</h2>
 <p><span class="math display">\[
 \int_0^1f(x)\mathrm{d}x=\lim_{n\to\infty}\sum_{i=0}^n\dfrac1nf(\dfrac in)
 \]</span></p>
@@ -361,8 +379,8 @@ a=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b
 </div>
 </div>
 </section>
-<section id="不太好记的不定积分" class="level2">
-<h2 class="anchored" data-anchor-id="不太好记的不定积分">不太好记的不定积分</h2>
+<section id="不太好记的不定积分" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="不太好记的不定积分"><span class="header-section-number">3</span> 不太好记的不定积分</h2>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -395,8 +413,8 @@ a=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b
 <li><span class="math inline">\(\int\dfrac{1}{1+\cos x}\mathrm dx=\tan\dfrac t2+C\)</span></li>
 </ul>
 </section>
-<section id="三角函数定积分的一个结论" class="level2">
-<h2 class="anchored" data-anchor-id="三角函数定积分的一个结论">三角函数定积分的一个结论</h2>
+<section id="三角函数定积分的一个结论" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="三角函数定积分的一个结论"><span class="header-section-number">4</span> 三角函数定积分的一个结论</h2>
 <p><span class="math display">\[
 \int_0^{\frac \pi2}\sin^nx\mathrm dx=
 \int_0^{\frac \pi2}\cos^nx\mathrm dx=
@@ -411,8 +429,8 @@ a=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b
 <p><span class="proof-title"><em>论证</em>. </span><a href="https://www.zhihu.com/question/364635137?utm_id=0">见此</a></p>
 </div>
 </section>
-<section id="旋转体体积" class="level2">
-<h2 class="anchored" data-anchor-id="旋转体体积">旋转体体积</h2>
+<section id="旋转体体积" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="旋转体体积"><span class="header-section-number">5</span> 旋转体体积</h2>
 <p><span class="math display">\[
 V=\pi\int_a^bf^2(x)\mathrm dx
 \]</span></p>
