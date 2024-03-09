@@ -9,7 +9,9 @@ website:
     right:
       - icon: github
         href: https://github.com/Kengroo1024
-    left: 
+    left:
+      - text: 首页
+        file: index.qmd
       - text: 关于
         file: about.qmd
   sidebar:
@@ -17,7 +19,9 @@ website:
 
 format:
   html:
-    theme: darkly
+    theme:
+      light: flatly
+      dark: darkly
     code-copy: true
     css: styles.css
 

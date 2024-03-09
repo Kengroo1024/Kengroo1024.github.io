@@ -1,19 +1,43 @@
 ---
 title: "Kengroo1024"
+sidebar: false
 about:
   template: jolla
   links:
-    - text: Github
+    - text: 懒人中心
       icon: github
       href: https://github.com/Kengroo1024
-    - text: Wechat
-      icon: wechat
-    - text: QQ
-      icon: tencent-qq
-    - text: Tiktok
-      icon: tiktok
+    - text: E-mail
+      icon: envelope-paper-fill
+      href: mailto://Kengroo<ao1ca0da6@foxmail.com>
 ---
 
-## About this blog
+## 关于我/About me
+
+在读本科生，正准备考研。
+
+## 关于本博客/About this blog
 
 这是我使用GitHub托管的小博客，使用Quarto创建。
+
+建立本博客完全出于兴趣。
+
+### 转载许可
+
+本博客上发表的文章，如无特别说明，皆使用 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 许可证](https://creativecommons.org/licenses/by-nc-sa/4.0/) 发布
+
+### 考研数学版块
+
+这是我在考研复习数学时所做的笔记，不保证正确性，亦不保证完整性，因为过于浅显的知识点并不会被记录。
+
+## 杂七杂八的事情/Miscellanea
+
+考研数学相关的博文基本上是在手机上写的，因为手机上用的是[Obsidian](https://Obsidian.md)，因此其中非常有可能出现一些奇怪的语法或句子，那就是Obsidian的专用语法，我看漏了没改或者是懒得改。
+
+## 鸣谢/Acknowlegements
+
+[Quarto](https://Quarto.org)
+
+[Github](https://github.com)
+
+[知乎](https://zhihu.com)上热心的数学答主们

@@ -1,0 +1,286 @@
+---
+title: "Quarto使用心得 第二节"
+date: 2023-11-29
+categories:
+  - Quarto
+---
+
+在[上一篇](https://www.cnblogs.com/Kengroo/p/17853491.html)博客中，我们已经在 VScode 中配置好了 Quarto 的工作环境，接下来我们将 Quarto 渲染一篇文档为 HTML 格式。
+
+Quarto 采取格式与内容相分离的方式来编写文档，因此，我们写作内容的文件是一个纯文本文件，渲染（render）与格式调整是之后完成的事情。
+
+要使用 Quarto 渲染一个文档，首先在工作空间中新建一个名为`test.qmd`的空文件，这个文件就是我们将在其中写作的文档。
+
+## YAML 配置
+
+[YAML](https://yaml.org/) 是“YAML ain't Markup Language”的循环缩写。YAML 是一种在互联网上广泛使用的用于数据存储和交换的标记语言。
+
+<!-- YAML 对于格式化的规则的要求是非常严格的，下面我将简短地叙述在 Quarto 中会用到的规则，关于 YAML 的完整教程，可以看[菜鸟教程上的 YAML 教程](https://www.runoob.com/w3cnote/yaml-intro.html)。
+
+1. YAML 是大小写敏感的。`kengroo`和`Kengroo`被视为两个变量。
+2. 用缩进表示层级关系，推荐用两个空格作为缩进符，在 Quarto 中，使用非两个空格的缩进会报错。
+3. 使用键值对`key: value`表示数据。**注意**：在冒号“:”与“value”间有一空格分隔，否则会报错。
+4. 有布尔值`true`和`false`，注意大小写。
+5. 数组的语法类似 Markdown 的无序列表，使用连字符+空格的方式，注意，需要保持缩进层级相同。
+
+    ```YAML
+    - item1
+    - item2
+    - item3
+    ```
+
+6. 单行字符串由双引号`""`包裹。
+7. 对于多行文本，使用`>`,`|`,`|+`,`|-`四种方式引导，这四种方法各有不同的意义
+
+    - “\>” 忽略多行字符串中每行的换行
+    - “|” 不忽略换行
+    - “|+” 为字符串最后的一行添加换行
+    - “|-” 删除字符串最后一行的换行符
+
+    例如
+
+    ```YAML
+    string: |
+      here is a
+      multi-line
+      string
+    ```
+
+    注意冒号和管道符之间的空格，以及多行文本的相同缩进。
+8. 兼容流式风格，即 JSON 的写法 -->
+
+Quarto 的配置选项以 YAML 的格式写在文件的最开头，上下由三个连字符“-”包裹，称为文档的“Metadata”，你如果熟悉 Pandoc 标准的 Markdown，对这种配置格式应该不感到陌生。
+
+关于 YAML 的说明将在下一篇博客中提及，现在我给出一个可用的样例用于编写我们的文件。
+
+```yaml
+---
+lang: zh
+format: 
+  html: default
+---
+```
+
+这是一个正确的 Metadata 写法。其意义是令模板使用中文，并用默认配置将文档输出为 HTML 格式。现在你应该将这段代码复制进你的文档中。以便后续的预览和渲染。
+
+## 预览和渲染文档
+
+下载了 Quarto 扩展以后，在 VScode 中打开 qmd 文件，页面的右上角会有一个 Preview 按钮，点击可以进行预览，在一般的屏幕上上会打开预览的 HTML 文件。
+
+自带的预览脚本对于 HTML 输出的支持是很好的，但是对于其他的文件格式就不那么完美了。按 ctrl+反引号打开终端，或使用 cmd，执行下面的命令
+
+```batch
+quarto preview src
+```
+
+其中，`src`是目标文件的地址。
+
+就会开启一个预览进程，只要终端不被关闭或进程不被停止，Quarto 就会监控文件的更改并实时预览文件，还可以在终端中查看渲染失败的错误信息。
+
+要渲染文件，只需要把上面命令的 preview 换成 render 即可，即
+
+```batch
+quarto render src
+```
+
+现在，预览你的文档并尝试下面学习下面的写作语法。
+
+## 基本的 Markdown 和 GFM 语法
+
+Markdown 是一种轻量级的标记语言。使用 Markdown，你可以完全将格式抛诸脑后，完全将注意力集中在内容的写作上，这篇博客的写作就是使用 Markdown 完成的。
+
+你可以在 [Markdown 官方教程](https://markdown.com.cn)中学习到 Markdown 的[基本语法](https://markdown.com.cn/basic-syntax/)和[扩展语法](https://markdown.com.cn/extended-syntax/)。
+
+Quarto 也完全支持 [<abbr title="Github Flavored arkdown">GFM</abbr>](https://github.github.com/gfm/) 的所有语法，你可以查看 GFM 的一个[中文文档](https://gfm.docschina.org/zh-hans/)来学习 GFM 的语法。GFM 是 Markdown 的一个方言，为 Markdown 添加了很多有用的特性，在此不多赘述。
+
+## Quarto-Pandoc 专用的的 Markdown 语法
+
+Quarto 还有拥有许多 GFM 不包括和不支持的语法，诸如网格式表格、图表和公式编号、以及引用等等，可以在[官方教程](https://quarto.org/docs/authoring/markdown-basics.html)查看完整的教程，这里列出几个常用的。
+
+### 分页符和嵌入视频
+
+分页符语法`{{< pagebreak >}}`，注意尖括号与文字之间都有一个空格。分页符在不同的环境下（例如 word 和 latex 中）都会解析成各自的分页符
+
+嵌入视频语法`{{< video src >}}`，注意其中的空格，`src`为视频地址，只接受 mp4 后缀的视频。例如
+
+```html
+{{< video https://www.youtube.com/embed/9Q_608h25ZE >}}
+```
+
+然后效果是
+
+{{< video https://www.youtube.com/embed/9Q_608h25ZE >}}
+
+经我实测，只对油管有较好的支持，对 bilibili 并不支持。但是 Markdown 是支持内嵌 HTML 的，也可以直接把 bilibili 复制过来的 HTML 代码嵌入其中。
+
+### 容器（div 和 span）
+
+Quarto 中支持用三个或更多的英文冒号包裹一段内容，这定义了一个容器。
+
+例如这样
+
+```html
+:::{#text .smaller}
+Some text
+:::
+```
+
+这与以下 HTML 代码相同
+
+```HTML
+<div id="text" class="smaller">
+  Some text
+</div>
+```
+
+容器之间可以嵌套，只要使用的冒号个数不一样多即可。
+
+大括号也可以单独使用，为一些元素添加属性，例如
+
+```html
+![alt](imgsrc){#text}
+```
+
+这代表一张 ID 为 `text` 的图片。
+
+Quarto 中有一些预定义的样式，例如上面的 smaller 就可以将元素变得更小。
+
+### 标注块
+
+将容器类名定义为
+
+- `callout-note`
+- `callout-tip`
+- `callout-warning`
+- `callout-important`
+- `callout-caution`
+
+中的一种，就可以得到标注块，例如这样
+
+```html
+:::{.callout-note}
+## This is a note for you
+
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+```
+
+就会得到
+
+:::{.callout-note}
+## This is a note for you
+
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+注意，我们使用了一个二级标题改变了标注块的标题。
+
+### 标签页（仅支持 HTML）
+
+将类名写为`panel-tabset`就可以得到标签页。
+
+标签页可以将内容分页展示，其中用二级标题来进行分页。
+
+例如
+
+```html
+:::{.panel-tabset}
+## Python
+
+print("hello world")
+
+## C
+
+printf("hello world\n");
+
+## Cpp
+
+cout << "hello world" << endl;
+:::
+```
+
+渲染效果
+
+:::{.panel-tabset}
+## Python
+
+print("hello world")
+
+## C
+
+printf("hello world\n");
+
+## Cpp
+
+cout << "hello world" << endl;
+:::
+
+### 交叉引用
+
+可以使用容器和大括号对几乎所有的元素进行编号以便交叉引用，例如定理、公式图表等，只要定义它们的 ID 即可。
+
+例如
+
+```html
+:::{#thm-Pythagorean}
+
+## 勾股定理
+
+在直角三角形ABC中，C为直角，角的对边分别为a,b,c，则它们满足下列关系
+
+$$
+a^2+b^2=c^2
+$$
+:::
+```
+
+这将渲染出以下效果
+
+:::{#thm-Pythagorean}
+## 勾股定理
+
+在直角三角形ABC中，C为直角，角的对边分别为a,b,c，则它们满足下列关系
+$$
+a^2+b^2=c^2
+$$
+:::
+
+注意，ID 前必须带有对应的类名如 thm, eq, pf, tbl 等，并且标题被渲染成了定理的名字。
+
+要进行引用，只需要写下`@thm-Pythagorean`，这将得到一个完整的引用 @thm-Pythagorean。
+
+要进行自定义引用前缀，需要写`[公式 @thm-Pythagorean]`，这将得到 [公式 @thm-Pythagorean] 而不是 @thm-Pythagorean 。
+
+要进行无前缀引用，需要写`[-@thm-Pythagorean]`，注意 @ 前的连字符 -，这将得到单独的 [-@thm-Pythagorean]，不带任何前缀。
+
+对于全部的类名，请见下面的表格。
+
+|环境|前缀|使用div|
+|---|:---:|---|
+|表|tbl|否|
+|图|fig|否|
+|方程式|eq|否|
+|章节|sec|否|
+|列表|lst|否|
+|定理|thm|是|
+|引理|lem|是|
+|推论|cor|是|
+|命题|prp|是|
+|猜想|cnj|是|
+|定义|def|是|
+|例|exm|是|
+|练习|exr|是|
+
+对于证明、解等环境，它们并不需要交叉引用，因此并没有相应的前缀，要使用相应的环境只需要将类名定义为`solution`、`proof`即可，例如
+
+```html
+:::{.solution}
+Some text
+:::
+```
+
+## 参考
+
+[Quarto 官网](https://quarto.org)
