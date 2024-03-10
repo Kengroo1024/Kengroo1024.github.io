@@ -5,7 +5,7 @@ categories:
   - Quarto
 ---
 
-在[上一篇](https://www.cnblogs.com/Kengroo/p/17853491.html)博客中，我们已经在 VScode 中配置好了 Quarto 的工作环境，接下来我们将 Quarto 渲染一篇文档为 HTML 格式。
+在[上一篇](%E7%AC%AC%E4%B8%80%E8%8A%82.qmd)博客中，我们已经在 VScode 中配置好了 Quarto 的工作环境，接下来我们将 Quarto 渲染一篇文档为 HTML 格式。
 
 Quarto 采取格式与内容相分离的方式来编写文档，因此，我们写作内容的文件是一个纯文本文件，渲染（render）与格式调整是之后完成的事情。
 
@@ -106,6 +106,7 @@ Quarto 还有拥有许多 GFM 不包括和不支持的语法，诸如网格式�
 ```html
 {{< video https://www.youtube.com/embed/9Q_608h25ZE >}}
 ```
+
 
 然后效果是
 

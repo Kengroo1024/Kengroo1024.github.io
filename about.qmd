@@ -9,7 +9,7 @@ about:
       href: https://github.com/Kengroo1024
     - text: E-mail
       icon: envelope-paper-fill
-      href: mailto://Kengroo<ao1ca0da6@foxmail.com>
+      href: mailto://ao1ca0da6@foxmail.com
 ---
 
 ## 关于我/About me
@@ -40,4 +40,4 @@ about:
 
 [Github](https://github.com)
 
-[知乎](https://zhihu.com)上热心的数学答主们
+[知乎](https://.zhihu.com)上热心的数学答主们

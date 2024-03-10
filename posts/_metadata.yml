@@ -8,3 +8,12 @@ freeze: true
 title-block-banner: false
 
 author: "Kengroo1024"
+
+date-modified: "last-modified"
+
+number-sections: true
+number-depth: 4
+
+toc: true
+toc-depth: 3
+toc-title: "目录"
