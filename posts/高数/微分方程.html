@@ -312,8 +312,8 @@ window.Quarto = {
   <li><a href="#一阶线性微分方程" id="toc-一阶线性微分方程" class="nav-link" data-scroll-target="#一阶线性微分方程"><span class="header-section-number">3</span> 一阶线性微分方程</a></li>
   <li><a href="#线性微分方程解的结构" id="toc-线性微分方程解的结构" class="nav-link" data-scroll-target="#线性微分方程解的结构"><span class="header-section-number">4</span> 线性微分方程解的结构</a>
   <ul class="collapse">
-  <li><a href="#解齐次方程" id="toc-解齐次方程" class="nav-link" data-scroll-target="#解齐次方程"><span class="header-section-number">4.1</span> 解齐次方程</a></li>
-  <li><a href="#解非齐次方程" id="toc-解非齐次方程" class="nav-link" data-scroll-target="#解非齐次方程"><span class="header-section-number">4.2</span> 解非齐次方程</a></li>
+  <li><a href="#齐次方程" id="toc-齐次方程" class="nav-link" data-scroll-target="#齐次方程"><span class="header-section-number">4.1</span> 齐次方程</a></li>
+  <li><a href="#非齐次方程" id="toc-非齐次方程" class="nav-link" data-scroll-target="#非齐次方程"><span class="header-section-number">4.2</span> 非齐次方程</a></li>
   <li><a href="#拆分非齐次方程" id="toc-拆分非齐次方程" class="nav-link" data-scroll-target="#拆分非齐次方程"><span class="header-section-number">4.3</span> 拆分非齐次方程</a></li>
   </ul></li>
   <li><a href="#常系数线性微分方程" id="toc-常系数线性微分方程" class="nav-link" data-scroll-target="#常系数线性微分方程"><span class="header-section-number">5</span> 常系数线性微分方程</a>
@@ -321,7 +321,12 @@ window.Quarto = {
   <li><a href="#常系数齐次线性方程" id="toc-常系数齐次线性方程" class="nav-link" data-scroll-target="#常系数齐次线性方程"><span class="header-section-number">5.1</span> 常系数齐次线性方程</a></li>
   <li><a href="#二阶常系数非齐次线性方程" id="toc-二阶常系数非齐次线性方程" class="nav-link" data-scroll-target="#二阶常系数非齐次线性方程"><span class="header-section-number">5.2</span> 二阶常系数非齐次线性方程</a></li>
   </ul></li>
-  <li><a href="#差分方程" id="toc-差分方程" class="nav-link" data-scroll-target="#差分方程"><span class="header-section-number">6</span> 差分方程</a></li>
+  <li><a href="#差分方程" id="toc-差分方程" class="nav-link" data-scroll-target="#差分方程"><span class="header-section-number">6</span> 差分方程</a>
+  <ul class="collapse">
+  <li><a href="#解差分方程" id="toc-解差分方程" class="nav-link" data-scroll-target="#解差分方程"><span class="header-section-number">6.1</span> 解差分方程</a></li>
+  <li><a href="#特征根法" id="toc-特征根法" class="nav-link" data-scroll-target="#特征根法"><span class="header-section-number">6.2</span> 特征根法</a></li>
+  <li><a href="#参考" id="toc-参考" class="nav-link" data-scroll-target="#参考"><span class="header-section-number">6.3</span> 参考</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -355,6 +360,12 @@ window.Quarto = {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">修改的</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2024年3月10日</p>
+    </div>
+  </div>
     
   </div>
   
@@ -399,19 +410,9 @@ y=
 </section>
 <section id="线性微分方程解的结构" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="线性微分方程解的结构"><span class="header-section-number">4</span> 线性微分方程解的结构</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-注释
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>可以和线性方程组解的结构类比证明和记忆。</p>
-</div>
-</div>
+<blockquote class="blockquote">
+<p>[!note] 可以和线性方程组解的结构类比证明和记忆。</p>
+</blockquote>
 <p><span class="math inline">\(n\)</span>阶线性微分方程的一般形式为</p>
 <p><span class="math display">\[
 y^{(n)}+\sum_{i=1}^{n} p_{i}(x)y^{(n-i)}=q(x)
@@ -426,16 +427,16 @@ y''+p(x)y'+q(x)y=0
 <p><span class="math display">\[
 y''+p(x)y'+q(x)y=f(x)
 \]</span></p>
-<section id="解齐次方程" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="解齐次方程"><span class="header-section-number">4.1</span> 解齐次方程</h3>
+<section id="齐次方程" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="齐次方程"><span class="header-section-number">4.1</span> 齐次方程</h3>
 <p>如果<span class="math inline">\(y_1(x)\)</span>和<span class="math inline">\(y_2(x)\)</span>是齐次方程的两个线性无关<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>的特解，那么</p>
 <p><span class="math display">\[
 y=C_1y_1(x)+C_2y_2(x)
 \]</span></p>
 <p>就是齐次方程的通解。</p>
 </section>
-<section id="解非齐次方程" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="解非齐次方程"><span class="header-section-number">4.2</span> 解非齐次方程</h3>
+<section id="非齐次方程" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="非齐次方程"><span class="header-section-number">4.2</span> 非齐次方程</h3>
 <p>如果如果<span class="math inline">\(y_1(x)\)</span>和<span class="math inline">\(y_2(x)\)</span>是齐次方程的两个线性无关的特解，<span class="math inline">\(y^*(x)\)</span>是非齐次方程的特解，那么</p>
 <p><span class="math display">\[
 y=C_1y_1(x)+C_2y_2(x)+y^*(x)
@@ -520,8 +521,85 @@ k=\left\{\begin{aligned}
 </section>
 <section id="差分方程" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="差分方程"><span class="header-section-number">6</span> 差分方程</h2>
+<p>函数<span class="math inline">\(f(x)\)</span>定义在数列<span class="math inline">\(\{a_n\}\)</span>上，令<span class="math inline">\(y_n=f(x_n)\)</span>，定义<span class="math inline">\(\Delta\)</span>为差分算子，即<span class="math inline">\(\Delta y_n=y_n-y_{n-1}\)</span>.</p>
+<p>称形如</p>
+<p><span class="math display">\[
+F(x_n,\Delta y_n,\Delta^2 y_n,...,\Delta^n y_n)=0
+\]</span></p>
+<p>的含有因变量的差分的方程为差分方程。</p>
+<p>把数列看成定义在自然数子集上的函数，可以看出差分方程和递推关系完全等价。</p>
+<section id="解差分方程" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="解差分方程"><span class="header-section-number">6.1</span> 解差分方程</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+递推关系和常系数线性微分方程的联系
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>微分可以看作特殊的差分过程，作为差分在连续统上的一种推广。一阶线性微分方程可以通过离散化精确地写成递推关系的形式。</p>
+<p>更详细可以看<a href="https://en.wikipedia.org/wiki/Recurrence_relation#Relationship_to_differential_equations">Wiki</a></p>
+</div>
+</div>
+<p><span class="math display">\[
+u_n=\sum_{i=1}^k a_iu_{n-i}+f(n)
+\]</span></p>
+<p>称为<span class="math inline">\(k\)</span>阶常系数递推关系。</p>
+<p>使用特征根法解上面的递推关系。</p>
+</section>
+<section id="特征根法" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="特征根法"><span class="header-section-number">6.2</span> 特征根法</h3>
+<p>将递推关系式</p>
+<p><span class="math display">\[
+u_n-a_1u_{n-1}-a_2u_{n-2}-...-a_k-u_{n-k}=0
+\]</span></p>
+<p>改写为如下的特征方程</p>
+<p><span class="math display">\[
+x^k-a_1x^{k-1}-...-a_{k-1}x-a_k=0
+\]</span></p>
+<p>有如下定理</p>
+<ol type="1">
+<li><p>设<span class="math inline">\(q\in C\)</span>且<span class="math inline">\(q\not=0\)</span>，<span class="math inline">\(u_n=q^n\)</span>是递推关系的一个解当且仅当<span class="math inline">\(q\)</span>是特征方程的一个根。<span class="math inline">\(q\)</span>称为递推关系的一个<span class="math inline">\(m\)</span>重特征根，当<span class="math inline">\(q\)</span>是特征方程的<span class="math inline">\(m\)</span>重根，简称特征根。</p></li>
+<li><p>设<span class="math inline">\(g_i(n)\)</span>都是递推关系的解，那么它们的线性组合也是递推关系的解</p></li>
+<li><p>如果递推关系有<span class="math inline">\(k\)</span>个彼此相异的特征根<span class="math inline">\(q_1,q_2,...,q_k\)</span>，那么</p>
+<p><span class="math display">\[
+u_n=c_1q_1^n+c_2q_2^n+...+c_kq_k^n
+\]</span></p>
+<p>是递推关系的通解。</p></li>
+</ol>
+<section id="有重根时的常系数线性齐次递推关系解法" class="level4" data-number="6.2.1">
+<h4 data-number="6.2.1" class="anchored" data-anchor-id="有重根时的常系数线性齐次递推关系解法"><span class="header-section-number">6.2.1</span> 有重根时的常系数线性齐次递推关系解法</h4>
+<p>设<span class="math inline">\(q\)</span>是递推关系的一个<span class="math inline">\(m\)</span>重特征根，那么</p>
+<p><span class="math display">\[
+u_n=n^jq^n,j=0,1,2,...,m-1
+\]</span></p>
+<p>都是递推关系的解。</p>
+<p>设递推关系有<span class="math inline">\(t\)</span>个相异的特征根<span class="math inline">\(q_1,q_2,...,q_t\)</span>，其中<span class="math inline">\(q_i\)</span>是<span class="math inline">\(e_i\)</span>重根，<span class="math inline">\(i=1,2,...,t\)</span>. 令</p>
+<p><span class="math display">\[
+h_i(n)=c_{i1}+c_{i2}n+...+c_{ie_i}n^{e_i-1}
+\]</span></p>
+<p>那么递推关系的通解为</p>
+<p><span class="math display">\[
+u_n=h_1(n)q_1^n+h_2(n)q_2^n+...+h_t(n)q_t^n
+\]</span></p>
+</section>
+<section id="两类特殊常系数非齐次线性递推关系的解" class="level4" data-number="6.2.2">
+<h4 data-number="6.2.2" class="anchored" data-anchor-id="两类特殊常系数非齐次线性递推关系的解"><span class="header-section-number">6.2.2</span> 两类特殊常系数非齐次线性递推关系的解</h4>
+<ol type="1">
+<li><span class="math inline">\(f(n)\)</span>是<span class="math inline">\(n\)</span>的<span class="math inline">\(m\)</span>次多项式，如果1是递推关系的<span class="math inline">\(i\)</span>重特征根（如果不是特征根那么按0重计算）那么<span class="math inline">\(n^ig(n)\)</span>是递推关系的一个特解，其中<span class="math inline">\(g(n)\)</span>是一个<span class="math inline">\(m\)</span>次多项式，系数应通过待定系数法解出。</li>
+<li><span class="math inline">\(f(n)=c\cdot a^n\)</span>，其中<span class="math inline">\(c,a\)</span>均为非零常数。如果<span class="math inline">\(a\)</span>是递推关系的<span class="math inline">\(i\)</span>重特征根（如果不是特征根那么按0重计算）那么<span class="math inline">\(A\cdot n^ia^n\)</span>是递推关系的一个特解，其中系数<span class="math inline">\(A\)</span>应通过待定系数法解出。</li>
+</ol>
+</section>
+</section>
+<section id="参考" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="参考"><span class="header-section-number">6.3</span> 参考</h3>
+<p>华南理工大学出版社《组合数学》曹汝成，第三章第二节，递推关系</p>
 
 
+</section>
 </section>
 
 
