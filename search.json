@@ -1,315 +1,269 @@
 [
   {
-    "objectID": "posts/高数/积分.html",
-    "href": "posts/高数/积分.html",
-    "title": "积分",
+    "objectID": "考研数学.html",
+    "href": "考研数学.html",
+    "title": "考研数学",
     "section": "",
-    "text": "在区间\\([a,b]\\)上做分划 \\[\na=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b\n\\] 令\\(\\Delta x_i=x_i-x_{i-1}\\)，任取\\(\\xi_i\\in[x_{i-1},x_i]\\)，只要\\(\\lambda=\\mathrm{sup}\\{\\Delta x_i\\}\\to 0\\)时，和式 \\[\n\\sum_{i=1}^{n}f(\\xi_i)\\Delta x_i\n\\]\n的极限存在，那么称和式为\\(f(x)\\)在区间\\([a,b]\\)上的定积分，记做 \\[\n\\int_a^b f(x)\\mathrm{d}x.\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "积分"
-    ]
+    "text": "欢迎来到考研数学板块\n\n\n\n\n\n\n   \n     \n     \n       排序方式\n       缺省\n         \n          标题\n        \n         \n          日期 - 日期升序\n        \n         \n          日期 - 日期降序\n        \n         \n          作者\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n概率与统计知识点\n\n\n\n\n\n\n考研数学\n\n\n概统\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n二次型\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n特征向量\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n矩阵\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n行列式计算\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n三角函数\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n导数和微分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n微分方程\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n积分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n无匹配项"
   },
   {
-    "objectID": "posts/高数/积分.html#定积分定义",
-    "href": "posts/高数/积分.html#定积分定义",
-    "title": "积分",
+    "objectID": "考研数学/高数/微分方程.html",
+    "href": "考研数学/高数/微分方程.html",
+    "title": "微分方程",
     "section": "",
-    "text": "在区间\\([a,b]\\)上做分划 \\[\na=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b\n\\] 令\\(\\Delta x_i=x_i-x_{i-1}\\)，任取\\(\\xi_i\\in[x_{i-1},x_i]\\)，只要\\(\\lambda=\\mathrm{sup}\\{\\Delta x_i\\}\\to 0\\)时，和式 \\[\n\\sum_{i=1}^{n}f(\\xi_i)\\Delta x_i\n\\]\n的极限存在，那么称和式为\\(f(x)\\)在区间\\([a,b]\\)上的定积分，记做 \\[\n\\int_a^b f(x)\\mathrm{d}x.\n\\]",
+    "text": "可以被表示为\\(g(x)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "积分"
+      "微分方程"
     ]
   },
   {
-    "objectID": "posts/高数/积分.html#构造定积分",
-    "href": "posts/高数/积分.html#构造定积分",
-    "title": "积分",
-    "section": "2 构造定积分",
-    "text": "2 构造定积分\n\\[\n\\int_0^1f(x)\\mathrm{d}x=\\lim_{n\\to\\infty}\\sum_{i=0}^n\\dfrac1nf(\\dfrac in)\n\\]\n极限，求和，\\(\\dfrac in\\)就是\\(\\xi_i\\)，\\(\\dfrac 1n\\)就是\\(\\Delta x_i\\)，就是把区间\\([0,1]\\)分为了\\(n\\)份，符合定积分定义因此这个极限就是定积分。\n\n\n\n\n\n\n注释\n\n\n\n看到极限后求和就要想到积分。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "积分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/积分.html#不太好记的不定积分",
-    "href": "posts/高数/积分.html#不太好记的不定积分",
-    "title": "积分",
-    "section": "3 不太好记的不定积分",
-    "text": "3 不太好记的不定积分\n\n\n\n\n\n\n注意\n\n\n\n不定积分一定要记得带\\(C\\)\n\n\n\n\n\n\n\n\n注意\n\n\n\n看到这类积分是定积分时一定要先考察是否是奇函数\n\n\n\n\\(\\int\\dfrac{1}{a^2-x^2}\\mathrm dx=\\dfrac{1}{2a}\\ln\\left|\\dfrac{a+x}{a-x}\\right|+C\\)\n\\(\\int\\dfrac{1}{\\sqrt{x^2\\pm a^2}}\\mathrm dx=\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|+C\\)\n\\(\\int\\dfrac{1}{1+\\cos x}\\mathrm dx=\\tan\\dfrac t2+C\\)",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "积分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/积分.html#三角函数定积分的一个结论",
-    "href": "posts/高数/积分.html#三角函数定积分的一个结论",
-    "title": "积分",
-    "section": "4 三角函数定积分的一个结论",
-    "text": "4 三角函数定积分的一个结论\n\\[\n\\int_0^{\\frac \\pi2}\\sin^nx\\mathrm dx=\n\\int_0^{\\frac \\pi2}\\cos^nx\\mathrm dx=\n\\left\\{\n\\begin{aligned}\n\\dfrac{(n-1)!!}{n!!}\\dfrac\\pi2,\\text{当n为偶数}\\\\\n\\dfrac{(n-1)!!}{n!!},\\text{当n为奇数}\n\\end{aligned}\n\\right.\n\\]\n\n论证. 见此",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "积分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/积分.html#旋转体体积",
-    "href": "posts/高数/积分.html#旋转体体积",
-    "title": "积分",
-    "section": "5 旋转体体积",
-    "text": "5 旋转体体积\n\\[\nV=\\pi\\int_a^bf^2(x)\\mathrm dx\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "积分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/导数和微分.html",
-    "href": "posts/高数/导数和微分.html",
-    "title": "导数和微分",
+    "objectID": "考研数学/高数/微分方程.html#可分离变量的方程",
+    "href": "考研数学/高数/微分方程.html#可分离变量的方程",
+    "title": "微分方程",
     "section": "",
-    "text": "\\[\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}\n\\] \\[\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial y}\\\\\n\\]",
+    "text": "可以被表示为\\(g(x)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "导数和微分"
+      "微分方程"
     ]
   },
   {
-    "objectID": "posts/高数/导数和微分.html#二元函数求偏导链式法则",
-    "href": "posts/高数/导数和微分.html#二元函数求偏导链式法则",
-    "title": "导数和微分",
+    "objectID": "考研数学/高数/微分方程.html#齐次微分方程",
+    "href": "考研数学/高数/微分方程.html#齐次微分方程",
+    "title": "微分方程",
+    "section": "齐次微分方程",
+    "text": "齐次微分方程\n可以被表示为\\(\\dfrac{\\mathrm dy}{\\mathrm dx}=\\varphi(\\dfrac yx)\\)的方程\n求解方法：令\\(u=\\dfrac yx\\)，有\\(y'=u+xu'\\)，则原方程可以化为\n\\[\nxu'=\\varphi(u)-u\n\\]\n进一步可以化为\n\\[\n\\dfrac{\\mathrm dx}{x}=\\dfrac{\\mathrm du}{\\varphi(u)-u}\n\\]\n于是归结为可分离变量的方程。",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/微分方程.html#一阶线性微分方程",
+    "href": "考研数学/高数/微分方程.html#一阶线性微分方程",
+    "title": "微分方程",
+    "section": "一阶线性微分方程",
+    "text": "一阶线性微分方程\n形如\\(y'+p(x)y=q(x)\\)的方程\n求解方法：公式法\n\\[\ny=\n\\mathrm e^{-\\int p(x)\\mathrm dx}\n\\left[\n\\int q(x)\\mathrm e^{\\int p(x)\\mathrm dx}\\mathrm dx+C\n\\right]\n\\]\n括号内都是正的，括号外都是负的，e的指数上都是\\(p\\)，常数项才有\\(q\\).",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/微分方程.html#线性微分方程解的结构",
+    "href": "考研数学/高数/微分方程.html#线性微分方程解的结构",
+    "title": "微分方程",
+    "section": "线性微分方程解的结构",
+    "text": "线性微分方程解的结构\n\n[!note] 可以和线性方程组解的结构类比证明和记忆。\n\n\\(n\\)阶线性微分方程的一般形式为\n\\[\ny^{(n)}+\\sum_{i=1}^{n} p_{i}(x)y^{(n-i)}=q(x)\n\\]\n规定\\(y^{(0)}=y\\). 当\\(f(x)=0\\)时称为\\(n\\)阶齐次线性微分方程。\n在此特别研究二阶线性微分方程。\n二阶齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=0\n\\]\n二阶非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f(x)\n\\]\n\n齐次方程\n如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关1的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)\n\\]\n就是齐次方程的通解。\n\n\n非齐次方程\n如果如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关的特解，\\(y^*(x)\\)是非齐次方程的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)+y^*(x)\n\\]\n是非齐次方程的通解。\n\n\n拆分非齐次方程\n如果\\(y_1^*(x),y_2^*(x)\\)分别是非齐次线性方程\n\\[\n\\begin{aligned}\ny''+p(x)y'+q(x)y=f_1(x)\\\\\ny''+p(x)y'+q(x)y=f_2(x)\n\\end{aligned}\n\\]\n的通解，那么\\(y_1^*(x)+y_2^*(x)\\)是非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f_1(x)+f_2(x)\n\\]\n的一个特解。",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/微分方程.html#常系数线性微分方程",
+    "href": "考研数学/高数/微分方程.html#常系数线性微分方程",
+    "title": "微分方程",
+    "section": "常系数线性微分方程",
+    "text": "常系数线性微分方程\n\n常系数齐次线性方程\n采用特征根法求解，以二阶为例。\n二阶常系数齐次微分方程一般形式为\n\\[\ny''+py'+q=0\n\\]\n特征方程为\n\\[\nr^2+pr+q=0\n\\]\n设\\(r_1,r_2\\)为该方程的两个根。\n\n\\(r_1\\not= r_2\\)，且都是实数，通解为\n\\[\ny=C_1\\mathrm e^{r_1x}+C_2\\mathrm e^{r_2x}\n\\]\n\\(r_1=r_2\\)，通解为\n\\[\ny=(C_1+C_2x)\\mathrm e^{r_1x}\n\\]\n\\(r_1=a+\\mathrm ib,\\ r_2=a-\\mathrm ib\\)为共轭复根，通解为\n\\[\ny=\\mathrm e^{ax}(C_1\\cos bx+C_2\\sin bx)\n\\]\n\n其实还是\n\\[\ny=\\sum_{i=1}^n \\mathrm C_ie^{r_i}\n\\]\n只是有复数时要用欧拉公式展开。\n\n\n二阶常系数非齐次线性方程\n二阶常系数非齐次微分方程一般形式为\n\\[\ny''+py'+q=f(x)\n\\]\n\n若\\(f(x)=P_m(x)e^{\\lambda x}\\)，其中\\(P_m(x)\\)为\\(x\\)的\\(m\\)次多项式，\\(\\lambda\\)为特征方程的一个根，那么特解可以表示为\n\\[\ny^*(x)=x^kQ_m(x)\\mathrm e^{\\lambda x}\n\\]\n其中\\(k\\)是\\(\\lambda\\)的重数，\\(Q_m(x)\\)是与\\(P_m(x)\\)同次的多项式。\n若\\[f(x)=\\mathrm e^{ax}[P_l^{(1)}(x)\\cos bx+P_n^{(2)}(x)\\sin bx]\\]其中\\(P_l^{(1)},P_n^{(2)}\\)分别是\\(x\\)的\\(l,n\\)次多项式，则特解可以表示为\n\\[\ny^*(x)=x^k\\mathrm e^{ax}[R_m^{(1)}(x)\\cos bx+R_m^{(2)}(x)\\sin bx]\n\\]\n其中\\(R_m^{(1)}(x),R_m^{(2)}(x)\\)是两个\\(m\\)次多项式，\\(m=\\max\\{n,l\\}\\).\n\\[\nk=\\left\\{\\begin{aligned}\n0&,a+\\mathrm ib\\text{不是特征方程的根}\\\\\n1&,a+\\mathrm ib\\text{是特征方程的单根}\n\\end{aligned}\\right.\n\\]",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/微分方程.html#差分方程",
+    "href": "考研数学/高数/微分方程.html#差分方程",
+    "title": "微分方程",
+    "section": "差分方程",
+    "text": "差分方程\n函数\\(f(x)\\)定义在数列\\(\\{a_n\\}\\)上，令\\(y_n=f(x_n)\\)，定义\\(\\Delta\\)为差分算子，即\\(\\Delta y_n=y_n-y_{n-1}\\).\n称形如\n\\[\nF(x_n,\\Delta y_n,\\Delta^2 y_n,...,\\Delta^n y_n)=0\n\\]\n的含有因变量的差分的方程为差分方程。\n把数列看成定义在自然数子集上的函数，可以看出差分方程和递推关系完全等价。\n\n解差分方程\n\n\n\n\n\n\n递推关系和常系数线性微分方程的联系\n\n\n\n微分可以看作特殊的差分过程，作为差分在连续统上的一种推广。一阶线性微分方程可以通过离散化精确地写成递推关系的形式。\n更详细可以看Wiki\n\n\n\\[\nu_n=\\sum_{i=1}^k a_iu_{n-i}+f(n)\n\\]\n称为\\(k\\)阶常系数递推关系。\n使用特征根法解上面的递推关系。\n\n\n特征根法\n将递推关系式\n\\[\nu_n-a_1u_{n-1}-a_2u_{n-2}-...-a_k-u_{n-k}=0\n\\]\n改写为如下的特征方程\n\\[\nx^k-a_1x^{k-1}-...-a_{k-1}x-a_k=0\n\\]\n有如下定理\n\n设\\(q\\in C\\)且\\(q\\not=0\\)，\\(u_n=q^n\\)是递推关系的一个解当且仅当\\(q\\)是特征方程的一个根。\\(q\\)称为递推关系的一个\\(m\\)重特征根，当\\(q\\)是特征方程的\\(m\\)重根，简称特征根。\n设\\(g_i(n)\\)都是递推关系的解，那么它们的线性组合也是递推关系的解\n如果递推关系有\\(k\\)个彼此相异的特征根\\(q_1,q_2,...,q_k\\)，那么\n\\[\nu_n=c_1q_1^n+c_2q_2^n+...+c_kq_k^n\n\\]\n是递推关系的通解。\n\n\n有重根时的常系数线性齐次递推关系解法\n设\\(q\\)是递推关系的一个\\(m\\)重特征根，那么\n\\[\nu_n=n^jq^n,j=0,1,2,...,m-1\n\\]\n都是递推关系的解。\n设递推关系有\\(t\\)个相异的特征根\\(q_1,q_2,...,q_t\\)，其中\\(q_i\\)是\\(e_i\\)重根，\\(i=1,2,...,t\\). 令\n\\[\nh_i(n)=c_{i1}+c_{i2}n+...+c_{ie_i}n^{e_i-1}\n\\]\n那么递推关系的通解为\n\\[\nu_n=h_1(n)q_1^n+h_2(n)q_2^n+...+h_t(n)q_t^n\n\\]\n\n\n两类特殊常系数非齐次线性递推关系的解\n\n\\(f(n)\\)是\\(n\\)的\\(m\\)次多项式，如果1是递推关系的\\(i\\)重特征根（如果不是特征根那么按0重计算）那么\\(n^ig(n)\\)是递推关系的一个特解，其中\\(g(n)\\)是一个\\(m\\)次多项式，系数应通过待定系数法解出。\n\\(f(n)=c\\cdot a^n\\)，其中\\(c,a\\)均为非零常数。如果\\(a\\)是递推关系的\\(i\\)重特征根（如果不是特征根那么按0重计算）那么\\(A\\cdot n^ia^n\\)是递推关系的一个特解，其中系数\\(A\\)应通过待定系数法解出。\n\n\n\n\n参考\n华南理工大学出版社《组合数学》曹汝成，第三章第二节，递推关系",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/微分方程.html#footnotes",
+    "href": "考研数学/高数/微分方程.html#footnotes",
+    "title": "微分方程",
+    "section": "脚注",
+    "text": "脚注\n\n\n线性无关即不成比例↩︎",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "微分方程"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/三角函数.html",
+    "href": "考研数学/高数/三角函数.html",
+    "title": "三角函数",
     "section": "",
-    "text": "\\[\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}\n\\] \\[\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial y}\\\\\n\\]",
+    "text": "三角函数六角图\n\n\n在图中，对角线表示倒数，黄色三角形的邻角表示具有恒等关系，具体如下\n\n\\(\\sin^2x+\\cos^2=1\\)\n\\(\\sec^2x-\\tan^2x=1\\)\n\\(\\csc^2x-\\cot^2x=1\\)",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "导数和微分"
+      "三角函数"
     ]
   },
   {
-    "objectID": "posts/高数/导数和微分.html#二元函数全微分",
-    "href": "posts/高数/导数和微分.html#二元函数全微分",
-    "title": "导数和微分",
-    "section": "2 二元函数全微分",
-    "text": "2 二元函数全微分\n\\[\n\\mathrm{d}z=\\dfrac{\\partial z}{\\partial x}\\mathrm{d}x+\\dfrac{\\partial z}{\\partial y}\\mathrm{d}y\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "导数和微分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/导数和微分.html#taylor-formula",
-    "href": "posts/高数/导数和微分.html#taylor-formula",
-    "title": "导数和微分",
-    "section": "3 Taylor Formula",
-    "text": "3 Taylor Formula\n\\[\nf(x)=f(x-x_0)+f'(x_0)(x-x_0)+o(x)\n\\]\n\\[\nf(x)=f(x-x_0)+\\sum_{i=1}^{\\infty}f^{(i)}(x_0)\\dfrac{(x-x_0)^n}{i!}\n\\]\n\n\n\n常用泰勒展开式",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "导数和微分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/导数和微分.html#导数定义",
-    "href": "posts/高数/导数和微分.html#导数定义",
-    "title": "导数和微分",
-    "section": "4 导数定义",
-    "text": "4 导数定义\n给定函数\\(f(x)\\)，若极限\n\\[\n\\lim_{\\Delta x\\to0}\\dfrac{f(x_0\\pm\\Delta x)-f(x_0)}{\\Delta x}\n\\]\n存在，且相等则称其为\\(f(x)\\)在\\(x_0\\)处的导数，并称\\(f(x)\\)在\\(x=x_0\\)处可导。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "导数和微分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/导数和微分.html#高阶无穷小量",
-    "href": "posts/高数/导数和微分.html#高阶无穷小量",
-    "title": "导数和微分",
-    "section": "5 高阶无穷小量",
-    "text": "5 高阶无穷小量\n若\\(f,g\\)在\\(x_0\\)处的极限都是0，并且有\n\\[\n\\lim_{x\\to x_0}\\dfrac{f(x)}{g(x)}=0\n\\]\n则称\\(f\\)为\\(g\\)在\\(x=x_0\\)处的高阶无穷小量，记做\n\\[\nf(x)=o(g(x))\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "导数和微分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/导数和微分.html#一阶微分的形式不变性和高阶微分没有此性质",
-    "href": "posts/高数/导数和微分.html#一阶微分的形式不变性和高阶微分没有此性质",
-    "title": "导数和微分",
-    "section": "6 一阶微分的形式不变性和高阶微分没有此性质",
-    "text": "6 一阶微分的形式不变性和高阶微分没有此性质\n已知\\(y=f(u),u=\\varphi(x)\\)，那么进行变量替换时有\n\\[\n\\mathrm dy=f'(u)\\mathrm du=f'(u)\\varphi'(x)\\mathrm dx\n\\]\n这称为一阶微分的形式不变性，而二阶微分不具有这个性质，而是\n\\[\n\\mathrm d^2y=f''(u)\\mathrm du^2+f'(x)\\mathrm d^2u\n\\]\n上式是通过将\\(u\\)看作以\\(x\\)为自变量的函数，而不是自变量得出的，进行第二次微分时，多出了一项，而且求微分的次数越高，多出的项越多。\n如果\\(u\\)是自变量，那么依旧有\n\\[\n\\mathrm d^2y=f''(u)\\mathrm du^2\n\\]\n\n\n\n\n\n\n求微分时变量替换的问题\n\n\n\n所以在求微分时，只能一次一次求，不能一步到位。\n例如求\\(\\dfrac{\\mathrm d^2y}{dx^2}\\)不能直接求\\(\\dfrac{\\mathrm d^2y}{du^2}\\cdot\\left(\\dfrac{\\mathrm du}{dx}\\right)^2\\)\n因为它实际上是\n\\[\n\\dfrac{\\mathrm d^2y}{\\mathrm dx^2}=f''(u)\\left(\\dfrac{\\mathrm du}{\\mathrm dx}\\right)^2+f'(x)\\dfrac{\\mathrm d^2u}{\\mathrm dx^2}\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "导数和微分"
-    ]
-  },
-  {
-    "objectID": "posts/高数/导数和微分.html#渐近线",
-    "href": "posts/高数/导数和微分.html#渐近线",
-    "title": "导数和微分",
-    "section": "7 渐近线",
-    "text": "7 渐近线\n如果关于函数\\(f(x)\\)的极限\n\\[\n\\lim_{x\\to+\\infty}\\dfrac{f(x)}{x}\n\\]\n存在，那么这个函数有一个向\\(x\\)轴正方向的渐近线，其斜率\\(k\\)等于上述极限，截距\n\\[\nb=\\lim_{x\\to+\\infty}(f(x)-kx)\n\\]\n\n\n\n\n\n\n注释\n\n\n\n如果\\(f(x)\\)同时在\\((c,+\\infty)\\)上可导，那么由L’Hopital’s Rule可以立即得到\n\\[\nk=\\lim_{x\\to+\\infty}f'(x)\n\\]\n\n\n上述讨论在\\(x\\to-\\infty\\)时也成立，函数在\\(x\\)轴负方向也有一条渐近线，如果正负两根渐近线重合，视为一条渐近线。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "导数和微分"
-    ]
-  },
-  {
-    "objectID": "posts/线性代数/行列式.html",
-    "href": "posts/线性代数/行列式.html",
-    "title": "行列式计算",
+    "objectID": "考研数学/高数/三角函数.html#三角函数六角图",
+    "href": "考研数学/高数/三角函数.html#三角函数六角图",
+    "title": "三角函数",
     "section": "",
-    "text": "参见这里",
+    "text": "三角函数六角图\n\n\n在图中，对角线表示倒数，黄色三角形的邻角表示具有恒等关系，具体如下\n\n\\(\\sin^2x+\\cos^2=1\\)\n\\(\\sec^2x-\\tan^2x=1\\)\n\\(\\csc^2x-\\cot^2x=1\\)",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
+      "高数",
+      "三角函数"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/三角函数.html#三角函数和差化积公式",
+    "href": "考研数学/高数/三角函数.html#三角函数和差化积公式",
+    "title": "三角函数",
+    "section": "三角函数和差化积公式",
+    "text": "三角函数和差化积公式",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "三角函数"
+    ]
+  },
+  {
+    "objectID": "考研数学/线性代数/矩阵.html",
+    "href": "考研数学/线性代数/矩阵.html",
+    "title": "矩阵",
+    "section": "",
+    "text": "二阶矩阵的特征多项式\\(|\\lambda\\boldsymbol E-\\boldsymbol A|=0\\)为\n\\[\n\\lambda^2-tr(\\boldsymbol A)\\lambda+\\det(\\boldsymbol A)=0\n\\]\n其中\\(tr(A)\\)为矩阵的迹，\\(\\det(A)\\)为矩阵的行列式。\n只要解该方程即可。",
+    "crumbs": [
+      "考研数学",
       "线性代数",
-      "行列式计算"
+      "矩阵"
     ]
   },
   {
-    "objectID": "posts/线性代数/行列式.html#行列式计算",
-    "href": "posts/线性代数/行列式.html#行列式计算",
-    "title": "行列式计算",
+    "objectID": "考研数学/线性代数/矩阵.html#二阶矩阵的特征值",
+    "href": "考研数学/线性代数/矩阵.html#二阶矩阵的特征值",
+    "title": "矩阵",
     "section": "",
-    "text": "参见这里",
+    "text": "二阶矩阵的特征多项式\\(|\\lambda\\boldsymbol E-\\boldsymbol A|=0\\)为\n\\[\n\\lambda^2-tr(\\boldsymbol A)\\lambda+\\det(\\boldsymbol A)=0\n\\]\n其中\\(tr(A)\\)为矩阵的迹，\\(\\det(A)\\)为矩阵的行列式。\n只要解该方程即可。",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "线性代数",
-      "行列式计算"
+      "矩阵"
     ]
   },
   {
-    "objectID": "posts/线性代数/特征向量.html",
-    "href": "posts/线性代数/特征向量.html",
-    "title": "特征向量",
+    "objectID": "考研数学/线性代数/矩阵.html#矩阵多项式的特征值",
+    "href": "考研数学/线性代数/矩阵.html#矩阵多项式的特征值",
+    "title": "矩阵",
+    "section": "矩阵多项式的特征值",
+    "text": "矩阵多项式的特征值\n若\\(\\lambda\\)是\\(\\boldsymbol A\\)的特征值，那么\\(\\varphi(\\lambda)\\)是矩阵多项式\\(\\varphi(\\boldsymbol A)\\)的特征值。",
+    "crumbs": [
+      "考研数学",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "考研数学/线性代数/矩阵.html#对角矩阵",
+    "href": "考研数学/线性代数/矩阵.html#对角矩阵",
+    "title": "矩阵",
+    "section": "对角矩阵",
+    "text": "对角矩阵\n\n矩阵的相似对角化\n如果一个矩阵相似于对角矩阵，那么它可以写为\n\\[\n\\boldsymbol A=\\boldsymbol P^{-1}\\boldsymbol\\Lambda\\boldsymbol P\n\\]\n其中\\(\\boldsymbol P\\)是各个特征向量组成的矩阵，它们和\\(\\boldsymbol\\Lambda\\)中各自的特征值一一对应。\n\n\n矩阵相似对角化的条件\n如果\\(k\\)阶方阵拥有\\(k\\)个线性无关的特征向量，则其相似于对角矩阵。\n\n\n\n\n\n\n对于具体的情况\n\n\n\n\n\n\n实对称矩阵必能对角化\n若矩阵有\\(k\\)个不同的特征值，则其也必能对角化\n若矩阵的每个\\(i\\)重特征值都拥有\\(i\\)个线性无关的特征向量，那么它也必能对角化\n\n\n\n\n\n\n特征值\n对角矩阵的特征值是对角线上所有元素，重复按重根计算。\n\n\n秩\n对角矩阵的秩等于对角线上非零元的个数。\n\n推论 1 如果一个矩阵相似于对角矩阵，则它的秩等于非0特征值的个数，重根按重数计算。",
+    "crumbs": [
+      "考研数学",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "考研数学/线性代数/矩阵.html#伴随矩阵",
+    "href": "考研数学/线性代数/矩阵.html#伴随矩阵",
+    "title": "矩阵",
+    "section": "伴随矩阵",
+    "text": "伴随矩阵\n\n秩\n\\(n\\)阶矩阵\\(\\boldsymbol A\\)的伴随矩阵为\\(\\boldsymbol A^*\\)，它的秩为\n\\[\nr(\\boldsymbol A^*)=\\left\\{\\begin{aligned}\nn,&\\text{ if }r(\\boldsymbol A)=n,\\\\\n1,&\\text{ if }r(\\boldsymbol A)=n-1,\\\\\n0,&\\text{ if }r(\\boldsymbol A)&lt;n-1\n\\end{aligned}\\right.\n\\]",
+    "crumbs": [
+      "考研数学",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "考研数学/线性代数/矩阵.html#秩1矩阵",
+    "href": "考研数学/线性代数/矩阵.html#秩1矩阵",
+    "title": "矩阵",
+    "section": "秩1矩阵",
+    "text": "秩1矩阵\n设矩阵\\(\\boldsymbol A\\)的秩为1，那么它有如下一些性质\n\n可分解性\n\\(\\boldsymbol A\\)一定可以被分解为两向量之积，即\n\\[\n\\exists\\boldsymbol\\alpha,\\boldsymbol\\beta,\\text{使得}\\boldsymbol A=\\boldsymbol\\alpha^T\\boldsymbol\\beta\n\\]\n且\n\\[\n\\boldsymbol\\beta^T\\boldsymbol\\alpha=tr(\\boldsymbol A)\n\\]\n\n\n\n\n\n\n推广\n\n\n\n如果\\(r(\\boldsymbol A)=k\\)则\\(\\boldsymbol A\\)可以被分解为一\\(m\\times k\\)和秩\\(k\\)矩阵\\(\\boldsymbol M\\)和一\\(k\\times n\\)的秩\\(k\\)矩阵\\(\\boldsymbol N\\)之积\n\n\n\n\n特征值\n如果\\(\\boldsymbol A\\)是\\(n\\)阶方阵，其特征值为\\(n-1\\)个0和\\(tr(\\boldsymbol A)\\).\n\n\n相似对角化\n\\(\\boldsymbol A\\)一定可以相似对角化，其中\\(n\\)个0对应\\(n\\)个线性无关的特征向量。\n\n\n幂乘\n\\[\n\\boldsymbol A^n=tr(\\boldsymbol A)^{n-1}A\n\\]",
+    "crumbs": [
+      "考研数学",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "考研数学/线性代数/矩阵.html#实对称矩阵",
+    "href": "考研数学/线性代数/矩阵.html#实对称矩阵",
+    "title": "矩阵",
+    "section": "实对称矩阵",
+    "text": "实对称矩阵\n对于有限维实对称矩阵（下面简称对称矩阵），有如下性质\n\n特征向量正交性\n对称矩阵不同特征值对应的特征向量是正交的。\n\n\n特征向量个数\n对称矩阵特征根的代数重数和几何重数相等，即\\(i\\)重特征根必然对应\\(i\\)个线性无关的特征向量。\n\n\n\n\n\n\n注释\n\n\n\n根据矩阵相似对角化的条件，对称矩阵必可相似对角化\n且由 推论 1 ，对称矩阵的秩等于其非零特征值的个数，重根按重数计算。\n\n\n\n\n特征值和特征向量\n对称矩阵的特征值均为实数，特征向量均为实向量。",
+    "crumbs": [
+      "考研数学",
+      "线性代数",
+      "矩阵"
+    ]
+  },
+  {
+    "objectID": "考研数学/线性代数/二次型.html",
+    "href": "考研数学/线性代数/二次型.html",
+    "title": "二次型",
     "section": "",
-    "text": "可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。",
+    "text": "实际上就是把二次型的矩阵\\(\\boldsymbol A\\)对角化，按矩阵的相似对角化操作即可。如果还要进一步求出所用的线性变换\\(\\boldsymbol P\\)，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "线性代数",
-      "特征向量"
+      "二次型"
     ]
   },
   {
-    "objectID": "posts/线性代数/特征向量.html#逆矩阵的特征值和特征向量的对应关系",
-    "href": "posts/线性代数/特征向量.html#逆矩阵的特征值和特征向量的对应关系",
-    "title": "特征向量",
+    "objectID": "考研数学/线性代数/二次型.html#将二次型化为规范型",
+    "href": "考研数学/线性代数/二次型.html#将二次型化为规范型",
+    "title": "二次型",
     "section": "",
-    "text": "可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。",
+    "text": "实际上就是把二次型的矩阵\\(\\boldsymbol A\\)对角化，按矩阵的相似对角化操作即可。如果还要进一步求出所用的线性变换\\(\\boldsymbol P\\)，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "线性代数",
-      "特征向量"
+      "二次型"
     ]
   },
   {
-    "objectID": "posts/线性代数/特征向量.html#判断特征根重数的一种方法",
-    "href": "posts/线性代数/特征向量.html#判断特征根重数的一种方法",
-    "title": "特征向量",
-    "section": "2 判断特征根重数的一种方法",
-    "text": "2 判断特征根重数的一种方法\n条件：n阶方阵\\(\\boldsymbol A\\)可相似对角化，或者干脆就是对角矩阵。\n行为：把待验证的特征值\\(\\lambda_0\\)带入矩阵\\(\\boldsymbol A-\\lambda\\boldsymbol E\\)中。\n结论：\\(\\boldsymbol A-\\lambda_0\\boldsymbol E\\)的秩\\(r\\)与该特征值所对应的线性无关的特征向量个数\\(k\\)的关系为\n\\[\nk=n-r\n\\]\n该命题的逆命题也成立，实际上，它的逆命题就是矩阵相似对角化的条件",
+    "objectID": "考研数学/线性代数/二次型.html#二次型的正定性",
+    "href": "考研数学/线性代数/二次型.html#二次型的正定性",
+    "title": "二次型",
+    "section": "二次型的正定性",
+    "text": "二次型的正定性\n二次型如果是正定的，那么其所有的特征值\\(\\lambda\\geq0\\)；如果是负定的，那么所有的特征值\\(\\lambda\\leq0\\).\n二次型如果是正定的，则所有顺序主子式大于0.",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "线性代数",
-      "特征向量"
+      "二次型"
     ]
   },
   {
-    "objectID": "posts/线性代数/特征向量.html#几何重数和代数重数",
-    "href": "posts/线性代数/特征向量.html#几何重数和代数重数",
-    "title": "特征向量",
-    "section": "3 几何重数和代数重数",
-    "text": "3 几何重数和代数重数\n代数重数，即解特征方程时特征根的重数。\n几何重数，即特征值对应的解空间的维数，也就是特征根对应的线性无关的特征向量的个数。\n关系：代数重数\\(\\geq\\)几何重数\\(\\geq1\\)\n当代数重数与几何重数相等时，矩阵可相似对角化。这是更为普适的条件，可以适用于复矩阵。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "线性代数",
-      "特征向量"
-    ]
-  },
-  {
-    "objectID": "posts/概统/知识点.html",
-    "href": "posts/概统/知识点.html",
-    "title": "概率与统计知识点",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "博客",
     "section": "",
-    "text": "\\[\nP(B|A)=\\dfrac{P(AB)}{P(A)}\n\\]\n^ff235e\n\n\\[\nP(B|A)P(A)=P(A|B)P(B)=P(AB)\n\\]\n\n\n\n\n\\[\nf_{Y|X}(y|x)=\\dfrac{f(x,y)}{f_X(x)}\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "概统",
-      "概率与统计知识点"
-    ]
-  },
-  {
-    "objectID": "posts/概统/知识点.html#条件概率",
-    "href": "posts/概统/知识点.html#条件概率",
-    "title": "概率与统计知识点",
-    "section": "",
-    "text": "\\[\nP(B|A)=\\dfrac{P(AB)}{P(A)}\n\\]\n^ff235e\n\n\\[\nP(B|A)P(A)=P(A|B)P(B)=P(AB)\n\\]\n\n\n\n\n\\[\nf_{Y|X}(y|x)=\\dfrac{f(x,y)}{f_X(x)}\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "概统",
-      "概率与统计知识点"
-    ]
-  },
-  {
-    "objectID": "posts/概统/知识点.html#全概率公式",
-    "href": "posts/概统/知识点.html#全概率公式",
-    "title": "概率与统计知识点",
-    "section": "2 全概率公式",
-    "text": "2 全概率公式\n\\[\nP(A)=\\sum_{i=1}^nP(A|B_i)P(B_i)\n\\]\n^6c9cba",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "概统",
-      "概率与统计知识点"
-    ]
-  },
-  {
-    "objectID": "posts/概统/知识点.html#贝叶斯公式",
-    "href": "posts/概统/知识点.html#贝叶斯公式",
-    "title": "概率与统计知识点",
-    "section": "3 贝叶斯公式",
-    "text": "3 贝叶斯公式\n在只有两个事件时\n\\[\nP(B|A)=\\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\\bar B)P(\\bar B)}\n\\]\n在多个事件时\n\\[\nP(B_i|A)=\\dfrac{P(A|B_i)P(B_i)}{\\sum_{i=1}^nP(A|B_i)P(B_i)}\n\\]\n^322785\n\n论证. 对条件概率公式的分母使用一次全概率公式即可。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "概统",
-      "概率与统计知识点"
-    ]
+    "text": "欢迎来到博客，欢迎看我的随笔\n\n\n\n\n\n\n   \n     \n     \n       排序方式\n       缺省\n         \n          标题\n        \n         \n          日期 - 日期升序\n        \n         \n          日期 - 日期降序\n        \n         \n          作者\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n7-zip的文件名编码问题\n\n\n\n\n\n\n7-zip\n\n\nWindows\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第二节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月29日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第一节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月24日\n\n\nKengroo1024\n\n\n\n\n\n\n无匹配项"
   },
   {
     "objectID": "posts/Quarto使用心得/第二节.html",
@@ -318,7 +272,6 @@
     "section": "",
     "text": "在上一篇博客中，我们已经在 VScode 中配置好了 Quarto 的工作环境，接下来我们将 Quarto 渲染一篇文档为 HTML 格式。\nQuarto 采取格式与内容相分离的方式来编写文档，因此，我们写作内容的文件是一个纯文本文件，渲染（render）与格式调整是之后完成的事情。\n要使用 Quarto 渲染一个文档，首先在工作空间中新建一个名为test.qmd的空文件，这个文件就是我们将在其中写作的文档。",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第二节"
@@ -331,7 +284,6 @@
     "section": "1 YAML 配置",
     "text": "1 YAML 配置\nYAML 是“YAML ain’t Markup Language”的循环缩写。YAML 是一种在互联网上广泛使用的用于数据存储和交换的标记语言。\n\nQuarto 的配置选项以 YAML 的格式写在文件的最开头，上下由三个连字符“-”包裹，称为文档的“Metadata”，你如果熟悉 Pandoc 标准的 Markdown，对这种配置格式应该不感到陌生。\n关于 YAML 的说明将在下一篇博客中提及，现在我给出一个可用的样例用于编写我们的文件。\n---\nlang: zh\nformat: \n  html: default\n---\n这是一个正确的 Metadata 写法。其意义是令模板使用中文，并用默认配置将文档输出为 HTML 格式。现在你应该将这段代码复制进你的文档中。以便后续的预览和渲染。",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第二节"
@@ -344,7 +296,6 @@
     "section": "2 预览和渲染文档",
     "text": "2 预览和渲染文档\n下载了 Quarto 扩展以后，在 VScode 中打开 qmd 文件，页面的右上角会有一个 Preview 按钮，点击可以进行预览，在一般的屏幕上上会打开预览的 HTML 文件。\n自带的预览脚本对于 HTML 输出的支持是很好的，但是对于其他的文件格式就不那么完美了。按 ctrl+反引号打开终端，或使用 cmd，执行下面的命令\nquarto preview src\n其中，src是目标文件的地址。\n就会开启一个预览进程，只要终端不被关闭或进程不被停止，Quarto 就会监控文件的更改并实时预览文件，还可以在终端中查看渲染失败的错误信息。\n要渲染文件，只需要把上面命令的 preview 换成 render 即可，即\nquarto render src\n现在，预览你的文档并尝试下面学习下面的写作语法。",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第二节"
@@ -357,7 +308,6 @@
     "section": "3 基本的 Markdown 和 GFM 语法",
     "text": "3 基本的 Markdown 和 GFM 语法\nMarkdown 是一种轻量级的标记语言。使用 Markdown，你可以完全将格式抛诸脑后，完全将注意力集中在内容的写作上，这篇博客的写作就是使用 Markdown 完成的。\n你可以在 Markdown 官方教程中学习到 Markdown 的基本语法和扩展语法。\nQuarto 也完全支持 GFM 的所有语法，你可以查看 GFM 的一个中文文档来学习 GFM 的语法。GFM 是 Markdown 的一个方言，为 Markdown 添加了很多有用的特性，在此不多赘述。",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第二节"
@@ -370,7 +320,6 @@
     "section": "4 Quarto-Pandoc 专用的的 Markdown 语法",
     "text": "4 Quarto-Pandoc 专用的的 Markdown 语法\nQuarto 还有拥有许多 GFM 不包括和不支持的语法，诸如网格式表格、图表和公式编号、以及引用等等，可以在官方教程查看完整的教程，这里列出几个常用的。\n\n4.1 分页符和嵌入视频\n分页符语法，注意尖括号与文字之间都有一个空格。分页符在不同的环境下（例如 word 和 latex 中）都会解析成各自的分页符\n嵌入视频语法，注意其中的空格，src为视频地址，只接受 mp4 后缀的视频。例如\n\n然后效果是\n\n经我实测，只对油管有较好的支持，对 bilibili 并不支持。但是 Markdown 是支持内嵌 HTML 的，也可以直接把 bilibili 复制过来的 HTML 代码嵌入其中。\n\n\n4.2 容器（div 和 span）\nQuarto 中支持用三个或更多的英文冒号包裹一段内容，这定义了一个容器。\n例如这样\n:::{#text .smaller}\nSome text\n:::\n这与以下 HTML 代码相同\n&lt;div id=\"text\" class=\"smaller\"&gt;\n  Some text\n&lt;/div&gt;\n容器之间可以嵌套，只要使用的冒号个数不一样多即可。\n大括号也可以单独使用，为一些元素添加属性，例如\n![alt](imgsrc){#text}\n这代表一张 ID 为 text 的图片。\nQuarto 中有一些预定义的样式，例如上面的 smaller 就可以将元素变得更小。\n\n\n4.3 标注块\n将容器类名定义为\n\ncallout-note\ncallout-tip\ncallout-warning\ncallout-important\ncallout-caution\n\n中的一种，就可以得到标注块，例如这样\n:::{.callout-note}\n## This is a note for you\n\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n就会得到\n\n\n\n\n\n\nThis is a note for you\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n注意，我们使用了一个二级标题改变了标注块的标题。\n\n\n4.4 标签页（仅支持 HTML）\n将类名写为panel-tabset就可以得到标签页。\n标签页可以将内容分页展示，其中用二级标题来进行分页。\n例如\n:::{.panel-tabset}\n## Python\n\nprint(\"hello world\")\n\n## C\n\nprintf(\"hello world\\n\");\n\n## Cpp\n\ncout &lt;&lt; \"hello world\" &lt;&lt; endl;\n:::\n渲染效果\n\nPythonCCpp\n\n\nprint(“hello world”)\n\n\nprintf(“hello world”);\n\n\ncout &lt;&lt; “hello world” &lt;&lt; endl;\n\n\n\n\n\n4.5 交叉引用\n可以使用容器和大括号对几乎所有的元素进行编号以便交叉引用，例如定理、公式图表等，只要定义它们的 ID 即可。\n例如\n:::{#thm-Pythagorean}\n\n## 勾股定理\n\n在直角三角形ABC中，C为直角，角的对边分别为a,b,c，则它们满足下列关系\n\n$$\na^2+b^2=c^2\n$$\n:::\n这将渲染出以下效果\n\n定理 1 (勾股定理) 在直角三角形ABC中，C为直角，角的对边分别为a,b,c，则它们满足下列关系 \\[\na^2+b^2=c^2\n\\]\n\n注意，ID 前必须带有对应的类名如 thm, eq, pf, tbl 等，并且标题被渲染成了定理的名字。\n要进行引用，只需要写下@thm-Pythagorean，这将得到一个完整的引用 定理 1。\n要进行自定义引用前缀，需要写[公式 @thm-Pythagorean]，这将得到 公式 1 而不是 定理 1 。\n要进行无前缀引用，需要写[-@thm-Pythagorean]，注意 @ 前的连字符 -，这将得到单独的 1，不带任何前缀。\n对于全部的类名，请见下面的表格。\n\n\n\n环境\n前缀\n使用div\n\n\n\n\n表\ntbl\n否\n\n\n图\nfig\n否\n\n\n方程式\neq\n否\n\n\n章节\nsec\n否\n\n\n列表\nlst\n否\n\n\n定理\nthm\n是\n\n\n引理\nlem\n是\n\n\n推论\ncor\n是\n\n\n命题\nprp\n是\n\n\n猜想\ncnj\n是\n\n\n定义\ndef\n是\n\n\n例\nexm\n是\n\n\n练习\nexr\n是\n\n\n\n对于证明、解等环境，它们并不需要交叉引用，因此并没有相应的前缀，要使用相应的环境只需要将类名定义为solution、proof即可，例如\n:::{.solution}\nSome text\n:::",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第二节"
@@ -383,7 +332,6 @@
     "section": "5 参考",
     "text": "5 参考\nQuarto 官网",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第二节"
@@ -394,7 +342,7 @@
     "href": "index.html",
     "title": "Hello you guys",
     "section": "",
-    "text": "概率与统计知识点\n\n\n\n\n\n\n考研数学\n\n\n概统\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n二次型\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n特征向量\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n矩阵\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n行列式计算\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n三角函数\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n导数和微分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n微分方程\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n积分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\n7-zip的文件名编码问题\n\n\n\n\n\n\n7-zip\n\n\nWindows\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第二节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月29日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第一节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月24日\n\n\nKengroo1024\n\n\n\n\n\n\n无匹配项"
+    "text": "排序方式\n       缺省\n         \n          标题\n        \n         \n          日期 - 日期升序\n        \n         \n          日期 - 日期降序\n        \n         \n          作者\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n概率与统计知识点\n\n\n\n\n\n\n考研数学\n\n\n概统\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n二次型\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n特征向量\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n矩阵\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n行列式计算\n\n\n\n\n\n\n考研数学\n\n\n线性代数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n三角函数\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n导数和微分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n微分方程\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n积分\n\n\n\n\n\n\n考研数学\n\n\n高数\n\n\n\n\n\n\n\n\n\n2024年3月1日\n\n\n\n\n\n\n\n\n\n\n\n\n7-zip的文件名编码问题\n\n\n\n\n\n\n7-zip\n\n\nWindows\n\n\n\n\n\n\n\n\n\n2024年2月9日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第二节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月29日\n\n\nKengroo1024\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto使用心得 第一节\n\n\n\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n2023年11月24日\n\n\nKengroo1024\n\n\n\n\n\n\n无匹配项"
   },
   {
     "objectID": "about.html",
@@ -438,7 +386,6 @@
     "section": "",
     "text": "Quarto 是 R 语言开发团队 Posit 开发的新一代开源出版工具，用于替换 Rmarkdown，并且在一定程度上具有学术写作的能力，甚至可以它创建一个网站，基于 Pandoc 和 Deno （你可以在 Quarto 的安装目录里找到这两个工具）。不仅对于 R 的支持良好，而且对于 Python, Julia, Obeservable 都有良好支持。\n由于是一个新的工具，官方的文档没有对于中文的支持，因此这篇博客记录了 Quarto 的基本使用方法。",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第一节"
@@ -451,7 +398,6 @@
     "section": "1 环境配置",
     "text": "1 环境配置\nQuarto 可以使用以下两种方式下载。注意，无论是哪一种，都需要良好的网络支持。\n\n使用winget命令\nwinget install --id Posit.Quarto\n在官网上选择合适的版本进行下载\n\n在 cmd 中输入\nquarto --version\n出现一段数字即下载成功。\n\n1.1 附加组件的下载\nQuarto 有两个附加组件：\n\nTinyTex\nChromium\n\n可以使用\nquarto list tools\n查看附加组件的下载情况，正常情况应该出现类似下面的提示\n[✓] Inspecting tools\n\nTool         Status            Installed     Latest\nchromium     Not installed     ---           869685\ntinytex      Up to date        v2022.10      v2022.10\n\n1.1.1 TinyTex\nTinyTex 是 Texlive 的一个发行版，Quarto-Pandoc 依赖它编译 qmd 文件为 pdf 格式。不过如果系统的环境变量中已经有了 Tex Live，则 Quarto 会自动使用，不用下载 TinyTex。\n另外，Quarto 只对 Tex Live 进行了适配，如果使用外部 Tex 系统，只推荐使用 Tex Live。\n下载 TinyTex\nquarto install tinytex\n升级 TinyTex\nquarto update tinytex\n使用 Quarto 下载的 TinyTex 默认是不会添加到环境变量的，也就是说，如果没有其它 Tex 发行版，在 cmd 中输入latex或xelatex会得到“‘xxx’ 不是内部或外部命令，也不是可运行的程序或批处理文件。”这样的提示。如果想独立使用 TinyTex，需要使用\nquarto install tinytex --update-path\n\n\n1.1.2 Chromium\nQuarto 使用 Chromium 对 HTML 文件进行预览，如果系统中已经有了 Chromium 系浏览器如 Chrome, Edge, 360 极速浏览器, VScode等则不用下载。\n下载 Chromium\nquarto install Chromium\n升级 Chromium\nquarto update Chromium",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第一节"
@@ -464,7 +410,6 @@
     "section": "2 编辑器",
     "text": "2 编辑器\nQuarto 文件的默认扩展名是 qmd，这是一个纯文本文件。\n理论上，完全可以使用记事本编写 qmd 文件，然后使用 Quarto 渲染，但是仍然有几个编辑器是受到官方推荐的\n\nVScode\nJupyter Lab\nRstudio\nNeovim\n\n私以为，能使用 Neovim 的大佬，已经不再需要这篇教程了，而我个人并不使用 Rstudio，因此这一节集中在使用 VScode 和 Jupyter Lab 来使用 Quarto 上。\n\n2.1 Jupyter Lab\n基于 Jupyter Lab 使用 Quarto 并不需要额外的组件支持，Quarto 支持直接渲染 ipynb 文件，但是在文件中需要一些额外的 metadata 说明，这一篇博客中暂且不提。\n\n\n2.2 VScode\n朋友，不知道你是否知道宇宙第一的文本编辑器 VScode 呢？如果你没有尝试过，请务必试一试。\n基于 VScode 使用 Quarto 需要先安装它的官方扩展\nQuarto现在只是一个出版工具，并不绑定任何语言，如果要使用代码相关的功能，还需要在系统中安装语言内核，以及在vscode中安装相关的扩展\n\nPython Extension\nR Extension\nJulia Extension\n\n另外，在 VScode 中使用 Python 要通过 Jupyter 作为中介，检查系统中的 Jupyter 是否被 Quarto 使用，需要下面的命令\nquarto check jupyter\n如果正确安装，应该出现类似下面的提示\n[&gt;] Checking Python 3 installation....OK\n      Version: 3.11.5 (Conda)\n      Path: C:/Anaconda3/python.exe\n      Jupyter: 5.5.0\n      Kernels: python3, ir\n\n(-) Checking Jupyter engine render....0.00s - Debugger warning: It seems that frozen modules are being used, which may\n0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n0.00s - to python to disable frozen modules.\n0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n0.00s - Debugger warning: It seems that frozen modules are being used, which may\n0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n0.00s - to python to disable frozen modules.\n0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n[&gt;] Checking Jupyter engine render....OK\n最后，按ctrl+,打开设置，在设置的右上角，点击“打开设置(python)”按钮，在 setting.python 文件中添加以下配置\n{\n    \"[quarto]\": {\n    \"editor.quickSuggestions\": {\n        \"comments\": \"on\",\n        \"other\": \"on\",\n        \"strings\": \"on\"\n        }\n    }\n}\n这个配置开启了代码自动补全和建议",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第一节"
@@ -477,7 +422,6 @@
     "section": "3 参考",
     "text": "3 参考\nQuarto 官网",
     "crumbs": [
-      "首页",
       "Posts",
       "Quarto使用心得",
       "Quarto使用心得 第一节"
@@ -490,7 +434,6 @@
     "section": "",
     "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
     "crumbs": [
-      "首页",
       "Posts",
       "杂项",
       "7-zip的文件名编码问题"
@@ -503,7 +446,6 @@
     "section": "",
     "text": "7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。",
     "crumbs": [
-      "首页",
       "Posts",
       "杂项",
       "7-zip的文件名编码问题"
@@ -516,7 +458,6 @@
     "section": "2 问题解决",
     "text": "2 问题解决\n使用 CLI 界面，将 7-zip 可执行文件加入环境变量或在 7-zip可执行文件的所在目录打开 cmd 或者 powershell\n\n2.1 查看压缩包内容\n执行下列命令\nchcp [nnn]\n其中 nnn 是微软的代码页，下面列出几个常用的\n\n\n\n编码\n代码页\n\n\n\n\nGBK\n936\n\n\nUTF-8\n65001\n\n\nUTF-16\n1200\n\n\nShift-JIS\n932\n\n\n\n然后执行下面命令\n7z l src\n\n\n2.2 进行解压\n执行以下命令\n7z x src [-o dest] -mcp=num\nsrc为源文件路径，dest为输出文件路径，num为文件编码对应的代码页，如果不指定输出路径默认解压到当前目录。\n注意，在 ps 中相对路径须加./",
     "crumbs": [
-      "首页",
       "Posts",
       "杂项",
       "7-zip的文件名编码问题"
@@ -529,7 +470,6 @@
     "section": "3 碎碎念",
     "text": "3 碎碎念\nmcp选项竟然没有出现在文档里面，无法理解。\n但是文档中提供了scc和scs选项，看起来也能起到相同的效果。",
     "crumbs": [
-      "首页",
       "Posts",
       "杂项",
       "7-zip的文件名编码问题"
@@ -542,283 +482,297 @@
     "section": "4 参考",
     "text": "4 参考\n解决方案来自 CSDN\n7-zip CLI 帮助文档",
     "crumbs": [
-      "首页",
       "Posts",
       "杂项",
       "7-zip的文件名编码问题"
     ]
   },
   {
-    "objectID": "posts/线性代数/二次型.html",
-    "href": "posts/线性代数/二次型.html",
-    "title": "二次型",
+    "objectID": "考研数学/概统/知识点.html",
+    "href": "考研数学/概统/知识点.html",
+    "title": "概率与统计知识点",
     "section": "",
-    "text": "实际上就是把二次型的矩阵\\(\\boldsymbol A\\)对角化，按矩阵的相似对角化操作即可。如果还要进一步求出所用的线性变换\\(\\boldsymbol P\\)，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。",
+    "text": "\\[\nP(B|A)=\\dfrac{P(AB)}{P(A)}\n\\]\n^ff235e\n\n\\[\nP(B|A)P(A)=P(A|B)P(B)=P(AB)\n\\]\n\n\n\n\n\\[\nf_{Y|X}(y|x)=\\dfrac{f(x,y)}{f_X(x)}\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
-      "线性代数",
-      "二次型"
+      "考研数学",
+      "概统",
+      "概率与统计知识点"
     ]
   },
   {
-    "objectID": "posts/线性代数/二次型.html#将二次型化为规范型",
-    "href": "posts/线性代数/二次型.html#将二次型化为规范型",
-    "title": "二次型",
+    "objectID": "考研数学/概统/知识点.html#条件概率",
+    "href": "考研数学/概统/知识点.html#条件概率",
+    "title": "概率与统计知识点",
     "section": "",
-    "text": "实际上就是把二次型的矩阵\\(\\boldsymbol A\\)对角化，按矩阵的相似对角化操作即可。如果还要进一步求出所用的线性变换\\(\\boldsymbol P\\)，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。",
+    "text": "\\[\nP(B|A)=\\dfrac{P(AB)}{P(A)}\n\\]\n^ff235e\n\n\\[\nP(B|A)P(A)=P(A|B)P(B)=P(AB)\n\\]\n\n\n\n\n\\[\nf_{Y|X}(y|x)=\\dfrac{f(x,y)}{f_X(x)}\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
-      "线性代数",
-      "二次型"
+      "考研数学",
+      "概统",
+      "概率与统计知识点"
     ]
   },
   {
-    "objectID": "posts/线性代数/二次型.html#二次型的正定性",
-    "href": "posts/线性代数/二次型.html#二次型的正定性",
-    "title": "二次型",
-    "section": "2 二次型的正定性",
-    "text": "2 二次型的正定性\n二次型如果是正定的，那么其所有的特征值\\(\\lambda\\geq0\\)；如果是负定的，那么所有的特征值\\(\\lambda\\leq0\\).\n二次型如果是正定的，则所有顺序主子式大于0.",
+    "objectID": "考研数学/概统/知识点.html#全概率公式",
+    "href": "考研数学/概统/知识点.html#全概率公式",
+    "title": "概率与统计知识点",
+    "section": "全概率公式",
+    "text": "全概率公式\n\\[\nP(A)=\\sum_{i=1}^nP(A|B_i)P(B_i)\n\\]\n^6c9cba",
     "crumbs": [
-      "首页",
-      "Posts",
-      "线性代数",
-      "二次型"
+      "考研数学",
+      "概统",
+      "概率与统计知识点"
     ]
   },
   {
-    "objectID": "posts/线性代数/矩阵.html",
-    "href": "posts/线性代数/矩阵.html",
-    "title": "矩阵",
+    "objectID": "考研数学/概统/知识点.html#贝叶斯公式",
+    "href": "考研数学/概统/知识点.html#贝叶斯公式",
+    "title": "概率与统计知识点",
+    "section": "贝叶斯公式",
+    "text": "贝叶斯公式\n在只有两个事件时\n\\[\nP(B|A)=\\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\\bar B)P(\\bar B)}\n\\]\n在多个事件时\n\\[\nP(B_i|A)=\\dfrac{P(A|B_i)P(B_i)}{\\sum_{i=1}^nP(A|B_i)P(B_i)}\n\\]\n^322785\n\n论证. 对条件概率公式的分母使用一次全概率公式即可。",
+    "crumbs": [
+      "考研数学",
+      "概统",
+      "概率与统计知识点"
+    ]
+  },
+  {
+    "objectID": "考研数学/线性代数/特征向量.html",
+    "href": "考研数学/线性代数/特征向量.html",
+    "title": "特征向量",
     "section": "",
-    "text": "二阶矩阵的特征多项式\\(|\\lambda\\boldsymbol E-\\boldsymbol A|=0\\)为\n\\[\n\\lambda^2-tr(\\boldsymbol A)\\lambda+\\det(\\boldsymbol A)=0\n\\]\n其中\\(tr(A)\\)为矩阵的迹，\\(\\det(A)\\)为矩阵的行列式。\n只要解该方程即可。",
+    "text": "可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "线性代数",
-      "矩阵"
+      "特征向量"
     ]
   },
   {
-    "objectID": "posts/线性代数/矩阵.html#二阶矩阵的特征值",
-    "href": "posts/线性代数/矩阵.html#二阶矩阵的特征值",
-    "title": "矩阵",
+    "objectID": "考研数学/线性代数/特征向量.html#逆矩阵的特征值和特征向量的对应关系",
+    "href": "考研数学/线性代数/特征向量.html#逆矩阵的特征值和特征向量的对应关系",
+    "title": "特征向量",
     "section": "",
-    "text": "二阶矩阵的特征多项式\\(|\\lambda\\boldsymbol E-\\boldsymbol A|=0\\)为\n\\[\n\\lambda^2-tr(\\boldsymbol A)\\lambda+\\det(\\boldsymbol A)=0\n\\]\n其中\\(tr(A)\\)为矩阵的迹，\\(\\det(A)\\)为矩阵的行列式。\n只要解该方程即可。",
+    "text": "可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "线性代数",
-      "矩阵"
+      "特征向量"
     ]
   },
   {
-    "objectID": "posts/线性代数/矩阵.html#矩阵多项式的特征值",
-    "href": "posts/线性代数/矩阵.html#矩阵多项式的特征值",
-    "title": "矩阵",
-    "section": "2 矩阵多项式的特征值",
-    "text": "2 矩阵多项式的特征值\n若\\(\\lambda\\)是\\(\\boldsymbol A\\)的特征值，那么\\(\\varphi(\\lambda)\\)是矩阵多项式\\(\\varphi(\\boldsymbol A)\\)的特征值。",
+    "objectID": "考研数学/线性代数/特征向量.html#判断特征根重数的一种方法",
+    "href": "考研数学/线性代数/特征向量.html#判断特征根重数的一种方法",
+    "title": "特征向量",
+    "section": "判断特征根重数的一种方法",
+    "text": "判断特征根重数的一种方法\n条件：n阶方阵\\(\\boldsymbol A\\)可相似对角化，或者干脆就是对角矩阵。\n行为：把待验证的特征值\\(\\lambda_0\\)带入矩阵\\(\\boldsymbol A-\\lambda\\boldsymbol E\\)中。\n结论：\\(\\boldsymbol A-\\lambda_0\\boldsymbol E\\)的秩\\(r\\)与该特征值所对应的线性无关的特征向量个数\\(k\\)的关系为\n\\[\nk=n-r\n\\]\n该命题的逆命题也成立，实际上，它的逆命题就是矩阵相似对角化的条件",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "线性代数",
-      "矩阵"
+      "特征向量"
     ]
   },
   {
-    "objectID": "posts/线性代数/矩阵.html#对角矩阵",
-    "href": "posts/线性代数/矩阵.html#对角矩阵",
-    "title": "矩阵",
-    "section": "3 对角矩阵",
-    "text": "3 对角矩阵\n\n3.1 矩阵的相似对角化\n如果一个矩阵相似于对角矩阵，那么它可以写为\n\\[\n\\boldsymbol A=\\boldsymbol P^{-1}\\boldsymbol\\Lambda\\boldsymbol P\n\\]\n其中\\(\\boldsymbol P\\)是各个特征向量组成的矩阵，它们和\\(\\boldsymbol\\Lambda\\)中各自的特征值一一对应。\n\n\n3.2 矩阵相似对角化的条件\n如果\\(k\\)阶方阵拥有\\(k\\)个线性无关的特征向量，则其相似于对角矩阵。\n\n\n\n\n\n\n对于具体的情况\n\n\n\n\n\n\n实对称矩阵必能对角化\n若矩阵有\\(k\\)个不同的特征值，则其也必能对角化\n若矩阵的每个\\(i\\)重特征值都拥有\\(i\\)个线性无关的特征向量，那么它也必能对角化\n\n\n\n\n\n\n3.3 特征值\n对角矩阵的特征值是对角线上所有元素，重复按重根计算。\n\n\n3.4 秩\n对角矩阵的秩等于对角线上非零元的个数。\n\n推论 1 如果一个矩阵相似于对角矩阵，则它的秩等于非0特征值的个数，重根按重数计算。",
+    "objectID": "考研数学/线性代数/特征向量.html#几何重数和代数重数",
+    "href": "考研数学/线性代数/特征向量.html#几何重数和代数重数",
+    "title": "特征向量",
+    "section": "几何重数和代数重数",
+    "text": "几何重数和代数重数\n代数重数，即解特征方程时特征根的重数。\n几何重数，即特征值对应的解空间的维数，也就是特征根对应的线性无关的特征向量的个数。\n关系：代数重数\\(\\geq\\)几何重数\\(\\geq1\\)\n当代数重数与几何重数相等时，矩阵可相似对角化。这是更为普适的条件，可以适用于复矩阵。",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "线性代数",
-      "矩阵"
+      "特征向量"
     ]
   },
   {
-    "objectID": "posts/线性代数/矩阵.html#伴随矩阵",
-    "href": "posts/线性代数/矩阵.html#伴随矩阵",
-    "title": "矩阵",
-    "section": "4 伴随矩阵",
-    "text": "4 伴随矩阵\n\n4.1 秩\n\\(n\\)阶矩阵\\(\\boldsymbol A\\)的伴随矩阵为\\(\\boldsymbol A^*\\)，它的秩为\n\\[\nr(\\boldsymbol A^*)=\\left\\{\\begin{aligned}\nn,&\\text{ if }r(\\boldsymbol A)=n,\\\\\n1,&\\text{ if }r(\\boldsymbol A)=n-1,\\\\\n0,&\\text{ if }r(\\boldsymbol A)&lt;n-1\n\\end{aligned}\\right.\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "线性代数",
-      "矩阵"
-    ]
-  },
-  {
-    "objectID": "posts/线性代数/矩阵.html#秩1矩阵",
-    "href": "posts/线性代数/矩阵.html#秩1矩阵",
-    "title": "矩阵",
-    "section": "5 秩1矩阵",
-    "text": "5 秩1矩阵\n设矩阵\\(\\boldsymbol A\\)的秩为1，那么它有如下一些性质\n\n5.1 可分解性\n\\(\\boldsymbol A\\)一定可以被分解为两向量之积，即\n\\[\n\\exists\\boldsymbol\\alpha,\\boldsymbol\\beta,\\text{使得}\\boldsymbol A=\\boldsymbol\\alpha^T\\boldsymbol\\beta\n\\]\n且\n\\[\n\\boldsymbol\\beta^T\\boldsymbol\\alpha=tr(\\boldsymbol A)\n\\]\n\n\n\n\n\n\n推广\n\n\n\n如果\\(r(\\boldsymbol A)=k\\)则\\(\\boldsymbol A\\)可以被分解为一\\(m\\times k\\)和秩\\(k\\)矩阵\\(\\boldsymbol M\\)和一\\(k\\times n\\)的秩\\(k\\)矩阵\\(\\boldsymbol N\\)之积\n\n\n\n\n5.2 特征值\n如果\\(\\boldsymbol A\\)是\\(n\\)阶方阵，其特征值为\\(n-1\\)个0和\\(tr(\\boldsymbol A)\\).\n\n\n5.3 相似对角化\n\\(\\boldsymbol A\\)一定可以相似对角化，其中\\(n\\)个0对应\\(n\\)个线性无关的特征向量。\n\n\n5.4 幂乘\n\\[\n\\boldsymbol A^n=tr(\\boldsymbol A)^{n-1}A\n\\]",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "线性代数",
-      "矩阵"
-    ]
-  },
-  {
-    "objectID": "posts/线性代数/矩阵.html#实对称矩阵",
-    "href": "posts/线性代数/矩阵.html#实对称矩阵",
-    "title": "矩阵",
-    "section": "6 实对称矩阵",
-    "text": "6 实对称矩阵\n对于有限维实对称矩阵（下面简称对称矩阵），有如下性质\n\n6.1 特征向量正交性\n对称矩阵不同特征值对应的特征向量是正交的。\n\n\n6.2 特征向量个数\n对称矩阵特征根的代数重数和几何重数相等，即\\(i\\)重特征根必然对应\\(i\\)个线性无关的特征向量。\n\n\n\n\n\n\n注释\n\n\n\n根据矩阵相似对角化的条件，对称矩阵必可相似对角化\n且由 推论 1 ，对称矩阵的秩等于其非零特征值的个数，重根按重数计算。\n\n\n\n\n6.3 特征值和特征向量\n对称矩阵的特征值均为实数，特征向量均为实向量。",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "线性代数",
-      "矩阵"
-    ]
-  },
-  {
-    "objectID": "posts/高数/三角函数.html",
-    "href": "posts/高数/三角函数.html",
-    "title": "三角函数",
+    "objectID": "考研数学/线性代数/行列式.html",
+    "href": "考研数学/线性代数/行列式.html",
+    "title": "行列式计算",
     "section": "",
-    "text": "三角函数六角图\n\n\n在图中，对角线表示倒数，黄色三角形的邻角表示具有恒等关系，具体如下\n\n\\(\\sin^2x+\\cos^2=1\\)\n\\(\\sec^2x-\\tan^2x=1\\)\n\\(\\csc^2x-\\cot^2x=1\\)",
+    "text": "参见这里",
     "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "三角函数"
+      "考研数学",
+      "线性代数",
+      "行列式计算"
     ]
   },
   {
-    "objectID": "posts/高数/三角函数.html#三角函数六角图",
-    "href": "posts/高数/三角函数.html#三角函数六角图",
-    "title": "三角函数",
+    "objectID": "考研数学/线性代数/行列式.html#行列式计算",
+    "href": "考研数学/线性代数/行列式.html#行列式计算",
+    "title": "行列式计算",
     "section": "",
-    "text": "三角函数六角图\n\n\n在图中，对角线表示倒数，黄色三角形的邻角表示具有恒等关系，具体如下\n\n\\(\\sin^2x+\\cos^2=1\\)\n\\(\\sec^2x-\\tan^2x=1\\)\n\\(\\csc^2x-\\cot^2x=1\\)",
+    "text": "参见这里",
     "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "三角函数"
+      "考研数学",
+      "线性代数",
+      "行列式计算"
     ]
   },
   {
-    "objectID": "posts/高数/三角函数.html#三角函数和差化积公式",
-    "href": "posts/高数/三角函数.html#三角函数和差化积公式",
-    "title": "三角函数",
-    "section": "2 三角函数和差化积公式",
-    "text": "2 三角函数和差化积公式",
-    "crumbs": [
-      "首页",
-      "Posts",
-      "高数",
-      "三角函数"
-    ]
-  },
-  {
-    "objectID": "posts/高数/微分方程.html",
-    "href": "posts/高数/微分方程.html",
-    "title": "微分方程",
+    "objectID": "考研数学/高数/导数和微分.html",
+    "href": "考研数学/高数/导数和微分.html",
+    "title": "导数和微分",
     "section": "",
-    "text": "可以被表示为\\(g(x)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
+    "text": "\\[\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}\n\\] \\[\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial y}\\\\\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "微分方程"
+      "导数和微分"
     ]
   },
   {
-    "objectID": "posts/高数/微分方程.html#可分离变量的方程",
-    "href": "posts/高数/微分方程.html#可分离变量的方程",
-    "title": "微分方程",
+    "objectID": "考研数学/高数/导数和微分.html#二元函数求偏导链式法则",
+    "href": "考研数学/高数/导数和微分.html#二元函数求偏导链式法则",
+    "title": "导数和微分",
     "section": "",
-    "text": "可以被表示为\\(g(x)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
+    "text": "\\[\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}\n\\] \\[\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial y}\\\\\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "微分方程"
+      "导数和微分"
     ]
   },
   {
-    "objectID": "posts/高数/微分方程.html#齐次微分方程",
-    "href": "posts/高数/微分方程.html#齐次微分方程",
-    "title": "微分方程",
-    "section": "2 齐次微分方程",
-    "text": "2 齐次微分方程\n可以被表示为\\(\\dfrac{\\mathrm dy}{\\mathrm dx}=\\varphi(\\dfrac yx)\\)的方程\n求解方法：令\\(u=\\dfrac yx\\)，有\\(y'=u+xu'\\)，则原方程可以化为\n\\[\nxu'=\\varphi(u)-u\n\\]\n进一步可以化为\n\\[\n\\dfrac{\\mathrm dx}{x}=\\dfrac{\\mathrm du}{\\varphi(u)-u}\n\\]\n于是归结为可分离变量的方程。",
+    "objectID": "考研数学/高数/导数和微分.html#二元函数全微分",
+    "href": "考研数学/高数/导数和微分.html#二元函数全微分",
+    "title": "导数和微分",
+    "section": "二元函数全微分",
+    "text": "二元函数全微分\n\\[\n\\mathrm{d}z=\\dfrac{\\partial z}{\\partial x}\\mathrm{d}x+\\dfrac{\\partial z}{\\partial y}\\mathrm{d}y\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "微分方程"
+      "导数和微分"
     ]
   },
   {
-    "objectID": "posts/高数/微分方程.html#一阶线性微分方程",
-    "href": "posts/高数/微分方程.html#一阶线性微分方程",
-    "title": "微分方程",
-    "section": "3 一阶线性微分方程",
-    "text": "3 一阶线性微分方程\n形如\\(y'+p(x)y=q(x)\\)的方程\n求解方法：公式法\n\\[\ny=\n\\mathrm e^{-\\int p(x)\\mathrm dx}\n\\left[\n\\int q(x)\\mathrm e^{\\int p(x)\\mathrm dx}\\mathrm dx+C\n\\right]\n\\]\n括号内都是正的，括号外都是负的，e的指数上都是\\(p\\)，常数项才有\\(q\\).",
+    "objectID": "考研数学/高数/导数和微分.html#taylor-formula",
+    "href": "考研数学/高数/导数和微分.html#taylor-formula",
+    "title": "导数和微分",
+    "section": "Taylor Formula",
+    "text": "Taylor Formula\n\\[\nf(x)=f(x-x_0)+f'(x_0)(x-x_0)+o(x)\n\\]\n\\[\nf(x)=f(x-x_0)+\\sum_{i=1}^{\\infty}f^{(i)}(x_0)\\dfrac{(x-x_0)^n}{i!}\n\\]\n\n\n\n常用泰勒展开式",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "微分方程"
+      "导数和微分"
     ]
   },
   {
-    "objectID": "posts/高数/微分方程.html#线性微分方程解的结构",
-    "href": "posts/高数/微分方程.html#线性微分方程解的结构",
-    "title": "微分方程",
-    "section": "4 线性微分方程解的结构",
-    "text": "4 线性微分方程解的结构\n\n[!note] 可以和线性方程组解的结构类比证明和记忆。\n\n\\(n\\)阶线性微分方程的一般形式为\n\\[\ny^{(n)}+\\sum_{i=1}^{n} p_{i}(x)y^{(n-i)}=q(x)\n\\]\n规定\\(y^{(0)}=y\\). 当\\(f(x)=0\\)时称为\\(n\\)阶齐次线性微分方程。\n在此特别研究二阶线性微分方程。\n二阶齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=0\n\\]\n二阶非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f(x)\n\\]\n\n4.1 齐次方程\n如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关1的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)\n\\]\n就是齐次方程的通解。\n\n\n4.2 非齐次方程\n如果如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关的特解，\\(y^*(x)\\)是非齐次方程的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)+y^*(x)\n\\]\n是非齐次方程的通解。\n\n\n4.3 拆分非齐次方程\n如果\\(y_1^*(x),y_2^*(x)\\)分别是非齐次线性方程\n\\[\n\\begin{aligned}\ny''+p(x)y'+q(x)y=f_1(x)\\\\\ny''+p(x)y'+q(x)y=f_2(x)\n\\end{aligned}\n\\]\n的通解，那么\\(y_1^*(x)+y_2^*(x)\\)是非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f_1(x)+f_2(x)\n\\]\n的一个特解。",
+    "objectID": "考研数学/高数/导数和微分.html#导数定义",
+    "href": "考研数学/高数/导数和微分.html#导数定义",
+    "title": "导数和微分",
+    "section": "导数定义",
+    "text": "导数定义\n给定函数\\(f(x)\\)，若极限\n\\[\n\\lim_{\\Delta x\\to0}\\dfrac{f(x_0\\pm\\Delta x)-f(x_0)}{\\Delta x}\n\\]\n存在，且相等则称其为\\(f(x)\\)在\\(x_0\\)处的导数，并称\\(f(x)\\)在\\(x=x_0\\)处可导。",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "微分方程"
+      "导数和微分"
     ]
   },
   {
-    "objectID": "posts/高数/微分方程.html#常系数线性微分方程",
-    "href": "posts/高数/微分方程.html#常系数线性微分方程",
-    "title": "微分方程",
-    "section": "5 常系数线性微分方程",
-    "text": "5 常系数线性微分方程\n\n5.1 常系数齐次线性方程\n采用特征根法求解，以二阶为例。\n二阶常系数齐次微分方程一般形式为\n\\[\ny''+py'+q=0\n\\]\n特征方程为\n\\[\nr^2+pr+q=0\n\\]\n设\\(r_1,r_2\\)为该方程的两个根。\n\n\\(r_1\\not= r_2\\)，且都是实数，通解为\n\\[\ny=C_1\\mathrm e^{r_1x}+C_2\\mathrm e^{r_2x}\n\\]\n\\(r_1=r_2\\)，通解为\n\\[\ny=(C_1+C_2x)\\mathrm e^{r_1x}\n\\]\n\\(r_1=a+\\mathrm ib,\\ r_2=a-\\mathrm ib\\)为共轭复根，通解为\n\\[\ny=\\mathrm e^{ax}(C_1\\cos bx+C_2\\sin bx)\n\\]\n\n其实还是\n\\[\ny=\\sum_{i=1}^n \\mathrm C_ie^{r_i}\n\\]\n只是有复数时要用欧拉公式展开。\n\n\n5.2 二阶常系数非齐次线性方程\n二阶常系数非齐次微分方程一般形式为\n\\[\ny''+py'+q=f(x)\n\\]\n\n若\\(f(x)=P_m(x)e^{\\lambda x}\\)，其中\\(P_m(x)\\)为\\(x\\)的\\(m\\)次多项式，\\(\\lambda\\)为特征方程的一个根，那么特解可以表示为\n\\[\ny^*(x)=x^kQ_m(x)\\mathrm e^{\\lambda x}\n\\]\n其中\\(k\\)是\\(\\lambda\\)的重数，\\(Q_m(x)\\)是与\\(P_m(x)\\)同次的多项式。\n若\\[f(x)=\\mathrm e^{ax}[P_l^{(1)}(x)\\cos bx+P_n^{(2)}(x)\\sin bx]\\]其中\\(P_l^{(1)},P_n^{(2)}\\)分别是\\(x\\)的\\(l,n\\)次多项式，则特解可以表示为\n\\[\ny^*(x)=x^k\\mathrm e^{ax}[R_m^{(1)}(x)\\cos bx+R_m^{(2)}(x)\\sin bx]\n\\]\n其中\\(R_m^{(1)}(x),R_m^{(2)}(x)\\)是两个\\(m\\)次多项式，\\(m=\\max\\{n,l\\}\\).\n\\[\nk=\\left\\{\\begin{aligned}\n0&,a+\\mathrm ib\\text{不是特征方程的根}\\\\\n1&,a+\\mathrm ib\\text{是特征方程的单根}\n\\end{aligned}\\right.\n\\]",
+    "objectID": "考研数学/高数/导数和微分.html#高阶无穷小量",
+    "href": "考研数学/高数/导数和微分.html#高阶无穷小量",
+    "title": "导数和微分",
+    "section": "高阶无穷小量",
+    "text": "高阶无穷小量\n若\\(f,g\\)在\\(x_0\\)处的极限都是0，并且有\n\\[\n\\lim_{x\\to x_0}\\dfrac{f(x)}{g(x)}=0\n\\]\n则称\\(f\\)为\\(g\\)在\\(x=x_0\\)处的高阶无穷小量，记做\n\\[\nf(x)=o(g(x))\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "微分方程"
+      "导数和微分"
     ]
   },
   {
-    "objectID": "posts/高数/微分方程.html#差分方程",
-    "href": "posts/高数/微分方程.html#差分方程",
-    "title": "微分方程",
-    "section": "6 差分方程",
-    "text": "6 差分方程\n函数\\(f(x)\\)定义在数列\\(\\{a_n\\}\\)上，令\\(y_n=f(x_n)\\)，定义\\(\\Delta\\)为差分算子，即\\(\\Delta y_n=y_n-y_{n-1}\\).\n称形如\n\\[\nF(x_n,\\Delta y_n,\\Delta^2 y_n,...,\\Delta^n y_n)=0\n\\]\n的含有因变量的差分的方程为差分方程。\n把数列看成定义在自然数子集上的函数，可以看出差分方程和递推关系完全等价。\n\n6.1 解差分方程\n\n\n\n\n\n\n递推关系和常系数线性微分方程的联系\n\n\n\n微分可以看作特殊的差分过程，作为差分在连续统上的一种推广。一阶线性微分方程可以通过离散化精确地写成递推关系的形式。\n更详细可以看Wiki\n\n\n\\[\nu_n=\\sum_{i=1}^k a_iu_{n-i}+f(n)\n\\]\n称为\\(k\\)阶常系数递推关系。\n使用特征根法解上面的递推关系。\n\n\n6.2 特征根法\n将递推关系式\n\\[\nu_n-a_1u_{n-1}-a_2u_{n-2}-...-a_k-u_{n-k}=0\n\\]\n改写为如下的特征方程\n\\[\nx^k-a_1x^{k-1}-...-a_{k-1}x-a_k=0\n\\]\n有如下定理\n\n设\\(q\\in C\\)且\\(q\\not=0\\)，\\(u_n=q^n\\)是递推关系的一个解当且仅当\\(q\\)是特征方程的一个根。\\(q\\)称为递推关系的一个\\(m\\)重特征根，当\\(q\\)是特征方程的\\(m\\)重根，简称特征根。\n设\\(g_i(n)\\)都是递推关系的解，那么它们的线性组合也是递推关系的解\n如果递推关系有\\(k\\)个彼此相异的特征根\\(q_1,q_2,...,q_k\\)，那么\n\\[\nu_n=c_1q_1^n+c_2q_2^n+...+c_kq_k^n\n\\]\n是递推关系的通解。\n\n\n6.2.1 有重根时的常系数线性齐次递推关系解法\n设\\(q\\)是递推关系的一个\\(m\\)重特征根，那么\n\\[\nu_n=n^jq^n,j=0,1,2,...,m-1\n\\]\n都是递推关系的解。\n设递推关系有\\(t\\)个相异的特征根\\(q_1,q_2,...,q_t\\)，其中\\(q_i\\)是\\(e_i\\)重根，\\(i=1,2,...,t\\). 令\n\\[\nh_i(n)=c_{i1}+c_{i2}n+...+c_{ie_i}n^{e_i-1}\n\\]\n那么递推关系的通解为\n\\[\nu_n=h_1(n)q_1^n+h_2(n)q_2^n+...+h_t(n)q_t^n\n\\]\n\n\n6.2.2 两类特殊常系数非齐次线性递推关系的解\n\n\\(f(n)\\)是\\(n\\)的\\(m\\)次多项式，如果1是递推关系的\\(i\\)重特征根（如果不是特征根那么按0重计算）那么\\(n^ig(n)\\)是递推关系的一个特解，其中\\(g(n)\\)是一个\\(m\\)次多项式，系数应通过待定系数法解出。\n\\(f(n)=c\\cdot a^n\\)，其中\\(c,a\\)均为非零常数。如果\\(a\\)是递推关系的\\(i\\)重特征根（如果不是特征根那么按0重计算）那么\\(A\\cdot n^ia^n\\)是递推关系的一个特解，其中系数\\(A\\)应通过待定系数法解出。\n\n\n\n\n6.3 参考\n华南理工大学出版社《组合数学》曹汝成，第三章第二节，递推关系",
+    "objectID": "考研数学/高数/导数和微分.html#一阶微分的形式不变性和高阶微分没有此性质",
+    "href": "考研数学/高数/导数和微分.html#一阶微分的形式不变性和高阶微分没有此性质",
+    "title": "导数和微分",
+    "section": "一阶微分的形式不变性和高阶微分没有此性质",
+    "text": "一阶微分的形式不变性和高阶微分没有此性质\n已知\\(y=f(u),u=\\varphi(x)\\)，那么进行变量替换时有\n\\[\n\\mathrm dy=f'(u)\\mathrm du=f'(u)\\varphi'(x)\\mathrm dx\n\\]\n这称为一阶微分的形式不变性，而二阶微分不具有这个性质，而是\n\\[\n\\mathrm d^2y=f''(u)\\mathrm du^2+f'(x)\\mathrm d^2u\n\\]\n上式是通过将\\(u\\)看作以\\(x\\)为自变量的函数，而不是自变量得出的，进行第二次微分时，多出了一项，而且求微分的次数越高，多出的项越多。\n如果\\(u\\)是自变量，那么依旧有\n\\[\n\\mathrm d^2y=f''(u)\\mathrm du^2\n\\]\n\n\n\n\n\n\n求微分时变量替换的问题\n\n\n\n所以在求微分时，只能一次一次求，不能一步到位。\n例如求\\(\\dfrac{\\mathrm d^2y}{dx^2}\\)不能直接求\\(\\dfrac{\\mathrm d^2y}{du^2}\\cdot\\left(\\dfrac{\\mathrm du}{dx}\\right)^2\\)\n因为它实际上是\n\\[\n\\dfrac{\\mathrm d^2y}{\\mathrm dx^2}=f''(u)\\left(\\dfrac{\\mathrm du}{\\mathrm dx}\\right)^2+f'(x)\\dfrac{\\mathrm d^2u}{\\mathrm dx^2}\n\\]",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "微分方程"
+      "导数和微分"
     ]
   },
   {
-    "objectID": "posts/高数/微分方程.html#footnotes",
-    "href": "posts/高数/微分方程.html#footnotes",
-    "title": "微分方程",
-    "section": "脚注",
-    "text": "脚注\n\n\n线性无关即不成比例↩︎",
+    "objectID": "考研数学/高数/导数和微分.html#渐近线",
+    "href": "考研数学/高数/导数和微分.html#渐近线",
+    "title": "导数和微分",
+    "section": "渐近线",
+    "text": "渐近线\n如果关于函数\\(f(x)\\)的极限\n\\[\n\\lim_{x\\to+\\infty}\\dfrac{f(x)}{x}\n\\]\n存在，那么这个函数有一个向\\(x\\)轴正方向的渐近线，其斜率\\(k\\)等于上述极限，截距\n\\[\nb=\\lim_{x\\to+\\infty}(f(x)-kx)\n\\]\n\n\n\n\n\n\n注释\n\n\n\n如果\\(f(x)\\)同时在\\((c,+\\infty)\\)上可导，那么由L’Hopital’s Rule可以立即得到\n\\[\nk=\\lim_{x\\to+\\infty}f'(x)\n\\]\n\n\n上述讨论在\\(x\\to-\\infty\\)时也成立，函数在\\(x\\)轴负方向也有一条渐近线，如果正负两根渐近线重合，视为一条渐近线。",
     "crumbs": [
-      "首页",
-      "Posts",
+      "考研数学",
       "高数",
-      "微分方程"
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/积分.html",
+    "href": "考研数学/高数/积分.html",
+    "title": "积分",
+    "section": "",
+    "text": "在区间\\([a,b]\\)上做分划 \\[\na=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b\n\\] 令\\(\\Delta x_i=x_i-x_{i-1}\\)，任取\\(\\xi_i\\in[x_{i-1},x_i]\\)，只要\\(\\lambda=\\mathrm{sup}\\{\\Delta x_i\\}\\to 0\\)时，和式 \\[\n\\sum_{i=1}^{n}f(\\xi_i)\\Delta x_i\n\\]\n的极限存在，那么称和式为\\(f(x)\\)在区间\\([a,b]\\)上的定积分，记做 \\[\n\\int_a^b f(x)\\mathrm{d}x.\n\\]",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/积分.html#定积分定义",
+    "href": "考研数学/高数/积分.html#定积分定义",
+    "title": "积分",
+    "section": "",
+    "text": "在区间\\([a,b]\\)上做分划 \\[\na=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b\n\\] 令\\(\\Delta x_i=x_i-x_{i-1}\\)，任取\\(\\xi_i\\in[x_{i-1},x_i]\\)，只要\\(\\lambda=\\mathrm{sup}\\{\\Delta x_i\\}\\to 0\\)时，和式 \\[\n\\sum_{i=1}^{n}f(\\xi_i)\\Delta x_i\n\\]\n的极限存在，那么称和式为\\(f(x)\\)在区间\\([a,b]\\)上的定积分，记做 \\[\n\\int_a^b f(x)\\mathrm{d}x.\n\\]",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/积分.html#构造定积分",
+    "href": "考研数学/高数/积分.html#构造定积分",
+    "title": "积分",
+    "section": "构造定积分",
+    "text": "构造定积分\n\\[\n\\int_0^1f(x)\\mathrm{d}x=\\lim_{n\\to\\infty}\\sum_{i=0}^n\\dfrac1nf(\\dfrac in)\n\\]\n极限，求和，\\(\\dfrac in\\)就是\\(\\xi_i\\)，\\(\\dfrac 1n\\)就是\\(\\Delta x_i\\)，就是把区间\\([0,1]\\)分为了\\(n\\)份，符合定积分定义因此这个极限就是定积分。\n\n\n\n\n\n\n注释\n\n\n\n看到极限后求和就要想到积分。",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/积分.html#不太好记的不定积分",
+    "href": "考研数学/高数/积分.html#不太好记的不定积分",
+    "title": "积分",
+    "section": "不太好记的不定积分",
+    "text": "不太好记的不定积分\n\n\n\n\n\n\n注意\n\n\n\n不定积分一定要记得带\\(C\\)\n\n\n\n\n\n\n\n\n注意\n\n\n\n看到这类积分是定积分时一定要先考察是否是奇函数\n\n\n\n\\(\\int\\dfrac{1}{a^2-x^2}\\mathrm dx=\\dfrac{1}{2a}\\ln\\left|\\dfrac{a+x}{a-x}\\right|+C\\)\n\\(\\int\\dfrac{1}{\\sqrt{x^2\\pm a^2}}\\mathrm dx=\\ln\\left|x+\\sqrt{x^2\\pm a^2}\\right|+C\\)\n\\(\\int\\dfrac{1}{1+\\cos x}\\mathrm dx=\\tan\\dfrac t2+C\\)",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/积分.html#三角函数定积分的一个结论",
+    "href": "考研数学/高数/积分.html#三角函数定积分的一个结论",
+    "title": "积分",
+    "section": "三角函数定积分的一个结论",
+    "text": "三角函数定积分的一个结论\n\\[\n\\int_0^{\\frac \\pi2}\\sin^nx\\mathrm dx=\n\\int_0^{\\frac \\pi2}\\cos^nx\\mathrm dx=\n\\left\\{\n\\begin{aligned}\n\\dfrac{(n-1)!!}{n!!}\\dfrac\\pi2,\\text{当n为偶数}\\\\\n\\dfrac{(n-1)!!}{n!!},\\text{当n为奇数}\n\\end{aligned}\n\\right.\n\\]\n\n论证. 见此",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "积分"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/积分.html#旋转体体积",
+    "href": "考研数学/高数/积分.html#旋转体体积",
+    "title": "积分",
+    "section": "旋转体体积",
+    "text": "旋转体体积\n\\[\nV=\\pi\\int_a^bf^2(x)\\mathrm dx\n\\]",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "积分"
     ]
   }
 ]

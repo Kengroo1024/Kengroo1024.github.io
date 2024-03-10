@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kengroo1024">
 
-<title>Kengroo - 特征向量</title>
+<title>Kengroo - 矩阵</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -103,7 +102,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -123,6 +122,14 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">首页</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../考研数学.html"> 
+<span class="menu-text">考研数学</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">博客</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
@@ -147,7 +154,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/线性代数/二次型.html">线性代数</a></li><li class="breadcrumb-item"><a href="../../posts/线性代数/特征向量.html">特征向量</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/二次型.html">线性代数</a></li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/矩阵.html">矩阵</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -156,13 +163,13 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Posts</span></a>
+ <span class="menu-text">考研数学</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -179,7 +186,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/概统/知识点.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/概统/知识点.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">概率与统计知识点</span></a>
   </div>
 </li>
@@ -196,25 +203,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/高数/导数和微分.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/高数/导数和微分.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">导数和微分</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/高数/积分.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/高数/积分.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">积分</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/高数/三角函数.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/高数/三角函数.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">三角函数</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/高数/微分方程.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/高数/微分方程.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">微分方程</span></a>
   </div>
 </li>
@@ -231,66 +238,26 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/线性代数/二次型.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/线性代数/二次型.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">二次型</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/线性代数/矩阵.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/线性代数/矩阵.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">矩阵</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/线性代数/特征向量.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../考研数学/线性代数/特征向量.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">特征向量</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/线性代数/行列式.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/线性代数/行列式.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">行列式计算</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
- <span class="menu-text">杂项</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="切換部分">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/杂项/7-zip的文件名编码问题.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7-zip的文件名编码问题</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
- <span class="menu-text">Quarto使用心得</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="切換部分">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/Quarto使用心得/第二节.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quarto使用心得 第二节</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/Quarto使用心得/第一节.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quarto使用心得 第一节</span></a>
   </div>
 </li>
       </ul>
@@ -302,23 +269,13 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目录</h2>
-   
-  <ul>
-  <li><a href="#逆矩阵的特征值和特征向量的对应关系" id="toc-逆矩阵的特征值和特征向量的对应关系" class="nav-link active" data-scroll-target="#逆矩阵的特征值和特征向量的对应关系"><span class="header-section-number">1</span> 逆矩阵的特征值和特征向量的对应关系</a></li>
-  <li><a href="#判断特征根重数的一种方法" id="toc-判断特征根重数的一种方法" class="nav-link" data-scroll-target="#判断特征根重数的一种方法"><span class="header-section-number">2</span> 判断特征根重数的一种方法</a></li>
-  <li><a href="#几何重数和代数重数" id="toc-几何重数和代数重数" class="nav-link" data-scroll-target="#几何重数和代数重数"><span class="header-section-number">3</span> 几何重数和代数重数</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/线性代数/二次型.html">线性代数</a></li><li class="breadcrumb-item"><a href="../../posts/线性代数/特征向量.html">特征向量</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/二次型.html">线性代数</a></li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/矩阵.html">矩阵</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">特征向量</h1>
+<h1 class="title">矩阵</h1>
   <div class="quarto-categories">
     <div class="quarto-category">考研数学</div>
     <div class="quarto-category">线性代数</div>
@@ -329,12 +286,6 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">作者</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kengroo1024 </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -343,12 +294,6 @@ window.Quarto = {
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">修改的</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月9日</p>
-    </div>
-  </div>
     
   </div>
   
@@ -357,28 +302,152 @@ window.Quarto = {
 </header>
 
 
-<section id="逆矩阵的特征值和特征向量的对应关系" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="逆矩阵的特征值和特征向量的对应关系"><span class="header-section-number">1</span> 逆矩阵的特征值和特征向量的对应关系</h2>
-<p>可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。</p>
-</section>
-<section id="判断特征根重数的一种方法" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="判断特征根重数的一种方法"><span class="header-section-number">2</span> 判断特征根重数的一种方法</h2>
-<p>条件：n阶方阵<span class="math inline">\(\boldsymbol A\)</span>可相似对角化，或者干脆就是对角矩阵。</p>
-<p>行为：把待验证的特征值<span class="math inline">\(\lambda_0\)</span>带入矩阵<span class="math inline">\(\boldsymbol A-\lambda\boldsymbol E\)</span>中。</p>
-<p>结论：<span class="math inline">\(\boldsymbol A-\lambda_0\boldsymbol E\)</span>的秩<span class="math inline">\(r\)</span>与该特征值所对应的线性无关的特征向量个数<span class="math inline">\(k\)</span>的关系为</p>
+<section id="二阶矩阵的特征值" class="level2">
+<h2 class="anchored" data-anchor-id="二阶矩阵的特征值">二阶矩阵的特征值</h2>
+<p>二阶矩阵的特征多项式<span class="math inline">\(|\lambda\boldsymbol E-\boldsymbol A|=0\)</span>为</p>
 <p><span class="math display">\[
-k=n-r
+\lambda^2-tr(\boldsymbol A)\lambda+\det(\boldsymbol A)=0
 \]</span></p>
-<p>该命题的逆命题也成立，实际上，它的逆命题就是<a href="../../posts/线性代数/矩阵.html#矩阵相似对角化的条件">矩阵相似对角化的条件</a></p>
+<p>其中<span class="math inline">\(tr(A)\)</span>为矩阵的迹，<span class="math inline">\(\det(A)\)</span>为矩阵的行列式。</p>
+<p>只要解该方程即可。</p>
 </section>
-<section id="几何重数和代数重数" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="几何重数和代数重数"><span class="header-section-number">3</span> 几何重数和代数重数</h2>
-<p>代数重数，即解特征方程时特征根的重数。</p>
-<p>几何重数，即特征值对应的解空间的维数，也就是特征根对应的线性无关的特征向量的个数。</p>
-<p>关系：代数重数<span class="math inline">\(\geq\)</span>几何重数<span class="math inline">\(\geq1\)</span></p>
-<p>当代数重数与几何重数相等时，矩阵可相似对角化。这是更为普适的条件，可以适用于复矩阵。</p>
+<section id="矩阵多项式的特征值" class="level2">
+<h2 class="anchored" data-anchor-id="矩阵多项式的特征值">矩阵多项式的特征值</h2>
+<p>若<span class="math inline">\(\lambda\)</span>是<span class="math inline">\(\boldsymbol A\)</span>的特征值，那么<span class="math inline">\(\varphi(\lambda)\)</span>是矩阵多项式<span class="math inline">\(\varphi(\boldsymbol A)\)</span>的特征值。</p>
+</section>
+<section id="对角矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="对角矩阵">对角矩阵</h2>
+<section id="矩阵的相似对角化" class="level3">
+<h3 class="anchored" data-anchor-id="矩阵的相似对角化">矩阵的相似对角化</h3>
+<p>如果一个矩阵相似于对角矩阵，那么它可以写为</p>
+<p><span class="math display">\[
+\boldsymbol A=\boldsymbol P^{-1}\boldsymbol\Lambda\boldsymbol P
+\]</span></p>
+<p>其中<span class="math inline">\(\boldsymbol P\)</span>是各个特征向量组成的矩阵，它们和<span class="math inline">\(\boldsymbol\Lambda\)</span>中各自的特征值一一对应。</p>
+</section>
+<section id="矩阵相似对角化的条件" class="level3">
+<h3 class="anchored" data-anchor-id="矩阵相似对角化的条件">矩阵相似对角化的条件</h3>
+<p>如果<span class="math inline">\(k\)</span>阶方阵拥有<span class="math inline">\(k\)</span>个线性无关的特征向量，则其相似于对角矩阵。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+对于具体的情况
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>实对称矩阵必能对角化</li>
+<li>若矩阵有<span class="math inline">\(k\)</span>个不同的特征值，则其也必能对角化</li>
+<li>若矩阵的每个<span class="math inline">\(i\)</span>重特征值都拥有<span class="math inline">\(i\)</span>个线性无关的特征向量，那么它也必能对角化</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="特征值" class="level3">
+<h3 class="anchored" data-anchor-id="特征值">特征值</h3>
+<p>对角矩阵的特征值是对角线上所有元素，重复按重根计算。</p>
+</section>
+<section id="秩" class="level3">
+<h3 class="anchored" data-anchor-id="秩">秩</h3>
+<p>对角矩阵的秩等于对角线上非零元的个数。</p>
+<div id="cor-101" class="theorem corollary">
+<p><span class="theorem-title"><strong>推论 1</strong></span> 如果一个矩阵相似于对角矩阵，则它的秩等于非0特征值的个数，重根按重数计算。</p>
+</div>
+</section>
+</section>
+<section id="伴随矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="伴随矩阵">伴随矩阵</h2>
+<section id="秩-1" class="level3">
+<h3 class="anchored" data-anchor-id="秩-1">秩</h3>
+<p><span class="math inline">\(n\)</span>阶矩阵<span class="math inline">\(\boldsymbol A\)</span>的伴随矩阵为<span class="math inline">\(\boldsymbol A^*\)</span>，它的秩为</p>
+<p><span class="math display">\[
+r(\boldsymbol A^*)=\left\{\begin{aligned}
+n,&amp;\text{ if }r(\boldsymbol A)=n,\\
+1,&amp;\text{ if }r(\boldsymbol A)=n-1,\\
+0,&amp;\text{ if }r(\boldsymbol A)&lt;n-1
+\end{aligned}\right.
+\]</span></p>
+</section>
+</section>
+<section id="秩1矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="秩1矩阵">秩1矩阵</h2>
+<p>设矩阵<span class="math inline">\(\boldsymbol A\)</span>的秩为1，那么它有如下一些性质</p>
+<section id="可分解性" class="level3">
+<h3 class="anchored" data-anchor-id="可分解性">可分解性</h3>
+<p><span class="math inline">\(\boldsymbol A\)</span>一定可以被分解为两向量之积，即</p>
+<p><span class="math display">\[
+\exists\boldsymbol\alpha,\boldsymbol\beta,\text{使得}\boldsymbol A=\boldsymbol\alpha^T\boldsymbol\beta
+\]</span></p>
+<p>且</p>
+<p><span class="math display">\[
+\boldsymbol\beta^T\boldsymbol\alpha=tr(\boldsymbol A)
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+推广
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>如果<span class="math inline">\(r(\boldsymbol A)=k\)</span>则<span class="math inline">\(\boldsymbol A\)</span>可以被分解为一<span class="math inline">\(m\times k\)</span>和秩<span class="math inline">\(k\)</span>矩阵<span class="math inline">\(\boldsymbol M\)</span>和一<span class="math inline">\(k\times n\)</span>的秩<span class="math inline">\(k\)</span>矩阵<span class="math inline">\(\boldsymbol N\)</span>之积</p>
+</div>
+</div>
+</section>
+<section id="特征值-1" class="level3">
+<h3 class="anchored" data-anchor-id="特征值-1">特征值</h3>
+<p>如果<span class="math inline">\(\boldsymbol A\)</span>是<span class="math inline">\(n\)</span>阶方阵，其特征值为<span class="math inline">\(n-1\)</span>个0和<span class="math inline">\(tr(\boldsymbol A)\)</span>.</p>
+</section>
+<section id="相似对角化" class="level3">
+<h3 class="anchored" data-anchor-id="相似对角化">相似对角化</h3>
+<p><span class="math inline">\(\boldsymbol A\)</span>一定可以相似对角化，其中<span class="math inline">\(n\)</span>个0对应<span class="math inline">\(n\)</span>个线性无关的特征向量。</p>
+</section>
+<section id="幂乘" class="level3">
+<h3 class="anchored" data-anchor-id="幂乘">幂乘</h3>
+<p><span class="math display">\[
+\boldsymbol A^n=tr(\boldsymbol A)^{n-1}A
+\]</span></p>
+</section>
+</section>
+<section id="实对称矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="实对称矩阵">实对称矩阵</h2>
+<p>对于有限维实对称矩阵（下面简称对称矩阵），有如下性质</p>
+<section id="特征向量正交性" class="level3">
+<h3 class="anchored" data-anchor-id="特征向量正交性">特征向量正交性</h3>
+<p>对称矩阵不同特征值对应的特征向量是正交的。</p>
+</section>
+<section id="特征向量个数" class="level3">
+<h3 class="anchored" data-anchor-id="特征向量个数">特征向量个数</h3>
+<p>对称矩阵特征根的代数重数和几何重数相等，即<span class="math inline">\(i\)</span>重特征根必然对应<span class="math inline">\(i\)</span>个线性无关的特征向量。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注释
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>根据<a href="#矩阵相似对角化的条件">矩阵相似对角化的条件</a>，对称矩阵必可相似对角化</p>
+<p>且由 <a href="#cor-101" class="quarto-xref">推论&nbsp;1</a> ，对称矩阵的秩等于其非零特征值的个数，重根按重数计算。</p>
+</div>
+</div>
+</section>
+<section id="特征值和特征向量" class="level3">
+<h3 class="anchored" data-anchor-id="特征值和特征向量">特征值和特征向量</h3>
+<p>对称矩阵的特征值均为实数，特征向量均为实向量。</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

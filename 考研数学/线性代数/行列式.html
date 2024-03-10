@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kengroo1024">
 
-<title>Kengroo - 概率与统计知识点</title>
+<title>Kengroo - 行列式计算</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,40 +69,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -123,6 +93,14 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">首页</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../考研数学.html"> 
+<span class="menu-text">考研数学</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">博客</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
@@ -147,7 +125,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/概统/知识点.html">概统</a></li><li class="breadcrumb-item"><a href="../../posts/概统/知识点.html">概率与统计知识点</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/二次型.html">线性代数</a></li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/行列式.html">行列式计算</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -156,13 +134,13 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Posts</span></a>
+ <span class="menu-text">考研数学</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -170,16 +148,16 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">概统</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="切換部分">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/概统/知识点.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../考研数学/概统/知识点.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">概率与统计知识点</span></a>
   </div>
 </li>
@@ -196,25 +174,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/高数/导数和微分.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/高数/导数和微分.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">导数和微分</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/高数/积分.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/高数/积分.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">积分</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/高数/三角函数.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/高数/三角函数.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">三角函数</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/高数/微分方程.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/高数/微分方程.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">微分方程</span></a>
   </div>
 </li>
@@ -222,75 +200,35 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">线性代数</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="切換部分">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/线性代数/二次型.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/线性代数/二次型.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">二次型</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/线性代数/矩阵.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/线性代数/矩阵.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">矩阵</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/线性代数/特征向量.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/线性代数/特征向量.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">特征向量</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../posts/线性代数/行列式.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/线性代数/行列式.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">行列式计算</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
- <span class="menu-text">杂项</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="切換部分">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/杂项/7-zip的文件名编码问题.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">7-zip的文件名编码问题</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
- <span class="menu-text">Quarto使用心得</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="切換部分">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/Quarto使用心得/第二节.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quarto使用心得 第二节</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/Quarto使用心得/第一节.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quarto使用心得 第一节</span></a>
   </div>
 </li>
       </ul>
@@ -302,30 +240,16 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目录</h2>
-   
-  <ul>
-  <li><a href="#条件概率" id="toc-条件概率" class="nav-link active" data-scroll-target="#条件概率"><span class="header-section-number">1</span> 条件概率</a>
-  <ul class="collapse">
-  <li><a href="#离散情况" id="toc-离散情况" class="nav-link" data-scroll-target="#离散情况"><span class="header-section-number">1.1</span> 离散情况</a></li>
-  <li><a href="#连续情况" id="toc-连续情况" class="nav-link" data-scroll-target="#连续情况"><span class="header-section-number">1.2</span> 连续情况</a></li>
-  </ul></li>
-  <li><a href="#全概率公式" id="toc-全概率公式" class="nav-link" data-scroll-target="#全概率公式"><span class="header-section-number">2</span> 全概率公式</a></li>
-  <li><a href="#贝叶斯公式" id="toc-贝叶斯公式" class="nav-link" data-scroll-target="#贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Posts</li><li class="breadcrumb-item"><a href="../../posts/概统/知识点.html">概统</a></li><li class="breadcrumb-item"><a href="../../posts/概统/知识点.html">概率与统计知识点</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/二次型.html">线性代数</a></li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/行列式.html">行列式计算</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">概率与统计知识点</h1>
+<h1 class="title">行列式计算</h1>
   <div class="quarto-categories">
     <div class="quarto-category">考研数学</div>
-    <div class="quarto-category">概统</div>
+    <div class="quarto-category">线性代数</div>
   </div>
   </div>
 
@@ -333,12 +257,6 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">作者</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kengroo1024 </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -347,12 +265,6 @@ window.Quarto = {
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">修改的</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月9日</p>
-    </div>
-  </div>
     
   </div>
   
@@ -361,48 +273,9 @@ window.Quarto = {
 </header>
 
 
-<section id="条件概率" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="条件概率"><span class="header-section-number">1</span> 条件概率</h2>
-<section id="离散情况" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="离散情况"><span class="header-section-number">1.1</span> 离散情况</h3>
-<p><span class="math display">\[
-P(B|A)=\dfrac{P(AB)}{P(A)}
-\]</span></p>
-<p>^ff235e</p>
-<div class="cor-conditioned">
-<p><span class="math display">\[
-P(B|A)P(A)=P(A|B)P(B)=P(AB)
-\]</span></p>
-</div>
-</section>
-<section id="连续情况" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="连续情况"><span class="header-section-number">1.2</span> 连续情况</h3>
-<p><span class="math display">\[
-f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_X(x)}
-\]</span></p>
-</section>
-</section>
-<section id="全概率公式" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="全概率公式"><span class="header-section-number">2</span> 全概率公式</h2>
-<p><span class="math display">\[
-P(A)=\sum_{i=1}^nP(A|B_i)P(B_i)
-\]</span></p>
-<p>^6c9cba</p>
-</section>
-<section id="贝叶斯公式" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</h2>
-<p>在只有两个事件时</p>
-<p><span class="math display">\[
-P(B|A)=\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\bar B)P(\bar B)}
-\]</span></p>
-<p>在多个事件时</p>
-<p><span class="math display">\[
-P(B_i|A)=\dfrac{P(A|B_i)P(B_i)}{\sum_{i=1}^nP(A|B_i)P(B_i)}
-\]</span></p>
-<p>^322785</p>
-<div class="proof">
-<p><span class="proof-title"><em>论证</em>. </span>对条件概率公式的分母使用一次全概率公式即可。</p>
-</div>
+<section id="行列式计算" class="level2">
+<h2 class="anchored" data-anchor-id="行列式计算">行列式计算</h2>
+<p>参见<a href="https://zhuanlan.zhihu.com/p/34685081?utm_id=0">这里</a></p>
 
 
 </section>
