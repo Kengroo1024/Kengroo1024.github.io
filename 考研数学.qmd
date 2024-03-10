@@ -1,9 +1,8 @@
 ---
-title: "Hello you guys"
+title: 考研数学
 sidebar: false
 listing:
   contents: 
-    - posts
     - 考研数学
   sort: "date desc"
   type: default
@@ -11,7 +10,7 @@ listing:
   sort-ui: true
   filter-ui: true
 page-layout: full
-title-block-banner: true
 ---
 
+欢迎来到考研数学板块
 

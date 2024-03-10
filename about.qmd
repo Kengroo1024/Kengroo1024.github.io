@@ -1,6 +1,8 @@
 ---
 title: "Kengroo1024"
 sidebar: false
+execute: 
+  freeze: true
 about:
   template: jolla
   links:

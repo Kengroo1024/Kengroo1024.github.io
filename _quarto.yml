@@ -12,10 +12,20 @@ website:
     left:
       - text: 首页
         file: index.qmd
+      - text: 考研数学
+        file: 考研数学.qmd
+      - text: 博客
+        file: posts.qmd
       - text: 关于
         file: about.qmd
   sidebar:
-    contents: posts
+    - title: 考研数学
+      style: docked
+      contents: 考研数学
+
+    - title: 博文
+      contents: posts
+          
 
 format:
   html:
