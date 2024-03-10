@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kengroo1024">
 
 <title>Kengroo - 导数和微分</title>
 <style>
@@ -102,7 +103,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -269,7 +270,21 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#二元函数求偏导链式法则" id="toc-二元函数求偏导链式法则" class="nav-link active" data-scroll-target="#二元函数求偏导链式法则"><span class="header-section-number">1</span> 二元函数求偏导链式法则</a></li>
+  <li><a href="#二元函数全微分" id="toc-二元函数全微分" class="nav-link" data-scroll-target="#二元函数全微分"><span class="header-section-number">2</span> 二元函数全微分</a></li>
+  <li><a href="#taylor-formula" id="toc-taylor-formula" class="nav-link" data-scroll-target="#taylor-formula"><span class="header-section-number">3</span> Taylor Formula</a></li>
+  <li><a href="#导数定义" id="toc-导数定义" class="nav-link" data-scroll-target="#导数定义"><span class="header-section-number">4</span> 导数定义</a></li>
+  <li><a href="#高阶无穷小量" id="toc-高阶无穷小量" class="nav-link" data-scroll-target="#高阶无穷小量"><span class="header-section-number">5</span> 高阶无穷小量</a></li>
+  <li><a href="#一阶微分的形式不变性和高阶微分没有此性质" id="toc-一阶微分的形式不变性和高阶微分没有此性质" class="nav-link" data-scroll-target="#一阶微分的形式不变性和高阶微分没有此性质"><span class="header-section-number">6</span> 一阶微分的形式不变性和高阶微分没有此性质</a></li>
+  <li><a href="#渐近线" id="toc-渐近线" class="nav-link" data-scroll-target="#渐近线"><span class="header-section-number">7</span> 渐近线</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -286,6 +301,12 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kengroo1024 </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -294,6 +315,12 @@ window.Quarto = {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">修改的</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2024年3月10日</p>
+    </div>
+  </div>
     
   </div>
   
@@ -302,22 +329,22 @@ window.Quarto = {
 </header>
 
 
-<section id="二元函数求偏导链式法则" class="level2">
-<h2 class="anchored" data-anchor-id="二元函数求偏导链式法则">二元函数求偏导链式法则</h2>
+<section id="二元函数求偏导链式法则" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="二元函数求偏导链式法则"><span class="header-section-number">1</span> 二元函数求偏导链式法则</h2>
 <p><span class="math display">\[
 \dfrac{\partial z}{\partial x}=\dfrac{\partial z}{\partial u}\cdot\dfrac{\partial u}{\partial x}+\dfrac{\partial z}{\partial v}\cdot\dfrac{\partial v}{\partial x}
 \]</span> <span class="math display">\[
 \dfrac{\partial z}{\partial y}=\dfrac{\partial z}{\partial u}\cdot\dfrac{\partial u}{\partial y}+\dfrac{\partial z}{\partial v}\cdot\dfrac{\partial v}{\partial y}\\
 \]</span></p>
 </section>
-<section id="二元函数全微分" class="level2">
-<h2 class="anchored" data-anchor-id="二元函数全微分">二元函数全微分</h2>
+<section id="二元函数全微分" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="二元函数全微分"><span class="header-section-number">2</span> 二元函数全微分</h2>
 <p><span class="math display">\[
 \mathrm{d}z=\dfrac{\partial z}{\partial x}\mathrm{d}x+\dfrac{\partial z}{\partial y}\mathrm{d}y
 \]</span></p>
 </section>
-<section id="taylor-formula" class="level2">
-<h2 class="anchored" data-anchor-id="taylor-formula">Taylor Formula</h2>
+<section id="taylor-formula" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="taylor-formula"><span class="header-section-number">3</span> Taylor Formula</h2>
 <p><span class="math display">\[
 f(x)=f(x-x_0)+f'(x_0)(x-x_0)+o(x)
 \]</span></p>
@@ -331,16 +358,16 @@ f(x)=f(x-x_0)+\sum_{i=1}^{\infty}f^{(i)}(x_0)\dfrac{(x-x_0)^n}{i!}
 </figure>
 </div>
 </section>
-<section id="导数定义" class="level2">
-<h2 class="anchored" data-anchor-id="导数定义">导数定义</h2>
+<section id="导数定义" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="导数定义"><span class="header-section-number">4</span> 导数定义</h2>
 <p>给定函数<span class="math inline">\(f(x)\)</span>，若极限</p>
 <p><span class="math display">\[
 \lim_{\Delta x\to0}\dfrac{f(x_0\pm\Delta x)-f(x_0)}{\Delta x}
 \]</span></p>
 <p>存在，且相等则称其为<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x_0\)</span>处的导数，并称<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x=x_0\)</span>处可导。</p>
 </section>
-<section id="高阶无穷小量" class="level2">
-<h2 class="anchored" data-anchor-id="高阶无穷小量">高阶无穷小量</h2>
+<section id="高阶无穷小量" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="高阶无穷小量"><span class="header-section-number">5</span> 高阶无穷小量</h2>
 <p>若<span class="math inline">\(f,g\)</span>在<span class="math inline">\(x_0\)</span>处的极限都是0，并且有</p>
 <p><span class="math display">\[
 \lim_{x\to x_0}\dfrac{f(x)}{g(x)}=0
@@ -350,8 +377,8 @@ f(x)=f(x-x_0)+\sum_{i=1}^{\infty}f^{(i)}(x_0)\dfrac{(x-x_0)^n}{i!}
 f(x)=o(g(x))
 \]</span></p>
 </section>
-<section id="一阶微分的形式不变性和高阶微分没有此性质" class="level2">
-<h2 class="anchored" data-anchor-id="一阶微分的形式不变性和高阶微分没有此性质">一阶微分的形式不变性和高阶微分没有此性质</h2>
+<section id="一阶微分的形式不变性和高阶微分没有此性质" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="一阶微分的形式不变性和高阶微分没有此性质"><span class="header-section-number">6</span> 一阶微分的形式不变性和高阶微分没有此性质</h2>
 <p>已知<span class="math inline">\(y=f(u),u=\varphi(x)\)</span>，那么进行变量替换时有</p>
 <p><span class="math display">\[
 \mathrm dy=f'(u)\mathrm du=f'(u)\varphi'(x)\mathrm dx
@@ -384,8 +411,8 @@ f(x)=o(g(x))
 </div>
 </div>
 </section>
-<section id="渐近线" class="level2">
-<h2 class="anchored" data-anchor-id="渐近线">渐近线</h2>
+<section id="渐近线" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="渐近线"><span class="header-section-number">7</span> 渐近线</h2>
 <p>如果关于函数<span class="math inline">\(f(x)\)</span>的极限</p>
 <p><span class="math display">\[
 \lim_{x\to+\infty}\dfrac{f(x)}{x}
