@@ -16,6 +16,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/杂项/笔记管理.html",
       "/posts/杂项/7-zip的文件名编码问题.html",
       "/posts/Quarto使用心得/第二节.html",
       "/posts/Quarto使用心得/第一节.html"
@@ -24,6 +25,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/杂项/笔记管理.html",
       "/考研数学/概统/知识点.html",
       "/考研数学/线性代数/二次型.html",
       "/考研数学/线性代数/特征向量.html",
