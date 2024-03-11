@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kengroo1024">
 
 <title>Kengroo - 7-zip的文件名编码问题</title>
 <style>
@@ -74,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -200,22 +199,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目录</h2>
-   
-  <ul>
-  <li><a href="#问题概述" id="toc-问题概述" class="nav-link active" data-scroll-target="#问题概述"><span class="header-section-number">1</span> 问题概述</a></li>
-  <li><a href="#问题解决" id="toc-问题解决" class="nav-link" data-scroll-target="#问题解决"><span class="header-section-number">2</span> 问题解决</a>
-  <ul class="collapse">
-  <li><a href="#查看压缩包内容" id="toc-查看压缩包内容" class="nav-link" data-scroll-target="#查看压缩包内容"><span class="header-section-number">2.1</span> 查看压缩包内容</a></li>
-  <li><a href="#进行解压" id="toc-进行解压" class="nav-link" data-scroll-target="#进行解压"><span class="header-section-number">2.2</span> 进行解压</a></li>
-  </ul></li>
-  <li><a href="#碎碎念" id="toc-碎碎念" class="nav-link" data-scroll-target="#碎碎念"><span class="header-section-number">3</span> 碎碎念</a></li>
-  <li><a href="#参考" id="toc-参考" class="nav-link" data-scroll-target="#参考"><span class="header-section-number">4</span> 参考</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -232,12 +216,6 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">作者</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kengroo1024 </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -246,12 +224,6 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">修改的</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年2月9日</p>
-    </div>
-  </div>
     
   </div>
   
@@ -260,15 +232,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="问题概述" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="问题概述"><span class="header-section-number">1</span> 问题概述</h2>
+<section id="问题概述" class="level2">
+<h2 class="anchored" data-anchor-id="问题概述">问题概述</h2>
 <p>7-zip 的 GUI 界面不能设置文件名编码，因此会产生许多问题。例如如果将 Windows 的编码设置成 UTF-8，所有的压缩包文件名都会乱码。即使是 Windows 的编码是正常的 GBK，也会在解压用日语常用编码 Shift_JIS 进行编码的压缩包时出现乱码。</p>
 </section>
-<section id="问题解决" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="问题解决"><span class="header-section-number">2</span> 问题解决</h2>
+<section id="问题解决" class="level2">
+<h2 class="anchored" data-anchor-id="问题解决">问题解决</h2>
 <p>使用 CLI 界面，将 7-zip 可执行文件加入环境变量或在 7-zip可执行文件的所在目录打开 cmd 或者 powershell</p>
-<section id="查看压缩包内容" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="查看压缩包内容"><span class="header-section-number">2.1</span> 查看压缩包内容</h3>
+<section id="查看压缩包内容" class="level3">
+<h3 class="anchored" data-anchor-id="查看压缩包内容">查看压缩包内容</h3>
 <p>执行下列命令</p>
 <pre><code>chcp [nnn]</code></pre>
 <p>其中 nnn 是微软的代码页，下面列出几个常用的</p>
@@ -301,21 +273,21 @@ ul.task-list li input[type="checkbox"] {
 <p>然后执行下面命令</p>
 <pre><code>7z l src</code></pre>
 </section>
-<section id="进行解压" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="进行解压"><span class="header-section-number">2.2</span> 进行解压</h3>
+<section id="进行解压" class="level3">
+<h3 class="anchored" data-anchor-id="进行解压">进行解压</h3>
 <p>执行以下命令</p>
 <pre><code>7z x src [-o dest] -mcp=num</code></pre>
 <p><code>src</code>为源文件路径，<code>dest</code>为输出文件路径，<code>num</code>为文件编码对应的代码页，如果不指定输出路径默认解压到当前目录。</p>
 <p>注意，在 ps 中相对路径须加<code>./</code></p>
 </section>
 </section>
-<section id="碎碎念" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="碎碎念"><span class="header-section-number">3</span> 碎碎念</h2>
+<section id="碎碎念" class="level2">
+<h2 class="anchored" data-anchor-id="碎碎念">碎碎念</h2>
 <p><code>mcp</code>选项竟然没有出现在文档里面，无法理解。</p>
 <p>但是文档中提供了<code>scc</code>和<code>scs</code>选项，看起来也能起到相同的效果。</p>
 </section>
-<section id="参考" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="参考"><span class="header-section-number">4</span> 参考</h2>
+<section id="参考" class="level2">
+<h2 class="anchored" data-anchor-id="参考">参考</h2>
 <p>解决方案来自 <a href="https://blog.csdn.net/qq_43780850/article/details/129134210#:~:text=%E5%8F%AA%E9%9C%80%E8%A6%81%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A7%A3%E5%8E%8B%EF%BC%8C%E6%B7%BB%E5%8A%A0-mcp%3D936%E5%8F%82%E6%95%B0%E5%8D%B3%E5%8F%AF%EF%BC%8C936%E4%BB%A3%E8%A1%A8GBK%EF%BC%8C-mcp%20%E5%8D%B3method,code%20page%EF%BC%8Cx%E4%BB%A3%E8%A1%A8eXtract_7zip%20%E7%BC%96%E7%A0%81">CSDN</a></p>
 <p><a href="https://documentation.help/7-Zip/index4.htm">7-zip CLI 帮助文档</a></p>
 

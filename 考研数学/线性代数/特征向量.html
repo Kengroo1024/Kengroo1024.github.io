@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kengroo1024">
 
 <title>Kengroo - 特征向量</title>
 <style>
@@ -102,7 +103,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -275,7 +276,17 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#逆矩阵的特征值和特征向量的对应关系" id="toc-逆矩阵的特征值和特征向量的对应关系" class="nav-link active" data-scroll-target="#逆矩阵的特征值和特征向量的对应关系"><span class="header-section-number">1</span> 逆矩阵的特征值和特征向量的对应关系</a></li>
+  <li><a href="#判断特征根重数的一种方法" id="toc-判断特征根重数的一种方法" class="nav-link" data-scroll-target="#判断特征根重数的一种方法"><span class="header-section-number">2</span> 判断特征根重数的一种方法</a></li>
+  <li><a href="#几何重数和代数重数" id="toc-几何重数和代数重数" class="nav-link" data-scroll-target="#几何重数和代数重数"><span class="header-section-number">3</span> 几何重数和代数重数</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -292,6 +303,12 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kengroo1024 </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -300,6 +317,12 @@ window.Quarto = {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">修改的</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2024年3月11日</p>
+    </div>
+  </div>
     
   </div>
   
@@ -308,12 +331,12 @@ window.Quarto = {
 </header>
 
 
-<section id="逆矩阵的特征值和特征向量的对应关系" class="level2">
-<h2 class="anchored" data-anchor-id="逆矩阵的特征值和特征向量的对应关系">逆矩阵的特征值和特征向量的对应关系</h2>
+<section id="逆矩阵的特征值和特征向量的对应关系" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="逆矩阵的特征值和特征向量的对应关系"><span class="header-section-number">1</span> 逆矩阵的特征值和特征向量的对应关系</h2>
 <p>可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。</p>
 </section>
-<section id="判断特征根重数的一种方法" class="level2">
-<h2 class="anchored" data-anchor-id="判断特征根重数的一种方法">判断特征根重数的一种方法</h2>
+<section id="判断特征根重数的一种方法" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="判断特征根重数的一种方法"><span class="header-section-number">2</span> 判断特征根重数的一种方法</h2>
 <p>条件：n阶方阵<span class="math inline">\(\boldsymbol A\)</span>可相似对角化，或者干脆就是对角矩阵。</p>
 <p>行为：把待验证的特征值<span class="math inline">\(\lambda_0\)</span>带入矩阵<span class="math inline">\(\boldsymbol A-\lambda\boldsymbol E\)</span>中。</p>
 <p>结论：<span class="math inline">\(\boldsymbol A-\lambda_0\boldsymbol E\)</span>的秩<span class="math inline">\(r\)</span>与该特征值所对应的线性无关的特征向量个数<span class="math inline">\(k\)</span>的关系为</p>
@@ -322,8 +345,8 @@ k=n-r
 \]</span></p>
 <p>该命题的逆命题也成立，实际上，它的逆命题就是<a href="../../考研数学/线性代数/矩阵.html#矩阵相似对角化的条件">矩阵相似对角化的条件</a></p>
 </section>
-<section id="几何重数和代数重数" class="level2">
-<h2 class="anchored" data-anchor-id="几何重数和代数重数">几何重数和代数重数</h2>
+<section id="几何重数和代数重数" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="几何重数和代数重数"><span class="header-section-number">3</span> 几何重数和代数重数</h2>
 <p>代数重数，即解特征方程时特征根的重数。</p>
 <p>几何重数，即特征值对应的解空间的维数，也就是特征根对应的线性无关的特征向量的个数。</p>
 <p>关系：代数重数<span class="math inline">\(\geq\)</span>几何重数<span class="math inline">\(\geq1\)</span></p>

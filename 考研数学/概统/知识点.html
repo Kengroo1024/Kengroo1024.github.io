@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kengroo1024">
 
 <title>Kengroo - 概率与统计知识点</title>
 <style>
@@ -102,7 +103,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -275,7 +276,21 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#条件概率" id="toc-条件概率" class="nav-link active" data-scroll-target="#条件概率"><span class="header-section-number">1</span> 条件概率</a>
+  <ul class="collapse">
+  <li><a href="#离散情况" id="toc-离散情况" class="nav-link" data-scroll-target="#离散情况"><span class="header-section-number">1.1</span> 离散情况</a></li>
+  <li><a href="#连续情况" id="toc-连续情况" class="nav-link" data-scroll-target="#连续情况"><span class="header-section-number">1.2</span> 连续情况</a></li>
+  </ul></li>
+  <li><a href="#全概率公式" id="toc-全概率公式" class="nav-link" data-scroll-target="#全概率公式"><span class="header-section-number">2</span> 全概率公式</a></li>
+  <li><a href="#贝叶斯公式" id="toc-贝叶斯公式" class="nav-link" data-scroll-target="#贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -292,6 +307,12 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kengroo1024 </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -300,6 +321,12 @@ window.Quarto = {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">修改的</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2024年3月10日</p>
+    </div>
+  </div>
     
   </div>
   
@@ -308,10 +335,10 @@ window.Quarto = {
 </header>
 
 
-<section id="条件概率" class="level2">
-<h2 class="anchored" data-anchor-id="条件概率">条件概率</h2>
-<section id="离散情况" class="level3">
-<h3 class="anchored" data-anchor-id="离散情况">离散情况</h3>
+<section id="条件概率" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="条件概率"><span class="header-section-number">1</span> 条件概率</h2>
+<section id="离散情况" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="离散情况"><span class="header-section-number">1.1</span> 离散情况</h3>
 <p><span class="math display">\[
 P(B|A)=\dfrac{P(AB)}{P(A)}
 \]</span></p>
@@ -322,22 +349,22 @@ P(B|A)P(A)=P(A|B)P(B)=P(AB)
 \]</span></p>
 </div>
 </section>
-<section id="连续情况" class="level3">
-<h3 class="anchored" data-anchor-id="连续情况">连续情况</h3>
+<section id="连续情况" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="连续情况"><span class="header-section-number">1.2</span> 连续情况</h3>
 <p><span class="math display">\[
 f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_X(x)}
 \]</span></p>
 </section>
 </section>
-<section id="全概率公式" class="level2">
-<h2 class="anchored" data-anchor-id="全概率公式">全概率公式</h2>
+<section id="全概率公式" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="全概率公式"><span class="header-section-number">2</span> 全概率公式</h2>
 <p><span class="math display">\[
 P(A)=\sum_{i=1}^nP(A|B_i)P(B_i)
 \]</span></p>
 <p>^6c9cba</p>
 </section>
-<section id="贝叶斯公式" class="level2">
-<h2 class="anchored" data-anchor-id="贝叶斯公式">贝叶斯公式</h2>
+<section id="贝叶斯公式" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</h2>
 <p>在只有两个事件时</p>
 <p><span class="math display">\[
 P(B|A)=\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\bar B)P(\bar B)}

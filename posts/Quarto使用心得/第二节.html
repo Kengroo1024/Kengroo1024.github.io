@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kengroo1024">
 
 <title>Kengroo - Quarto使用心得 第二节</title>
 <style>
@@ -139,7 +138,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -265,26 +264,7 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目录</h2>
-   
-  <ul>
-  <li><a href="#yaml-配置" id="toc-yaml-配置" class="nav-link active" data-scroll-target="#yaml-配置"><span class="header-section-number">1</span> YAML 配置</a></li>
-  <li><a href="#预览和渲染文档" id="toc-预览和渲染文档" class="nav-link" data-scroll-target="#预览和渲染文档"><span class="header-section-number">2</span> 预览和渲染文档</a></li>
-  <li><a href="#基本的-markdown-和-gfm-语法" id="toc-基本的-markdown-和-gfm-语法" class="nav-link" data-scroll-target="#基本的-markdown-和-gfm-语法"><span class="header-section-number">3</span> 基本的 Markdown 和 GFM 语法</a></li>
-  <li><a href="#quarto-pandoc-专用的的-markdown-语法" id="toc-quarto-pandoc-专用的的-markdown-语法" class="nav-link" data-scroll-target="#quarto-pandoc-专用的的-markdown-语法"><span class="header-section-number">4</span> Quarto-Pandoc 专用的的 Markdown 语法</a>
-  <ul class="collapse">
-  <li><a href="#分页符和嵌入视频" id="toc-分页符和嵌入视频" class="nav-link" data-scroll-target="#分页符和嵌入视频"><span class="header-section-number">4.1</span> 分页符和嵌入视频</a></li>
-  <li><a href="#容器div-和-span" id="toc-容器div-和-span" class="nav-link" data-scroll-target="#容器div-和-span"><span class="header-section-number">4.2</span> 容器（div 和 span）</a></li>
-  <li><a href="#标注块" id="toc-标注块" class="nav-link" data-scroll-target="#标注块"><span class="header-section-number">4.3</span> 标注块</a></li>
-  <li><a href="#标签页仅支持-html" id="toc-标签页仅支持-html" class="nav-link" data-scroll-target="#标签页仅支持-html"><span class="header-section-number">4.4</span> 标签页（仅支持 HTML）</a></li>
-  <li><a href="#交叉引用" id="toc-交叉引用" class="nav-link" data-scroll-target="#交叉引用"><span class="header-section-number">4.5</span> 交叉引用</a></li>
-  </ul></li>
-  <li><a href="#参考" id="toc-参考" class="nav-link" data-scroll-target="#参考"><span class="header-section-number">5</span> 参考</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -300,12 +280,6 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">作者</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kengroo1024 </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -314,12 +288,6 @@ window.Quarto = {
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">修改的</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月9日</p>
-    </div>
-  </div>
     
   </div>
   
@@ -331,8 +299,8 @@ window.Quarto = {
 <p>在<a href="../../posts/Quarto使用心得/第一节.html">上一篇</a>博客中，我们已经在 VScode 中配置好了 Quarto 的工作环境，接下来我们将 Quarto 渲染一篇文档为 HTML 格式。</p>
 <p>Quarto 采取格式与内容相分离的方式来编写文档，因此，我们写作内容的文件是一个纯文本文件，渲染（render）与格式调整是之后完成的事情。</p>
 <p>要使用 Quarto 渲染一个文档，首先在工作空间中新建一个名为<code>test.qmd</code>的空文件，这个文件就是我们将在其中写作的文档。</p>
-<section id="yaml-配置" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="yaml-配置"><span class="header-section-number">1</span> YAML 配置</h2>
+<section id="yaml-配置" class="level2">
+<h2 class="anchored" data-anchor-id="yaml-配置">YAML 配置</h2>
 <p><a href="https://yaml.org/">YAML</a> 是“YAML ain’t Markup Language”的循环缩写。YAML 是一种在互联网上广泛使用的用于数据存储和交换的标记语言。</p>
 <!-- YAML 对于格式化的规则的要求是非常严格的，下面我将简短地叙述在 Quarto 中会用到的规则，关于 YAML 的完整教程，可以看[菜鸟教程上的 YAML 教程](https://www.runoob.com/w3cnote/yaml-intro.html)。
 
@@ -376,8 +344,8 @@ window.Quarto = {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>这是一个正确的 Metadata 写法。其意义是令模板使用中文，并用默认配置将文档输出为 HTML 格式。现在你应该将这段代码复制进你的文档中。以便后续的预览和渲染。</p>
 </section>
-<section id="预览和渲染文档" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="预览和渲染文档"><span class="header-section-number">2</span> 预览和渲染文档</h2>
+<section id="预览和渲染文档" class="level2">
+<h2 class="anchored" data-anchor-id="预览和渲染文档">预览和渲染文档</h2>
 <p>下载了 Quarto 扩展以后，在 VScode 中打开 qmd 文件，页面的右上角会有一个 Preview 按钮，点击可以进行预览，在一般的屏幕上上会打开预览的 HTML 文件。</p>
 <p>自带的预览脚本对于 HTML 输出的支持是很好的，但是对于其他的文件格式就不那么完美了。按 ctrl+反引号打开终端，或使用 cmd，执行下面的命令</p>
 <pre class="batch"><code>quarto preview src</code></pre>
@@ -387,17 +355,17 @@ window.Quarto = {
 <pre class="batch"><code>quarto render src</code></pre>
 <p>现在，预览你的文档并尝试下面学习下面的写作语法。</p>
 </section>
-<section id="基本的-markdown-和-gfm-语法" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="基本的-markdown-和-gfm-语法"><span class="header-section-number">3</span> 基本的 Markdown 和 GFM 语法</h2>
+<section id="基本的-markdown-和-gfm-语法" class="level2">
+<h2 class="anchored" data-anchor-id="基本的-markdown-和-gfm-语法">基本的 Markdown 和 GFM 语法</h2>
 <p>Markdown 是一种轻量级的标记语言。使用 Markdown，你可以完全将格式抛诸脑后，完全将注意力集中在内容的写作上，这篇博客的写作就是使用 Markdown 完成的。</p>
 <p>你可以在 <a href="https://markdown.com.cn">Markdown 官方教程</a>中学习到 Markdown 的<a href="https://markdown.com.cn/basic-syntax/">基本语法</a>和<a href="https://markdown.com.cn/extended-syntax/">扩展语法</a>。</p>
 <p>Quarto 也完全支持 <a href="https://github.github.com/gfm/"><abbr title="Github Flavored arkdown">GFM</abbr></a> 的所有语法，你可以查看 GFM 的一个<a href="https://gfm.docschina.org/zh-hans/">中文文档</a>来学习 GFM 的语法。GFM 是 Markdown 的一个方言，为 Markdown 添加了很多有用的特性，在此不多赘述。</p>
 </section>
-<section id="quarto-pandoc-专用的的-markdown-语法" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="quarto-pandoc-专用的的-markdown-语法"><span class="header-section-number">4</span> Quarto-Pandoc 专用的的 Markdown 语法</h2>
+<section id="quarto-pandoc-专用的的-markdown-语法" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-pandoc-专用的的-markdown-语法">Quarto-Pandoc 专用的的 Markdown 语法</h2>
 <p>Quarto 还有拥有许多 GFM 不包括和不支持的语法，诸如网格式表格、图表和公式编号、以及引用等等，可以在<a href="https://quarto.org/docs/authoring/markdown-basics.html">官方教程</a>查看完整的教程，这里列出几个常用的。</p>
-<section id="分页符和嵌入视频" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="分页符和嵌入视频"><span class="header-section-number">4.1</span> 分页符和嵌入视频</h3>
+<section id="分页符和嵌入视频" class="level3">
+<h3 class="anchored" data-anchor-id="分页符和嵌入视频">分页符和嵌入视频</h3>
 <p>分页符语法<code></code>，注意尖括号与文字之间都有一个空格。分页符在不同的环境下（例如 word 和 latex 中）都会解析成各自的分页符</p>
 <p>嵌入视频语法<code></code>，注意其中的空格，<code>src</code>为视频地址，只接受 mp4 后缀的视频。例如</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -405,8 +373,8 @@ window.Quarto = {
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9Q_608h25ZE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>经我实测，只对油管有较好的支持，对 bilibili 并不支持。但是 Markdown 是支持内嵌 HTML 的，也可以直接把 bilibili 复制过来的 HTML 代码嵌入其中。</p>
 </section>
-<section id="容器div-和-span" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="容器div-和-span"><span class="header-section-number">4.2</span> 容器（div 和 span）</h3>
+<section id="容器div-和-span" class="level3">
+<h3 class="anchored" data-anchor-id="容器div-和-span">容器（div 和 span）</h3>
 <p>Quarto 中支持用三个或更多的英文冒号包裹一段内容，这定义了一个容器。</p>
 <p>例如这样</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:::{#text .smaller}</span>
@@ -422,8 +390,8 @@ window.Quarto = {
 <p>这代表一张 ID 为 <code>text</code> 的图片。</p>
 <p>Quarto 中有一些预定义的样式，例如上面的 smaller 就可以将元素变得更小。</p>
 </section>
-<section id="标注块" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="标注块"><span class="header-section-number">4.3</span> 标注块</h3>
+<section id="标注块" class="level3">
+<h3 class="anchored" data-anchor-id="标注块">标注块</h3>
 <p>将容器类名定义为</p>
 <ul>
 <li><code>callout-note</code></li>
@@ -455,8 +423,8 @@ This is a note for you
 </div>
 <p>注意，我们使用了一个二级标题改变了标注块的标题。</p>
 </section>
-<section id="标签页仅支持-html" class="level3" data-number="4.4">
-<h3 data-number="4.4" class="anchored" data-anchor-id="标签页仅支持-html"><span class="header-section-number">4.4</span> 标签页（仅支持 HTML）</h3>
+<section id="标签页仅支持-html" class="level3">
+<h3 class="anchored" data-anchor-id="标签页仅支持-html">标签页（仅支持 HTML）</h3>
 <p>将类名写为<code>panel-tabset</code>就可以得到标签页。</p>
 <p>标签页可以将内容分页展示，其中用二级标题来进行分页。</p>
 <p>例如</p>
@@ -489,8 +457,8 @@ This is a note for you
 </div>
 </div>
 </section>
-<section id="交叉引用" class="level3" data-number="4.5">
-<h3 data-number="4.5" class="anchored" data-anchor-id="交叉引用"><span class="header-section-number">4.5</span> 交叉引用</h3>
+<section id="交叉引用" class="level3">
+<h3 class="anchored" data-anchor-id="交叉引用">交叉引用</h3>
 <p>可以使用容器和大括号对几乎所有的元素进行编号以便交叉引用，例如定理、公式图表等，只要定义它们的 ID 即可。</p>
 <p>例如</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>:::{#thm-Pythagorean}</span>
@@ -596,8 +564,8 @@ a^2+b^2=c^2
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="参考" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="参考"><span class="header-section-number">5</span> 参考</h2>
+<section id="参考" class="level2">
+<h2 class="anchored" data-anchor-id="参考">参考</h2>
 <p><a href="https://quarto.org">Quarto 官网</a></p>
 
 
