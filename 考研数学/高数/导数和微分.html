@@ -210,6 +210,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../考研数学/高数/二元函数微分.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">二元函数的微分</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../考研数学/高数/积分.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">积分</span></a>
   </div>
@@ -318,7 +324,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改的</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月10日</p>
+      <p class="date-modified">2024年3月11日</p>
     </div>
   </div>
     
@@ -385,9 +391,15 @@ f(x)=o(g(x))
 \]</span></p>
 <p>这称为一阶微分的形式不变性，而二阶微分不具有这个性质，而是</p>
 <p><span class="math display">\[
-\mathrm d^2y=f''(u)\mathrm du^2+f'(x)\mathrm d^2u
+\begin{aligned}
+\mathrm d^2y
+&amp;=f'(u)\mathrm d^2u+f''(u)\mathrm du^2\\
+&amp;=\left[
+f'(u)\varphi''(x)+f''(u)(\varphi'(x))^2\right]
+\mathrm dx^2
+\end{aligned}
 \]</span></p>
-<p>上式是通过将<span class="math inline">\(u\)</span>看作以<span class="math inline">\(x\)</span>为自变量的函数，而不是自变量得出的，进行第二次微分时，多出了一项，而且求微分的次数越高，多出的项越多。</p>
+<p>上式是通过将<span class="math inline">\(u\)</span>看作以<span class="math inline">\(x\)</span>为自变量的函数，而不是自变量，对一阶微分进行第二次微分得出的，进行第二次微分时，多出了一项，而且求微分的次数越高，多出的项越多。</p>
 <p>如果<span class="math inline">\(u\)</span>是自变量，那么依旧有</p>
 <p><span class="math display">\[
 \mathrm d^2y=f''(u)\mathrm du^2
@@ -403,7 +415,8 @@ f(x)=o(g(x))
 </div>
 <div class="callout-body-container callout-body">
 <p>所以在求微分时，只能一次一次求，不能一步到位。</p>
-<p>例如求<span class="math inline">\(\dfrac{\mathrm d^2y}{dx^2}\)</span>不能直接求<span class="math inline">\(\dfrac{\mathrm d^2y}{du^2}\cdot\left(\dfrac{\mathrm du}{dx}\right)^2\)</span></p>
+<p>或者说，求导数运算被认为是两个微分符号相除，而是一整个微分算子<span class="math inline">\(\dfrac{\mathrm d}{\mathrm dx}\)</span>作用在函数上。</p>
+<p>例如求<span class="math inline">\(\dfrac{\mathrm d^2y}{\mathrm dx^2}\)</span>不能直接求<span class="math inline">\(\dfrac{\mathrm d^2y}{\mathrm du^2}\cdot\left(\dfrac{\mathrm du}{\mathrm dx}\right)^2\)</span></p>
 <p>因为它实际上是</p>
 <p><span class="math display">\[
 \dfrac{\mathrm d^2y}{\mathrm dx^2}=f''(u)\left(\dfrac{\mathrm du}{\mathrm dx}\right)^2+f'(x)\dfrac{\mathrm d^2u}{\mathrm dx^2}
