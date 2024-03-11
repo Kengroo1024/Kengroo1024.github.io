@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kengroo1024">
 
 <title>Kengroo - Quarto使用心得 第一节</title>
 <style>
@@ -107,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed fullcontent">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -233,7 +234,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#环境配置" id="toc-环境配置" class="nav-link active" data-scroll-target="#环境配置"><span class="header-section-number">1</span> 环境配置</a>
+  <ul class="collapse">
+  <li><a href="#附加组件的下载" id="toc-附加组件的下载" class="nav-link" data-scroll-target="#附加组件的下载"><span class="header-section-number">1.1</span> 附加组件的下载</a></li>
+  </ul></li>
+  <li><a href="#编辑器" id="toc-编辑器" class="nav-link" data-scroll-target="#编辑器"><span class="header-section-number">2</span> 编辑器</a>
+  <ul class="collapse">
+  <li><a href="#jupyter-lab" id="toc-jupyter-lab" class="nav-link" data-scroll-target="#jupyter-lab"><span class="header-section-number">2.1</span> Jupyter Lab</a></li>
+  <li><a href="#vscode" id="toc-vscode" class="nav-link" data-scroll-target="#vscode"><span class="header-section-number">2.2</span> VScode</a></li>
+  </ul></li>
+  <li><a href="#参考" id="toc-参考" class="nav-link" data-scroll-target="#参考"><span class="header-section-number">3</span> 参考</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -249,6 +267,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kengroo1024 </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -257,6 +281,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">修改的</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2024年3月9日</p>
+    </div>
+  </div>
     
   </div>
   
@@ -267,8 +297,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><a href="https://quarto.org">Quarto</a> 是 R 语言开发团队 Posit 开发的新一代开源出版工具，用于替换 Rmarkdown，并且在一定程度上具有学术写作的能力，甚至可以它创建一个网站，基于 <a href="https://pandoc.org/">Pandoc</a> 和 <a href="https://www.denojs.cn/">Deno</a> （你可以在 Quarto 的安装目录里找到这两个工具）。不仅对于 <a href="https://www.r-project.org">R</a> 的支持良好，而且对于 <a href="https://www.python.org/">Python</a>, <a href="https://julialang.org/">Julia</a>, <a href="https://observablehq.com/">Obeservable</a> 都有良好支持。</p>
 <p>由于是一个新的工具，官方的文档没有对于中文的支持，因此这篇博客记录了 Quarto 的基本使用方法。</p>
-<section id="环境配置" class="level2">
-<h2 class="anchored" data-anchor-id="环境配置">环境配置</h2>
+<section id="环境配置" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="环境配置"><span class="header-section-number">1</span> 环境配置</h2>
 <p>Quarto 可以使用以下两种方式下载。注意，无论是哪一种，都需要良好的网络支持。</p>
 <ul>
 <li><p>使用<code>winget</code>命令</p>
@@ -278,8 +308,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>在 cmd 中输入</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>quarto <span class="op">--</span>version</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>出现一段数字即下载成功。</p>
-<section id="附加组件的下载" class="level3">
-<h3 class="anchored" data-anchor-id="附加组件的下载">附加组件的下载</h3>
+<section id="附加组件的下载" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="附加组件的下载"><span class="header-section-number">1.1</span> 附加组件的下载</h3>
 <p>Quarto 有两个附加组件：</p>
 <ul>
 <li>TinyTex</li>
@@ -293,8 +323,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Tool         Status            Installed     Latest
 chromium     Not installed     ---           869685
 tinytex      Up to date        v2022.10      v2022.10</code></pre>
-<section id="tinytex" class="level4">
-<h4 class="anchored" data-anchor-id="tinytex">TinyTex</h4>
+<section id="tinytex" class="level4" data-number="1.1.1">
+<h4 data-number="1.1.1" class="anchored" data-anchor-id="tinytex"><span class="header-section-number">1.1.1</span> TinyTex</h4>
 <p><a href="https://yihui.org/tinytex/">TinyTex</a> 是 Texlive 的一个发行版，Quarto-Pandoc 依赖它编译 qmd 文件为 pdf 格式。不过如果系统的环境变量中已经有了 <a href="https://tug.org/texlive/">Tex Live</a>，则 Quarto 会自动使用，不用下载 TinyTex。</p>
 <p>另外，Quarto 只对 Tex Live 进行了适配，如果使用外部 Tex 系统，只推荐使用 Tex Live。</p>
 <p>下载 TinyTex</p>
@@ -304,8 +334,8 @@ tinytex      Up to date        v2022.10      v2022.10</code></pre>
 <p>使用 Quarto 下载的 TinyTex 默认是不会添加到环境变量的，也就是说，如果没有其它 Tex 发行版，在 cmd 中输入<code>latex</code>或<code>xelatex</code>会得到“‘xxx’ 不是内部或外部命令，也不是可运行的程序或批处理文件。”这样的提示。如果想独立使用 TinyTex，需要使用</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>quarto install tinytex <span class="op">--</span>update<span class="op">-</span>path</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="chromium" class="level4">
-<h4 class="anchored" data-anchor-id="chromium">Chromium</h4>
+<section id="chromium" class="level4" data-number="1.1.2">
+<h4 data-number="1.1.2" class="anchored" data-anchor-id="chromium"><span class="header-section-number">1.1.2</span> Chromium</h4>
 <p>Quarto 使用 Chromium 对 HTML 文件进行预览，如果系统中已经有了 Chromium 系浏览器如 Chrome, Edge, 360 极速浏览器, VScode等则不用下载。</p>
 <p>下载 Chromium</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>quarto install Chromium</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -314,8 +344,8 @@ tinytex      Up to date        v2022.10      v2022.10</code></pre>
 </section>
 </section>
 </section>
-<section id="编辑器" class="level2">
-<h2 class="anchored" data-anchor-id="编辑器">编辑器</h2>
+<section id="编辑器" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="编辑器"><span class="header-section-number">2</span> 编辑器</h2>
 <p>Quarto 文件的默认扩展名是 qmd，这是一个纯文本文件。</p>
 <p>理论上，完全可以使用记事本编写 qmd 文件，然后使用 Quarto 渲染，但是仍然有几个编辑器是受到官方推荐的</p>
 <ul>
@@ -325,12 +355,12 @@ tinytex      Up to date        v2022.10      v2022.10</code></pre>
 <li><a href="https://neovim.io/">Neovim</a></li>
 </ul>
 <p>私以为，能使用 Neovim 的大佬，已经不再需要这篇教程了，而我个人并不使用 Rstudio，因此这一节集中在使用 VScode 和 Jupyter Lab 来使用 Quarto 上。</p>
-<section id="jupyter-lab" class="level3">
-<h3 class="anchored" data-anchor-id="jupyter-lab">Jupyter Lab</h3>
+<section id="jupyter-lab" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="jupyter-lab"><span class="header-section-number">2.1</span> Jupyter Lab</h3>
 <p>基于 Jupyter Lab 使用 Quarto 并不需要额外的组件支持，Quarto 支持直接渲染 ipynb 文件，但是在文件中需要一些额外的 metadata 说明，这一篇博客中暂且不提。</p>
 </section>
-<section id="vscode" class="level3">
-<h3 class="anchored" data-anchor-id="vscode">VScode</h3>
+<section id="vscode" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="vscode"><span class="header-section-number">2.2</span> VScode</h3>
 <p>朋友，不知道你是否知道宇宙第一的文本编辑器 VScode 呢？如果你没有尝试过，请务必试一试。</p>
 <p>基于 VScode 使用 Quarto 需要先安装它的<a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">官方扩展</a></p>
 <p>Quarto现在只是一个出版工具，并不绑定任何语言，如果要使用代码相关的功能，还需要在系统中安装语言内核，以及在vscode中安装相关的扩展</p>
@@ -370,8 +400,8 @@ tinytex      Up to date        v2022.10      v2022.10</code></pre>
 <p>这个配置开启了代码自动补全和建议</p>
 </section>
 </section>
-<section id="参考" class="level2">
-<h2 class="anchored" data-anchor-id="参考">参考</h2>
+<section id="参考" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="参考"><span class="header-section-number">3</span> 参考</h2>
 <p><a href="https://quarto.org">Quarto</a> 官网</p>
 
 
