@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kengroo1024">
 
 <title>Kengroo - 矩阵</title>
 <style>
@@ -103,7 +102,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -276,40 +275,7 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目录</h2>
-   
-  <ul>
-  <li><a href="#二阶矩阵的特征值" id="toc-二阶矩阵的特征值" class="nav-link active" data-scroll-target="#二阶矩阵的特征值"><span class="header-section-number">1</span> 二阶矩阵的特征值</a></li>
-  <li><a href="#矩阵多项式的特征值" id="toc-矩阵多项式的特征值" class="nav-link" data-scroll-target="#矩阵多项式的特征值"><span class="header-section-number">2</span> 矩阵多项式的特征值</a></li>
-  <li><a href="#对角矩阵" id="toc-对角矩阵" class="nav-link" data-scroll-target="#对角矩阵"><span class="header-section-number">3</span> 对角矩阵</a>
-  <ul class="collapse">
-  <li><a href="#矩阵的相似对角化" id="toc-矩阵的相似对角化" class="nav-link" data-scroll-target="#矩阵的相似对角化"><span class="header-section-number">3.1</span> 矩阵的相似对角化</a></li>
-  <li><a href="#矩阵相似对角化的条件" id="toc-矩阵相似对角化的条件" class="nav-link" data-scroll-target="#矩阵相似对角化的条件"><span class="header-section-number">3.2</span> 矩阵相似对角化的条件</a></li>
-  <li><a href="#特征值" id="toc-特征值" class="nav-link" data-scroll-target="#特征值"><span class="header-section-number">3.3</span> 特征值</a></li>
-  <li><a href="#秩" id="toc-秩" class="nav-link" data-scroll-target="#秩"><span class="header-section-number">3.4</span> 秩</a></li>
-  </ul></li>
-  <li><a href="#伴随矩阵" id="toc-伴随矩阵" class="nav-link" data-scroll-target="#伴随矩阵"><span class="header-section-number">4</span> 伴随矩阵</a>
-  <ul class="collapse">
-  <li><a href="#秩-1" id="toc-秩-1" class="nav-link" data-scroll-target="#秩-1"><span class="header-section-number">4.1</span> 秩</a></li>
-  </ul></li>
-  <li><a href="#秩1矩阵" id="toc-秩1矩阵" class="nav-link" data-scroll-target="#秩1矩阵"><span class="header-section-number">5</span> 秩1矩阵</a>
-  <ul class="collapse">
-  <li><a href="#可分解性" id="toc-可分解性" class="nav-link" data-scroll-target="#可分解性"><span class="header-section-number">5.1</span> 可分解性</a></li>
-  <li><a href="#特征值-1" id="toc-特征值-1" class="nav-link" data-scroll-target="#特征值-1"><span class="header-section-number">5.2</span> 特征值</a></li>
-  <li><a href="#相似对角化" id="toc-相似对角化" class="nav-link" data-scroll-target="#相似对角化"><span class="header-section-number">5.3</span> 相似对角化</a></li>
-  <li><a href="#幂乘" id="toc-幂乘" class="nav-link" data-scroll-target="#幂乘"><span class="header-section-number">5.4</span> 幂乘</a></li>
-  </ul></li>
-  <li><a href="#实对称矩阵" id="toc-实对称矩阵" class="nav-link" data-scroll-target="#实对称矩阵"><span class="header-section-number">6</span> 实对称矩阵</a>
-  <ul class="collapse">
-  <li><a href="#特征向量正交性" id="toc-特征向量正交性" class="nav-link" data-scroll-target="#特征向量正交性"><span class="header-section-number">6.1</span> 特征向量正交性</a></li>
-  <li><a href="#特征向量个数" id="toc-特征向量个数" class="nav-link" data-scroll-target="#特征向量个数"><span class="header-section-number">6.2</span> 特征向量个数</a></li>
-  <li><a href="#特征值和特征向量" id="toc-特征值和特征向量" class="nav-link" data-scroll-target="#特征值和特征向量"><span class="header-section-number">6.3</span> 特征值和特征向量</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -326,12 +292,6 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">作者</div>
-    <div class="quarto-title-meta-contents">
-             <p>Kengroo1024 </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
@@ -340,12 +300,6 @@ window.Quarto = {
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">修改的</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月10日</p>
-    </div>
-  </div>
     
   </div>
   
@@ -354,8 +308,8 @@ window.Quarto = {
 </header>
 
 
-<section id="二阶矩阵的特征值" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="二阶矩阵的特征值"><span class="header-section-number">1</span> 二阶矩阵的特征值</h2>
+<section id="二阶矩阵的特征值" class="level2">
+<h2 class="anchored" data-anchor-id="二阶矩阵的特征值">二阶矩阵的特征值</h2>
 <p>二阶矩阵的特征多项式<span class="math inline">\(|\lambda\boldsymbol E-\boldsymbol A|=0\)</span>为</p>
 <p><span class="math display">\[
 \lambda^2-tr(\boldsymbol A)\lambda+\det(\boldsymbol A)=0
@@ -363,22 +317,22 @@ window.Quarto = {
 <p>其中<span class="math inline">\(tr(A)\)</span>为矩阵的迹，<span class="math inline">\(\det(A)\)</span>为矩阵的行列式。</p>
 <p>只要解该方程即可。</p>
 </section>
-<section id="矩阵多项式的特征值" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="矩阵多项式的特征值"><span class="header-section-number">2</span> 矩阵多项式的特征值</h2>
+<section id="矩阵多项式的特征值" class="level2">
+<h2 class="anchored" data-anchor-id="矩阵多项式的特征值">矩阵多项式的特征值</h2>
 <p>若<span class="math inline">\(\lambda\)</span>是<span class="math inline">\(\boldsymbol A\)</span>的特征值，那么<span class="math inline">\(\varphi(\lambda)\)</span>是矩阵多项式<span class="math inline">\(\varphi(\boldsymbol A)\)</span>的特征值。</p>
 </section>
-<section id="对角矩阵" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="对角矩阵"><span class="header-section-number">3</span> 对角矩阵</h2>
-<section id="矩阵的相似对角化" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="矩阵的相似对角化"><span class="header-section-number">3.1</span> 矩阵的相似对角化</h3>
+<section id="对角矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="对角矩阵">对角矩阵</h2>
+<section id="矩阵的相似对角化" class="level3">
+<h3 class="anchored" data-anchor-id="矩阵的相似对角化">矩阵的相似对角化</h3>
 <p>如果一个矩阵相似于对角矩阵，那么它可以写为</p>
 <p><span class="math display">\[
 \boldsymbol A=\boldsymbol P^{-1}\boldsymbol\Lambda\boldsymbol P
 \]</span></p>
 <p>其中<span class="math inline">\(\boldsymbol P\)</span>是各个特征向量组成的矩阵，它们和<span class="math inline">\(\boldsymbol\Lambda\)</span>中各自的特征值一一对应。</p>
 </section>
-<section id="矩阵相似对角化的条件" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="矩阵相似对角化的条件"><span class="header-section-number">3.2</span> 矩阵相似对角化的条件</h3>
+<section id="矩阵相似对角化的条件" class="level3">
+<h3 class="anchored" data-anchor-id="矩阵相似对角化的条件">矩阵相似对角化的条件</h3>
 <p>如果<span class="math inline">\(k\)</span>阶方阵拥有<span class="math inline">\(k\)</span>个线性无关的特征向量，则其相似于对角矩阵。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -401,22 +355,22 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="特征值" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="特征值"><span class="header-section-number">3.3</span> 特征值</h3>
+<section id="特征值" class="level3">
+<h3 class="anchored" data-anchor-id="特征值">特征值</h3>
 <p>对角矩阵的特征值是对角线上所有元素，重复按重根计算。</p>
 </section>
-<section id="秩" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="秩"><span class="header-section-number">3.4</span> 秩</h3>
+<section id="秩" class="level3">
+<h3 class="anchored" data-anchor-id="秩">秩</h3>
 <p>对角矩阵的秩等于对角线上非零元的个数。</p>
 <div id="cor-101" class="theorem corollary">
 <p><span class="theorem-title"><strong>推论 1</strong></span> 如果一个矩阵相似于对角矩阵，则它的秩等于非0特征值的个数，重根按重数计算。</p>
 </div>
 </section>
 </section>
-<section id="伴随矩阵" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="伴随矩阵"><span class="header-section-number">4</span> 伴随矩阵</h2>
-<section id="秩-1" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="秩-1"><span class="header-section-number">4.1</span> 秩</h3>
+<section id="伴随矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="伴随矩阵">伴随矩阵</h2>
+<section id="秩-1" class="level3">
+<h3 class="anchored" data-anchor-id="秩-1">秩</h3>
 <p><span class="math inline">\(n\)</span>阶矩阵<span class="math inline">\(\boldsymbol A\)</span>的伴随矩阵为<span class="math inline">\(\boldsymbol A^*\)</span>，它的秩为</p>
 <p><span class="math display">\[
 r(\boldsymbol A^*)=\left\{\begin{aligned}
@@ -427,11 +381,11 @@ n,&amp;\text{ if }r(\boldsymbol A)=n,\\
 \]</span></p>
 </section>
 </section>
-<section id="秩1矩阵" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="秩1矩阵"><span class="header-section-number">5</span> 秩1矩阵</h2>
+<section id="秩1矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="秩1矩阵">秩1矩阵</h2>
 <p>设矩阵<span class="math inline">\(\boldsymbol A\)</span>的秩为1，那么它有如下一些性质</p>
-<section id="可分解性" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="可分解性"><span class="header-section-number">5.1</span> 可分解性</h3>
+<section id="可分解性" class="level3">
+<h3 class="anchored" data-anchor-id="可分解性">可分解性</h3>
 <p><span class="math inline">\(\boldsymbol A\)</span>一定可以被分解为两向量之积，即</p>
 <p><span class="math display">\[
 \exists\boldsymbol\alpha,\boldsymbol\beta,\text{使得}\boldsymbol A=\boldsymbol\alpha^T\boldsymbol\beta
@@ -454,30 +408,30 @@ n,&amp;\text{ if }r(\boldsymbol A)=n,\\
 </div>
 </div>
 </section>
-<section id="特征值-1" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="特征值-1"><span class="header-section-number">5.2</span> 特征值</h3>
+<section id="特征值-1" class="level3">
+<h3 class="anchored" data-anchor-id="特征值-1">特征值</h3>
 <p>如果<span class="math inline">\(\boldsymbol A\)</span>是<span class="math inline">\(n\)</span>阶方阵，其特征值为<span class="math inline">\(n-1\)</span>个0和<span class="math inline">\(tr(\boldsymbol A)\)</span>.</p>
 </section>
-<section id="相似对角化" class="level3" data-number="5.3">
-<h3 data-number="5.3" class="anchored" data-anchor-id="相似对角化"><span class="header-section-number">5.3</span> 相似对角化</h3>
+<section id="相似对角化" class="level3">
+<h3 class="anchored" data-anchor-id="相似对角化">相似对角化</h3>
 <p><span class="math inline">\(\boldsymbol A\)</span>一定可以相似对角化，其中<span class="math inline">\(n\)</span>个0对应<span class="math inline">\(n\)</span>个线性无关的特征向量。</p>
 </section>
-<section id="幂乘" class="level3" data-number="5.4">
-<h3 data-number="5.4" class="anchored" data-anchor-id="幂乘"><span class="header-section-number">5.4</span> 幂乘</h3>
+<section id="幂乘" class="level3">
+<h3 class="anchored" data-anchor-id="幂乘">幂乘</h3>
 <p><span class="math display">\[
 \boldsymbol A^n=tr(\boldsymbol A)^{n-1}A
 \]</span></p>
 </section>
 </section>
-<section id="实对称矩阵" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="实对称矩阵"><span class="header-section-number">6</span> 实对称矩阵</h2>
+<section id="实对称矩阵" class="level2">
+<h2 class="anchored" data-anchor-id="实对称矩阵">实对称矩阵</h2>
 <p>对于有限维实对称矩阵（下面简称对称矩阵），有如下性质</p>
-<section id="特征向量正交性" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="特征向量正交性"><span class="header-section-number">6.1</span> 特征向量正交性</h3>
+<section id="特征向量正交性" class="level3">
+<h3 class="anchored" data-anchor-id="特征向量正交性">特征向量正交性</h3>
 <p>对称矩阵不同特征值对应的特征向量是正交的。</p>
 </section>
-<section id="特征向量个数" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="特征向量个数"><span class="header-section-number">6.2</span> 特征向量个数</h3>
+<section id="特征向量个数" class="level3">
+<h3 class="anchored" data-anchor-id="特征向量个数">特征向量个数</h3>
 <p>对称矩阵特征根的代数重数和几何重数相等，即<span class="math inline">\(i\)</span>重特征根必然对应<span class="math inline">\(i\)</span>个线性无关的特征向量。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -494,8 +448,8 @@ n,&amp;\text{ if }r(\boldsymbol A)=n,\\
 </div>
 </div>
 </section>
-<section id="特征值和特征向量" class="level3" data-number="6.3">
-<h3 data-number="6.3" class="anchored" data-anchor-id="特征值和特征向量"><span class="header-section-number">6.3</span> 特征值和特征向量</h3>
+<section id="特征值和特征向量" class="level3">
+<h3 class="anchored" data-anchor-id="特征值和特征向量">特征值和特征向量</h3>
 <p>对称矩阵的特征值均为实数，特征向量均为实向量。</p>
 
 
