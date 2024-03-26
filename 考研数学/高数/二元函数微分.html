@@ -187,8 +187,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../考研数学/概统/知识点.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">概率与统计知识点</span></a>
+  <a href="../../考研数学/概统/概率论基本知识.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">概率论基本知识</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../考研数学/概统/统计学基本知识.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">统计学基本知识</span></a>
   </div>
 </li>
       </ul>
@@ -291,7 +297,20 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#连续的几个性质" id="toc-连续的几个性质" class="nav-link" data-scroll-target="#连续的几个性质"><span class="header-section-number">3.1</span> 连续的几个性质</a></li>
   </ul></li>
-  <li><a href="#偏导数" id="toc-偏导数" class="nav-link" data-scroll-target="#偏导数"><span class="header-section-number">4</span> 偏导数</a></li>
+  <li><a href="#偏导数" id="toc-偏导数" class="nav-link" data-scroll-target="#偏导数"><span class="header-section-number">4</span> 偏导数</a>
+  <ul class="collapse">
+  <li><a href="#定义-1" id="toc-定义-1" class="nav-link" data-scroll-target="#定义-1"><span class="header-section-number">4.1</span> 定义</a></li>
+  <li><a href="#高阶偏导数的性质" id="toc-高阶偏导数的性质" class="nav-link" data-scroll-target="#高阶偏导数的性质"><span class="header-section-number">6.1</span> 高阶偏导数的性质</a></li>
+  </ul></li>
+  <li><a href="#全微分" id="toc-全微分" class="nav-link" data-scroll-target="#全微分"><span class="header-section-number">7</span> 全微分</a></li>
+  <li><a href="#偏微分链式法则和一阶全微分的形式不变性" id="toc-偏微分链式法则和一阶全微分的形式不变性" class="nav-link" data-scroll-target="#偏微分链式法则和一阶全微分的形式不变性"><span class="header-section-number">8</span> 偏微分链式法则和一阶全微分的形式不变性</a></li>
+  <li><a href="#隐函数微分" id="toc-隐函数微分" class="nav-link" data-scroll-target="#隐函数微分"><span class="header-section-number">9</span> 隐函数微分</a></li>
+  <li><a href="#极值和最值" id="toc-极值和最值" class="nav-link" data-scroll-target="#极值和最值"><span class="header-section-number">10</span> 极值和最值</a>
+  <ul class="collapse">
+  <li><a href="#无约束情况" id="toc-无约束情况" class="nav-link" data-scroll-target="#无约束情况"><span class="header-section-number">10.1</span> 无约束情况</a></li>
+  <li><a href="#有约束极值" id="toc-有约束极值" class="nav-link" data-scroll-target="#有约束极值"><span class="header-section-number">10.2</span> 有约束极值</a></li>
+  </ul></li>
+  <li><a href="#拉格朗日乘数法" id="toc-拉格朗日乘数法" class="nav-link" data-scroll-target="#拉格朗日乘数法"><span class="header-section-number">11</span> 拉格朗日乘数法</a></li>
   </ul>
 </nav>
     </div>
@@ -328,7 +347,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改的</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月11日</p>
+      <p class="date-modified">2024年3月26日</p>
     </div>
   </div>
     
@@ -412,6 +431,135 @@ f(P_0)=\lim_{P\to P_0}f(P)
 </section>
 <section id="偏导数" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="偏导数"><span class="header-section-number">4</span> 偏导数</h2>
+<section id="定义-1" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored"><span class="header-section-number">4.1</span> 定义</h3>
+<p>设函数<span class="math inline">\(f(x,y)\)</span>在点<span class="math inline">\(P(x_0,y_0)\)</span>的某邻域上有定义，如果极限</p>
+<p><span class="math display">\[
+\lim_{\Delta x\to0}\dfrac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}
+\]</span></p>
+<p>存在，则称该极限为函数在点<span class="math inline">\(P\)</span>处的偏导数，记做</p>
+<p><span class="math display">\[
+\left.\dfrac{\partial f}{\partial x}\right|_{(x,y)=(x_0,y_0)}\text{或}f_x(x_0,y_0)
+\]</span></p>
+<p>同理可以定义<span class="math inline">\(f\)</span>对<span class="math inline">\(y\)</span>的偏导数。</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注释
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>偏导数就是把一个变量看成常数对另一个变量进行求导，因此无关变量的取值并不影响最后的结果，即</p>
+<p><span class="math display">\[
+\left.f_x(x,y)\right|_{(x,y)=(x_0,y_0)}=\left.f'(x,y_0)\right|_{x=x_0}
+\]</span></p>
+<section id="对于偏导数符号partial的理解" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="对于偏导数符号partial的理解"><span class="header-section-number">5</span> 对于偏导数符号<span class="math inline">\(\partial\)</span>的理解</h2>
+<p>偏导数符号<span class="math inline">\(\partial\)</span>读做“偏”（英文partial），只是用来表示偏微分运算的符号，其实并不是任何语言中的字母。</p>
+<p>偏微分符号<span class="math inline">\(\partial\)</span>其实和微分符号<span class="math inline">\(\mathrm d\)</span>表达的意义完全相同，只是为了特别表示偏微分运算，和一般的微分符号做出了区别。</p>
+</section>
+<section id="多元函数可导与可微之间的区别" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="多元函数可导与可微之间的区别"><span class="header-section-number">6</span> 多元函数可导与可微之间的区别</h2>
+<p>多元函数的“可导”仅仅是可以求偏导，可微才能和一元函数的可微可导等同。（对于一元函数，可导和可微是等价的。）</p>
+<p>因此多元函数的可导不能等于可微，也不能导出连续。但是可微可以导出连续。</p>
+</section>
+</div>
+</div>
+</section>
+<section id="高阶偏导数的性质" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="高阶偏导数的性质"><span class="header-section-number">6.1</span> 高阶偏导数的性质</h3>
+<p>如果函数<span class="math inline">\(f(x,y)\)</span>的高阶偏导数对复数个变量求偏导，则称此偏导数为<strong>混合偏导数</strong>。</p>
+<section id="混合偏导数求导次序的问题" class="level4" data-number="6.1.1">
+<h4 data-number="6.1.1" class="anchored" data-anchor-id="混合偏导数求导次序的问题"><span class="header-section-number">6.1.1</span> 混合偏导数求导次序的问题</h4>
+<p>以二阶混合偏导数为例，偏微分算子</p>
+<p><span class="math display">\[
+\dfrac{\partial^2}{\partial x\partial y}f(x,y)
+\]</span></p>
+<p>表示先对<span class="math inline">\(y\)</span>求偏导，再对<span class="math inline">\(x\)</span>求偏导，求导次序<strong>从左向右</strong>。</p>
+<p>如果函数的同阶偏导数，即分母上的各变量个数不不变而次序不同的偏导数都连续，则偏导数的值与求导次序无关，以二阶混合偏导数为例用数学语言表述为下面的定理</p>
+<p>如果<span class="math inline">\(f(x,y)\)</span>全部的两个二阶混合偏导数而言<span class="math inline">\(\dfrac{\partial^2f(x,y)}{\partial x\partial y}\)</span>和<span class="math inline">\(\dfrac{\partial^2f(x,y)}{\partial y\partial x}\)</span>在区域<span class="math inline">\(D\)</span>上连续，则<span class="math inline">\(\dfrac{\partial^2f(x,y)}{\partial x\partial y}=\dfrac{\partial^2f(x,y)}{\partial y\partial x}\)</span>在<span class="math inline">\(D\)</span>上成立。</p>
+<p>高阶混合偏导数的定理可以仿照此写出。</p>
+</section>
+</section>
+</section>
+<section id="全微分" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="全微分"><span class="header-section-number">7</span> 全微分</h2>
+<section id="定义-2" class="level4" data-number="7.0.1">
+<h4 data-number="7.0.1" class="anchored" data-anchor-id="定义-2"><span class="header-section-number">7.0.1</span> 定义</h4>
+<p>如果函数的全增量<span class="math inline">\(\Delta f\)</span>可以表示为如下的线性形式</p>
+<p>![[导数和微分#二元函数全微分]]</p>
+<p>全微分充分条件：</p>
+<p>如果<span class="math inline">\(f(x,y)\)</span>的偏导数<span class="math inline">\(\dfrac{\partial f}{\partial x},\dfrac{\partial f}{\partial y}\)</span>在点<span class="math inline">\((x_0,y_0)\)</span>处都连续，则函数<span class="math inline">\(f(x,y)\)</span>在点<span class="math inline">\((x_0,y_0)\)</span>处可微。</p>
+</section>
+</section>
+<section id="偏微分链式法则和一阶全微分的形式不变性" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="偏微分链式法则和一阶全微分的形式不变性"><span class="header-section-number">8</span> 偏微分链式法则和一阶全微分的形式不变性</h2>
+<ol type="1">
+<li><p>偏微分的链式法则</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{\partial z}{\partial x}=\dfrac{\partial z}{\partial u}\dfrac{\partial u}{\partial x}+\dfrac{\partial z}{\partial v}\dfrac{\partial v}{\partial x}\\
+\dfrac{\partial z}{\partial y}=\dfrac{\partial z}{\partial u}\dfrac{\partial u}{\partial y}+\dfrac{\partial z}{\partial v}\dfrac{\partial v}{\partial y}
+\end{aligned}
+\]</span></p></li>
+<li><p>一阶全微分的形式不变性</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathrm dz&amp;=\dfrac{\partial z}{\partial x}\mathrm dx+\dfrac{\partial z}{\partial y}\mathrm dy\\&amp;=\dfrac{\partial z}{\partial u}\mathrm du+\dfrac{\partial z}{\partial v}\mathrm dv
+\end{aligned}
+\]</span></p></li>
+<li><p>高阶全微分不具有形式不变性。这是显而易见的。</p></li>
+</ol>
+</section>
+<section id="隐函数微分" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="隐函数微分"><span class="header-section-number">9</span> 隐函数微分</h2>
+<p>隐函数微分利用形式不变性，如果隐含数是由</p>
+<p><span class="math display">\[
+F(x,y)=0
+\]</span></p>
+<p>确定的，那么函数微分表达为</p>
+<p><span class="math display">\[
+y'=-\dfrac{F_x}{F_y}
+\]</span></p>
+<p>如果函数是由<span class="math inline">\(F(x,y,z)=0\)</span>确定的，那么函数微分表达为</p>
+<p><span class="math display">\[
+\dfrac{\partial z}{\partial x}=-\dfrac{F_x}{F_y}
+\]</span></p>
+</section>
+<section id="极值和最值" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="极值和最值"><span class="header-section-number">10</span> 极值和最值</h2>
+<p>讨论可导函数。</p>
+<section id="无约束情况" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="无约束情况"><span class="header-section-number">10.1</span> 无约束情况</h3>
+<p>求偏导，极值点为所有一阶偏导数为0的点。</p>
+</section>
+<section id="有约束极值" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="有约束极值"><span class="header-section-number">10.2</span> 有约束极值</h3>
+<p>用拉格朗日乘数法转化为求方程组的解。</p>
+</section>
+</section>
+<section id="拉格朗日乘数法" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="拉格朗日乘数法"><span class="header-section-number">11</span> 拉格朗日乘数法</h2>
+<p>对于函数<span class="math inline">\(F(x_1,x_2,...,x_n)\)</span>，在约束</p>
+<p><span class="math display">\[
+\left\{
+\begin{aligned}
+\varphi[1](x_1,&amp;x_2,...,x_n)=0\\
+\varphi[2](x_1,&amp;x_2,...,x_n)=0\\
+&amp;\vdots\\
+\varphi[k](x_1,&amp;x_2,...,x_n)=0
+\end{aligned}
+\right.
+\]</span></p>
+<p>下求极值。</p>
+<p>定义拉格朗日函数</p>
+<p><span class="math display">\[
+L(x_1,x_2,...,x_n,\lambda_1,\lambda_2,...,\lambda_k)=F(x_1,x_2,...,x_n)+\sum_{i=1}^k \lambda_i\varphi[k](x_1,x_2,...,x_n)
+\]</span></p>
+<p>则拉格朗日函数的极值点对应原函数的极值点。求出各个一阶偏导后令其等于0，带入原函数计算出极值即可。（拉格朗日函数的极值也和原函数极值相等，不过计算会有一点麻烦。）</p>
 
 
 </section>

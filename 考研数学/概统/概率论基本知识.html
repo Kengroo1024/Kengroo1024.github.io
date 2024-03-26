@@ -8,7 +8,7 @@
 
 <meta name="author" content="Kengroo1024">
 
-<title>Kengroo - 二次型</title>
+<title>Kengroo - 概率论基本知识</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -155,7 +155,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/二次型.html">线性代数</a></li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/二次型.html">二次型</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/概统/概率论基本知识.html">概统</a></li><li class="breadcrumb-item"><a href="../../考研数学/概统/概率论基本知识.html">概率论基本知识</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -178,16 +178,16 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">概统</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="切換部分">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../考研数学/概统/概率论基本知识.html" class="sidebar-item-text sidebar-link">
+  <a href="../../考研数学/概统/概率论基本知识.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">概率论基本知识</span></a>
   </div>
 </li>
@@ -242,16 +242,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">线性代数</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="切換部分">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="切換部分">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../考研数学/线性代数/二次型.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../考研数学/线性代数/二次型.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">二次型</span></a>
   </div>
 </li>
@@ -287,21 +287,48 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#将二次型化为规范型" id="toc-将二次型化为规范型" class="nav-link active" data-scroll-target="#将二次型化为规范型"><span class="header-section-number">1</span> 将二次型化为规范型</a></li>
-  <li><a href="#惯性指数的顺序主子式求法" id="toc-惯性指数的顺序主子式求法" class="nav-link" data-scroll-target="#惯性指数的顺序主子式求法"><span class="header-section-number">2</span> 惯性指数的顺序主子式求法</a></li>
-  <li><a href="#二次型的正定性" id="toc-二次型的正定性" class="nav-link" data-scroll-target="#二次型的正定性"><span class="header-section-number">3</span> 二次型的正定性</a></li>
+  <li><a href="#条件概率" id="toc-条件概率" class="nav-link active" data-scroll-target="#条件概率"><span class="header-section-number">1</span> 条件概率</a>
+  <ul class="collapse">
+  <li><a href="#离散情况" id="toc-离散情况" class="nav-link" data-scroll-target="#离散情况"><span class="header-section-number">1.1</span> 离散情况</a></li>
+  <li><a href="#连续情况" id="toc-连续情况" class="nav-link" data-scroll-target="#连续情况"><span class="header-section-number">1.2</span> 连续情况</a></li>
+  </ul></li>
+  <li><a href="#全概率公式" id="toc-全概率公式" class="nav-link" data-scroll-target="#全概率公式"><span class="header-section-number">2</span> 全概率公式</a></li>
+  <li><a href="#贝叶斯公式" id="toc-贝叶斯公式" class="nav-link" data-scroll-target="#贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</a></li>
+  <li><a href="#切比雪夫不等式" id="toc-切比雪夫不等式" class="nav-link" data-scroll-target="#切比雪夫不等式"><span class="header-section-number">4</span> 切比雪夫不等式</a></li>
+  <li><a href="#数字特征" id="toc-数字特征" class="nav-link" data-scroll-target="#数字特征"><span class="header-section-number">5</span> 数字特征</a>
+  <ul class="collapse">
+  <li><a href="#均值方差协方差" id="toc-均值方差协方差" class="nav-link" data-scroll-target="#均值方差协方差"><span class="header-section-number">5.1</span> 均值、方差、协方差</a></li>
+  <li><a href="#矩" id="toc-矩" class="nav-link" data-scroll-target="#矩"><span class="header-section-number">5.2</span> 矩</a></li>
+  <li><a href="#峰度系数" id="toc-峰度系数" class="nav-link" data-scroll-target="#峰度系数"><span class="header-section-number">5.3</span> 峰度系数</a></li>
+  <li><a href="#偏度系数" id="toc-偏度系数" class="nav-link" data-scroll-target="#偏度系数"><span class="header-section-number">5.4</span> 偏度系数</a></li>
+  </ul></li>
+  <li><a href="#常见分布" id="toc-常见分布" class="nav-link" data-scroll-target="#常见分布"><span class="header-section-number">6</span> 常见分布</a>
+  <ul class="collapse">
+  <li><a href="#离散分布" id="toc-离散分布" class="nav-link" data-scroll-target="#离散分布"><span class="header-section-number">6.1</span> 离散分布</a></li>
+  <li><a href="#连续分布" id="toc-连续分布" class="nav-link" data-scroll-target="#连续分布"><span class="header-section-number">6.2</span> 连续分布</a></li>
+  </ul></li>
+  <li><a href="#多元正态分布" id="toc-多元正态分布" class="nav-link" data-scroll-target="#多元正态分布"><span class="header-section-number">7</span> 多元正态分布</a>
+  <ul class="collapse">
+  <li><a href="#从线性变换的角度看多元正态分布" id="toc-从线性变换的角度看多元正态分布" class="nav-link" data-scroll-target="#从线性变换的角度看多元正态分布"><span class="header-section-number">7.1</span> 从线性变换的角度看多元正态分布</a></li>
+  <li><a href="#本节参考" id="toc-本节参考" class="nav-link" data-scroll-target="#本节参考"><span class="header-section-number">7.2</span> 本节参考</a></li>
+  </ul></li>
+  <li><a href="#卷积" id="toc-卷积" class="nav-link" data-scroll-target="#卷积"><span class="header-section-number">8</span> 卷积</a>
+  <ul class="collapse">
+  <li><a href="#离散情况-1" id="toc-离散情况-1" class="nav-link" data-scroll-target="#离散情况-1"><span class="header-section-number">8.1</span> 离散情况</a></li>
+  <li><a href="#连续情况-1" id="toc-连续情况-1" class="nav-link" data-scroll-target="#连续情况-1"><span class="header-section-number">8.2</span> 连续情况</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/二次型.html">线性代数</a></li><li class="breadcrumb-item"><a href="../../考研数学/线性代数/二次型.html">二次型</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/概统/概率论基本知识.html">概统</a></li><li class="breadcrumb-item"><a href="../../考研数学/概统/概率论基本知识.html">概率论基本知识</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">二次型</h1>
+<h1 class="title">概率论基本知识</h1>
   <div class="quarto-categories">
     <div class="quarto-category">考研数学</div>
-    <div class="quarto-category">线性代数</div>
+    <div class="quarto-category">概统</div>
   </div>
   </div>
 
@@ -337,23 +364,339 @@ window.Quarto = {
 </header>
 
 
-<section id="将二次型化为规范型" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="将二次型化为规范型"><span class="header-section-number">1</span> 将二次型化为规范型</h2>
-<p>实际上就是把二次型的矩阵<span class="math inline">\(\boldsymbol A\)</span>对角化，按<a href="../../考研数学/线性代数/矩阵.html#矩阵的相似对角化">矩阵的相似对角化</a>操作即可。如果还要进一步求出所用的线性变换<span class="math inline">\(\boldsymbol P\)</span>，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。</p>
+<section id="条件概率" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="条件概率"><span class="header-section-number">1</span> 条件概率</h2>
+<section id="离散情况" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="离散情况"><span class="header-section-number">1.1</span> 离散情况</h3>
+<p><span class="math display">\[
+P(B|A)=\dfrac{P(AB)}{P(A)}
+\]</span></p>
+<p>^ff235e</p>
+<div class="cor-conditioned">
+<p><span class="math display">\[
+P(B|A)P(A)=P(A|B)P(B)=P(AB)
+\]</span></p>
+</div>
 </section>
-<section id="惯性指数的顺序主子式求法" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="惯性指数的顺序主子式求法"><span class="header-section-number">2</span> 惯性指数的顺序主子式求法</h2>
-<p>对于二次型的矩阵（实对称矩阵），在所有顺序主子式不为零的情况下（更严谨地说，在顺序主子式序列出现零之前），正惯性指数等于保号数，负惯性指数等于变号数。</p>
+<section id="连续情况" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="连续情况"><span class="header-section-number">1.2</span> 连续情况</h3>
+<p><span class="math display">\[
+f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_X(x)}
+\]</span></p>
 </section>
-<section id="二次型的正定性" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="二次型的正定性"><span class="header-section-number">3</span> 二次型的正定性</h2>
-<p>二次型如果是正定的，那么其所有的特征值<span class="math inline">\(\lambda\geq0\)</span>；如果是负定的，那么所有的特征值<span class="math inline">\(\lambda\leq0\)</span>.</p>
-<p>二次型如果是正定的，则所有顺序主子式大于0.</p>
+</section>
+<section id="全概率公式" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="全概率公式"><span class="header-section-number">2</span> 全概率公式</h2>
+<p><span class="math display">\[
+P(A)=\sum_{i=1}^nP(A|B_i)P(B_i)
+\]</span></p>
+<p>^6c9cba</p>
+</section>
+<section id="贝叶斯公式" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</h2>
+<p>在只有两个事件时</p>
+<p><span class="math display">\[
+P(B|A)=\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\bar B)P(\bar B)}
+\]</span></p>
+<p>在多个事件时</p>
+<p><span class="math display">\[
+P(B_i|A)=\dfrac{P(A|B_i)P(B_i)}{\sum_{i=1}^nP(A|B_i)P(B_i)}
+\]</span></p>
+<p>^322785</p>
+<div class="proof">
+<p><span class="proof-title"><em>论证</em>. </span>对条件概率公式的分母使用一次全概率公式即可。</p>
+</div>
+</section>
+<section id="切比雪夫不等式" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="切比雪夫不等式"><span class="header-section-number">4</span> 切比雪夫不等式</h2>
+<p><span class="math display">\[
+P(|X-\mu|\geq k)\leq \dfrac{\sigma^2}{k^2}
+\]</span></p>
+</section>
+<section id="数字特征" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="数字特征"><span class="header-section-number">5</span> 数字特征</h2>
+<section id="均值方差协方差" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="均值方差协方差"><span class="header-section-number">5.1</span> 均值、方差、协方差</h3>
+<p>均值</p>
+<p><span class="math display">\[
+\mu=Eg(X)=\int g(x)f(x)\mathrm dx
+\]</span> 方差 <span class="math display">\[
+\sigma^2=Var(X)=\int (x-\mu)^2f(x)\mathrm dx
+\]</span></p>
+<p>协方差</p>
+<p><span class="math display">\[
+Cov(X,Y)=E[(X-\mu_X)(Y-\mu_Y)]
+\]</span></p>
+<p>方差可以类似二项式展开，平方项用方差代替，乘积项用协方差代替。</p>
+<p><span class="math display">\[
+Var(aX+bY)=a^2Var(x)+2abCov(X,Y)+b^2Var(Y)
+\]</span></p>
+</section>
+<section id="矩" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="矩"><span class="header-section-number">5.2</span> 矩</h3>
+<section id="原点矩" class="level4" data-number="5.2.1">
+<h4 data-number="5.2.1" class="anchored" data-anchor-id="原点矩"><span class="header-section-number">5.2.1</span> 原点矩</h4>
+<p><span class="math display">\[
+v_k=\int x^kf(x)\mathrm dx
+\]</span></p>
+<p>零阶原点矩恒为 1</p>
+</section>
+<section id="中心矩" class="level4" data-number="5.2.2">
+<h4 data-number="5.2.2" class="anchored" data-anchor-id="中心矩"><span class="header-section-number">5.2.2</span> 中心矩</h4>
+<p><span class="math display">\[
+\mu_k=\int (x-\mu)^kf(x)\mathrm dx
+\]</span></p>
+<p>零阶中心矩恒为 1</p>
+<p>一阶中心矩恒为 0</p>
+<p>由二项式定理，有</p>
+<p><span class="math display">\[
+\mu_k=\sum_{i=0}^k
+\begin{pmatrix}
+k\\
+i
+\end{pmatrix}
+v_i(-\mu)^{k-i}
+\]</span></p>
+</section>
+</section>
+<section id="峰度系数" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="峰度系数"><span class="header-section-number">5.3</span> 峰度系数</h3>
+<p><span class="math display">\[
+kurtosis=\dfrac{\mu_4}{\sigma^4}-3=E(\dfrac{X-\mu}{\sigma})^4-E(N)^4
+\]</span></p>
+<p>其中，<span class="math inline">\(N\sim N(0,1)\)</span></p>
+</section>
+<section id="偏度系数" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="偏度系数"><span class="header-section-number">5.4</span> 偏度系数</h3>
+<p><span class="math display">\[
+skewness=\dfrac{\mu_3}{\sigma^3}=E(\dfrac{X-\mu}{\sigma})^3
+\]</span></p>
+</section>
+</section>
+<section id="常见分布" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="常见分布"><span class="header-section-number">6</span> 常见分布</h2>
+<section id="离散分布" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="离散分布"><span class="header-section-number">6.1</span> 离散分布</h3>
+<table class="table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 6%">
+<col style="width: 50%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>名称</th>
+<th>记号</th>
+<th>分布</th>
+<th>均值</th>
+<th>方差</th>
+<th>特征函数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>伯努利分布</td>
+<td><span class="math inline">\(B(1,p)\)</span></td>
+<td><span class="math inline">\(p^k(1-p)^{1-k}\)</span></td>
+<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(p(1-p)\)</span></td>
+<td><span class="math inline">\(p\mathrm e^{jt}+1-p\)</span></td>
+</tr>
+<tr class="even">
+<td>二项分布</td>
+<td><span class="math inline">\(B(n,p)\)</span></td>
+<td><span class="math inline">\(\begin{pmatrix}n\\k\end{pmatrix}p^k(1-p)^{n-k}\)</span></td>
+<td><span class="math inline">\(np\)</span></td>
+<td><span class="math inline">\(np(1-p)\)</span></td>
+<td><span class="math inline">\((p\mathrm e^{jt}+1-p)^n\)</span></td>
+</tr>
+<tr class="odd">
+<td>几何分布</td>
+<td><span class="math inline">\(Ge(p)\)</span></td>
+<td><span class="math inline">\(p(1-p)^{k-1}\)</span></td>
+<td><span class="math inline">\(\dfrac{1}{p}\)</span></td>
+<td><span class="math inline">\(\dfrac{1-p}{p^2}\)</span></td>
+<td><span class="math inline">\(\dfrac{p\mathrm e^{jt}}{1-(1-p)\mathrm e^{jt}}\)</span></td>
+</tr>
+<tr class="even">
+<td>帕斯卡分布</td>
+<td><span class="math inline">\(NB(r,p)\)</span></td>
+<td><span class="math inline">\(\begin{pmatrix}k-1\\ r-1\end{pmatrix}p^r(1-p)^{k-r}\)</span></td>
+<td><span class="math inline">\(\dfrac{r}{p}\)</span> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+<td><span class="math inline">\(\dfrac{r(1-p)}{p^2}\)</span></td>
+<td><span class="math inline">\((\dfrac{p\mathrm e^{jt}}{1-(1-p)\mathrm e^{jt}})^r\)</span></td>
+</tr>
+<tr class="odd">
+<td>超几何分布</td>
+<td><span class="math inline">\(H(N,n,M)\)</span></td>
+<td><span class="math inline">\(\dfrac{\begin{pmatrix}M\\ k\end{pmatrix}\begin{pmatrix}N-M\\ n-k\end{pmatrix}}{\begin{pmatrix}N\\ n\end{pmatrix}}\)</span></td>
+<td><span class="math inline">\(\dfrac{nM}{N}\)</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>泊松分布</td>
+<td><span class="math inline">\(pois(\lambda)\)</span></td>
+<td><span class="math inline">\(\mathrm e^{-\lambda}\dfrac{\lambda^k}{k!}\)</span></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td><span class="math inline">\(\mathrm e^{\lambda(jt-1)}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="连续分布" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="连续分布"><span class="header-section-number">6.2</span> 连续分布</h3>
+<table class="table">
+<colgroup>
+<col style="width: 2%">
+<col style="width: 9%">
+<col style="width: 36%">
+<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>名称</th>
+<th>记号</th>
+<th>概率密度函数</th>
+<th>均值</th>
+<th>方差</th>
+<th>特征函数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>均匀分布</td>
+<td><span class="math inline">\(U(a,b)\)</span></td>
+<td><span class="math inline">\(\dfrac{1}{b-a},x\in[a,b]\)</span></td>
+<td><span class="math inline">\(\dfrac{a+b}{2}\)</span></td>
+<td><span class="math inline">\(\dfrac{(b-a)^2}{12}\)</span></td>
+<td><span class="math inline">\(\dfrac{\mathrm e^{jtb}-\mathrm e^{jta}}{jt(b-a)}\)</span></td>
+</tr>
+<tr class="even">
+<td>指数分布</td>
+<td><span class="math inline">\(Exp(\lambda)\)</span></td>
+<td><span class="math inline">\(\lambda\mathrm e^{-\lambda t},x&gt;0\)</span></td>
+<td><span class="math inline">\(\dfrac{1}{\lambda}\)</span></td>
+<td><span class="math inline">\(\dfrac{1}{\lambda^2}\)</span></td>
+<td><span class="math inline">\(\dfrac{\lambda}{\lambda-jt}\)</span></td>
+</tr>
+<tr class="odd">
+<td>正态分布</td>
+<td><span class="math inline">\(N(\mu,\sigma^2)\)</span></td>
+<td><span class="math inline">\(\dfrac{1}{\sqrt{2\pi}\sigma}\exp(-\dfrac{(x-\mu)^2}{2\sigma^2})\)</span></td>
+<td><span class="math inline">\(\mu\)</span></td>
+<td><span class="math inline">\(\sigma\)</span></td>
+<td><span class="math inline">\(\exp(jt\mu-\dfrac{1}{2}\sigma^2t^2)\)</span></td>
+</tr>
+<tr class="even">
+<td>卡方分布</td>
+<td><span class="math inline">\(\chi^2(n)\)</span></td>
+<td></td>
+<td><span class="math inline">\(n\)</span></td>
+<td><span class="math inline">\(2n\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>t 分布</td>
+<td><span class="math inline">\(t(n)\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>F 分布</td>
+<td><span class="math inline">\(F(m,n)\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="多元正态分布" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="多元正态分布"><span class="header-section-number">7</span> 多元正态分布</h2>
+<p>多元正态分布接受两个参数：均值向量 <span class="math inline">\(\boldsymbol\mu\)</span> 和协方差矩阵 <span class="math inline">\(\boldsymbol\Sigma\)</span>，它的密度函数为</p>
+<p><span class="math display">\[
+f(\boldsymbol x;\boldsymbol\mu,\boldsymbol\Sigma)=\dfrac{1}{\sqrt{\det(2\pi\Sigma)}}\exp(-\dfrac{1}{2}(\boldsymbol x-\boldsymbol\mu)^T\Sigma^{-1}(\boldsymbol x-\boldsymbol\mu))
+\]</span></p>
+<p>其中</p>
+<ul>
+<li><span class="math inline">\(\boldsymbol x\)</span>是变量向量，维数是 <span class="math inline">\(d\)</span></li>
+<li><span class="math inline">\(\boldsymbol\mu\)</span>是均值向量，维数是 <span class="math inline">\(d\)</span></li>
+<li><span class="math inline">\(\boldsymbol\Sigma\)</span>是正定对称矩阵，维数是 <span class="math inline">\(d\times d\)</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>[!note] 1. 注意，系数上的行列式，在计算时矩阵前方的系数实际上还要再做<span class="math inline">\(d\)</span>次幂运算。 2. 由于协方差矩阵是正定的，因此它一定是非奇异的。</p>
+</blockquote>
+<p>特别地，随机变量 <span class="math inline">\((X,Y)\)</span> 服从二元正态分布，记作 <span class="math inline">\((X,Y)\sim N(\mu_1,\mu_2;\sigma^2_1,\sigma^2_2;\theta)\)</span>，<span class="math inline">\(\theta\)</span>表示两个变量之间的协方差。</p>
+<section id="从线性变换的角度看多元正态分布" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="从线性变换的角度看多元正态分布"><span class="header-section-number">7.1</span> 从线性变换的角度看多元正态分布</h3>
+<p>零均值多元正态分布 <span class="math inline">\(N(\boldsymbol0,\boldsymbol\Sigma)\)</span>可以看做标准多元正态分布 <span class="math inline">\(N(\boldsymbol 0,\boldsymbol E)\)</span> 做线性变换得到的，其中<span class="math inline">\(\boldsymbol E\)</span>是单位矩阵。</p>
+<p>设随机变量向量 <span class="math inline">\(\boldsymbol X\sim N(\boldsymbol0,\boldsymbol E)\)</span>.</p>
+<p>对 <span class="math inline">\(\boldsymbol X\)</span> 做倍乘变换再做正交变换 <span class="math inline">\(Y=\boldsymbol{BAX}\)</span>，<span class="math inline">\(\boldsymbol A\)</span>是对角矩阵，且 <span class="math inline">\(\boldsymbol A^2=\boldsymbol\Lambda\)</span>，<span class="math inline">\(\boldsymbol B\)</span>是正交矩阵，有 <span class="math inline">\(\boldsymbol X=(\boldsymbol{BA})^{-1}\boldsymbol Y\)</span>，且<span class="math inline">\(\boldsymbol B^T=\boldsymbol B^{-1}\)</span>.</p>
+<p>容易知道任意线性变换都可由<span class="math inline">\(\boldsymbol{BA}\)</span>表出。</p>
+<p>经过倍增变换，协方差矩阵变为 <span class="math inline">\(\boldsymbol\Lambda\)</span>. 正交变换不改变协方差行列式的值。</p>
+<p>代入概率密度公式，有</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(\boldsymbol y)
+&amp;=\dfrac{1}{\sqrt{2^d\pi^d\det(\boldsymbol\Lambda)}}\exp(-\dfrac{1}{2}((\boldsymbol{BA})^{-1}\boldsymbol y)^T(\boldsymbol{BA})^{-1}\boldsymbol y))\\
+&amp;=\dfrac{1}{\sqrt{2^d\pi^d\det(\boldsymbol\Lambda)}}\exp(-\dfrac{1}{2}\boldsymbol y^T(\boldsymbol B\boldsymbol{\Lambda}^{-1}\boldsymbol B^{-1})\boldsymbol y)
+\end{aligned}
+\]</span></p>
+<p>根据线性代数知识 <span class="math inline">\(\det(\boldsymbol B\boldsymbol{A}^{-2}\boldsymbol B^{-1})=\det(\boldsymbol\Lambda)^{-1}\)</span></p>
+<p>根据对称矩阵的性质，只要协方差矩阵与<span class="math inline">\(\boldsymbol\Lambda\)</span>拥有相同的特征值（它的特征值即对角元），即可化为该形式。</p>
+<p>因此可以得到结论，协方差矩阵的特征值决定随机变量的尺度，而均值向量决定随机变量的位置。</p>
+</section>
+<section id="本节参考" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="本节参考"><span class="header-section-number">7.2</span> 本节参考</h3>
+<p><a href="https://www.zhihu.com/tardis/zm/art/37609917?source_id=1005">知乎 - Xinyu Chen的回答</a></p>
+<p><a href="https://ww2.mathworks.cn/help/stats/mvnrnd.html?lang=en">MATLAB官方文档</a></p>
+</section>
+</section>
+<section id="卷积" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="卷积"><span class="header-section-number">8</span> 卷积</h2>
+<p>卷积是计算两随机变量分布和的方法。</p>
+<section id="离散情况-1" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="离散情况-1"><span class="header-section-number">8.1</span> 离散情况</h3>
+<p><span class="math display">\[
+P(X+Y=k)=\sum_{i=-\infty}^{+\infty}P(X=i,Y=k-i)
+\]</span></p>
+</section>
+<section id="连续情况-1" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="连续情况-1"><span class="header-section-number">8.2</span> 连续情况</h3>
+<p><span class="math display">\[
+P(X+Y\lt t)=\int_{-\infty}^{+\infty}f(s,t-s)\mathrm ds
+\]</span></p>
+<p>当 <span class="math inline">\(X,Y\)</span> 独立时，有</p>
+<p><span class="math display">\[
+P(X+Y\lt t)=\int_{-\infty}^{+\infty}f(s)g(t-s)\mathrm ds
+\]</span></p>
+<p>卷积运算是一个算子，通过两个函数生成第三个函数，记作</p>
+<p><span class="math display">\[
+(f\circ g)(x)=\int_{-\infty}^{+\infty}f(s)g(x-s)\mathrm ds
+\]</span></p>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">脚注</h2>
+
+<ol>
+<li id="fn1"><p>https://zhuanlan.zhihu.com/p/36270529<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

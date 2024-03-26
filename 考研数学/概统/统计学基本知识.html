@@ -8,7 +8,7 @@
 
 <meta name="author" content="Kengroo1024">
 
-<title>Kengroo - 概率与统计知识点</title>
+<title>Kengroo - 统计学基本知识</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -155,7 +126,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/概统/知识点.html">概统</a></li><li class="breadcrumb-item"><a href="../../考研数学/概统/知识点.html">概率与统计知识点</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/概统/概率论基本知识.html">概统</a></li><li class="breadcrumb-item"><a href="../../考研数学/概统/统计学基本知识.html">统计学基本知识</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -187,8 +158,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../考研数学/概统/知识点.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">概率与统计知识点</span></a>
+  <a href="../../考研数学/概统/概率论基本知识.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">概率论基本知识</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../考研数学/概统/统计学基本知识.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">统计学基本知识</span></a>
   </div>
 </li>
       </ul>
@@ -281,22 +258,35 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#条件概率" id="toc-条件概率" class="nav-link active" data-scroll-target="#条件概率"><span class="header-section-number">1</span> 条件概率</a>
+  <li><a href="#数据的分类" id="toc-数据的分类" class="nav-link active" data-scroll-target="#数据的分类"><span class="header-section-number">1</span> 数据的分类</a></li>
+  <li><a href="#统计中的几个基本概念" id="toc-统计中的几个基本概念" class="nav-link" data-scroll-target="#统计中的几个基本概念"><span class="header-section-number">2</span> 统计中的几个基本概念</a></li>
+  <li><a href="#抽样方法" id="toc-抽样方法" class="nav-link" data-scroll-target="#抽样方法"><span class="header-section-number">3</span> 抽样方法</a>
   <ul class="collapse">
-  <li><a href="#离散情况" id="toc-离散情况" class="nav-link" data-scroll-target="#离散情况"><span class="header-section-number">1.1</span> 离散情况</a></li>
-  <li><a href="#连续情况" id="toc-连续情况" class="nav-link" data-scroll-target="#连续情况"><span class="header-section-number">1.2</span> 连续情况</a></li>
+  <li><a href="#概率抽样" id="toc-概率抽样" class="nav-link" data-scroll-target="#概率抽样"><span class="header-section-number">3.1</span> 概率抽样</a></li>
+  <li><a href="#非概率抽样" id="toc-非概率抽样" class="nav-link" data-scroll-target="#非概率抽样"><span class="header-section-number">3.2</span> 非概率抽样</a></li>
   </ul></li>
-  <li><a href="#全概率公式" id="toc-全概率公式" class="nav-link" data-scroll-target="#全概率公式"><span class="header-section-number">2</span> 全概率公式</a></li>
-  <li><a href="#贝叶斯公式" id="toc-贝叶斯公式" class="nav-link" data-scroll-target="#贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</a></li>
+  <li><a href="#实验设计" id="toc-实验设计" class="nav-link" data-scroll-target="#实验设计"><span class="header-section-number">4</span> 实验设计</a></li>
+  <li><a href="#误差" id="toc-误差" class="nav-link" data-scroll-target="#误差"><span class="header-section-number">5</span> 误差</a>
+  <ul class="collapse">
+  <li><a href="#抽样误差" id="toc-抽样误差" class="nav-link" data-scroll-target="#抽样误差"><span class="header-section-number">5.1</span> 抽样误差</a></li>
+  <li><a href="#非抽样误差" id="toc-非抽样误差" class="nav-link" data-scroll-target="#非抽样误差"><span class="header-section-number">5.2</span> 非抽样误差</a></li>
+  <li><a href="#误差控制" id="toc-误差控制" class="nav-link" data-scroll-target="#误差控制"><span class="header-section-number">5.3</span> 误差控制</a></li>
+  </ul></li>
+  <li><a href="#数据预处理的步骤" id="toc-数据预处理的步骤" class="nav-link" data-scroll-target="#数据预处理的步骤"><span class="header-section-number">6</span> 数据预处理的步骤</a></li>
+  <li><a href="#数据展示" id="toc-数据展示" class="nav-link" data-scroll-target="#数据展示"><span class="header-section-number">7</span> 数据展示</a>
+  <ul class="collapse">
+  <li><a href="#条形图和帕累托图" id="toc-条形图和帕累托图" class="nav-link" data-scroll-target="#条形图和帕累托图"><span class="header-section-number">7.1</span> 条形图和帕累托图</a></li>
+  <li><a href="#饼图和环形图" id="toc-饼图和环形图" class="nav-link" data-scroll-target="#饼图和环形图"><span class="header-section-number">7.2</span> 饼图和环形图</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/概统/知识点.html">概统</a></li><li class="breadcrumb-item"><a href="../../考研数学/概统/知识点.html">概率与统计知识点</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">考研数学</li><li class="breadcrumb-item"><a href="../../考研数学/概统/概率论基本知识.html">概统</a></li><li class="breadcrumb-item"><a href="../../考研数学/概统/统计学基本知识.html">统计学基本知识</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">概率与统计知识点</h1>
+<h1 class="title">统计学基本知识</h1>
   <div class="quarto-categories">
     <div class="quarto-category">考研数学</div>
     <div class="quarto-category">概统</div>
@@ -317,14 +307,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">发布日期</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024年3月1日</p>
+      <p class="date">2024年3月24日</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">修改的</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月10日</p>
+      <p class="date-modified">2024年3月26日</p>
     </div>
   </div>
     
@@ -335,50 +325,103 @@ window.Quarto = {
 </header>
 
 
-<section id="条件概率" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="条件概率"><span class="header-section-number">1</span> 条件概率</h2>
-<section id="离散情况" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="离散情况"><span class="header-section-number">1.1</span> 离散情况</h3>
-<p><span class="math display">\[
-P(B|A)=\dfrac{P(AB)}{P(A)}
-\]</span></p>
-<p>^ff235e</p>
-<div class="cor-conditioned">
-<p><span class="math display">\[
-P(B|A)P(A)=P(A|B)P(B)=P(AB)
-\]</span></p>
-</div>
+<p>统计学是收集、处理、分析、解释数据，并从中得到结论的学科。统计学是一门研究数据的学科</p>
+<section id="数据的分类" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="数据的分类"><span class="header-section-number">1</span> 数据的分类</h2>
+<ul>
+<li>分类数据是非数字型数据，又分为有序类别数据和无序类别数据，有序如优中良差等，无序如制造业，金融业，旅游业等。总的来说，分类数据是离散的，可被因子化。</li>
+<li>数值数据是以数字为尺度的观察值，又分为连续数据和离散数据。虽然连续数据可以在某个区间内连续变化，但是我们观察到的数据的取值仍然是离散的。</li>
+<li>截面数据是在几乎相同的时间上收集的，不同空间产生的数据；时间序列数据通常是在同一空间观察到的，不同时间产生的数据。</li>
+</ul>
 </section>
-<section id="连续情况" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="连续情况"><span class="header-section-number">1.2</span> 连续情况</h3>
-<p><span class="math display">\[
-f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_X(x)}
-\]</span></p>
+<section id="统计中的几个基本概念" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="统计中的几个基本概念"><span class="header-section-number">2</span> 统计中的几个基本概念</h2>
+<ol type="1">
+<li><p>总体是包含所研究的全部个体的集合。总体分为有限总体和无限总体。无限总体又分为可数总体和不可数总体。</p>
+<p>当确定总体比较困难时，可以根据研究目的确定总体。</p>
+<p>例如，研究某地的居民抽烟情况，居民就构成一个总体，一个居民就是个体。</p></li>
+<li><p>样本是从总体中抽取的一部分元素的集合，样本集元素的数目称为样本量。</p></li>
+<li><p>参数是总体的统计特征，例如平均数，方差，总体比例，峰度系数，偏度系数等。</p></li>
+<li><p>统计量，统计量是一个有关统计数据的函数，并且不包含任何其他变量，也就是说能通过样本数据直接计算出来。常见的统计量有样本平均数，样本方差等。</p></li>
+<li><p>统计变量和数据的分类一样，因为统计数据就是统计变量的取值。</p></li>
+</ol>
+</section>
+<section id="抽样方法" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="抽样方法"><span class="header-section-number">3</span> 抽样方法</h2>
+<section id="概率抽样" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="概率抽样"><span class="header-section-number">3.1</span> 概率抽样</h3>
+<ul>
+<li>简单随机抽样</li>
+<li>分层抽样</li>
+<li>系统抽样</li>
+<li>整群抽样</li>
+</ul>
+</section>
+<section id="非概率抽样" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="非概率抽样"><span class="header-section-number">3.2</span> 非概率抽样</h3>
+<ul>
+<li>方便抽样</li>
+<li>自愿抽样</li>
+<li>配额抽样</li>
+</ul>
 </section>
 </section>
-<section id="全概率公式" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="全概率公式"><span class="header-section-number">2</span> 全概率公式</h2>
-<p><span class="math display">\[
-P(A)=\sum_{i=1}^nP(A|B_i)P(B_i)
-\]</span></p>
-<p>^6c9cba</p>
+<section id="实验设计" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="实验设计"><span class="header-section-number">4</span> 实验设计</h2>
+<p>需要分出实验组和对照组。</p>
+<p>需要使用尽可能少的实验次数获取尽可能多的信息</p>
 </section>
-<section id="贝叶斯公式" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</h2>
-<p>在只有两个事件时</p>
-<p><span class="math display">\[
-P(B|A)=\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\bar B)P(\bar B)}
-\]</span></p>
-<p>在多个事件时</p>
-<p><span class="math display">\[
-P(B_i|A)=\dfrac{P(A|B_i)P(B_i)}{\sum_{i=1}^nP(A|B_i)P(B_i)}
-\]</span></p>
-<p>^322785</p>
-<div class="proof">
-<p><span class="proof-title"><em>论证</em>. </span>对条件概率公式的分母使用一次全概率公式即可。</p>
-</div>
+<section id="误差" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="误差"><span class="header-section-number">5</span> 误差</h2>
+<p>误差是搜集到的数据和真实结果之间的差异，分为两类，抽样误差和非抽样误差。误差是不可避免的。</p>
+<section id="抽样误差" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="抽样误差"><span class="header-section-number">5.1</span> 抽样误差</h3>
+<p>抽样误差表示样本可能的结果与总体真值的平均差异。</p>
+<p>影响因素：</p>
+<ol type="1">
+<li>样本量越大，抽样误差越小</li>
+<li>总体变异性越大，抽样误差越大</li>
+</ol>
+<p>抽样误差可以减小但是不可以消除。</p>
+</section>
+<section id="非抽样误差" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="非抽样误差"><span class="header-section-number">5.2</span> 非抽样误差</h3>
+<ol type="1">
+<li>抽样框误差</li>
+<li>回答误差</li>
+<li>无回答误差</li>
+<li>调查员误差</li>
+<li>测量误差</li>
+</ol>
+<p>非抽样误差有些是实验设计/调查问卷不合理带来的，有些是无法避免的。</p>
+</section>
+<section id="误差控制" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="误差控制"><span class="header-section-number">5.3</span> 误差控制</h3>
+<p>抽样误差可以计算，计算出公式后进行控制的主要方法是改变样本量，使得抽样误差控制在一个可以接受的范围内。</p>
+<p>非抽样误差控制非常复杂，包括问卷设计，抽样框设计等。</p>
+</section>
+</section>
+<section id="数据预处理的步骤" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="数据预处理的步骤"><span class="header-section-number">6</span> 数据预处理的步骤</h2>
+<ol type="1">
+<li>数据审核</li>
+<li>数据筛选，可以通过 Excel 的筛选功能，也可以使用 Python 中的 filter 函数，R 中的 filter 函数等</li>
+<li>数据排序，使用 Excel 货 Python 等工具可以轻松完成</li>
+</ol>
+</section>
+<section id="数据展示" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="数据展示"><span class="header-section-number">7</span> 数据展示</h2>
+<p>使用 Excel、Python、R、SPSS 等工具对数据进行分析后，结果通常用频数分布表，联表，图表等展示。</p>
+<section id="条形图和帕累托图" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="条形图和帕累托图"><span class="header-section-number">7.1</span> 条形图和帕累托图</h3>
+<p>条形图是展示绝对数量数据最常用的图，帕累托图是对条形图进行排序并增加累计百分比后的条形图。</p>
+</section>
+<section id="饼图和环形图" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="饼图和环形图"><span class="header-section-number">7.2</span> 饼图和环形图</h3>
+<p>饼图是展示百分比数据最常用的图，环形图将饼图中间挖空，可以存放更多组别的数据。</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
