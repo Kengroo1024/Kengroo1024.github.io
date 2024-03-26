@@ -1,0 +1,242 @@
+---
+title: "概率论基本知识"
+date: 2024/3/1
+categories:
+  - 考研数学
+  - 概统
+---
+
+## 条件概率
+
+### 离散情况
+
+$$
+P(B|A)=\dfrac{P(AB)}{P(A)}
+$$
+
+^ff235e
+
+:::{.cor-conditioned}
+$$
+P(B|A)P(A)=P(A|B)P(B)=P(AB)
+$$
+:::
+
+### 连续情况
+
+$$
+f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_X(x)}
+$$
+
+## 全概率公式
+
+$$
+P(A)=\sum_{i=1}^nP(A|B_i)P(B_i)
+$$
+
+^6c9cba
+
+## 贝叶斯公式
+
+在只有两个事件时
+
+$$
+P(B|A)=\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\bar B)P(\bar B)}
+$$
+
+在多个事件时
+
+$$
+P(B_i|A)=\dfrac{P(A|B_i)P(B_i)}{\sum_{i=1}^nP(A|B_i)P(B_i)}
+$$
+
+^322785
+
+:::{.proof}
+对条件概率公式的分母使用一次全概率公式即可。
+:::
+
+## 切比雪夫不等式
+
+$$
+P(|X-\mu|\geq k)\leq \dfrac{\sigma^2}{k^2}
+$$
+
+## 数字特征
+
+### 均值、方差、协方差
+
+均值
+
+$$
+\mu=Eg(X)=\int g(x)f(x)\mathrm dx
+$$
+方差
+$$
+\sigma^2=Var(X)=\int (x-\mu)^2f(x)\mathrm dx
+$$
+
+协方差
+
+$$
+Cov(X,Y)=E[(X-\mu_X)(Y-\mu_Y)]
+$$
+
+方差可以类似二项式展开，平方项用方差代替，乘积项用协方差代替。
+
+$$
+Var(aX+bY)=a^2Var(x)+2abCov(X,Y)+b^2Var(Y)
+$$
+
+### 矩
+
+#### 原点矩
+
+$$
+v_k=\int x^kf(x)\mathrm dx
+$$
+
+零阶原点矩恒为 1
+
+#### 中心矩
+
+$$
+\mu_k=\int (x-\mu)^kf(x)\mathrm dx
+$$
+
+零阶中心矩恒为 1
+
+一阶中心矩恒为 0
+
+由二项式定理，有
+
+$$
+\mu_k=\sum_{i=0}^k
+\begin{pmatrix}
+k\\
+i
+\end{pmatrix}
+v_i(-\mu)^{k-i}
+$$
+
+### 峰度系数
+
+$$
+kurtosis=\dfrac{\mu_4}{\sigma^4}-3=E(\dfrac{X-\mu}{\sigma})^4-E(N)^4
+$$
+
+其中，$N\sim N(0,1)$
+
+### 偏度系数
+
+$$
+skewness=\dfrac{\mu_3}{\sigma^3}=E(\dfrac{X-\mu}{\sigma})^3
+$$
+
+## 常见分布
+
+### 离散分布
+
+| 名称    | 记号              | 分布                                                                                                                  | 均值                  | 方差                    | 特征函数                                                 |
+| ----- | --------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------- | --------------------- | ---------------------------------------------------- |
+| 伯努利分布 | $B(1,p)$        | $p^k(1-p)^{1-k}$                                                                                                    | $p$                 | $p(1-p)$              | $p\mathrm e^{jt}+1-p$                                |
+| 二项分布  | $B(n,p)$        | $\begin{pmatrix}n\\k\end{pmatrix}p^k(1-p)^{n-k}$                                                                    | $np$                | $np(1-p)$             | $(p\mathrm e^{jt}+1-p)^n$                            |
+| 几何分布  | $Ge(p)$         | $p(1-p)^{k-1}$                                                                                                      | $\dfrac{1}{p}$      | $\dfrac{1-p}{p^2}$    | $\dfrac{p\mathrm e^{jt}}{1-(1-p)\mathrm e^{jt}}$     |
+| 帕斯卡分布 | $NB(r,p)$       | $\begin{pmatrix}k-1\\ r-1\end{pmatrix}p^r(1-p)^{k-r}$                                                               | $\dfrac{r}{p}$ [^1] | $\dfrac{r(1-p)}{p^2}$ | $(\dfrac{p\mathrm e^{jt}}{1-(1-p)\mathrm e^{jt}})^r$ |
+| 超几何分布 | $H(N,n,M)$      | $\dfrac{\begin{pmatrix}M\\ k\end{pmatrix}\begin{pmatrix}N-M\\ n-k\end{pmatrix}}{\begin{pmatrix}N\\ n\end{pmatrix}}$ | $\dfrac{nM}{N}$     |                       |                                                      |
+| 泊松分布  | $pois(\lambda)$ | $\mathrm e^{-\lambda}\dfrac{\lambda^k}{k!}$                                                                         | $\lambda$           | $\lambda$             | $\mathrm e^{\lambda(jt-1)}$                          |
+
+[^1]: https://zhuanlan.zhihu.com/p/36270529
+
+### 连续分布
+
+| 名称   | 记号                | 概率密度函数                                                            | 均值                   | 方差                     | 特征函数                                               |
+| ---- | ----------------- | ----------------------------------------------------------------- | -------------------- | ---------------------- | -------------------------------------------------- |
+| 均匀分布 | $U(a,b)$          | $\dfrac{1}{b-a},x\in[a,b]$                                        | $\dfrac{a+b}{2}$     | $\dfrac{(b-a)^2}{12}$  | $\dfrac{\mathrm e^{jtb}-\mathrm e^{jta}}{jt(b-a)}$ |
+| 指数分布 | $Exp(\lambda)$    | $\lambda\mathrm e^{-\lambda t},x>0$                               | $\dfrac{1}{\lambda}$ | $\dfrac{1}{\lambda^2}$ | $\dfrac{\lambda}{\lambda-jt}$                      |
+| 正态分布 | $N(\mu,\sigma^2)$ | $\dfrac{1}{\sqrt{2\pi}\sigma}\exp(-\dfrac{(x-\mu)^2}{2\sigma^2})$ | $\mu$                | $\sigma$               | $\exp(jt\mu-\dfrac{1}{2}\sigma^2t^2)$              |
+| 卡方分布 | $\chi^2(n)$       |                                                                   | $n$                  | $2n$                   |                                                    |
+| t 分布 | $t(n)$            |                                                                   |                      |                        |                                                    |
+| F 分布 | $F(m,n)$          |                                                                   |                      |                        |                                                    |
+
+## 多元正态分布
+
+多元正态分布接受两个参数：均值向量 $\boldsymbol\mu$ 和协方差矩阵 $\boldsymbol\Sigma$，它的密度函数为
+
+$$
+f(\boldsymbol x;\boldsymbol\mu,\boldsymbol\Sigma)=\dfrac{1}{\sqrt{\det(2\pi\Sigma)}}\exp(-\dfrac{1}{2}(\boldsymbol x-\boldsymbol\mu)^T\Sigma^{-1}(\boldsymbol x-\boldsymbol\mu))
+$$
+
+其中
+
+- $\boldsymbol x$是变量向量，维数是 $d$
+- $\boldsymbol\mu$是均值向量，维数是 $d$
+- $\boldsymbol\Sigma$是正定对称矩阵，维数是 $d\times d$
+
+> [!note]
+> 1. 注意，系数上的行列式，在计算时矩阵前方的系数实际上还要再做$d$次幂运算。
+> 2. 由于协方差矩阵是正定的，因此它一定是非奇异的。
+
+特别地，随机变量 $(X,Y)$ 服从二元正态分布，记作 $(X,Y)\sim N(\mu_1,\mu_2;\sigma^2_1,\sigma^2_2;\theta)$，$\theta$表示两个变量之间的协方差。
+
+### 从线性变换的角度看多元正态分布
+
+零均值多元正态分布 $N(\boldsymbol0,\boldsymbol\Sigma)$可以看做标准多元正态分布 $N(\boldsymbol 0,\boldsymbol E)$ 做线性变换得到的，其中$\boldsymbol E$是单位矩阵。
+
+设随机变量向量 $\boldsymbol X\sim N(\boldsymbol0,\boldsymbol E)$.
+
+对 $\boldsymbol X$ 做倍乘变换再做正交变换 $Y=\boldsymbol{BAX}$，$\boldsymbol A$是对角矩阵，且 $\boldsymbol A^2=\boldsymbol\Lambda$，$\boldsymbol B$是正交矩阵，有 $\boldsymbol X=(\boldsymbol{BA})^{-1}\boldsymbol Y$，且$\boldsymbol B^T=\boldsymbol B^{-1}$.
+
+容易知道任意线性变换都可由$\boldsymbol{BA}$表出。
+
+经过倍增变换，协方差矩阵变为 $\boldsymbol\Lambda$. 正交变换不改变协方差行列式的值。
+
+代入概率密度公式，有
+
+$$
+\begin{aligned}
+f(\boldsymbol y)
+&=\dfrac{1}{\sqrt{2^d\pi^d\det(\boldsymbol\Lambda)}}\exp(-\dfrac{1}{2}((\boldsymbol{BA})^{-1}\boldsymbol y)^T(\boldsymbol{BA})^{-1}\boldsymbol y))\\
+&=\dfrac{1}{\sqrt{2^d\pi^d\det(\boldsymbol\Lambda)}}\exp(-\dfrac{1}{2}\boldsymbol y^T(\boldsymbol B\boldsymbol{\Lambda}^{-1}\boldsymbol B^{-1})\boldsymbol y)
+\end{aligned}
+$$
+
+根据线性代数知识 $\det(\boldsymbol B\boldsymbol{A}^{-2}\boldsymbol B^{-1})=\det(\boldsymbol\Lambda)^{-1}$
+
+根据对称矩阵的性质，只要协方差矩阵与$\boldsymbol\Lambda$拥有相同的特征值（它的特征值即对角元），即可化为该形式。
+
+因此可以得到结论，协方差矩阵的特征值决定随机变量的尺度，而均值向量决定随机变量的位置。
+
+### 本节参考
+
+[知乎 - Xinyu Chen的回答](https://www.zhihu.com/tardis/zm/art/37609917?source_id=1005)
+
+[MATLAB官方文档](https://ww2.mathworks.cn/help/stats/mvnrnd.html?lang=en)
+
+## 卷积
+
+卷积是计算两随机变量分布和的方法。
+
+### 离散情况
+
+$$
+P(X+Y=k)=\sum_{i=-\infty}^{+\infty}P(X=i,Y=k-i)
+$$
+
+### 连续情况
+
+$$
+P(X+Y\lt t)=\int_{-\infty}^{+\infty}f(s,t-s)\mathrm ds
+$$
+
+当 $X,Y$ 独立时，有
+
+$$
+P(X+Y\lt t)=\int_{-\infty}^{+\infty}f(s)g(t-s)\mathrm ds
+$$
+
+卷积运算是一个算子，通过两个函数生成第三个函数，记作 
+
+$$
+(f\circ g)(x)=\int_{-\infty}^{+\infty}f(s)g(x-s)\mathrm ds
+$$
