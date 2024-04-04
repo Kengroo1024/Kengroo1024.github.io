@@ -292,31 +292,45 @@ window.Quarto = {
   <li><a href="#离散情况" id="toc-离散情况" class="nav-link" data-scroll-target="#离散情况"><span class="header-section-number">1.1</span> 离散情况</a></li>
   <li><a href="#连续情况" id="toc-连续情况" class="nav-link" data-scroll-target="#连续情况"><span class="header-section-number">1.2</span> 连续情况</a></li>
   </ul></li>
-  <li><a href="#全概率公式" id="toc-全概率公式" class="nav-link" data-scroll-target="#全概率公式"><span class="header-section-number">2</span> 全概率公式</a></li>
-  <li><a href="#贝叶斯公式" id="toc-贝叶斯公式" class="nav-link" data-scroll-target="#贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</a></li>
-  <li><a href="#切比雪夫不等式" id="toc-切比雪夫不等式" class="nav-link" data-scroll-target="#切比雪夫不等式"><span class="header-section-number">4</span> 切比雪夫不等式</a></li>
-  <li><a href="#数字特征" id="toc-数字特征" class="nav-link" data-scroll-target="#数字特征"><span class="header-section-number">5</span> 数字特征</a>
+  <li><a href="#条件期望和重期望" id="toc-条件期望和重期望" class="nav-link" data-scroll-target="#条件期望和重期望"><span class="header-section-number">2</span> 条件期望和重期望</a></li>
+  <li><a href="#全概率公式" id="toc-全概率公式" class="nav-link" data-scroll-target="#全概率公式"><span class="header-section-number">3</span> 全概率公式</a></li>
+  <li><a href="#贝叶斯公式" id="toc-贝叶斯公式" class="nav-link" data-scroll-target="#贝叶斯公式"><span class="header-section-number">4</span> 贝叶斯公式</a></li>
+  <li><a href="#切比雪夫不等式" id="toc-切比雪夫不等式" class="nav-link" data-scroll-target="#切比雪夫不等式"><span class="header-section-number">5</span> 切比雪夫不等式</a></li>
+  <li><a href="#数字特征" id="toc-数字特征" class="nav-link" data-scroll-target="#数字特征"><span class="header-section-number">6</span> 数字特征</a>
   <ul class="collapse">
-  <li><a href="#均值方差协方差" id="toc-均值方差协方差" class="nav-link" data-scroll-target="#均值方差协方差"><span class="header-section-number">5.1</span> 均值、方差、协方差</a></li>
-  <li><a href="#矩" id="toc-矩" class="nav-link" data-scroll-target="#矩"><span class="header-section-number">5.2</span> 矩</a></li>
-  <li><a href="#峰度系数" id="toc-峰度系数" class="nav-link" data-scroll-target="#峰度系数"><span class="header-section-number">5.3</span> 峰度系数</a></li>
-  <li><a href="#偏度系数" id="toc-偏度系数" class="nav-link" data-scroll-target="#偏度系数"><span class="header-section-number">5.4</span> 偏度系数</a></li>
+  <li><a href="#均值方差协方差" id="toc-均值方差协方差" class="nav-link" data-scroll-target="#均值方差协方差"><span class="header-section-number">6.1</span> 均值、方差、协方差</a></li>
+  <li><a href="#矩" id="toc-矩" class="nav-link" data-scroll-target="#矩"><span class="header-section-number">6.2</span> 矩</a></li>
+  <li><a href="#变异系数" id="toc-变异系数" class="nav-link" data-scroll-target="#变异系数"><span class="header-section-number">6.3</span> 变异系数</a></li>
+  <li><a href="#峰度系数" id="toc-峰度系数" class="nav-link" data-scroll-target="#峰度系数"><span class="header-section-number">6.4</span> 峰度系数</a></li>
+  <li><a href="#偏度系数" id="toc-偏度系数" class="nav-link" data-scroll-target="#偏度系数"><span class="header-section-number">6.5</span> 偏度系数</a></li>
   </ul></li>
-  <li><a href="#常见分布" id="toc-常见分布" class="nav-link" data-scroll-target="#常见分布"><span class="header-section-number">6</span> 常见分布</a>
+  <li><a href="#常见分布" id="toc-常见分布" class="nav-link" data-scroll-target="#常见分布"><span class="header-section-number">7</span> 常见分布</a>
   <ul class="collapse">
-  <li><a href="#离散分布" id="toc-离散分布" class="nav-link" data-scroll-target="#离散分布"><span class="header-section-number">6.1</span> 离散分布</a></li>
-  <li><a href="#连续分布" id="toc-连续分布" class="nav-link" data-scroll-target="#连续分布"><span class="header-section-number">6.2</span> 连续分布</a></li>
+  <li><a href="#离散分布" id="toc-离散分布" class="nav-link" data-scroll-target="#离散分布"><span class="header-section-number">7.1</span> 离散分布</a></li>
+  <li><a href="#连续分布" id="toc-连续分布" class="nav-link" data-scroll-target="#连续分布"><span class="header-section-number">7.2</span> 连续分布</a></li>
   </ul></li>
-  <li><a href="#多元正态分布" id="toc-多元正态分布" class="nav-link" data-scroll-target="#多元正态分布"><span class="header-section-number">7</span> 多元正态分布</a>
+  <li><a href="#多元正态分布" id="toc-多元正态分布" class="nav-link" data-scroll-target="#多元正态分布"><span class="header-section-number">8</span> 多元正态分布</a>
   <ul class="collapse">
-  <li><a href="#从线性变换的角度看多元正态分布" id="toc-从线性变换的角度看多元正态分布" class="nav-link" data-scroll-target="#从线性变换的角度看多元正态分布"><span class="header-section-number">7.1</span> 从线性变换的角度看多元正态分布</a></li>
-  <li><a href="#本节参考" id="toc-本节参考" class="nav-link" data-scroll-target="#本节参考"><span class="header-section-number">7.2</span> 本节参考</a></li>
+  <li><a href="#从线性变换的角度看多元正态分布" id="toc-从线性变换的角度看多元正态分布" class="nav-link" data-scroll-target="#从线性变换的角度看多元正态分布"><span class="header-section-number">8.1</span> 从线性变换的角度看多元正态分布</a></li>
+  <li><a href="#本节参考" id="toc-本节参考" class="nav-link" data-scroll-target="#本节参考"><span class="header-section-number">8.2</span> 本节参考</a></li>
   </ul></li>
-  <li><a href="#卷积" id="toc-卷积" class="nav-link" data-scroll-target="#卷积"><span class="header-section-number">8</span> 卷积</a>
+  <li><a href="#边际分布和多维随机变量的独立性" id="toc-边际分布和多维随机变量的独立性" class="nav-link" data-scroll-target="#边际分布和多维随机变量的独立性"><span class="header-section-number">9</span> 边际分布和多维随机变量的独立性</a>
   <ul class="collapse">
-  <li><a href="#离散情况-1" id="toc-离散情况-1" class="nav-link" data-scroll-target="#离散情况-1"><span class="header-section-number">8.1</span> 离散情况</a></li>
-  <li><a href="#连续情况-1" id="toc-连续情况-1" class="nav-link" data-scroll-target="#连续情况-1"><span class="header-section-number">8.2</span> 连续情况</a></li>
+  <li><a href="#多维随机变量的独立性" id="toc-多维随机变量的独立性" class="nav-link" data-scroll-target="#多维随机变量的独立性"><span class="header-section-number">9.1</span> 多维随机变量的独立性</a></li>
   </ul></li>
+  <li><a href="#卷积" id="toc-卷积" class="nav-link" data-scroll-target="#卷积"><span class="header-section-number">10</span> 卷积</a>
+  <ul class="collapse">
+  <li><a href="#离散情况-1" id="toc-离散情况-1" class="nav-link" data-scroll-target="#离散情况-1"><span class="header-section-number">10.1</span> 离散情况</a></li>
+  <li><a href="#连续情况-1" id="toc-连续情况-1" class="nav-link" data-scroll-target="#连续情况-1"><span class="header-section-number">10.2</span> 连续情况</a></li>
+  </ul></li>
+  <li><a href="#随机变量序列的两种收敛" id="toc-随机变量序列的两种收敛" class="nav-link" data-scroll-target="#随机变量序列的两种收敛"><span class="header-section-number">11</span> 随机变量序列的两种收敛</a>
+  <ul class="collapse">
+  <li><a href="#依概率收敛" id="toc-依概率收敛" class="nav-link" data-scroll-target="#依概率收敛"><span class="header-section-number">11.1</span> 依概率收敛</a></li>
+  <li><a href="#按分布收敛" id="toc-按分布收敛" class="nav-link" data-scroll-target="#按分布收敛"><span class="header-section-number">11.2</span> 按分布收敛</a></li>
+  <li><a href="#性质" id="toc-性质" class="nav-link" data-scroll-target="#性质"><span class="header-section-number">11.3</span> 性质</a></li>
+  </ul></li>
+  <li><a href="#特征函数" id="toc-特征函数" class="nav-link" data-scroll-target="#特征函数"><span class="header-section-number">12</span> 特征函数</a></li>
+  <li><a href="#大数定律" id="toc-大数定律" class="nav-link" data-scroll-target="#大数定律"><span class="header-section-number">13</span> 大数定律</a></li>
   </ul>
 </nav>
     </div>
@@ -353,7 +367,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改的</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月26日</p>
+      <p class="date-modified">2024年4月4日</p>
     </div>
   </div>
     
@@ -385,15 +399,26 @@ f_{Y|X}(y|x)=\dfrac{f(x,y)}{f_X(x)}
 \]</span></p>
 </section>
 </section>
-<section id="全概率公式" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="全概率公式"><span class="header-section-number">2</span> 全概率公式</h2>
+<section id="条件期望和重期望" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="条件期望和重期望"><span class="header-section-number">2</span> 条件期望和重期望</h2>
+<p>条件期望</p>
+<p><span class="math display">\[
+E(X|Y=y)=\int xp_{X|Y}(x|y)\mathrm dx
+\]</span></p>
+<p>重期望公式</p>
+<p><span class="math display">\[
+E(X)=E(E(X|Y))=\sum E(X|Y)P(Y)
+\]</span></p>
+</section>
+<section id="全概率公式" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="全概率公式"><span class="header-section-number">3</span> 全概率公式</h2>
 <p><span class="math display">\[
 P(A)=\sum_{i=1}^nP(A|B_i)P(B_i)
 \]</span></p>
 <p>^6c9cba</p>
 </section>
-<section id="贝叶斯公式" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="贝叶斯公式"><span class="header-section-number">3</span> 贝叶斯公式</h2>
+<section id="贝叶斯公式" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="贝叶斯公式"><span class="header-section-number">4</span> 贝叶斯公式</h2>
 <p>在只有两个事件时</p>
 <p><span class="math display">\[
 P(B|A)=\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\bar B)P(\bar B)}
@@ -407,21 +432,28 @@ P(B_i|A)=\dfrac{P(A|B_i)P(B_i)}{\sum_{i=1}^nP(A|B_i)P(B_i)}
 <p><span class="proof-title"><em>论证</em>. </span>对条件概率公式的分母使用一次全概率公式即可。</p>
 </div>
 </section>
-<section id="切比雪夫不等式" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="切比雪夫不等式"><span class="header-section-number">4</span> 切比雪夫不等式</h2>
+<section id="切比雪夫不等式" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="切比雪夫不等式"><span class="header-section-number">5</span> 切比雪夫不等式</h2>
 <p><span class="math display">\[
 P(|X-\mu|\geq k)\leq \dfrac{\sigma^2}{k^2}
 \]</span></p>
 </section>
-<section id="数字特征" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="数字特征"><span class="header-section-number">5</span> 数字特征</h2>
-<section id="均值方差协方差" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="均值方差协方差"><span class="header-section-number">5.1</span> 均值、方差、协方差</h3>
+<section id="数字特征" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="数字特征"><span class="header-section-number">6</span> 数字特征</h2>
+<section id="均值方差协方差" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="均值方差协方差"><span class="header-section-number">6.1</span> 均值、方差、协方差</h3>
 <p>均值</p>
 <p><span class="math display">\[
-\mu=Eg(X)=\int g(x)f(x)\mathrm dx
+\mu=EX=\int xf(x)\mathrm dx
 \]</span> 方差 <span class="math display">\[
 \sigma^2=Var(X)=\int (x-\mu)^2f(x)\mathrm dx
+\]</span></p>
+<p>复合随机变量的均值和方差</p>
+<p><span class="math display">\[
+E(g(X))=\int g(x)f(x)\mathrm dx
+\]</span></p>
+<p><span class="math display">\[
+Var(g(X))=\int (g(x)-E(g(x)))^2f(x)\mathrm dx
 \]</span></p>
 <p>协方差</p>
 <p><span class="math display">\[
@@ -432,17 +464,17 @@ Cov(X,Y)=E[(X-\mu_X)(Y-\mu_Y)]
 Var(aX+bY)=a^2Var(x)+2abCov(X,Y)+b^2Var(Y)
 \]</span></p>
 </section>
-<section id="矩" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="矩"><span class="header-section-number">5.2</span> 矩</h3>
-<section id="原点矩" class="level4" data-number="5.2.1">
-<h4 data-number="5.2.1" class="anchored" data-anchor-id="原点矩"><span class="header-section-number">5.2.1</span> 原点矩</h4>
+<section id="矩" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="矩"><span class="header-section-number">6.2</span> 矩</h3>
+<section id="原点矩" class="level4" data-number="6.2.1">
+<h4 data-number="6.2.1" class="anchored" data-anchor-id="原点矩"><span class="header-section-number">6.2.1</span> 原点矩</h4>
 <p><span class="math display">\[
 v_k=\int x^kf(x)\mathrm dx
 \]</span></p>
 <p>零阶原点矩恒为 1</p>
 </section>
-<section id="中心矩" class="level4" data-number="5.2.2">
-<h4 data-number="5.2.2" class="anchored" data-anchor-id="中心矩"><span class="header-section-number">5.2.2</span> 中心矩</h4>
+<section id="中心矩" class="level4" data-number="6.2.2">
+<h4 data-number="6.2.2" class="anchored" data-anchor-id="中心矩"><span class="header-section-number">6.2.2</span> 中心矩</h4>
 <p><span class="math display">\[
 \mu_k=\int (x-\mu)^kf(x)\mathrm dx
 \]</span></p>
@@ -459,24 +491,30 @@ v_i(-\mu)^{k-i}
 \]</span></p>
 </section>
 </section>
-<section id="峰度系数" class="level3" data-number="5.3">
-<h3 data-number="5.3" class="anchored" data-anchor-id="峰度系数"><span class="header-section-number">5.3</span> 峰度系数</h3>
+<section id="变异系数" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="变异系数"><span class="header-section-number">6.3</span> 变异系数</h3>
+<p><span class="math display">\[
+C_v(X)=\dfrac{\sqrt{Var(X)}}{E(X)}=\dfrac{\sigma}{\mu}
+\]</span></p>
+</section>
+<section id="峰度系数" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="峰度系数"><span class="header-section-number">6.4</span> 峰度系数</h3>
 <p><span class="math display">\[
 kurtosis=\dfrac{\mu_4}{\sigma^4}-3=E(\dfrac{X-\mu}{\sigma})^4-E(N)^4
 \]</span></p>
 <p>其中，<span class="math inline">\(N\sim N(0,1)\)</span></p>
 </section>
-<section id="偏度系数" class="level3" data-number="5.4">
-<h3 data-number="5.4" class="anchored" data-anchor-id="偏度系数"><span class="header-section-number">5.4</span> 偏度系数</h3>
+<section id="偏度系数" class="level3" data-number="6.5">
+<h3 data-number="6.5" class="anchored" data-anchor-id="偏度系数"><span class="header-section-number">6.5</span> 偏度系数</h3>
 <p><span class="math display">\[
 skewness=\dfrac{\mu_3}{\sigma^3}=E(\dfrac{X-\mu}{\sigma})^3
 \]</span></p>
 </section>
 </section>
-<section id="常见分布" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="常见分布"><span class="header-section-number">6</span> 常见分布</h2>
-<section id="离散分布" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="离散分布"><span class="header-section-number">6.1</span> 离散分布</h3>
+<section id="常见分布" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="常见分布"><span class="header-section-number">7</span> 常见分布</h2>
+<section id="离散分布" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="离散分布"><span class="header-section-number">7.1</span> 离散分布</h3>
 <table class="table">
 <colgroup>
 <col style="width: 2%">
@@ -548,8 +586,8 @@ skewness=\dfrac{\mu_3}{\sigma^3}=E(\dfrac{X-\mu}{\sigma})^3
 </tbody>
 </table>
 </section>
-<section id="连续分布" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="连续分布"><span class="header-section-number">6.2</span> 连续分布</h3>
+<section id="连续分布" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="连续分布"><span class="header-section-number">7.2</span> 连续分布</h3>
 <table class="table">
 <colgroup>
 <col style="width: 2%">
@@ -622,8 +660,8 @@ skewness=\dfrac{\mu_3}{\sigma^3}=E(\dfrac{X-\mu}{\sigma})^3
 </table>
 </section>
 </section>
-<section id="多元正态分布" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="多元正态分布"><span class="header-section-number">7</span> 多元正态分布</h2>
+<section id="多元正态分布" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="多元正态分布"><span class="header-section-number">8</span> 多元正态分布</h2>
 <p>多元正态分布接受两个参数：均值向量 <span class="math inline">\(\boldsymbol\mu\)</span> 和协方差矩阵 <span class="math inline">\(\boldsymbol\Sigma\)</span>，它的密度函数为</p>
 <p><span class="math display">\[
 f(\boldsymbol x;\boldsymbol\mu,\boldsymbol\Sigma)=\dfrac{1}{\sqrt{\det(2\pi\Sigma)}}\exp(-\dfrac{1}{2}(\boldsymbol x-\boldsymbol\mu)^T\Sigma^{-1}(\boldsymbol x-\boldsymbol\mu))
@@ -634,12 +672,25 @@ f(\boldsymbol x;\boldsymbol\mu,\boldsymbol\Sigma)=\dfrac{1}{\sqrt{\det(2\pi\Sigm
 <li><span class="math inline">\(\boldsymbol\mu\)</span>是均值向量，维数是 <span class="math inline">\(d\)</span></li>
 <li><span class="math inline">\(\boldsymbol\Sigma\)</span>是正定对称矩阵，维数是 <span class="math inline">\(d\times d\)</span></li>
 </ul>
-<blockquote class="blockquote">
-<p>[!note] 1. 注意，系数上的行列式，在计算时矩阵前方的系数实际上还要再做<span class="math inline">\(d\)</span>次幂运算。 2. 由于协方差矩阵是正定的，因此它一定是非奇异的。</p>
-</blockquote>
-<p>特别地，随机变量 <span class="math inline">\((X,Y)\)</span> 服从二元正态分布，记作 <span class="math inline">\((X,Y)\sim N(\mu_1,\mu_2;\sigma^2_1,\sigma^2_2;\theta)\)</span>，<span class="math inline">\(\theta\)</span>表示两个变量之间的协方差。</p>
-<section id="从线性变换的角度看多元正态分布" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="从线性变换的角度看多元正态分布"><span class="header-section-number">7.1</span> 从线性变换的角度看多元正态分布</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注释
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>注意，系数上的行列式，在计算时矩阵前方的系数实际上还要再做<span class="math inline">\(d\)</span>次幂运算。</li>
+<li>由于协方差矩阵是正定的，因此它一定是非奇异的。</li>
+</ol>
+</div>
+</div>
+<p>特别地，随机变量 <span class="math inline">\((X,Y)\)</span> 服从二元正态分布，记作 <span class="math inline">\((X,Y)\sim N(\mu_1,\mu_2;\sigma^2_1,\sigma^2_2;\theta)\)</span>，<span class="math inline">\(\theta\)</span>表示两个变量之间的相关系数。</p>
+<section id="从线性变换的角度看多元正态分布" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="从线性变换的角度看多元正态分布"><span class="header-section-number">8.1</span> 从线性变换的角度看多元正态分布</h3>
 <p>零均值多元正态分布 <span class="math inline">\(N(\boldsymbol0,\boldsymbol\Sigma)\)</span>可以看做标准多元正态分布 <span class="math inline">\(N(\boldsymbol 0,\boldsymbol E)\)</span> 做线性变换得到的，其中<span class="math inline">\(\boldsymbol E\)</span>是单位矩阵。</p>
 <p>设随机变量向量 <span class="math inline">\(\boldsymbol X\sim N(\boldsymbol0,\boldsymbol E)\)</span>.</p>
 <p>对 <span class="math inline">\(\boldsymbol X\)</span> 做倍乘变换再做正交变换 <span class="math inline">\(Y=\boldsymbol{BAX}\)</span>，<span class="math inline">\(\boldsymbol A\)</span>是对角矩阵，且 <span class="math inline">\(\boldsymbol A^2=\boldsymbol\Lambda\)</span>，<span class="math inline">\(\boldsymbol B\)</span>是正交矩阵，有 <span class="math inline">\(\boldsymbol X=(\boldsymbol{BA})^{-1}\boldsymbol Y\)</span>，且<span class="math inline">\(\boldsymbol B^T=\boldsymbol B^{-1}\)</span>.</p>
@@ -657,23 +708,55 @@ f(\boldsymbol y)
 <p>根据对称矩阵的性质，只要协方差矩阵与<span class="math inline">\(\boldsymbol\Lambda\)</span>拥有相同的特征值（它的特征值即对角元），即可化为该形式。</p>
 <p>因此可以得到结论，协方差矩阵的特征值决定随机变量的尺度，而均值向量决定随机变量的位置。</p>
 </section>
-<section id="本节参考" class="level3" data-number="7.2">
-<h3 data-number="7.2" class="anchored" data-anchor-id="本节参考"><span class="header-section-number">7.2</span> 本节参考</h3>
+<section id="本节参考" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="本节参考"><span class="header-section-number">8.2</span> 本节参考</h3>
 <p><a href="https://www.zhihu.com/tardis/zm/art/37609917?source_id=1005">知乎 - Xinyu Chen的回答</a></p>
 <p><a href="https://ww2.mathworks.cn/help/stats/mvnrnd.html?lang=en">MATLAB官方文档</a></p>
 </section>
 </section>
-<section id="卷积" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="卷积"><span class="header-section-number">8</span> 卷积</h2>
+<section id="边际分布和多维随机变量的独立性" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="边际分布和多维随机变量的独立性"><span class="header-section-number">9</span> 边际分布和多维随机变量的独立性</h2>
+<p>多维随机变量的分布函数，当其中的一个或几个变量趋于无穷后，可以得到剩余变量的联合边际分布函数。</p>
+<p>以二维随机变量<span class="math inline">\((X,Y)\)</span>为例，其联合分布函数为<span class="math inline">\(F(x,y)\)</span>，则<span class="math inline">\(X\)</span>的边际分布为</p>
+<p><span class="math display">\[
+F_X(x)=\lim_{y\to+\infty}F(x,y)
+\]</span></p>
+<p>在离散场合，可以类似得到。</p>
+<p>边际密度函数，只需要把上述的分布函数换成概率密度函数并相应积分，还是以二维随机变量为例</p>
+<p><span class="math display">\[
+p_X(x)=\int_{-\infty}^{+\infty} p(x,y)\mathrm dy
+\]</span></p>
+<p>在涉及多维随机变量的积分时，要注意积分区域的确定。</p>
+<section id="多维随机变量的独立性" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="多维随机变量的独立性"><span class="header-section-number">9.1</span> 多维随机变量的独立性</h3>
+<p>多维随机变量<span class="math inline">\(X_1,X_2,\cdots,X_n\)</span>的联合分布函数为<span class="math inline">\(F(x_1,x_2,\cdots,x_n)\)</span>，边际分布为<span class="math inline">\(F_i(x_i)\)</span>，如果有</p>
+<p><span class="math display">\[
+F(x_1,x_2,\cdots,x_n)=\prod_{i=1}^n F_i(x_i)
+\]</span></p>
+<p>则称<span class="math inline">\(X_1,X_2,\cdots,X_n\)</span>相互独立。</p>
+<p>连续时，可以转化为密度函数</p>
+<p><span class="math display">\[
+p(x_1,x_2,\cdots,x_n)=\prod_{i=1}^n p_i(x_i)
+\]</span></p>
+<p>由此可以知道独立的随机变量积的期望等于期望的积，即</p>
+<p><span class="math display">\[
+E(XY)=E(X)E(Y)
+\]</span></p>
+<p>在更多维度的条件下也可以给出类似的结论。</p>
+<p>并且由上面的性质可以得到独立的随机变量一定不相关（协方差为 0），注意，反之不一定成立，独立是比不相关更强的条件。</p>
+</section>
+</section>
+<section id="卷积" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="卷积"><span class="header-section-number">10</span> 卷积</h2>
 <p>卷积是计算两随机变量分布和的方法。</p>
-<section id="离散情况-1" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="离散情况-1"><span class="header-section-number">8.1</span> 离散情况</h3>
+<section id="离散情况-1" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="离散情况-1"><span class="header-section-number">10.1</span> 离散情况</h3>
 <p><span class="math display">\[
 P(X+Y=k)=\sum_{i=-\infty}^{+\infty}P(X=i,Y=k-i)
 \]</span></p>
 </section>
-<section id="连续情况-1" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="连续情况-1"><span class="header-section-number">8.2</span> 连续情况</h3>
+<section id="连续情况-1" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="连续情况-1"><span class="header-section-number">10.2</span> 连续情况</h3>
 <p><span class="math display">\[
 P(X+Y\lt t)=\int_{-\infty}^{+\infty}f(s,t-s)\mathrm ds
 \]</span></p>
@@ -685,9 +768,59 @@ P(X+Y\lt t)=\int_{-\infty}^{+\infty}f(s)g(t-s)\mathrm ds
 <p><span class="math display">\[
 (f\circ g)(x)=\int_{-\infty}^{+\infty}f(s)g(x-s)\mathrm ds
 \]</span></p>
-
-
 </section>
+</section>
+<section id="随机变量序列的两种收敛" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="随机变量序列的两种收敛"><span class="header-section-number">11</span> 随机变量序列的两种收敛</h2>
+<p>假设随机变量序列<span class="math inline">\(\{X_n\}\)</span>的分布函数序列为<span class="math inline">\(\{F_n(x)\}\)</span>，<span class="math inline">\(X\)</span>为任意给定的随机变量。</p>
+<section id="依概率收敛" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="依概率收敛"><span class="header-section-number">11.1</span> 依概率收敛</h3>
+<p><span class="math display">\[
+\forall\epsilon\gt0,\lim_{n\to\infty}P(|X_n-X|\geq\epsilon)=0
+\]</span></p>
+<p>记作<span class="math inline">\(X_n\stackrel{P}{\longrightarrow}X\)</span></p>
+</section>
+<section id="按分布收敛" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="按分布收敛"><span class="header-section-number">11.2</span> 按分布收敛</h3>
+<p><span class="math display">\[
+\lim_{n\to\infty}F_n(x)=F(x)
+\]</span></p>
+<p>记作<span class="math inline">\(X_n\stackrel{L}{\longrightarrow}X\)</span></p>
+</section>
+<section id="性质" class="level3" data-number="11.3">
+<h3 data-number="11.3" class="anchored" data-anchor-id="性质"><span class="header-section-number">11.3</span> 性质</h3>
+<p>依概率收敛强于按分布收敛。并且依概率收敛可以推出按分布收敛。</p>
+<p>在<span class="math inline">\(X\)</span>服从退化分布时，二者是等价的，即</p>
+<p><span class="math display">\[
+X_n\stackrel{P}{\longrightarrow}c\iff X_n\stackrel{L}{\longrightarrow}c
+\]</span></p>
+</section>
+</section>
+<section id="特征函数" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="特征函数"><span class="header-section-number">12</span> 特征函数</h2>
+<p><span class="math display">\[
+\varphi(t)=E(\mathrm e^{itX})=\int \mathrm e^{itx}\mathrm dF(x)
+\]</span></p>
+<p>称为随机变量的特征函数。</p>
+<p>常见分布的特征函数列在了上面的表格里。特征函数有如下性质：</p>
+<ol type="1">
+<li><span class="math inline">\(|\varphi(t)|\leq\varphi(0)=1\)</span></li>
+<li><span class="math inline">\(\varphi(-t)=\overline{\varphi(t)}\)</span></li>
+<li>若<span class="math inline">\(Y=aX+b\)</span>，则 <span class="math display">\[
+\varphi_Y(t)=\mathrm e^{ibt}\varphi_X(at)
+\]</span></li>
+<li>若随机变量<span class="math inline">\(X,Y\)</span>独立，则 <span class="math display">\[
+\varphi_{X+Y}(t)=\varphi_X(t)\varphi_Y(t)
+\]</span></li>
+<li><span class="math inline">\(\varphi^{(0)}(t)=i^kE(X^k)\)</span>，可以通过这个性质求随机变量的各阶原点矩（如果存在），进而求出中心矩。</li>
+<li>特征函数和分布函数相互唯一确定。</li>
+</ol>
+</section>
+<section id="大数定律" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="大数定律"><span class="header-section-number">13</span> 大数定律</h2>
+<p>大数定律告诉我们频率依概率收敛到概率，即频率的回归性。同时也提供了经验分布函数和矩估计的理论依据。</p>
+
+
 </section>
 
 

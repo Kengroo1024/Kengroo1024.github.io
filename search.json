@@ -11,7 +11,7 @@
     "href": "考研数学/高数/微分方程.html",
     "title": "微分方程",
     "section": "",
-    "text": "可以被表示为\\(g(x)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
+    "text": "可以被表示为\\(g(y)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
     "crumbs": [
       "考研数学",
       "高数",
@@ -23,7 +23,7 @@
     "href": "考研数学/高数/微分方程.html#可分离变量的方程",
     "title": "微分方程",
     "section": "",
-    "text": "可以被表示为\\(g(x)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
+    "text": "可以被表示为\\(g(y)\\mathrm dy=f(x)\\mathrm dx\\)的方程\n求解方法：两边积分\n\\[\n\\int g(y)\\mathrm dy=\\int f(x)\\mathrm dx\n\\]",
     "crumbs": [
       "考研数学",
       "高数",
@@ -31,11 +31,11 @@
     ]
   },
   {
-    "objectID": "考研数学/高数/微分方程.html#齐次微分方程",
-    "href": "考研数学/高数/微分方程.html#齐次微分方程",
+    "objectID": "考研数学/高数/微分方程.html#一种特殊的齐次微分方程",
+    "href": "考研数学/高数/微分方程.html#一种特殊的齐次微分方程",
     "title": "微分方程",
-    "section": "2 齐次微分方程",
-    "text": "2 齐次微分方程\n可以被表示为\\(\\dfrac{\\mathrm dy}{\\mathrm dx}=\\varphi(\\dfrac yx)\\)的方程\n求解方法：令\\(u=\\dfrac yx\\)，有\\(y'=u+xu'\\)，则原方程可以化为\n\\[\nxu'=\\varphi(u)-u\n\\]\n进一步可以化为\n\\[\n\\dfrac{\\mathrm dx}{x}=\\dfrac{\\mathrm du}{\\varphi(u)-u}\n\\]\n于是归结为可分离变量的方程。",
+    "section": "2 一种特殊的齐次微分方程",
+    "text": "2 一种特殊的齐次微分方程\n可以被表示为\\(\\dfrac{\\mathrm dy}{\\mathrm dx}=\\varphi(\\dfrac yx)\\)的方程\n求解方法：令\\(u=\\dfrac yx\\)，有\\(y'=u+xu'\\)，则原方程可以化为\n\\[\nxu'=\\varphi(u)-u\n\\]\n进一步可以化为\n\\[\n\\dfrac{\\mathrm dx}{x}=\\dfrac{\\mathrm du}{\\varphi(u)-u}\n\\]\n于是归结为可分离变量的方程。",
     "crumbs": [
       "考研数学",
       "高数",
@@ -59,7 +59,7 @@
     "href": "考研数学/高数/微分方程.html#线性微分方程解的结构",
     "title": "微分方程",
     "section": "4 线性微分方程解的结构",
-    "text": "4 线性微分方程解的结构\n\n[!note] 可以和线性方程组解的结构类比证明和记忆。\n\n\\(n\\)阶线性微分方程的一般形式为\n\\[\ny^{(n)}+\\sum_{i=1}^{n} p_{i}(x)y^{(n-i)}=q(x)\n\\]\n规定\\(y^{(0)}=y\\). 当\\(f(x)=0\\)时称为\\(n\\)阶齐次线性微分方程。\n在此特别研究二阶线性微分方程。\n二阶齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=0\n\\]\n二阶非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f(x)\n\\]\n\n4.1 齐次方程\n如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关1的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)\n\\]\n就是齐次方程的通解。\n\n\n4.2 非齐次方程\n如果如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关的特解，\\(y^*(x)\\)是非齐次方程的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)+y^*(x)\n\\]\n是非齐次方程的通解。\n\n\n4.3 拆分非齐次方程\n如果\\(y_1^*(x),y_2^*(x)\\)分别是非齐次线性方程\n\\[\n\\begin{aligned}\ny''+p(x)y'+q(x)y=f_1(x)\\\\\ny''+p(x)y'+q(x)y=f_2(x)\n\\end{aligned}\n\\]\n的通解，那么\\(y_1^*(x)+y_2^*(x)\\)是非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f_1(x)+f_2(x)\n\\]\n的一个特解。",
+    "text": "4 线性微分方程解的结构\n\n可以和线性方程组解的结构类比证明和记忆。\n\n\\(n\\)阶线性微分方程的一般形式为\n\\[\ny^{(n)}+\\sum_{i=1}^{n} p_{i}(x)y^{(n-i)}=q(x)\n\\]\n规定\\(y^{(0)}=y\\). 当\\(q(x)=0\\)时称为\\(n\\)阶齐次线性微分方程。\n在此特别研究二阶线性微分方程。\n二阶齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=0\n\\]\n二阶非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f(x)\n\\]\n\n4.1 齐次方程\n如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关1的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)\n\\]\n就是齐次方程的通解。\n\n\n4.2 非齐次方程\n如果如果\\(y_1(x)\\)和\\(y_2(x)\\)是齐次方程的两个线性无关的特解，\\(y^*(x)\\)是非齐次方程的特解，那么\n\\[\ny=C_1y_1(x)+C_2y_2(x)+y^*(x)\n\\]\n是非齐次方程的通解。\n\n\n4.3 拆分非齐次方程\n如果\\(y_1^*(x),y_2^*(x)\\)分别是非齐次线性方程\n\\[\n\\begin{aligned}\ny''+p(x)y'+q(x)y=f_1(x)\\\\\ny''+p(x)y'+q(x)y=f_2(x)\n\\end{aligned}\n\\]\n的通解，那么\\(y_1^*(x)+y_2^*(x)\\)是非齐次线性方程\n\\[\ny''+p(x)y'+q(x)y=f_1(x)+f_2(x)\n\\]\n的一个特解。",
     "crumbs": [
       "考研数学",
       "高数",
@@ -71,7 +71,7 @@
     "href": "考研数学/高数/微分方程.html#常系数线性微分方程",
     "title": "微分方程",
     "section": "5 常系数线性微分方程",
-    "text": "5 常系数线性微分方程\n\n5.1 常系数齐次线性方程\n采用特征根法求解，以二阶为例。\n二阶常系数齐次微分方程一般形式为\n\\[\ny''+py'+q=0\n\\]\n特征方程为\n\\[\nr^2+pr+q=0\n\\]\n设\\(r_1,r_2\\)为该方程的两个根。\n\n\\(r_1\\not= r_2\\)，且都是实数，通解为\n\\[\ny=C_1\\mathrm e^{r_1x}+C_2\\mathrm e^{r_2x}\n\\]\n\\(r_1=r_2\\)，通解为\n\\[\ny=(C_1+C_2x)\\mathrm e^{r_1x}\n\\]\n\\(r_1=a+\\mathrm ib,\\ r_2=a-\\mathrm ib\\)为共轭复根，通解为\n\\[\ny=\\mathrm e^{ax}(C_1\\cos bx+C_2\\sin bx)\n\\]\n\n其实还是\n\\[\ny=\\sum_{i=1}^n \\mathrm C_ie^{r_i}\n\\]\n只是有复数时要用欧拉公式展开。\n\n\n5.2 二阶常系数非齐次线性方程\n二阶常系数非齐次微分方程一般形式为\n\\[\ny''+py'+q=f(x)\n\\]\n\n若\\(f(x)=P_m(x)e^{\\lambda x}\\)，其中\\(P_m(x)\\)为\\(x\\)的\\(m\\)次多项式，\\(\\lambda\\)为特征方程的一个根，那么特解可以表示为\n\\[\ny^*(x)=x^kQ_m(x)\\mathrm e^{\\lambda x}\n\\]\n其中\\(k\\)是\\(\\lambda\\)的重数，\\(Q_m(x)\\)是与\\(P_m(x)\\)同次的多项式。\n若\\[f(x)=\\mathrm e^{ax}[P_l^{(1)}(x)\\cos bx+P_n^{(2)}(x)\\sin bx]\\]其中\\(P_l^{(1)},P_n^{(2)}\\)分别是\\(x\\)的\\(l,n\\)次多项式，则特解可以表示为\n\\[\ny^*(x)=x^k\\mathrm e^{ax}[R_m^{(1)}(x)\\cos bx+R_m^{(2)}(x)\\sin bx]\n\\]\n其中\\(R_m^{(1)}(x),R_m^{(2)}(x)\\)是两个\\(m\\)次多项式，\\(m=\\max\\{n,l\\}\\).\n\\[\nk=\\left\\{\\begin{aligned}\n0&,a+\\mathrm ib\\text{不是特征方程的根}\\\\\n1&,a+\\mathrm ib\\text{是特征方程的单根}\n\\end{aligned}\\right.\n\\]",
+    "text": "5 常系数线性微分方程\n\n5.1 常系数齐次线性方程\n采用特征根法求解，以二阶为例。\n二阶常系数齐次微分方程一般形式为\n\\[\ny''+py'+qy=0\n\\]\n特征方程为\n\\[\nr^2+pr+q=0\n\\]\n设\\(r_1,r_2\\)为该方程的两个根。\n\n\\(r_1\\not= r_2\\)，且都是实数，通解为\n\\[\ny=C_1\\mathrm e^{r_1x}+C_2\\mathrm e^{r_2x}\n\\]\n\\(r_1=r_2\\)，通解为\n\\[\ny=(C_1+C_2x)\\mathrm e^{r_1x}\n\\]\n\\(r_1=a+\\mathrm ib,\\ r_2=a-\\mathrm ib\\)为共轭复根，通解为\n\\[\ny=\\mathrm e^{ax}(C_1\\cos bx+C_2\\sin bx)\n\\]\n\n其实还是\n\\[\ny=\\sum_{i=1}^n \\mathrm C_ie^{r_i}\n\\]\n只是有复数时要用欧拉公式展开。\n\n\n5.2 二阶常系数非齐次线性方程\n二阶常系数非齐次微分方程一般形式为\n\\[\ny''+py'+q=f(x)\n\\]\n\n若\\(f(x)=P_m(x)e^{\\lambda x}\\)，其中\\(P_m(x)\\)为\\(x\\)的\\(m\\)次多项式，那么特解可以表示为\n\\[\ny^*(x)=x^kQ_m(x)\\mathrm e^{\\lambda x}\n\\]\n其中\\(k\\)是\\(\\lambda\\)作为特征方程根的重数（如果不是按0重计算），\\(Q_m(x)\\)是与\\(P_m(x)\\)同次的多项式。\n若\\[f(x)=\\mathrm e^{ax}[P_l^{(1)}(x)\\cos bx+P_n^{(2)}(x)\\sin bx]\\]其中\\(P_l^{(1)},P_n^{(2)}\\)分别是\\(x\\)的\\(l,n\\)次多项式，则特解可以表示为\n\\[\ny^*(x)=x^k\\mathrm e^{ax}[R_m^{(1)}(x)\\cos bx+R_m^{(2)}(x)\\sin bx]\n\\]\n其中\\(R_m^{(1)}(x),R_m^{(2)}(x)\\)是两个\\(m\\)次多项式，\\(m=\\max\\{n,l\\}\\).\n\\[\nk=\\left\\{\\begin{aligned}\n0&,a+\\mathrm ib\\text{不是特征方程的根}\\\\\n1&,a+\\mathrm ib\\text{是特征方程的单根}\n\\end{aligned}\\right.\n\\]",
     "crumbs": [
       "考研数学",
       "高数",
@@ -83,7 +83,7 @@
     "href": "考研数学/高数/微分方程.html#差分方程",
     "title": "微分方程",
     "section": "6 差分方程",
-    "text": "6 差分方程\n函数\\(f(x)\\)定义在数列\\(\\{a_n\\}\\)上，令\\(y_n=f(x_n)\\)，定义\\(\\Delta\\)为差分算子，即\\(\\Delta y_n=y_n-y_{n-1}\\).\n称形如\n\\[\nF(x_n,\\Delta y_n,\\Delta^2 y_n,...,\\Delta^n y_n)=0\n\\]\n的含有因变量的差分的方程为差分方程。\n把数列看成定义在自然数子集上的函数，可以看出差分方程和递推关系完全等价。\n\n6.1 解差分方程\n\n\n\n\n\n\n递推关系和常系数线性微分方程的联系\n\n\n\n微分可以看作特殊的差分过程，作为差分在连续统上的一种推广。一阶线性微分方程可以通过离散化精确地写成递推关系的形式。\n更详细可以看Wiki\n\n\n\\[\nu_n=\\sum_{i=1}^k a_iu_{n-i}+f(n)\n\\]\n称为\\(k\\)阶常系数递推关系。\n使用特征根法解上面的递推关系。\n\n\n6.2 特征根法\n将递推关系式\n\\[\nu_n-a_1u_{n-1}-a_2u_{n-2}-...-a_k-u_{n-k}=0\n\\]\n改写为如下的特征方程\n\\[\nx^k-a_1x^{k-1}-...-a_{k-1}x-a_k=0\n\\]\n有如下定理\n\n设\\(q\\in C\\)且\\(q\\not=0\\)，\\(u_n=q^n\\)是递推关系的一个解当且仅当\\(q\\)是特征方程的一个根。\\(q\\)称为递推关系的一个\\(m\\)重特征根，当\\(q\\)是特征方程的\\(m\\)重根，简称特征根。\n设\\(g_i(n)\\)都是递推关系的解，那么它们的线性组合也是递推关系的解\n如果递推关系有\\(k\\)个彼此相异的特征根\\(q_1,q_2,...,q_k\\)，那么\n\\[\nu_n=c_1q_1^n+c_2q_2^n+...+c_kq_k^n\n\\]\n是递推关系的通解。\n\n\n6.2.1 有重根时的常系数线性齐次递推关系解法\n设\\(q\\)是递推关系的一个\\(m\\)重特征根，那么\n\\[\nu_n=n^jq^n,j=0,1,2,...,m-1\n\\]\n都是递推关系的解。\n设递推关系有\\(t\\)个相异的特征根\\(q_1,q_2,...,q_t\\)，其中\\(q_i\\)是\\(e_i\\)重根，\\(i=1,2,...,t\\). 令\n\\[\nh_i(n)=c_{i1}+c_{i2}n+...+c_{ie_i}n^{e_i-1}\n\\]\n那么递推关系的通解为\n\\[\nu_n=h_1(n)q_1^n+h_2(n)q_2^n+...+h_t(n)q_t^n\n\\]\n\n\n6.2.2 两类特殊常系数非齐次线性递推关系的解\n\n\\(f(n)\\)是\\(n\\)的\\(m\\)次多项式，如果1是递推关系的\\(i\\)重特征根（如果不是特征根那么按0重计算）那么\\(n^ig(n)\\)是递推关系的一个特解，其中\\(g(n)\\)是一个\\(m\\)次多项式，系数应通过待定系数法解出。\n\\(f(n)=c\\cdot a^n\\)，其中\\(c,a\\)均为非零常数。如果\\(a\\)是递推关系的\\(i\\)重特征根（如果不是特征根那么按0重计算）那么\\(A\\cdot n^ia^n\\)是递推关系的一个特解，其中系数\\(A\\)应通过待定系数法解出。\n\n\n\n\n6.3 参考\n华南理工大学出版社《组合数学》曹汝成，第三章第二节，递推关系",
+    "text": "6 差分方程\n函数\\(f(x)\\)定义在数列\\(\\{x_n\\}\\)上，令\\(y_n=f(x_n)\\)，定义\\(\\Delta\\)为差分算子，即\\(\\Delta y_n=y_n-y_{n-1}\\).\n称形如\n\\[\nF(x_n,\\Delta y_n,\\Delta^2 y_n,\\cdots,\\Delta^n y_n)=0\n\\]\n的含有因变量的差分的方程为差分方程。\n把数列看成定义在自然数子集上的函数，可以看出差分方程和递推关系完全等价。\n\n6.1 解差分方程\n\n\n\n\n\n\n递推关系和常系数线性微分方程的联系\n\n\n\n微分可以看作特殊的差分过程，作为差分在连续统上的一种推广。一阶线性微分方程可以通过离散化精确地写成递推关系的形式。\n更详细可以看Wiki\n\n\n\\[\nu_n=\\sum_{i=1}^k a_iu_{n-i}+f(n)\n\\]\n称为\\(k\\)阶常系数递推关系。\n使用特征根法解上面的递推关系。\n\n\n6.2 特征根法\n将递推关系式\n\\[\nu_n-a_1u_{n-1}-a_2u_{n-2}-\\cdots-a_k-u_{n-k}=0\n\\]\n改写为如下的特征方程\n\\[\nx^k-a_1x^{k-1}-\\cdots-a_{k-1}x-a_k=0\n\\]\n有如下定理\n\n设\\(q\\in C\\)且\\(q\\not=0\\)，\\(u_n=q^n\\)是递推关系的一个解当且仅当\\(q\\)是特征方程的一个根。\\(q\\)称为递推关系的一个\\(m\\)重特征根，当\\(q\\)是特征方程的\\(m\\)重根，简称特征根。\n设\\(g_i(n)\\)都是递推关系的解，那么它们的线性组合也是递推关系的解\n如果递推关系有\\(k\\)个彼此相异的特征根\\(q_1,q_2,\\cdots,q_k\\)，那么\n\\[\nu_n=c_1q_1^n+c_2q_2^n+\\cdots+c_kq_k^n\n\\]\n是递推关系的通解。\n\n\n6.2.1 有重根时的常系数线性齐次递推关系解法\n设\\(q\\)是递推关系的一个\\(m\\)重特征根，那么\n\\[\nu_n=n^jq^n,j=0,1,2,\\cdots,m-1\n\\]\n都是递推关系的解。\n设递推关系有\\(t\\)个相异的特征根\\(q_1,q_2,\\cdots,q_t\\)，其中\\(q_i\\)是\\(e_i\\)重根，\\(i=1,2,\\cdots,t\\). 令\n\\[\nh_i(n)=c_{i1}+c_{i2}n+\\cdots+c_{ie_i}n^{e_i-1}\n\\]\n那么递推关系的通解为\n\\[\nu_n=h_1(n)q_1^n+h_2(n)q_2^n+\\cdots+h_t(n)q_t^n\n\\]\n\n\n6.2.2 两类特殊常系数非齐次线性递推关系的解\n\n\\(f(n)\\)是\\(n\\)的\\(m\\)次多项式，如果1是递推关系的\\(i\\)重特征根（如果不是特征根那么按0重计算）那么\\(n^ig(n)\\)是递推关系的一个特解，其中\\(g(n)\\)是一个\\(m\\)次多项式，系数应通过待定系数法解出。\n\\(f(n)=c\\cdot a^n\\)，其中\\(c,a\\)均为非零常数。如果\\(a\\)是递推关系的\\(i\\)重特征根（如果不是特征根那么按0重计算）那么\\(A\\cdot n^ia^n\\)是递推关系的一个特解，其中系数\\(A\\)应通过待定系数法解出。\n\n\n\n\n6.3 参考\n华南理工大学出版社《组合数学》曹汝成，第三章第二节，递推关系",
     "crumbs": [
       "考研数学",
       "高数",
@@ -131,7 +131,7 @@
     "href": "考研数学/高数/二元函数微分.html#二元函数的极限",
     "title": "二元函数的微分",
     "section": "2 二元函数的极限",
-    "text": "2 二元函数的极限\n\n2.1 定义\n设函数\\(f(x,y)\\)在区域\\(D\\)上有定义，\\(P_0(x_0,y_0)\\)在\\(D\\)中或其边界上。如果\\(\\forall\\epsilon&gt;0,\\exists\\delta&gt;0\\)，对\\(D\\)中任一点\\(P\\)，只要\\(|PP_0|&lt;\\delta\\)，都有\n\\[\n|f(x,y)-A|&lt;\\epsilon\n\\]\n成立，那么就称\\(A\\)是\\(f(x,y)\\)在\\((x,y)\\to(x_0,y_0)\\)时的极限，记做\n\\[\n\\lim_{(x,y)\\to(x_0,y_0)}f(x,y)=A\n\\]\n或\n\\[\n\\lim_{P\\to P_0}f(P)=A\n\\]\n\n\n2.2 计算\n\n2.2.1 累次极限法\n上面定义的极限称为重极限。\n还有一种极限称为累次极限，即各自变量按一定的顺序取极限，类似下面的样式\n\\[\n\\lim_{x\\to x_0}\\lim_{y\\to y_0}f(x,y)\n\\]\n对于重极限和累次极限，有下列重要定理：\n\n如果改变积分次序，累次极限的值改变，那么重极限不存在\n重极限和累次极限可能都存在，也可能都不存在，也可能其中一个存在另一个不存在。\n如果累次极限交换顺序后值都相等，且重极限存在，则累次极限和重极限必然相等。\n\n\n\n2.2.2 按路径逼近法\n可以让点通过某条路径，如一条直线，来逼近极限，多了一个关系限制以后就可以消元降重，使得重极限变为一般的极限。\n对于路径逼近法，有下列定理：\n如果从两条不同的路径逼近重极限，得到的极限值不同，则重极限不存在。\n\n\n2.2.3 定义法\n按路径逼近法就是定义法的推论。",
+    "text": "2 二元函数的极限\n\n2.1 定义\n设函数\\(f(x,y)\\)在区域\\(D\\)上有定义，\\(P_0(x_0,y_0)\\)在\\(D\\)中或其边界上。如果\\(\\forall\\epsilon&gt;0,\\exists\\delta&gt;0\\)，对\\(D\\)中任一点\\(P\\)，只要\\(|PP_0|&lt;\\delta\\)，都有\n\\[\n|f(x,y)-A|&lt;\\epsilon\n\\]\n成立，那么就称\\(A\\)是\\(f(x,y)\\)在\\((x,y)\\to(x_0,y_0)\\)时的极限，记做\n\\[\n\\lim_{(x,y)\\to(x_0,y_0)}f(x,y)=A\n\\]\n或\n\\[\n\\lim_{P\\to P_0}f(P)=A\n\\]\n\n\n2.2 计算\n\n2.2.1 累次极限法\n上面定义的极限称为重极限。\n还有一种极限称为累次极限，即各自变量按一定的顺序取极限，类似下面的样式\n\\[\n\\lim_{x\\to x_0}\\lim_{y\\to y_0}f(x,y)\n\\]\n对于重极限和累次极限，有下列重要定理：\n\n如果改变积分次序，累次极限的值改变，那么重极限不存在\n重极限和累次极限可能都存在，也可能都不存在，也可能其中一个存在另一个不存在。\n如果累次极限交换顺序后值都相等，且重极限存在，则累次极限和重极限必然相等。\n\n\n\n2.2.2 按路径逼近法\n可以让点通过某条路径，如一条直线（如\\(y=kx\\)），来逼近极限，多了一个关系限制以后就可以消元降重，使得重极限变为一般的极限。\n对于路径逼近法，有下列定理：\n如果从两条不同的路径逼近重极限，得到的极限值不同，则重极限不存在。\n\n\n2.2.3 定义法\n按路径逼近法就是定义法的推论。\n\n\n\n2.3 一个结论\n对于极限\n\\[\n\\lim_{(x,y)\\to(0,0)}\\dfrac{x^py^q}{x^m+y^n}\n\\]\n有如下结论：\n\n如果\\(m,n\\)不全为偶数，则该极限不存在\n如果\\(m,n\\)全为偶数，再分为两种情况\n\n若 \\[\n\\dfrac{p}{m}+\\dfrac{q}{n}\\leq1\n\\] 则该极限不存在，且此时只需要取路径\\(y=kx^{\\frac{m-p}{q}}\\)即可证明极限不存在。\n若 \\[\n\\dfrac{p}{m}+\\dfrac{q}{n}\\gt1\n\\] 则该极限的值为\\(0\\).\n\n\n\n\n\n\n\n\n提示\n\n\n\n举例，经典极限\n\\[\n\\lim_{(x,y)\\to(0,0)}\\dfrac{xy}{x^2+y^2}\n\\]\n不存在",
     "crumbs": [
       "考研数学",
       "高数",
@@ -155,7 +155,7 @@
     "href": "考研数学/高数/二元函数微分.html#偏导数",
     "title": "二元函数的微分",
     "section": "4 偏导数",
-    "text": "4 偏导数\n\n4.1 定义\n设函数\\(f(x,y)\\)在点\\(P(x_0,y_0)\\)的某邻域上有定义，如果极限\n\\[\n\\lim_{\\Delta x\\to0}\\dfrac{f(x_0+\\Delta x,y_0)-f(x_0,y_0)}{\\Delta x}\n\\]\n存在，则称该极限为函数在点\\(P\\)处的偏导数，记做\n\\[\n\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(x,y)=(x_0,y_0)}\\text{或}f_x(x_0,y_0)\n\\]\n同理可以定义\\(f\\)对\\(y\\)的偏导数。\n\n\n\n\n\n\n注释\n\n\n\n偏导数就是把一个变量看成常数对另一个变量进行求导，因此无关变量的取值并不影响最后的结果，即\n\\[\n\\left.f_x(x,y)\\right|_{(x,y)=(x_0,y_0)}=\\left.f'(x,y_0)\\right|_{x=x_0}\n\\]\n\n5 对于偏导数符号\\(\\partial\\)的理解\n偏导数符号\\(\\partial\\)读做“偏”（英文partial），只是用来表示偏微分运算的符号，其实并不是任何语言中的字母。\n偏微分符号\\(\\partial\\)其实和微分符号\\(\\mathrm d\\)表达的意义完全相同，只是为了特别表示偏微分运算，和一般的微分符号做出了区别。\n\n\n6 多元函数可导与可微之间的区别\n多元函数的“可导”仅仅是可以求偏导，可微才能和一元函数的可微可导等同。（对于一元函数，可导和可微是等价的。）\n因此多元函数的可导不能等于可微，也不能导出连续。但是可微可以导出连续。\n\n\n\n\n\n6.1 高阶偏导数的性质\n如果函数\\(f(x,y)\\)的高阶偏导数对复数个变量求偏导，则称此偏导数为混合偏导数。\n\n6.1.1 混合偏导数求导次序的问题\n以二阶混合偏导数为例，偏微分算子\n\\[\n\\dfrac{\\partial^2}{\\partial x\\partial y}f(x,y)\n\\]\n表示先对\\(y\\)求偏导，再对\\(x\\)求偏导，求导次序从左向右。\n如果函数的同阶偏导数，即分母上的各变量个数不不变而次序不同的偏导数都连续，则偏导数的值与求导次序无关，以二阶混合偏导数为例用数学语言表述为下面的定理\n如果\\(f(x,y)\\)全部的两个二阶混合偏导数而言\\(\\dfrac{\\partial^2f(x,y)}{\\partial x\\partial y}\\)和\\(\\dfrac{\\partial^2f(x,y)}{\\partial y\\partial x}\\)在区域\\(D\\)上连续，则\\(\\dfrac{\\partial^2f(x,y)}{\\partial x\\partial y}=\\dfrac{\\partial^2f(x,y)}{\\partial y\\partial x}\\)在\\(D\\)上成立。\n高阶混合偏导数的定理可以仿照此写出。",
+    "text": "4 偏导数\n\n4.1 定义\n设函数\\(f(x,y)\\)在点\\(P(x_0,y_0)\\)的某邻域上有定义，如果极限\n\\[\n\\lim_{\\Delta x\\to0}\\dfrac{f(x_0+\\Delta x,y_0)-f(x_0,y_0)}{\\Delta x}\n\\]\n存在，则称该极限为函数在点\\(P\\)处的偏导数，记做\n\\[\n\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(x,y)=(x_0,y_0)}\\text{或}f_x(x_0,y_0)\n\\]\n同理可以定义\\(f\\)对\\(y\\)的偏导数。\n\n\n\n\n\n\n注释\n\n\n\n偏导数就是把一个变量看成常数对另一个变量进行求导，因此无关变量的取值并不影响最后的结果，即\n\\[\n\\left.f_x(x,y)\\right|_{(x,y)=(x_0,y_0)}=\\left.f'(x,y_0)\\right|_{x=x_0}\n\\]\n分段函数分段点处的偏导数只能按定义求，只能按定义求，只能按定义求！！！\n\n5 对于偏导数符号\\(\\partial\\)的理解\n偏导数符号\\(\\partial\\)读做“偏”（英文partial），只是用来表示偏微分运算的符号，其实并不是任何语言中的字母。\n偏微分符号\\(\\partial\\)其实和微分符号\\(\\mathrm d\\)表达的意义完全相同，只是为了特别表示偏微分运算，和一般的微分符号做出了区别。\n\n\n6 多元函数可导与可微之间的区别\n多元函数的“可导”仅仅是可以求偏导，可微才能和一元函数的可微可导等同。（对于一元函数，可导和可微是等价的。）\n因此多元函数的可导不能等于可微，也不能导出连续。但是可微可以导出连续。\n\n\n\n\n\n6.1 高阶偏导数的性质\n如果函数\\(f(x,y)\\)的高阶偏导数对复数个变量求偏导，则称此偏导数为混合偏导数。\n\n6.1.1 混合偏导数求导次序的问题\n以二阶混合偏导数为例，偏微分算子\n\\[\n\\dfrac{\\partial^2}{\\partial x\\partial y}f(x,y)\n\\]\n表示先对\\(y\\)求偏导，再对\\(x\\)求偏导，求导次序从左向右。\n如果函数的同阶偏导数，即分母上的各变量个数不不变而次序不同的偏导数都连续，则偏导数的值与求导次序无关，以二阶混合偏导数为例用数学语言表述为下面的定理\n如果\\(f(x,y)\\)全部的两个二阶混合偏导数而言\\(\\dfrac{\\partial^2f(x,y)}{\\partial x\\partial y}\\)和\\(\\dfrac{\\partial^2f(x,y)}{\\partial y\\partial x}\\)在区域\\(D\\)上连续，则\\(\\dfrac{\\partial^2f(x,y)}{\\partial x\\partial y}=\\dfrac{\\partial^2f(x,y)}{\\partial y\\partial x}\\)在\\(D\\)上成立。\n高阶混合偏导数的定理可以仿照此写出。",
     "crumbs": [
       "考研数学",
       "高数",
@@ -191,7 +191,7 @@
     "href": "考研数学/高数/二元函数微分.html#全微分",
     "title": "二元函数的微分",
     "section": "7 全微分",
-    "text": "7 全微分\n\n7.0.1 定义\n如果函数的全增量\\(\\Delta f\\)可以表示为如下的线性形式\n![[导数和微分#二元函数全微分]]\n全微分充分条件：\n如果\\(f(x,y)\\)的偏导数\\(\\dfrac{\\partial f}{\\partial x},\\dfrac{\\partial f}{\\partial y}\\)在点\\((x_0,y_0)\\)处都连续，则函数\\(f(x,y)\\)在点\\((x_0,y_0)\\)处可微。",
+    "text": "7 全微分\n\n7.0.1 判定\n定义法判定\\(f(x,y)\\)在\\((x_0,y_0)\\)是否可微\n\n先判定\\(f_x(x_0,y_0)\\)和\\(f_y(x_0,y_0)\\)是否存在，如果不存在则不可微，如果存在进入下一步\n计算极限 \\[\n\\lim_{(\\mathrm dx,\\mathrm dy)\\to(0,0)}\\dfrac{f(x_0+\\mathrm dx,y_0+\\mathrm dy)-f(x_0,y_0)-(f_x(x_0,y_0)\\mathrm dx+f_y(x_0,y_0)\\mathrm dy)}{\\sqrt{\\mathrm dx^2+\\mathrm dy^2}}=0\n\\] 是否成立。如果成立则可微，不成立则不可微。\n如果逼近的点是\\((0,0)\\)，那么上述极限可进一步改写为 \\[\n\\lim_{(x,y)\\to(0,0)}\\dfrac{f(x,y)-f(0,0)-(f_x(0,0)x+f_y(0,0)y)}{\\sqrt{x^2+y^2}}=0\n\\]\n\n从上面的判定过程可以看出，函数在一点可微，则在这一点处关于各个变量的一阶偏导都存在，但不保证它们都连续。\n全微分充分条件：\n如果\\(f(x,y)\\)的偏导数\\(\\dfrac{\\partial f}{\\partial x},\\dfrac{\\partial f}{\\partial y}\\)在点\\((x_0,y_0)\\)处都连续，则函数\\(f(x,y)\\)在点\\((x_0,y_0)\\)处可微。\n上述命题的逆否命题为：\n如果函数在一点不可微，则它的偏导数不连续。\n总结一下多元函数的连续，可偏导，和可微\ngraph LR\nsubgraph A[正向推导]\ndirection TB\n可微---&gt;连续 & 可偏导\n一阶偏导数连续---&gt;可微\nend\n\nsubgraph B[反向推导]\ndirection TB\n不连续 & 不可偏导---&gt;不可微\n不可微---&gt;一阶偏导数不连续\nend\n注意表中没有连线的节点表示根本无关。",
     "crumbs": [
       "考研数学",
       "高数",
@@ -203,7 +203,7 @@
     "href": "考研数学/高数/二元函数微分.html#偏微分链式法则和一阶全微分的形式不变性",
     "title": "二元函数的微分",
     "section": "8 偏微分链式法则和一阶全微分的形式不变性",
-    "text": "8 偏微分链式法则和一阶全微分的形式不变性\n\n偏微分的链式法则\n\\[\n\\begin{aligned}\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\dfrac{\\partial v}{\\partial x}\\\\\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\dfrac{\\partial v}{\\partial y}\n\\end{aligned}\n\\]\n一阶全微分的形式不变性\n\\[\n\\begin{aligned}\n\\mathrm dz&=\\dfrac{\\partial z}{\\partial x}\\mathrm dx+\\dfrac{\\partial z}{\\partial y}\\mathrm dy\\\\&=\\dfrac{\\partial z}{\\partial u}\\mathrm du+\\dfrac{\\partial z}{\\partial v}\\mathrm dv\n\\end{aligned}\n\\]\n高阶全微分不具有形式不变性。这是显而易见的。",
+    "text": "8 偏微分链式法则和一阶全微分的形式不变性\n设\\(z=z(u,v),u=u(x,y),v=v(x,y)\\)\n\n偏微分的链式法则\n\\[\n\\begin{aligned}\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\dfrac{\\partial v}{\\partial x}\\\\\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\dfrac{\\partial v}{\\partial y}\n\\end{aligned}\n\\]\n一阶全微分的形式不变性\n\\[\n\\begin{aligned}\n\\mathrm dz&=\\dfrac{\\partial z}{\\partial x}\\mathrm dx+\\dfrac{\\partial z}{\\partial y}\\mathrm dy\\\\&=\\dfrac{\\partial z}{\\partial u}\\mathrm du+\\dfrac{\\partial z}{\\partial v}\\mathrm dv\n\\end{aligned}\n\\]\n高阶全微分不具有形式不变性。这是显而易见的。",
     "crumbs": [
       "考研数学",
       "高数",
@@ -716,11 +716,23 @@
     ]
   },
   {
+    "objectID": "考研数学/概统/概率论基本知识.html#条件期望和重期望",
+    "href": "考研数学/概统/概率论基本知识.html#条件期望和重期望",
+    "title": "概率论基本知识",
+    "section": "2 条件期望和重期望",
+    "text": "2 条件期望和重期望\n条件期望\n\\[\nE(X|Y=y)=\\int xp_{X|Y}(x|y)\\mathrm dx\n\\]\n重期望公式\n\\[\nE(X)=E(E(X|Y))=\\sum E(X|Y)P(Y)\n\\]",
+    "crumbs": [
+      "考研数学",
+      "概统",
+      "概率论基本知识"
+    ]
+  },
+  {
     "objectID": "考研数学/概统/概率论基本知识.html#全概率公式",
     "href": "考研数学/概统/概率论基本知识.html#全概率公式",
     "title": "概率论基本知识",
-    "section": "2 全概率公式",
-    "text": "2 全概率公式\n\\[\nP(A)=\\sum_{i=1}^nP(A|B_i)P(B_i)\n\\]\n^6c9cba",
+    "section": "3 全概率公式",
+    "text": "3 全概率公式\n\\[\nP(A)=\\sum_{i=1}^nP(A|B_i)P(B_i)\n\\]\n^6c9cba",
     "crumbs": [
       "考研数学",
       "概统",
@@ -731,8 +743,8 @@
     "objectID": "考研数学/概统/概率论基本知识.html#贝叶斯公式",
     "href": "考研数学/概统/概率论基本知识.html#贝叶斯公式",
     "title": "概率论基本知识",
-    "section": "3 贝叶斯公式",
-    "text": "3 贝叶斯公式\n在只有两个事件时\n\\[\nP(B|A)=\\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\\bar B)P(\\bar B)}\n\\]\n在多个事件时\n\\[\nP(B_i|A)=\\dfrac{P(A|B_i)P(B_i)}{\\sum_{i=1}^nP(A|B_i)P(B_i)}\n\\]\n^322785\n\n论证. 对条件概率公式的分母使用一次全概率公式即可。",
+    "section": "4 贝叶斯公式",
+    "text": "4 贝叶斯公式\n在只有两个事件时\n\\[\nP(B|A)=\\dfrac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\\bar B)P(\\bar B)}\n\\]\n在多个事件时\n\\[\nP(B_i|A)=\\dfrac{P(A|B_i)P(B_i)}{\\sum_{i=1}^nP(A|B_i)P(B_i)}\n\\]\n^322785\n\n论证. 对条件概率公式的分母使用一次全概率公式即可。",
     "crumbs": [
       "考研数学",
       "概统",
@@ -743,8 +755,8 @@
     "objectID": "考研数学/概统/概率论基本知识.html#切比雪夫不等式",
     "href": "考研数学/概统/概率论基本知识.html#切比雪夫不等式",
     "title": "概率论基本知识",
-    "section": "4 切比雪夫不等式",
-    "text": "4 切比雪夫不等式\n\\[\nP(|X-\\mu|\\geq k)\\leq \\dfrac{\\sigma^2}{k^2}\n\\]",
+    "section": "5 切比雪夫不等式",
+    "text": "5 切比雪夫不等式\n\\[\nP(|X-\\mu|\\geq k)\\leq \\dfrac{\\sigma^2}{k^2}\n\\]",
     "crumbs": [
       "考研数学",
       "概统",
@@ -755,8 +767,8 @@
     "objectID": "考研数学/概统/概率论基本知识.html#数字特征",
     "href": "考研数学/概统/概率论基本知识.html#数字特征",
     "title": "概率论基本知识",
-    "section": "5 数字特征",
-    "text": "5 数字特征\n\n5.1 均值、方差、协方差\n均值\n\\[\n\\mu=Eg(X)=\\int g(x)f(x)\\mathrm dx\n\\] 方差 \\[\n\\sigma^2=Var(X)=\\int (x-\\mu)^2f(x)\\mathrm dx\n\\]\n协方差\n\\[\nCov(X,Y)=E[(X-\\mu_X)(Y-\\mu_Y)]\n\\]\n方差可以类似二项式展开，平方项用方差代替，乘积项用协方差代替。\n\\[\nVar(aX+bY)=a^2Var(x)+2abCov(X,Y)+b^2Var(Y)\n\\]\n\n\n5.2 矩\n\n5.2.1 原点矩\n\\[\nv_k=\\int x^kf(x)\\mathrm dx\n\\]\n零阶原点矩恒为 1\n\n\n5.2.2 中心矩\n\\[\n\\mu_k=\\int (x-\\mu)^kf(x)\\mathrm dx\n\\]\n零阶中心矩恒为 1\n一阶中心矩恒为 0\n由二项式定理，有\n\\[\n\\mu_k=\\sum_{i=0}^k\n\\begin{pmatrix}\nk\\\\\ni\n\\end{pmatrix}\nv_i(-\\mu)^{k-i}\n\\]\n\n\n\n5.3 峰度系数\n\\[\nkurtosis=\\dfrac{\\mu_4}{\\sigma^4}-3=E(\\dfrac{X-\\mu}{\\sigma})^4-E(N)^4\n\\]\n其中，\\(N\\sim N(0,1)\\)\n\n\n5.4 偏度系数\n\\[\nskewness=\\dfrac{\\mu_3}{\\sigma^3}=E(\\dfrac{X-\\mu}{\\sigma})^3\n\\]",
+    "section": "6 数字特征",
+    "text": "6 数字特征\n\n6.1 均值、方差、协方差\n均值\n\\[\n\\mu=EX=\\int xf(x)\\mathrm dx\n\\] 方差 \\[\n\\sigma^2=Var(X)=\\int (x-\\mu)^2f(x)\\mathrm dx\n\\]\n复合随机变量的均值和方差\n\\[\nE(g(X))=\\int g(x)f(x)\\mathrm dx\n\\]\n\\[\nVar(g(X))=\\int (g(x)-E(g(x)))^2f(x)\\mathrm dx\n\\]\n协方差\n\\[\nCov(X,Y)=E[(X-\\mu_X)(Y-\\mu_Y)]\n\\]\n方差可以类似二项式展开，平方项用方差代替，乘积项用协方差代替。\n\\[\nVar(aX+bY)=a^2Var(x)+2abCov(X,Y)+b^2Var(Y)\n\\]\n\n\n6.2 矩\n\n6.2.1 原点矩\n\\[\nv_k=\\int x^kf(x)\\mathrm dx\n\\]\n零阶原点矩恒为 1\n\n\n6.2.2 中心矩\n\\[\n\\mu_k=\\int (x-\\mu)^kf(x)\\mathrm dx\n\\]\n零阶中心矩恒为 1\n一阶中心矩恒为 0\n由二项式定理，有\n\\[\n\\mu_k=\\sum_{i=0}^k\n\\begin{pmatrix}\nk\\\\\ni\n\\end{pmatrix}\nv_i(-\\mu)^{k-i}\n\\]\n\n\n\n6.3 变异系数\n\\[\nC_v(X)=\\dfrac{\\sqrt{Var(X)}}{E(X)}=\\dfrac{\\sigma}{\\mu}\n\\]\n\n\n6.4 峰度系数\n\\[\nkurtosis=\\dfrac{\\mu_4}{\\sigma^4}-3=E(\\dfrac{X-\\mu}{\\sigma})^4-E(N)^4\n\\]\n其中，\\(N\\sim N(0,1)\\)\n\n\n6.5 偏度系数\n\\[\nskewness=\\dfrac{\\mu_3}{\\sigma^3}=E(\\dfrac{X-\\mu}{\\sigma})^3\n\\]",
     "crumbs": [
       "考研数学",
       "概统",
@@ -767,8 +779,8 @@
     "objectID": "考研数学/概统/概率论基本知识.html#常见分布",
     "href": "考研数学/概统/概率论基本知识.html#常见分布",
     "title": "概率论基本知识",
-    "section": "6 常见分布",
-    "text": "6 常见分布\n\n6.1 离散分布\n\n\n\n\n\n\n\n\n\n\n\n名称\n记号\n分布\n均值\n方差\n特征函数\n\n\n\n\n伯努利分布\n\\(B(1,p)\\)\n\\(p^k(1-p)^{1-k}\\)\n\\(p\\)\n\\(p(1-p)\\)\n\\(p\\mathrm e^{jt}+1-p\\)\n\n\n二项分布\n\\(B(n,p)\\)\n\\(\\begin{pmatrix}n\\\\k\\end{pmatrix}p^k(1-p)^{n-k}\\)\n\\(np\\)\n\\(np(1-p)\\)\n\\((p\\mathrm e^{jt}+1-p)^n\\)\n\n\n几何分布\n\\(Ge(p)\\)\n\\(p(1-p)^{k-1}\\)\n\\(\\dfrac{1}{p}\\)\n\\(\\dfrac{1-p}{p^2}\\)\n\\(\\dfrac{p\\mathrm e^{jt}}{1-(1-p)\\mathrm e^{jt}}\\)\n\n\n帕斯卡分布\n\\(NB(r,p)\\)\n\\(\\begin{pmatrix}k-1\\\\ r-1\\end{pmatrix}p^r(1-p)^{k-r}\\)\n\\(\\dfrac{r}{p}\\) 1\n\\(\\dfrac{r(1-p)}{p^2}\\)\n\\((\\dfrac{p\\mathrm e^{jt}}{1-(1-p)\\mathrm e^{jt}})^r\\)\n\n\n超几何分布\n\\(H(N,n,M)\\)\n\\(\\dfrac{\\begin{pmatrix}M\\\\ k\\end{pmatrix}\\begin{pmatrix}N-M\\\\ n-k\\end{pmatrix}}{\\begin{pmatrix}N\\\\ n\\end{pmatrix}}\\)\n\\(\\dfrac{nM}{N}\\)\n\n\n\n\n泊松分布\n\\(pois(\\lambda)\\)\n\\(\\mathrm e^{-\\lambda}\\dfrac{\\lambda^k}{k!}\\)\n\\(\\lambda\\)\n\\(\\lambda\\)\n\\(\\mathrm e^{\\lambda(jt-1)}\\)\n\n\n\n\n\n6.2 连续分布\n\n\n\n\n\n\n\n\n\n\n\n名称\n记号\n概率密度函数\n均值\n方差\n特征函数\n\n\n\n\n均匀分布\n\\(U(a,b)\\)\n\\(\\dfrac{1}{b-a},x\\in[a,b]\\)\n\\(\\dfrac{a+b}{2}\\)\n\\(\\dfrac{(b-a)^2}{12}\\)\n\\(\\dfrac{\\mathrm e^{jtb}-\\mathrm e^{jta}}{jt(b-a)}\\)\n\n\n指数分布\n\\(Exp(\\lambda)\\)\n\\(\\lambda\\mathrm e^{-\\lambda t},x&gt;0\\)\n\\(\\dfrac{1}{\\lambda}\\)\n\\(\\dfrac{1}{\\lambda^2}\\)\n\\(\\dfrac{\\lambda}{\\lambda-jt}\\)\n\n\n正态分布\n\\(N(\\mu,\\sigma^2)\\)\n\\(\\dfrac{1}{\\sqrt{2\\pi}\\sigma}\\exp(-\\dfrac{(x-\\mu)^2}{2\\sigma^2})\\)\n\\(\\mu\\)\n\\(\\sigma\\)\n\\(\\exp(jt\\mu-\\dfrac{1}{2}\\sigma^2t^2)\\)\n\n\n卡方分布\n\\(\\chi^2(n)\\)\n\n\\(n\\)\n\\(2n\\)\n\n\n\nt 分布\n\\(t(n)\\)\n\n\n\n\n\n\nF 分布\n\\(F(m,n)\\)",
+    "section": "7 常见分布",
+    "text": "7 常见分布\n\n7.1 离散分布\n\n\n\n\n\n\n\n\n\n\n\n名称\n记号\n分布\n均值\n方差\n特征函数\n\n\n\n\n伯努利分布\n\\(B(1,p)\\)\n\\(p^k(1-p)^{1-k}\\)\n\\(p\\)\n\\(p(1-p)\\)\n\\(p\\mathrm e^{jt}+1-p\\)\n\n\n二项分布\n\\(B(n,p)\\)\n\\(\\begin{pmatrix}n\\\\k\\end{pmatrix}p^k(1-p)^{n-k}\\)\n\\(np\\)\n\\(np(1-p)\\)\n\\((p\\mathrm e^{jt}+1-p)^n\\)\n\n\n几何分布\n\\(Ge(p)\\)\n\\(p(1-p)^{k-1}\\)\n\\(\\dfrac{1}{p}\\)\n\\(\\dfrac{1-p}{p^2}\\)\n\\(\\dfrac{p\\mathrm e^{jt}}{1-(1-p)\\mathrm e^{jt}}\\)\n\n\n帕斯卡分布\n\\(NB(r,p)\\)\n\\(\\begin{pmatrix}k-1\\\\ r-1\\end{pmatrix}p^r(1-p)^{k-r}\\)\n\\(\\dfrac{r}{p}\\) 1\n\\(\\dfrac{r(1-p)}{p^2}\\)\n\\((\\dfrac{p\\mathrm e^{jt}}{1-(1-p)\\mathrm e^{jt}})^r\\)\n\n\n超几何分布\n\\(H(N,n,M)\\)\n\\(\\dfrac{\\begin{pmatrix}M\\\\ k\\end{pmatrix}\\begin{pmatrix}N-M\\\\ n-k\\end{pmatrix}}{\\begin{pmatrix}N\\\\ n\\end{pmatrix}}\\)\n\\(\\dfrac{nM}{N}\\)\n\n\n\n\n泊松分布\n\\(pois(\\lambda)\\)\n\\(\\mathrm e^{-\\lambda}\\dfrac{\\lambda^k}{k!}\\)\n\\(\\lambda\\)\n\\(\\lambda\\)\n\\(\\mathrm e^{\\lambda(jt-1)}\\)\n\n\n\n\n\n7.2 连续分布\n\n\n\n\n\n\n\n\n\n\n\n名称\n记号\n概率密度函数\n均值\n方差\n特征函数\n\n\n\n\n均匀分布\n\\(U(a,b)\\)\n\\(\\dfrac{1}{b-a},x\\in[a,b]\\)\n\\(\\dfrac{a+b}{2}\\)\n\\(\\dfrac{(b-a)^2}{12}\\)\n\\(\\dfrac{\\mathrm e^{jtb}-\\mathrm e^{jta}}{jt(b-a)}\\)\n\n\n指数分布\n\\(Exp(\\lambda)\\)\n\\(\\lambda\\mathrm e^{-\\lambda t},x&gt;0\\)\n\\(\\dfrac{1}{\\lambda}\\)\n\\(\\dfrac{1}{\\lambda^2}\\)\n\\(\\dfrac{\\lambda}{\\lambda-jt}\\)\n\n\n正态分布\n\\(N(\\mu,\\sigma^2)\\)\n\\(\\dfrac{1}{\\sqrt{2\\pi}\\sigma}\\exp(-\\dfrac{(x-\\mu)^2}{2\\sigma^2})\\)\n\\(\\mu\\)\n\\(\\sigma\\)\n\\(\\exp(jt\\mu-\\dfrac{1}{2}\\sigma^2t^2)\\)\n\n\n卡方分布\n\\(\\chi^2(n)\\)\n\n\\(n\\)\n\\(2n\\)\n\n\n\nt 分布\n\\(t(n)\\)\n\n\n\n\n\n\nF 分布\n\\(F(m,n)\\)",
     "crumbs": [
       "考研数学",
       "概统",
@@ -779,8 +791,20 @@
     "objectID": "考研数学/概统/概率论基本知识.html#多元正态分布",
     "href": "考研数学/概统/概率论基本知识.html#多元正态分布",
     "title": "概率论基本知识",
-    "section": "7 多元正态分布",
-    "text": "7 多元正态分布\n多元正态分布接受两个参数：均值向量 \\(\\boldsymbol\\mu\\) 和协方差矩阵 \\(\\boldsymbol\\Sigma\\)，它的密度函数为\n\\[\nf(\\boldsymbol x;\\boldsymbol\\mu,\\boldsymbol\\Sigma)=\\dfrac{1}{\\sqrt{\\det(2\\pi\\Sigma)}}\\exp(-\\dfrac{1}{2}(\\boldsymbol x-\\boldsymbol\\mu)^T\\Sigma^{-1}(\\boldsymbol x-\\boldsymbol\\mu))\n\\]\n其中\n\n\\(\\boldsymbol x\\)是变量向量，维数是 \\(d\\)\n\\(\\boldsymbol\\mu\\)是均值向量，维数是 \\(d\\)\n\\(\\boldsymbol\\Sigma\\)是正定对称矩阵，维数是 \\(d\\times d\\)\n\n\n[!note] 1. 注意，系数上的行列式，在计算时矩阵前方的系数实际上还要再做\\(d\\)次幂运算。 2. 由于协方差矩阵是正定的，因此它一定是非奇异的。\n\n特别地，随机变量 \\((X,Y)\\) 服从二元正态分布，记作 \\((X,Y)\\sim N(\\mu_1,\\mu_2;\\sigma^2_1,\\sigma^2_2;\\theta)\\)，\\(\\theta\\)表示两个变量之间的协方差。\n\n7.1 从线性变换的角度看多元正态分布\n零均值多元正态分布 \\(N(\\boldsymbol0,\\boldsymbol\\Sigma)\\)可以看做标准多元正态分布 \\(N(\\boldsymbol 0,\\boldsymbol E)\\) 做线性变换得到的，其中\\(\\boldsymbol E\\)是单位矩阵。\n设随机变量向量 \\(\\boldsymbol X\\sim N(\\boldsymbol0,\\boldsymbol E)\\).\n对 \\(\\boldsymbol X\\) 做倍乘变换再做正交变换 \\(Y=\\boldsymbol{BAX}\\)，\\(\\boldsymbol A\\)是对角矩阵，且 \\(\\boldsymbol A^2=\\boldsymbol\\Lambda\\)，\\(\\boldsymbol B\\)是正交矩阵，有 \\(\\boldsymbol X=(\\boldsymbol{BA})^{-1}\\boldsymbol Y\\)，且\\(\\boldsymbol B^T=\\boldsymbol B^{-1}\\).\n容易知道任意线性变换都可由\\(\\boldsymbol{BA}\\)表出。\n经过倍增变换，协方差矩阵变为 \\(\\boldsymbol\\Lambda\\). 正交变换不改变协方差行列式的值。\n代入概率密度公式，有\n\\[\n\\begin{aligned}\nf(\\boldsymbol y)\n&=\\dfrac{1}{\\sqrt{2^d\\pi^d\\det(\\boldsymbol\\Lambda)}}\\exp(-\\dfrac{1}{2}((\\boldsymbol{BA})^{-1}\\boldsymbol y)^T(\\boldsymbol{BA})^{-1}\\boldsymbol y))\\\\\n&=\\dfrac{1}{\\sqrt{2^d\\pi^d\\det(\\boldsymbol\\Lambda)}}\\exp(-\\dfrac{1}{2}\\boldsymbol y^T(\\boldsymbol B\\boldsymbol{\\Lambda}^{-1}\\boldsymbol B^{-1})\\boldsymbol y)\n\\end{aligned}\n\\]\n根据线性代数知识 \\(\\det(\\boldsymbol B\\boldsymbol{A}^{-2}\\boldsymbol B^{-1})=\\det(\\boldsymbol\\Lambda)^{-1}\\)\n根据对称矩阵的性质，只要协方差矩阵与\\(\\boldsymbol\\Lambda\\)拥有相同的特征值（它的特征值即对角元），即可化为该形式。\n因此可以得到结论，协方差矩阵的特征值决定随机变量的尺度，而均值向量决定随机变量的位置。\n\n\n7.2 本节参考\n知乎 - Xinyu Chen的回答\nMATLAB官方文档",
+    "section": "8 多元正态分布",
+    "text": "8 多元正态分布\n多元正态分布接受两个参数：均值向量 \\(\\boldsymbol\\mu\\) 和协方差矩阵 \\(\\boldsymbol\\Sigma\\)，它的密度函数为\n\\[\nf(\\boldsymbol x;\\boldsymbol\\mu,\\boldsymbol\\Sigma)=\\dfrac{1}{\\sqrt{\\det(2\\pi\\Sigma)}}\\exp(-\\dfrac{1}{2}(\\boldsymbol x-\\boldsymbol\\mu)^T\\Sigma^{-1}(\\boldsymbol x-\\boldsymbol\\mu))\n\\]\n其中\n\n\\(\\boldsymbol x\\)是变量向量，维数是 \\(d\\)\n\\(\\boldsymbol\\mu\\)是均值向量，维数是 \\(d\\)\n\\(\\boldsymbol\\Sigma\\)是正定对称矩阵，维数是 \\(d\\times d\\)\n\n\n\n\n\n\n\n注释\n\n\n\n\n注意，系数上的行列式，在计算时矩阵前方的系数实际上还要再做\\(d\\)次幂运算。\n由于协方差矩阵是正定的，因此它一定是非奇异的。\n\n\n\n特别地，随机变量 \\((X,Y)\\) 服从二元正态分布，记作 \\((X,Y)\\sim N(\\mu_1,\\mu_2;\\sigma^2_1,\\sigma^2_2;\\theta)\\)，\\(\\theta\\)表示两个变量之间的相关系数。\n\n8.1 从线性变换的角度看多元正态分布\n零均值多元正态分布 \\(N(\\boldsymbol0,\\boldsymbol\\Sigma)\\)可以看做标准多元正态分布 \\(N(\\boldsymbol 0,\\boldsymbol E)\\) 做线性变换得到的，其中\\(\\boldsymbol E\\)是单位矩阵。\n设随机变量向量 \\(\\boldsymbol X\\sim N(\\boldsymbol0,\\boldsymbol E)\\).\n对 \\(\\boldsymbol X\\) 做倍乘变换再做正交变换 \\(Y=\\boldsymbol{BAX}\\)，\\(\\boldsymbol A\\)是对角矩阵，且 \\(\\boldsymbol A^2=\\boldsymbol\\Lambda\\)，\\(\\boldsymbol B\\)是正交矩阵，有 \\(\\boldsymbol X=(\\boldsymbol{BA})^{-1}\\boldsymbol Y\\)，且\\(\\boldsymbol B^T=\\boldsymbol B^{-1}\\).\n容易知道任意线性变换都可由\\(\\boldsymbol{BA}\\)表出。\n经过倍增变换，协方差矩阵变为 \\(\\boldsymbol\\Lambda\\). 正交变换不改变协方差行列式的值。\n代入概率密度公式，有\n\\[\n\\begin{aligned}\nf(\\boldsymbol y)\n&=\\dfrac{1}{\\sqrt{2^d\\pi^d\\det(\\boldsymbol\\Lambda)}}\\exp(-\\dfrac{1}{2}((\\boldsymbol{BA})^{-1}\\boldsymbol y)^T(\\boldsymbol{BA})^{-1}\\boldsymbol y))\\\\\n&=\\dfrac{1}{\\sqrt{2^d\\pi^d\\det(\\boldsymbol\\Lambda)}}\\exp(-\\dfrac{1}{2}\\boldsymbol y^T(\\boldsymbol B\\boldsymbol{\\Lambda}^{-1}\\boldsymbol B^{-1})\\boldsymbol y)\n\\end{aligned}\n\\]\n根据线性代数知识 \\(\\det(\\boldsymbol B\\boldsymbol{A}^{-2}\\boldsymbol B^{-1})=\\det(\\boldsymbol\\Lambda)^{-1}\\)\n根据对称矩阵的性质，只要协方差矩阵与\\(\\boldsymbol\\Lambda\\)拥有相同的特征值（它的特征值即对角元），即可化为该形式。\n因此可以得到结论，协方差矩阵的特征值决定随机变量的尺度，而均值向量决定随机变量的位置。\n\n\n8.2 本节参考\n知乎 - Xinyu Chen的回答\nMATLAB官方文档",
+    "crumbs": [
+      "考研数学",
+      "概统",
+      "概率论基本知识"
+    ]
+  },
+  {
+    "objectID": "考研数学/概统/概率论基本知识.html#边际分布和多维随机变量的独立性",
+    "href": "考研数学/概统/概率论基本知识.html#边际分布和多维随机变量的独立性",
+    "title": "概率论基本知识",
+    "section": "9 边际分布和多维随机变量的独立性",
+    "text": "9 边际分布和多维随机变量的独立性\n多维随机变量的分布函数，当其中的一个或几个变量趋于无穷后，可以得到剩余变量的联合边际分布函数。\n以二维随机变量\\((X,Y)\\)为例，其联合分布函数为\\(F(x,y)\\)，则\\(X\\)的边际分布为\n\\[\nF_X(x)=\\lim_{y\\to+\\infty}F(x,y)\n\\]\n在离散场合，可以类似得到。\n边际密度函数，只需要把上述的分布函数换成概率密度函数并相应积分，还是以二维随机变量为例\n\\[\np_X(x)=\\int_{-\\infty}^{+\\infty} p(x,y)\\mathrm dy\n\\]\n在涉及多维随机变量的积分时，要注意积分区域的确定。\n\n9.1 多维随机变量的独立性\n多维随机变量\\(X_1,X_2,\\cdots,X_n\\)的联合分布函数为\\(F(x_1,x_2,\\cdots,x_n)\\)，边际分布为\\(F_i(x_i)\\)，如果有\n\\[\nF(x_1,x_2,\\cdots,x_n)=\\prod_{i=1}^n F_i(x_i)\n\\]\n则称\\(X_1,X_2,\\cdots,X_n\\)相互独立。\n连续时，可以转化为密度函数\n\\[\np(x_1,x_2,\\cdots,x_n)=\\prod_{i=1}^n p_i(x_i)\n\\]\n由此可以知道独立的随机变量积的期望等于期望的积，即\n\\[\nE(XY)=E(X)E(Y)\n\\]\n在更多维度的条件下也可以给出类似的结论。\n并且由上面的性质可以得到独立的随机变量一定不相关（协方差为 0），注意，反之不一定成立，独立是比不相关更强的条件。",
     "crumbs": [
       "考研数学",
       "概统",
@@ -791,8 +815,44 @@
     "objectID": "考研数学/概统/概率论基本知识.html#卷积",
     "href": "考研数学/概统/概率论基本知识.html#卷积",
     "title": "概率论基本知识",
-    "section": "8 卷积",
-    "text": "8 卷积\n卷积是计算两随机变量分布和的方法。\n\n8.1 离散情况\n\\[\nP(X+Y=k)=\\sum_{i=-\\infty}^{+\\infty}P(X=i,Y=k-i)\n\\]\n\n\n8.2 连续情况\n\\[\nP(X+Y\\lt t)=\\int_{-\\infty}^{+\\infty}f(s,t-s)\\mathrm ds\n\\]\n当 \\(X,Y\\) 独立时，有\n\\[\nP(X+Y\\lt t)=\\int_{-\\infty}^{+\\infty}f(s)g(t-s)\\mathrm ds\n\\]\n卷积运算是一个算子，通过两个函数生成第三个函数，记作\n\\[\n(f\\circ g)(x)=\\int_{-\\infty}^{+\\infty}f(s)g(x-s)\\mathrm ds\n\\]",
+    "section": "10 卷积",
+    "text": "10 卷积\n卷积是计算两随机变量分布和的方法。\n\n10.1 离散情况\n\\[\nP(X+Y=k)=\\sum_{i=-\\infty}^{+\\infty}P(X=i,Y=k-i)\n\\]\n\n\n10.2 连续情况\n\\[\nP(X+Y\\lt t)=\\int_{-\\infty}^{+\\infty}f(s,t-s)\\mathrm ds\n\\]\n当 \\(X,Y\\) 独立时，有\n\\[\nP(X+Y\\lt t)=\\int_{-\\infty}^{+\\infty}f(s)g(t-s)\\mathrm ds\n\\]\n卷积运算是一个算子，通过两个函数生成第三个函数，记作\n\\[\n(f\\circ g)(x)=\\int_{-\\infty}^{+\\infty}f(s)g(x-s)\\mathrm ds\n\\]",
+    "crumbs": [
+      "考研数学",
+      "概统",
+      "概率论基本知识"
+    ]
+  },
+  {
+    "objectID": "考研数学/概统/概率论基本知识.html#随机变量序列的两种收敛",
+    "href": "考研数学/概统/概率论基本知识.html#随机变量序列的两种收敛",
+    "title": "概率论基本知识",
+    "section": "11 随机变量序列的两种收敛",
+    "text": "11 随机变量序列的两种收敛\n假设随机变量序列\\(\\{X_n\\}\\)的分布函数序列为\\(\\{F_n(x)\\}\\)，\\(X\\)为任意给定的随机变量。\n\n11.1 依概率收敛\n\\[\n\\forall\\epsilon\\gt0,\\lim_{n\\to\\infty}P(|X_n-X|\\geq\\epsilon)=0\n\\]\n记作\\(X_n\\stackrel{P}{\\longrightarrow}X\\)\n\n\n11.2 按分布收敛\n\\[\n\\lim_{n\\to\\infty}F_n(x)=F(x)\n\\]\n记作\\(X_n\\stackrel{L}{\\longrightarrow}X\\)\n\n\n11.3 性质\n依概率收敛强于按分布收敛。并且依概率收敛可以推出按分布收敛。\n在\\(X\\)服从退化分布时，二者是等价的，即\n\\[\nX_n\\stackrel{P}{\\longrightarrow}c\\iff X_n\\stackrel{L}{\\longrightarrow}c\n\\]",
+    "crumbs": [
+      "考研数学",
+      "概统",
+      "概率论基本知识"
+    ]
+  },
+  {
+    "objectID": "考研数学/概统/概率论基本知识.html#特征函数",
+    "href": "考研数学/概统/概率论基本知识.html#特征函数",
+    "title": "概率论基本知识",
+    "section": "12 特征函数",
+    "text": "12 特征函数\n\\[\n\\varphi(t)=E(\\mathrm e^{itX})=\\int \\mathrm e^{itx}\\mathrm dF(x)\n\\]\n称为随机变量的特征函数。\n常见分布的特征函数列在了上面的表格里。特征函数有如下性质：\n\n\\(|\\varphi(t)|\\leq\\varphi(0)=1\\)\n\\(\\varphi(-t)=\\overline{\\varphi(t)}\\)\n若\\(Y=aX+b\\)，则 \\[\n\\varphi_Y(t)=\\mathrm e^{ibt}\\varphi_X(at)\n\\]\n若随机变量\\(X,Y\\)独立，则 \\[\n\\varphi_{X+Y}(t)=\\varphi_X(t)\\varphi_Y(t)\n\\]\n\\(\\varphi^{(0)}(t)=i^kE(X^k)\\)，可以通过这个性质求随机变量的各阶原点矩（如果存在），进而求出中心矩。\n特征函数和分布函数相互唯一确定。",
+    "crumbs": [
+      "考研数学",
+      "概统",
+      "概率论基本知识"
+    ]
+  },
+  {
+    "objectID": "考研数学/概统/概率论基本知识.html#大数定律",
+    "href": "考研数学/概统/概率论基本知识.html#大数定律",
+    "title": "概率论基本知识",
+    "section": "13 大数定律",
+    "text": "13 大数定律\n大数定律告诉我们频率依概率收敛到概率，即频率的回归性。同时也提供了经验分布函数和矩估计的理论依据。",
     "crumbs": [
       "考研数学",
       "概统",
@@ -992,11 +1052,23 @@
     ]
   },
   {
+    "objectID": "考研数学/高数/三角函数.html#三角函数嵌套反三角函数",
+    "href": "考研数学/高数/三角函数.html#三角函数嵌套反三角函数",
+    "title": "三角函数",
+    "section": "3 三角函数嵌套反三角函数",
+    "text": "3 三角函数嵌套反三角函数\n前提条件\\(x\\in(0,\\dfrac{\\pi}{2})\\)\n\\[\n\\begin{aligned}\n&\\sin\\arccos x=\\cos\\arcsin x=\\sqrt{1-x^2}\\\\\n&\\sin\\arctan x=\\dfrac{x}{\\sqrt{1+x^2}}\\\\\n&\\cos\\arctan x=\\dfrac{1}{\\sqrt{1+x^2}}\\\\\n&\\tan\\arcsin x=\\dfrac{x}{\\sqrt{1-x^2}}\\\\\n&\\tan\\arccos x=\\dfrac{\\sqrt{1-x^2}}{x}\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "三角函数"
+    ]
+  },
+  {
     "objectID": "考研数学/高数/导数和微分.html",
     "href": "考研数学/高数/导数和微分.html",
     "title": "导数和微分",
     "section": "",
-    "text": "\\[\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}\n\\] \\[\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial y}\\\\\n\\]",
+    "text": "如果\\(f(x)\\)满足以下条件：\n\n在闭区间\\([a,b]\\)上连续\n在开区间\\((a,b)\\)内可导\n\n那么有如下结论：\n在\\((a,b)\\)上存在一点\\(\\xi\\)，使得\n\\[\nf'(\\xi)=\\dfrac{f(b)-f(a)}{b-a}\n\\]",
     "crumbs": [
       "考研数学",
       "高数",
@@ -1004,23 +1076,11 @@
     ]
   },
   {
-    "objectID": "考研数学/高数/导数和微分.html#二元函数求偏导链式法则",
-    "href": "考研数学/高数/导数和微分.html#二元函数求偏导链式法则",
+    "objectID": "考研数学/高数/导数和微分.html#拉格朗日中值定理",
+    "href": "考研数学/高数/导数和微分.html#拉格朗日中值定理",
     "title": "导数和微分",
     "section": "",
-    "text": "\\[\n\\dfrac{\\partial z}{\\partial x}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial x}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial x}\n\\] \\[\n\\dfrac{\\partial z}{\\partial y}=\\dfrac{\\partial z}{\\partial u}\\cdot\\dfrac{\\partial u}{\\partial y}+\\dfrac{\\partial z}{\\partial v}\\cdot\\dfrac{\\partial v}{\\partial y}\\\\\n\\]",
-    "crumbs": [
-      "考研数学",
-      "高数",
-      "导数和微分"
-    ]
-  },
-  {
-    "objectID": "考研数学/高数/导数和微分.html#二元函数全微分",
-    "href": "考研数学/高数/导数和微分.html#二元函数全微分",
-    "title": "导数和微分",
-    "section": "2 二元函数全微分",
-    "text": "2 二元函数全微分\n\\[\n\\mathrm{d}z=\\dfrac{\\partial z}{\\partial x}\\mathrm{d}x+\\dfrac{\\partial z}{\\partial y}\\mathrm{d}y\n\\]",
+    "text": "如果\\(f(x)\\)满足以下条件：\n\n在闭区间\\([a,b]\\)上连续\n在开区间\\((a,b)\\)内可导\n\n那么有如下结论：\n在\\((a,b)\\)上存在一点\\(\\xi\\)，使得\n\\[\nf'(\\xi)=\\dfrac{f(b)-f(a)}{b-a}\n\\]",
     "crumbs": [
       "考研数学",
       "高数",
@@ -1031,8 +1091,8 @@
     "objectID": "考研数学/高数/导数和微分.html#taylor-formula",
     "href": "考研数学/高数/导数和微分.html#taylor-formula",
     "title": "导数和微分",
-    "section": "3 Taylor Formula",
-    "text": "3 Taylor Formula\n\\[\nf(x)=f(x-x_0)+f'(x_0)(x-x_0)+o(x)\n\\]\n\\[\nf(x)=f(x-x_0)+\\sum_{i=1}^{\\infty}f^{(i)}(x_0)\\dfrac{(x-x_0)^n}{i!}\n\\]\n\n\n\n常用泰勒展开式",
+    "section": "2 Taylor Formula",
+    "text": "2 Taylor Formula\n\\[\nf(x)=f(x-x_0)+f'(x_0)(x-x_0)+o(x)\n\\]\n\\[\nf(x)=f(x-x_0)+\\sum_{i=1}^{\\infty}f^{(i)}(x_0)\\dfrac{(x-x_0)^n}{i!}\n\\]\n\n\n\n常用泰勒展开式",
     "crumbs": [
       "考研数学",
       "高数",
@@ -1043,8 +1103,8 @@
     "objectID": "考研数学/高数/导数和微分.html#有理化",
     "href": "考研数学/高数/导数和微分.html#有理化",
     "title": "导数和微分",
-    "section": "4 有理化",
-    "text": "4 有理化\n求极限时，若分子或分母上出现了根式做差，很多时候可以利用平方差公式进行分子或分母有理化，或三次方公式也可以。",
+    "section": "3 有理化",
+    "text": "3 有理化\n求极限时，若分子或分母上出现了根式做差，很多时候可以利用平方差公式进行分子或分母有理化，或三次方公式也可以。",
     "crumbs": [
       "考研数学",
       "高数",
@@ -1055,8 +1115,20 @@
     "objectID": "考研数学/高数/导数和微分.html#导数定义",
     "href": "考研数学/高数/导数和微分.html#导数定义",
     "title": "导数和微分",
-    "section": "5 导数定义",
-    "text": "5 导数定义\n给定函数\\(f(x)\\)，若极限\n\\[\n\\lim_{\\Delta x\\to0}\\dfrac{f(x_0\\pm\\Delta x)-f(x_0)}{\\Delta x}\n\\]\n存在，且相等则称其为\\(f(x)\\)在\\(x_0\\)处的导数，并称\\(f(x)\\)在\\(x=x_0\\)处可导。",
+    "section": "4 导数定义",
+    "text": "4 导数定义\n给定函数\\(f(x)\\)，若极限\n\\[\n\\lim_{\\Delta x\\to0}\\dfrac{f(x_0\\pm\\Delta x)-f(x_0)}{\\Delta x}\n\\]\n存在，且相等则称其为\\(f(x)\\)在\\(x_0\\)处的导数，并称\\(f(x)\\)在\\(x=x_0\\)处可导。",
+    "crumbs": [
+      "考研数学",
+      "高数",
+      "导数和微分"
+    ]
+  },
+  {
+    "objectID": "考研数学/高数/导数和微分.html#导数的存在性和极限",
+    "href": "考研数学/高数/导数和微分.html#导数的存在性和极限",
+    "title": "导数和微分",
+    "section": "5 导数的存在性和极限",
+    "text": "5 导数的存在性和极限\n\n\\(f(x)\\)在\\(x_0\\)处可导，则\\(f(x)\\)在\\(x_0\\)处连续。但\\(\\lim_{x\\to x_0}f'(x)\\)存在，不能导出则\\(f(x)\\)在\\(x_0\\)处连续\n如果\\(f(x_0)\\)在\\(x_0\\)附近的某空心邻域内可导且\\(f'(x)\\)在\\(x_0\\)处的极限为\\(A\\)，那么\n\n如果\\(f'(x)\\)在\\(x_0\\)处的极限为\\(A\\)，\\(f(x)\\)在\\(x_0\\)处不连续，那么\\(f'(x_0)\\)不存在\n如果\\(f'(x)\\)在\\(x_0\\)处的极限为\\(A\\)，\\(f(x)\\)在\\(x_0\\)处连续，那么\\(f'(x_0)=A\\)\n\\(f'(x)\\)在\\(x_0\\)处的极限等于无穷，那么\\(f'(x_0)\\)不存在\n如果\\(f'(x)\\)在\\(x_0\\)处的极限不等于无穷，也不存在，此时不能确定\\(f'(x_0)\\)的存在性",
     "crumbs": [
       "考研数学",
       "高数",

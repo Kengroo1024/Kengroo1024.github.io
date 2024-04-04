@@ -288,7 +288,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#可分离变量的方程" id="toc-可分离变量的方程" class="nav-link active" data-scroll-target="#可分离变量的方程"><span class="header-section-number">1</span> 可分离变量的方程</a></li>
-  <li><a href="#齐次微分方程" id="toc-齐次微分方程" class="nav-link" data-scroll-target="#齐次微分方程"><span class="header-section-number">2</span> 齐次微分方程</a></li>
+  <li><a href="#一种特殊的齐次微分方程" id="toc-一种特殊的齐次微分方程" class="nav-link" data-scroll-target="#一种特殊的齐次微分方程"><span class="header-section-number">2</span> 一种特殊的齐次微分方程</a></li>
   <li><a href="#一阶线性微分方程" id="toc-一阶线性微分方程" class="nav-link" data-scroll-target="#一阶线性微分方程"><span class="header-section-number">3</span> 一阶线性微分方程</a></li>
   <li><a href="#线性微分方程解的结构" id="toc-线性微分方程解的结构" class="nav-link" data-scroll-target="#线性微分方程解的结构"><span class="header-section-number">4</span> 线性微分方程解的结构</a>
   <ul class="collapse">
@@ -343,7 +343,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改的</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月10日</p>
+      <p class="date-modified">2024年4月4日</p>
     </div>
   </div>
     
@@ -356,14 +356,14 @@ window.Quarto = {
 
 <section id="可分离变量的方程" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="可分离变量的方程"><span class="header-section-number">1</span> 可分离变量的方程</h2>
-<p>可以被表示为<span class="math inline">\(g(x)\mathrm dy=f(x)\mathrm dx\)</span>的方程</p>
+<p>可以被表示为<span class="math inline">\(g(y)\mathrm dy=f(x)\mathrm dx\)</span>的方程</p>
 <p>求解方法：两边积分</p>
 <p><span class="math display">\[
 \int g(y)\mathrm dy=\int f(x)\mathrm dx
 \]</span></p>
 </section>
-<section id="齐次微分方程" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="齐次微分方程"><span class="header-section-number">2</span> 齐次微分方程</h2>
+<section id="一种特殊的齐次微分方程" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="一种特殊的齐次微分方程"><span class="header-section-number">2</span> 一种特殊的齐次微分方程</h2>
 <p>可以被表示为<span class="math inline">\(\dfrac{\mathrm dy}{\mathrm dx}=\varphi(\dfrac yx)\)</span>的方程</p>
 <p>求解方法：令<span class="math inline">\(u=\dfrac yx\)</span>，有<span class="math inline">\(y'=u+xu'\)</span>，则原方程可以化为</p>
 <p><span class="math display">\[
@@ -391,13 +391,13 @@ y=
 <section id="线性微分方程解的结构" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="线性微分方程解的结构"><span class="header-section-number">4</span> 线性微分方程解的结构</h2>
 <blockquote class="blockquote">
-<p>[!note] 可以和线性方程组解的结构类比证明和记忆。</p>
+<p>可以和线性方程组解的结构类比证明和记忆。</p>
 </blockquote>
 <p><span class="math inline">\(n\)</span>阶线性微分方程的一般形式为</p>
 <p><span class="math display">\[
 y^{(n)}+\sum_{i=1}^{n} p_{i}(x)y^{(n-i)}=q(x)
 \]</span></p>
-<p>规定<span class="math inline">\(y^{(0)}=y\)</span>. 当<span class="math inline">\(f(x)=0\)</span>时称为<span class="math inline">\(n\)</span>阶齐次线性微分方程。</p>
+<p>规定<span class="math inline">\(y^{(0)}=y\)</span>. 当<span class="math inline">\(q(x)=0\)</span>时称为<span class="math inline">\(n\)</span>阶齐次线性微分方程。</p>
 <p>在此特别研究二阶线性微分方程。</p>
 <p>二阶齐次线性方程</p>
 <p><span class="math display">\[
@@ -446,7 +446,7 @@ y''+p(x)y'+q(x)y=f_1(x)+f_2(x)
 <p>采用特征根法求解，以二阶为例。</p>
 <p>二阶常系数齐次微分方程一般形式为</p>
 <p><span class="math display">\[
-y''+py'+q=0
+y''+py'+qy=0
 \]</span></p>
 <p>特征方程为</p>
 <p><span class="math display">\[
@@ -480,11 +480,11 @@ y=\sum_{i=1}^n \mathrm C_ie^{r_i}
 y''+py'+q=f(x)
 \]</span></p>
 <ol type="1">
-<li><p>若<span class="math inline">\(f(x)=P_m(x)e^{\lambda x}\)</span>，其中<span class="math inline">\(P_m(x)\)</span>为<span class="math inline">\(x\)</span>的<span class="math inline">\(m\)</span>次多项式，<span class="math inline">\(\lambda\)</span>为特征方程的一个根，那么特解可以表示为</p>
+<li><p>若<span class="math inline">\(f(x)=P_m(x)e^{\lambda x}\)</span>，其中<span class="math inline">\(P_m(x)\)</span>为<span class="math inline">\(x\)</span>的<span class="math inline">\(m\)</span>次多项式，那么特解可以表示为</p>
 <p><span class="math display">\[
 y^*(x)=x^kQ_m(x)\mathrm e^{\lambda x}
 \]</span></p>
-<p>其中<span class="math inline">\(k\)</span>是<span class="math inline">\(\lambda\)</span>的重数，<span class="math inline">\(Q_m(x)\)</span>是与<span class="math inline">\(P_m(x)\)</span>同次的多项式。</p></li>
+<p>其中<span class="math inline">\(k\)</span>是<span class="math inline">\(\lambda\)</span>作为特征方程根的重数（如果不是按0重计算），<span class="math inline">\(Q_m(x)\)</span>是与<span class="math inline">\(P_m(x)\)</span>同次的多项式。</p></li>
 <li><p>若<span class="math display">\[f(x)=\mathrm e^{ax}[P_l^{(1)}(x)\cos bx+P_n^{(2)}(x)\sin bx]\]</span>其中<span class="math inline">\(P_l^{(1)},P_n^{(2)}\)</span>分别是<span class="math inline">\(x\)</span>的<span class="math inline">\(l,n\)</span>次多项式，则特解可以表示为</p>
 <p><span class="math display">\[
 y^*(x)=x^k\mathrm e^{ax}[R_m^{(1)}(x)\cos bx+R_m^{(2)}(x)\sin bx]
@@ -501,10 +501,10 @@ k=\left\{\begin{aligned}
 </section>
 <section id="差分方程" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="差分方程"><span class="header-section-number">6</span> 差分方程</h2>
-<p>函数<span class="math inline">\(f(x)\)</span>定义在数列<span class="math inline">\(\{a_n\}\)</span>上，令<span class="math inline">\(y_n=f(x_n)\)</span>，定义<span class="math inline">\(\Delta\)</span>为差分算子，即<span class="math inline">\(\Delta y_n=y_n-y_{n-1}\)</span>.</p>
+<p>函数<span class="math inline">\(f(x)\)</span>定义在数列<span class="math inline">\(\{x_n\}\)</span>上，令<span class="math inline">\(y_n=f(x_n)\)</span>，定义<span class="math inline">\(\Delta\)</span>为差分算子，即<span class="math inline">\(\Delta y_n=y_n-y_{n-1}\)</span>.</p>
 <p>称形如</p>
 <p><span class="math display">\[
-F(x_n,\Delta y_n,\Delta^2 y_n,...,\Delta^n y_n)=0
+F(x_n,\Delta y_n,\Delta^2 y_n,\cdots,\Delta^n y_n)=0
 \]</span></p>
 <p>的含有因变量的差分的方程为差分方程。</p>
 <p>把数列看成定义在自然数子集上的函数，可以看出差分方程和递推关系完全等价。</p>
@@ -534,19 +534,19 @@ u_n=\sum_{i=1}^k a_iu_{n-i}+f(n)
 <h3 data-number="6.2" class="anchored" data-anchor-id="特征根法"><span class="header-section-number">6.2</span> 特征根法</h3>
 <p>将递推关系式</p>
 <p><span class="math display">\[
-u_n-a_1u_{n-1}-a_2u_{n-2}-...-a_k-u_{n-k}=0
+u_n-a_1u_{n-1}-a_2u_{n-2}-\cdots-a_k-u_{n-k}=0
 \]</span></p>
 <p>改写为如下的特征方程</p>
 <p><span class="math display">\[
-x^k-a_1x^{k-1}-...-a_{k-1}x-a_k=0
+x^k-a_1x^{k-1}-\cdots-a_{k-1}x-a_k=0
 \]</span></p>
 <p>有如下定理</p>
 <ol type="1">
 <li><p>设<span class="math inline">\(q\in C\)</span>且<span class="math inline">\(q\not=0\)</span>，<span class="math inline">\(u_n=q^n\)</span>是递推关系的一个解当且仅当<span class="math inline">\(q\)</span>是特征方程的一个根。<span class="math inline">\(q\)</span>称为递推关系的一个<span class="math inline">\(m\)</span>重特征根，当<span class="math inline">\(q\)</span>是特征方程的<span class="math inline">\(m\)</span>重根，简称特征根。</p></li>
 <li><p>设<span class="math inline">\(g_i(n)\)</span>都是递推关系的解，那么它们的线性组合也是递推关系的解</p></li>
-<li><p>如果递推关系有<span class="math inline">\(k\)</span>个彼此相异的特征根<span class="math inline">\(q_1,q_2,...,q_k\)</span>，那么</p>
+<li><p>如果递推关系有<span class="math inline">\(k\)</span>个彼此相异的特征根<span class="math inline">\(q_1,q_2,\cdots,q_k\)</span>，那么</p>
 <p><span class="math display">\[
-u_n=c_1q_1^n+c_2q_2^n+...+c_kq_k^n
+u_n=c_1q_1^n+c_2q_2^n+\cdots+c_kq_k^n
 \]</span></p>
 <p>是递推关系的通解。</p></li>
 </ol>
@@ -554,16 +554,16 @@ u_n=c_1q_1^n+c_2q_2^n+...+c_kq_k^n
 <h4 data-number="6.2.1" class="anchored" data-anchor-id="有重根时的常系数线性齐次递推关系解法"><span class="header-section-number">6.2.1</span> 有重根时的常系数线性齐次递推关系解法</h4>
 <p>设<span class="math inline">\(q\)</span>是递推关系的一个<span class="math inline">\(m\)</span>重特征根，那么</p>
 <p><span class="math display">\[
-u_n=n^jq^n,j=0,1,2,...,m-1
+u_n=n^jq^n,j=0,1,2,\cdots,m-1
 \]</span></p>
 <p>都是递推关系的解。</p>
-<p>设递推关系有<span class="math inline">\(t\)</span>个相异的特征根<span class="math inline">\(q_1,q_2,...,q_t\)</span>，其中<span class="math inline">\(q_i\)</span>是<span class="math inline">\(e_i\)</span>重根，<span class="math inline">\(i=1,2,...,t\)</span>. 令</p>
+<p>设递推关系有<span class="math inline">\(t\)</span>个相异的特征根<span class="math inline">\(q_1,q_2,\cdots,q_t\)</span>，其中<span class="math inline">\(q_i\)</span>是<span class="math inline">\(e_i\)</span>重根，<span class="math inline">\(i=1,2,\cdots,t\)</span>. 令</p>
 <p><span class="math display">\[
-h_i(n)=c_{i1}+c_{i2}n+...+c_{ie_i}n^{e_i-1}
+h_i(n)=c_{i1}+c_{i2}n+\cdots+c_{ie_i}n^{e_i-1}
 \]</span></p>
 <p>那么递推关系的通解为</p>
 <p><span class="math display">\[
-u_n=h_1(n)q_1^n+h_2(n)q_2^n+...+h_t(n)q_t^n
+u_n=h_1(n)q_1^n+h_2(n)q_2^n+\cdots+h_t(n)q_t^n
 \]</span></p>
 </section>
 <section id="两类特殊常系数非齐次线性递推关系的解" class="level4" data-number="6.2.2">

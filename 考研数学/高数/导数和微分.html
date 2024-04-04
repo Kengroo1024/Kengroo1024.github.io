@@ -287,11 +287,11 @@ window.Quarto = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#二元函数求偏导链式法则" id="toc-二元函数求偏导链式法则" class="nav-link active" data-scroll-target="#二元函数求偏导链式法则"><span class="header-section-number">1</span> 二元函数求偏导链式法则</a></li>
-  <li><a href="#二元函数全微分" id="toc-二元函数全微分" class="nav-link" data-scroll-target="#二元函数全微分"><span class="header-section-number">2</span> 二元函数全微分</a></li>
-  <li><a href="#taylor-formula" id="toc-taylor-formula" class="nav-link" data-scroll-target="#taylor-formula"><span class="header-section-number">3</span> Taylor Formula</a></li>
-  <li><a href="#有理化" id="toc-有理化" class="nav-link" data-scroll-target="#有理化"><span class="header-section-number">4</span> 有理化</a></li>
-  <li><a href="#导数定义" id="toc-导数定义" class="nav-link" data-scroll-target="#导数定义"><span class="header-section-number">5</span> 导数定义</a></li>
+  <li><a href="#拉格朗日中值定理" id="toc-拉格朗日中值定理" class="nav-link active" data-scroll-target="#拉格朗日中值定理"><span class="header-section-number">1</span> 拉格朗日中值定理</a></li>
+  <li><a href="#taylor-formula" id="toc-taylor-formula" class="nav-link" data-scroll-target="#taylor-formula"><span class="header-section-number">2</span> Taylor Formula</a></li>
+  <li><a href="#有理化" id="toc-有理化" class="nav-link" data-scroll-target="#有理化"><span class="header-section-number">3</span> 有理化</a></li>
+  <li><a href="#导数定义" id="toc-导数定义" class="nav-link" data-scroll-target="#导数定义"><span class="header-section-number">4</span> 导数定义</a></li>
+  <li><a href="#导数的存在性和极限" id="toc-导数的存在性和极限" class="nav-link" data-scroll-target="#导数的存在性和极限"><span class="header-section-number">5</span> 导数的存在性和极限</a></li>
   <li><a href="#高阶无穷小量" id="toc-高阶无穷小量" class="nav-link" data-scroll-target="#高阶无穷小量"><span class="header-section-number">6</span> 高阶无穷小量</a></li>
   <li><a href="#一阶微分的形式不变性和高阶微分没有此性质" id="toc-一阶微分的形式不变性和高阶微分没有此性质" class="nav-link" data-scroll-target="#一阶微分的形式不变性和高阶微分没有此性质"><span class="header-section-number">7</span> 一阶微分的形式不变性和高阶微分没有此性质</a></li>
   <li><a href="#渐近线" id="toc-渐近线" class="nav-link" data-scroll-target="#渐近线"><span class="header-section-number">8</span> 渐近线</a></li>
@@ -331,7 +331,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">修改的</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024年3月26日</p>
+      <p class="date-modified">2024年4月4日</p>
     </div>
   </div>
     
@@ -342,22 +342,21 @@ window.Quarto = {
 </header>
 
 
-<section id="二元函数求偏导链式法则" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="二元函数求偏导链式法则"><span class="header-section-number">1</span> 二元函数求偏导链式法则</h2>
+<section id="拉格朗日中值定理" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="拉格朗日中值定理"><span class="header-section-number">1</span> 拉格朗日中值定理</h2>
+<p>如果<span class="math inline">\(f(x)\)</span>满足以下条件：</p>
+<ul>
+<li>在闭区间<span class="math inline">\([a,b]\)</span>上连续</li>
+<li>在开区间<span class="math inline">\((a,b)\)</span>内可导</li>
+</ul>
+<p>那么有如下结论：</p>
+<p>在<span class="math inline">\((a,b)\)</span>上存在一点<span class="math inline">\(\xi\)</span>，使得</p>
 <p><span class="math display">\[
-\dfrac{\partial z}{\partial x}=\dfrac{\partial z}{\partial u}\cdot\dfrac{\partial u}{\partial x}+\dfrac{\partial z}{\partial v}\cdot\dfrac{\partial v}{\partial x}
-\]</span> <span class="math display">\[
-\dfrac{\partial z}{\partial y}=\dfrac{\partial z}{\partial u}\cdot\dfrac{\partial u}{\partial y}+\dfrac{\partial z}{\partial v}\cdot\dfrac{\partial v}{\partial y}\\
+f'(\xi)=\dfrac{f(b)-f(a)}{b-a}
 \]</span></p>
 </section>
-<section id="二元函数全微分" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="二元函数全微分"><span class="header-section-number">2</span> 二元函数全微分</h2>
-<p><span class="math display">\[
-\mathrm{d}z=\dfrac{\partial z}{\partial x}\mathrm{d}x+\dfrac{\partial z}{\partial y}\mathrm{d}y
-\]</span></p>
-</section>
-<section id="taylor-formula" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="taylor-formula"><span class="header-section-number">3</span> Taylor Formula</h2>
+<section id="taylor-formula" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="taylor-formula"><span class="header-section-number">2</span> Taylor Formula</h2>
 <p><span class="math display">\[
 f(x)=f(x-x_0)+f'(x_0)(x-x_0)+o(x)
 \]</span></p>
@@ -371,17 +370,30 @@ f(x)=f(x-x_0)+\sum_{i=1}^{\infty}f^{(i)}(x_0)\dfrac{(x-x_0)^n}{i!}
 </figure>
 </div>
 </section>
-<section id="有理化" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="有理化"><span class="header-section-number">4</span> 有理化</h2>
+<section id="有理化" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="有理化"><span class="header-section-number">3</span> 有理化</h2>
 <p>求极限时，若分子或分母上出现了根式做差，很多时候可以利用平方差公式进行分子或分母有理化，或三次方公式也可以。</p>
 </section>
-<section id="导数定义" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="导数定义"><span class="header-section-number">5</span> 导数定义</h2>
+<section id="导数定义" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="导数定义"><span class="header-section-number">4</span> 导数定义</h2>
 <p>给定函数<span class="math inline">\(f(x)\)</span>，若极限</p>
 <p><span class="math display">\[
 \lim_{\Delta x\to0}\dfrac{f(x_0\pm\Delta x)-f(x_0)}{\Delta x}
 \]</span></p>
 <p>存在，且相等则称其为<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x_0\)</span>处的导数，并称<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x=x_0\)</span>处可导。</p>
+</section>
+<section id="导数的存在性和极限" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="导数的存在性和极限"><span class="header-section-number">5</span> 导数的存在性和极限</h2>
+<ol type="1">
+<li><span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x_0\)</span>处可导，则<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x_0\)</span>处连续。但<span class="math inline">\(\lim_{x\to x_0}f'(x)\)</span>存在，不能导出则<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x_0\)</span>处连续</li>
+<li>如果<span class="math inline">\(f(x_0)\)</span>在<span class="math inline">\(x_0\)</span>附近的某空心邻域内可导且<span class="math inline">\(f'(x)\)</span>在<span class="math inline">\(x_0\)</span>处的极限为<span class="math inline">\(A\)</span>，那么
+<ol type="1">
+<li>如果<span class="math inline">\(f'(x)\)</span>在<span class="math inline">\(x_0\)</span>处的极限为<span class="math inline">\(A\)</span>，<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x_0\)</span>处不连续，那么<span class="math inline">\(f'(x_0)\)</span>不存在</li>
+<li>如果<span class="math inline">\(f'(x)\)</span>在<span class="math inline">\(x_0\)</span>处的极限为<span class="math inline">\(A\)</span>，<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(x_0\)</span>处连续，那么<span class="math inline">\(f'(x_0)=A\)</span></li>
+<li><span class="math inline">\(f'(x)\)</span>在<span class="math inline">\(x_0\)</span>处的极限等于无穷，那么<span class="math inline">\(f'(x_0)\)</span>不存在</li>
+<li>如果<span class="math inline">\(f'(x)\)</span>在<span class="math inline">\(x_0\)</span>处的极限不等于无穷，也不存在，此时不能确定<span class="math inline">\(f'(x_0)\)</span>的存在性</li>
+</ol></li>
+</ol>
 </section>
 <section id="高阶无穷小量" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="高阶无穷小量"><span class="header-section-number">6</span> 高阶无穷小量</h2>
