@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kengroo - 考研数学</title>
+<title>考研数学 – Kengroo</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,17 +35,20 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-1cc1d18173f069ccc668de54e3f99b8a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-cf0d4353f96427bd63a8953a20ed0d69.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-1cc1d18173f069ccc668de54e3f99b8a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -100,8 +106,8 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -114,7 +120,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -133,7 +139,169 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -145,7 +313,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="搜索"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="切换导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="展开或折叠导航栏" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -153,6 +321,10 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">首页</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./量子力学.html"> 
+<span class="menu-text">量子力学</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./考研数学.html" aria-current="page"> 
@@ -175,7 +347,7 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="切换深色模式"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -187,9 +359,10 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">类别</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">全部 <span class="quarto-category-count">(11)</span></div><div class="category" data-category="概统">概统 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="线性代数">线性代数 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="考研数学">考研数学 <span class="quarto-category-count">(11)</span></div><div class="category" data-category="高数">高数 <span class="quarto-category-count">(5)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">分类</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">全部 <span class="quarto-category-count">(11)</span></div><div class="category" data-category="JUU2JUE2JTgyJUU3JUJCJTlG">概统 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="JUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw">线性代数 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2">考研数学 <span class="quarto-category-count">(11)</span></div><div class="category" data-category="JUU5JUFCJTk4JUU2JTk1JUIw">高数 <span class="quarto-category-count">(5)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -218,54 +391,50 @@ window.Quarto = {
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="排序方式" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">排序方式</option>
-       <option value="index" data-direction="asc">缺省</option>
-         <option value="listing-title" data-direction="asc">
-          标题
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          日期 - 日期升序
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          日期 - 日期降序
-        </option>
-         <option value="listing-author" data-direction="asc">
-          作者
-        </option>
-     </select>
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="排序方式" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">排序方式</option>
+      <option value="index" data-direction="asc">默认</option>
+      <option value="listing-title" data-direction="asc">
+        标题
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        日期 - 日期升序
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        日期 - 日期降序
+      </option>
+      <option value="listing-author" data-direction="asc">
+        作者
+      </option>
+    </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+      <input type="text" class="search form-control" placeholder="筛选">
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="考研数学,概统" data-listing-date-sort="1711209600000" data-listing-file-modified-sort="1711426918805" data-listing-date-modified-sort="1711426918000" data-listing-reading-time-sort="1" data-listing-word-count-sort="64">
-<div class="thumbnail">
-<p><a href="./考研数学/概统/统计学基本知识.html" class="no-external"></a></p><a href="./考研数学/概统/统计学基本知识.html" class="no-external">
+<div class="quarto-post image-right" data-index="0" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU2JUE2JTgyJUU3JUJCJTlG" data-listing-date-sort="1711209600000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="64">
+<div class="thumbnail"><a href="./考研数学/概统/统计学基本知识.html" class="no-external">
+
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/概统/统计学基本知识.html" class="no-external"></a></p>
-</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./考研数学/概统/统计学基本知识.html" class="no-external">统计学基本知识</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./考研数学/概统/统计学基本知识.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU2JUE2JTgyJUU3JUJCJTlG'); return false;">概统</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('概统'); return false;">
-概统
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/概统/统计学基本知识.html" class="no-external">统计学是收集、处理、分析、解释数据，并从中得到结论的学科。统计学是一门研究数据的学科</a>
-</div>
+<div class="delink listing-description"><a href="./考研数学/概统/统计学基本知识.html" class="no-external">
+统计学是收集、处理、分析、解释数据，并从中得到结论的学科。统计学是一门研究数据的学科
+</a></div>
 </div>
 <div class="metadata">
 <a href="./考研数学/概统/统计学基本知识.html" class="no-external">
@@ -278,30 +447,26 @@ Kengroo1024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="考研数学,高数" data-listing-date-sort="1710086400000" data-listing-file-modified-sort="1712224045396" data-listing-date-modified-sort="1712224045000" data-listing-reading-time-sort="2" data-listing-word-count-sort="267">
-<div class="thumbnail">
-<p><a href="./考研数学/高数/二元函数微分.html" class="no-external"></a></p><a href="./考研数学/高数/二元函数微分.html" class="no-external">
+<div class="quarto-post image-right" data-index="1" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU5JUFCJTk4JUU2JTk1JUIw" data-listing-date-sort="1710086400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="2" data-listing-word-count-sort="267">
+<div class="thumbnail"><a href="./考研数学/高数/二元函数微分.html" class="no-external">
+
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/高数/二元函数微分.html" class="no-external"></a></p>
-</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./考研数学/高数/二元函数微分.html" class="no-external">二元函数的微分</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./考研数学/高数/二元函数微分.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JUFCJTk4JUU2JTk1JUIw'); return false;">高数</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('高数'); return false;">
-高数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/高数/二元函数微分.html" class="no-external">设函数<span class="math inline">\(f(x,y)\)</span>在区域<span class="math inline">\(D\)</span>上有定义，<span class="math inline">\(P_0(x_0,y_0)\)</span>在<span class="math inline">\(D\)</span>中或其边界上。如果<span class="math inline">\(\forall\epsilon&gt;0,\exists\delta&gt;0\)</span>，对<span class="math inline">\(D\)</span>中任一点<span class="math inline">\(P\)</span>，只要<span class="math inline">\(|PP_0|&lt;\delta\)</span>，都有</a>
-</div>
+<div class="delink listing-description"><a href="./考研数学/高数/二元函数微分.html" class="no-external">
+设函数<span class="math inline">\(f(x,y)\)</span>在区域<span class="math inline">\(D\)</span>上有定义，<span class="math inline">\(P_0(x_0,y_0)\)</span>在<span class="math inline">\(D\)</span>中或其边界上。如果<span class="math inline">\(\forall\epsilon&gt;0,\exists\delta&gt;0\)</span>，对<span class="math inline">\(D\)</span>中任一点<span class="math inline">\(P\)</span>，只要<span class="math inline">\(|PP_0|&lt;\delta\)</span>，都有
+</a></div>
 </div>
 <div class="metadata">
 <a href="./考研数学/高数/二元函数微分.html" class="no-external">
@@ -314,140 +479,26 @@ Kengroo1024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="考研数学,概统" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1712223716686" data-listing-date-modified-sort="1712223716000" data-listing-reading-time-sort="11" data-listing-word-count-sort="2076">
-<div class="thumbnail">
-<p><a href="./考研数学/概统/概率论基本知识.html" class="no-external"></a></p><a href="./考研数学/概统/概率论基本知识.html" class="no-external">
+<div class="quarto-post image-right" data-index="2" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
+<div class="thumbnail"><a href="./考研数学/线性代数/矩阵.html" class="no-external">
+
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/概统/概率论基本知识.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./考研数学/概统/概率论基本知识.html" class="no-external">概率论基本知识</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./考研数学/概统/概率论基本知识.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('概统'); return false;">
-概统
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/概统/概率论基本知识.html" class="no-external"><span class="math display">\[
-P(B|A)=\dfrac{P(AB)}{P(A)}
-\]</span></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./考研数学/概统/概率论基本知识.html" class="no-external">
-<div class="listing-date">
-2024年3月1日
-</div>
-<div class="listing-author">
-Kengroo1024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="考研数学,线性代数" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1711426570604" data-listing-date-modified-sort="1711426570000" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<div class="thumbnail">
-<p><a href="./考研数学/线性代数/二次型.html" class="no-external"></a></p><a href="./考研数学/线性代数/二次型.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/线性代数/二次型.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./考研数学/线性代数/二次型.html" class="no-external">二次型</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./考研数学/线性代数/二次型.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('线性代数'); return false;">
-线性代数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/线性代数/二次型.html" class="no-external">实际上就是把二次型的矩阵<span class="math inline">\(\boldsymbol A\)</span>对角化，按矩阵的相似对角化操作即可。如果还要进一步求出所用的线性变换<span class="math inline">\(\boldsymbol P\)</span>，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./考研数学/线性代数/二次型.html" class="no-external">
-<div class="listing-date">
-2024年3月1日
-</div>
-<div class="listing-author">
-Kengroo1024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="考研数学,线性代数" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1711426623680" data-listing-date-modified-sort="1711426623000" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
-<div class="thumbnail">
-<p><a href="./考研数学/线性代数/特征向量.html" class="no-external"></a></p><a href="./考研数学/线性代数/特征向量.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/线性代数/特征向量.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./考研数学/线性代数/特征向量.html" class="no-external">特征向量</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./考研数学/线性代数/特征向量.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('线性代数'); return false;">
-线性代数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/线性代数/特征向量.html" class="no-external">可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./考研数学/线性代数/特征向量.html" class="no-external">
-<div class="listing-date">
-2024年3月1日
-</div>
-<div class="listing-author">
-Kengroo1024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="考研数学,线性代数" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1711426608187" data-listing-date-modified-sort="1711426608000" data-listing-reading-time-sort="1" data-listing-word-count-sort="81">
-<div class="thumbnail">
-<p><a href="./考研数学/线性代数/矩阵.html" class="no-external"></a></p><a href="./考研数学/线性代数/矩阵.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/线性代数/矩阵.html" class="no-external"></a></p>
-</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./考研数学/线性代数/矩阵.html" class="no-external">矩阵</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./考研数学/线性代数/矩阵.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw'); return false;">线性代数</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('线性代数'); return false;">
-线性代数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/线性代数/矩阵.html" class="no-external">二阶矩阵的特征多项式<span class="math inline">\(|\lambda\boldsymbol E-\boldsymbol A|=0\)</span>为</a>
-</div>
+<div class="delink listing-description"><a href="./考研数学/线性代数/矩阵.html" class="no-external">
+二阶矩阵的特征多项式<span class="math inline">\(|\lambda\boldsymbol E-\boldsymbol A|=0\)</span>为
+</a></div>
 </div>
 <div class="metadata">
 <a href="./考研数学/线性代数/矩阵.html" class="no-external">
@@ -460,30 +511,90 @@ Kengroo1024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="考研数学,线性代数" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1710076522481" data-listing-date-modified-sort="1710076522000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./考研数学/线性代数/行列式.html" class="no-external"></a></p><a href="./考研数学/线性代数/行列式.html" class="no-external">
+<div class="quarto-post image-right" data-index="3" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
+<div class="thumbnail"><a href="./考研数学/线性代数/特征向量.html" class="no-external">
+
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/线性代数/行列式.html" class="no-external"></a></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./考研数学/线性代数/特征向量.html" class="no-external">特征向量</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw'); return false;">线性代数</div>
+
 </div>
+<div class="delink listing-description"><a href="./考研数学/线性代数/特征向量.html" class="no-external">
+可逆矩阵的特征值和特征向量和其逆矩阵一一对应，它们的特征值互为倒数，特征向量不变。
+</a></div>
+</div>
+<div class="metadata">
+<a href="./考研数学/线性代数/特征向量.html" class="no-external">
+<div class="listing-date">
+2024年3月1日
+</div>
+<div class="listing-author">
+Kengroo1024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="thumbnail"><a href="./考研数学/线性代数/二次型.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./考研数学/线性代数/二次型.html" class="no-external">二次型</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw'); return false;">线性代数</div>
+
+</div>
+<div class="delink listing-description"><a href="./考研数学/线性代数/二次型.html" class="no-external">
+实际上就是把二次型的矩阵<span class="math inline">\(\boldsymbol A\)</span>对角化，按矩阵的相似对角化操作即可。如果还要进一步求出所用的线性变换<span class="math inline">\(\boldsymbol P\)</span>，还需要将其化为正交矩阵，也就是要把每个特征向量单位化。
+</a></div>
+</div>
+<div class="metadata">
+<a href="./考研数学/线性代数/二次型.html" class="no-external">
+<div class="listing-date">
+2024年3月1日
+</div>
+<div class="listing-author">
+Kengroo1024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail"><a href="./考研数学/线性代数/行列式.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./考研数学/线性代数/行列式.html" class="no-external">行列式计算</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./考研数学/线性代数/行列式.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU3JUJBJUJGJUU2JTgwJUE3JUU0JUJCJUEzJUU2JTk1JUIw'); return false;">线性代数</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('线性代数'); return false;">
-线性代数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/线性代数/行列式.html" class="no-external">参见这里</a>
-</div>
+<div class="delink listing-description"><a href="./考研数学/线性代数/行列式.html" class="no-external">
+参见这里
+</a></div>
 </div>
 <div class="metadata">
 <a href="./考研数学/线性代数/行列式.html" class="no-external">
@@ -496,66 +607,26 @@ Kengroo1024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="考研数学,高数" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1712224082496" data-listing-date-modified-sort="1712224082000" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<div class="thumbnail">
-<p><a href="./考研数学/高数/三角函数.html" class="no-external"></a></p><a href="./考研数学/高数/三角函数.html" class="no-external">
-<p class="card-img-top"><img src="考研数学\高数\三角函数六角图.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./考研数学/高数/三角函数.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./考研数学/高数/三角函数.html" class="no-external">三角函数</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./考研数学/高数/三角函数.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('高数'); return false;">
-高数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/高数/三角函数.html" class="no-external">在图中，对角线表示倒数，黄色三角形的邻角表示具有恒等关系，具体如下</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./考研数学/高数/三角函数.html" class="no-external">
-<div class="listing-date">
-2024年3月1日
-</div>
-<div class="listing-author">
-Kengroo1024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="考研数学,高数" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1712223793803" data-listing-date-modified-sort="1712223793000" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
-<div class="thumbnail">
-<p><a href="./考研数学/高数/导数和微分.html" class="no-external"></a></p><a href="./考研数学/高数/导数和微分.html" class="no-external">
-<p class="card-img-top"><img src="考研数学\高数\常用泰勒展开式1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./考研数学/高数/导数和微分.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="6" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU5JUFCJTk4JUU2JTk1JUIw" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
+<div class="thumbnail"><a href="./考研数学/高数/导数和微分.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="考研数学/高数/常用泰勒展开式1.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./考研数学/高数/导数和微分.html" class="no-external">导数和微分</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./考研数学/高数/导数和微分.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JUFCJTk4JUU2JTk1JUIw'); return false;">高数</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('高数'); return false;">
-高数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/高数/导数和微分.html" class="no-external">如果<span class="math inline">\(f(x)\)</span>满足以下条件：</a>
-</div>
+<div class="delink listing-description"><a href="./考研数学/高数/导数和微分.html" class="no-external">
+如果<span class="math inline">\(f(x)\)</span>满足以下条件：
+</a></div>
 </div>
 <div class="metadata">
 <a href="./考研数学/高数/导数和微分.html" class="no-external">
@@ -568,30 +639,26 @@ Kengroo1024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="考研数学,高数" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1712224360715" data-listing-date-modified-sort="1712224360000" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
-<div class="thumbnail">
-<p><a href="./考研数学/高数/微分方程.html" class="no-external"></a></p><a href="./考研数学/高数/微分方程.html" class="no-external">
+<div class="quarto-post image-right" data-index="7" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU5JUFCJTk4JUU2JTk1JUIw" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="191">
+<div class="thumbnail"><a href="./考研数学/高数/微分方程.html" class="no-external">
+
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/高数/微分方程.html" class="no-external"></a></p>
-</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./考研数学/高数/微分方程.html" class="no-external">微分方程</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./考研数学/高数/微分方程.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JUFCJTk4JUU2JTk1JUIw'); return false;">高数</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('高数'); return false;">
-高数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/高数/微分方程.html" class="no-external">可以被表示为<span class="math inline">\(g(y)\mathrm dy=f(x)\mathrm dx\)</span>的方程</a>
-</div>
+<div class="delink listing-description"><a href="./考研数学/高数/微分方程.html" class="no-external">
+可以被表示为<span class="math inline">\(g(y)\mathrm dy=f(x)\mathrm dx\)</span>的方程
+</a></div>
 </div>
 <div class="metadata">
 <a href="./考研数学/高数/微分方程.html" class="no-external">
@@ -604,33 +671,61 @@ Kengroo1024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="考研数学,高数" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1711426527592" data-listing-date-modified-sort="1711426527000" data-listing-reading-time-sort="1" data-listing-word-count-sort="49">
-<div class="thumbnail">
-<p><a href="./考研数学/高数/积分.html" class="no-external"></a></p><a href="./考研数学/高数/积分.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./考研数学/高数/积分.html" class="no-external"></a></p>
+<div class="quarto-post image-right" data-index="8" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU5JUFCJTk4JUU2JTk1JUIw" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
+<div class="thumbnail"><a href="./考研数学/高数/三角函数.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="考研数学/高数/三角函数六角图.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./考研数学/高数/三角函数.html" class="no-external">三角函数</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JUFCJTk4JUU2JTk1JUIw'); return false;">高数</div>
+
 </div>
+<div class="delink listing-description"><a href="./考研数学/高数/三角函数.html" class="no-external">
+在图中，对角线表示倒数，黄色三角形的邻角表示具有恒等关系，具体如下
+</a></div>
+</div>
+<div class="metadata">
+<a href="./考研数学/高数/三角函数.html" class="no-external">
+<div class="listing-date">
+2024年3月1日
+</div>
+<div class="listing-author">
+Kengroo1024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU5JUFCJTk4JUU2JTk1JUIw" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="1" data-listing-word-count-sort="49">
+<div class="thumbnail"><a href="./考研数学/高数/积分.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./考研数学/高数/积分.html" class="no-external">积分</a>
 </h3>
-<div class="listing-subtitle">
-<a href="./考研数学/高数/积分.html" class="no-external"></a>
-</div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('考研数学'); return false;">
-考研数学
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU5JUFCJTk4JUU2JTk1JUIw'); return false;">高数</div>
+
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('高数'); return false;">
-高数
-</div>
-</div>
-<div class="listing-description">
-<a href="./考研数学/高数/积分.html" class="no-external">在区间<span class="math inline">\([a,b]\)</span>上做分划 <span class="math display">\[
+<div class="delink listing-description"><a href="./考研数学/高数/积分.html" class="no-external">
+在区间<span class="math inline">\([a,b]\)</span>上做分划 <span class="math display">\[
 a=x_0&lt;x_1&lt;x_2&lt;...&lt;x_{n-1}&lt;x_n=b
 \]</span> 令<span class="math inline">\(\Delta x_i=x_i-x_{i-1}\)</span>，任取<span class="math inline">\(\xi_i\in[x_{i-1},x_i]\)</span>，只要<span class="math inline">\(\lambda=\mathrm{sup}\{\Delta x_i\}\to 0\)</span>时，和式 <span class="math display">\[
-\sum_{i=1}…</span></a>
-</div>
+\sum_{i=1}…</span>
+</a></div>
 </div>
 <div class="metadata">
 <a href="./考研数学/高数/积分.html" class="no-external">
@@ -643,193 +738,109 @@ Kengroo1024
 </a>
 </div>
 </div>
+<div class="quarto-post image-right" data-index="10" data-categories="JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2JTJDJUU2JUE2JTgyJUU3JUJCJTlG" data-listing-date-sort="1709222400000" data-listing-file-modified-sort="1776345610947" data-listing-date-modified-sort="1776345610000" data-listing-reading-time-sort="11" data-listing-word-count-sort="2076">
+<div class="thumbnail"><a href="./考研数学/概统/概率论基本知识.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./考研数学/概统/概率论基本知识.html" class="no-external">概率论基本知识</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU4JTgwJTgzJUU3JUEwJTk0JUU2JTk1JUIwJUU1JUFEJUE2'); return false;">考研数学</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU2JUE2JTgyJUU3JUJCJTlG'); return false;">概统</div>
+
 </div>
-<div class="listing-no-matching d-none">
-无匹配项
+<div class="delink listing-description"><a href="./考研数学/概统/概率论基本知识.html" class="no-external">
+<span class="math display">\[
+P(B|A)=\dfrac{P(AB)}{P(A)}
+\]</span>
+</a></div>
 </div>
+<div class="metadata">
+<a href="./考研数学/概统/概率论基本知识.html" class="no-external">
+<div class="listing-date">
+2024年3月1日
+</div>
+<div class="listing-author">
+Kengroo1024
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">无匹配项</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
       return false;
     }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
     }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
@@ -837,162 +848,184 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
       return codeEl.innerText;
     }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "已复制");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "已复制");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/Kengroo1024\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1000,185 +1033,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 
 
